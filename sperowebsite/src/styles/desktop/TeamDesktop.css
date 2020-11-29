@@ -3,9 +3,12 @@
     flex-direction: column;
     position: relative;
     overflow-x: hidden;
+    background-color: #fff2e6;
+    background-size : cover
   }
   
 .staff-card-container {
+    
     /* background-color: red; */
     position: relative;
     width: 100vw;
@@ -33,17 +36,17 @@
 }
 
 .staff-title {
-    font-size: 70px;
+    font-size: 4vw;
     font-family: 'Lexend Deca', sans-serif;
     color: #5C6A6F;
     padding-left: 37%;
-    padding-top: 6vw;
+    padding-top: 7vw;
     /* padding-bottom: 3vw; */
     /* transform: translate(-50%, -50%); */
 }
 
 .staff-description {
-    font-size: 16px;
+    font-size: 0.75vw;
     font-family: 'Tenor Sans', sans-serif;
     color: #5C6A6F;
     padding-left: 20vw;
