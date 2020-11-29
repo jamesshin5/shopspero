@@ -38,9 +38,9 @@
 }
 
 .top-dark {
-    width: 87.5%;
+    width: 85%;
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 14px;
+    font-size: 0.7vw;
     color: #394648;
     position: absolute;
     top: 40%;
@@ -51,7 +51,7 @@
 .centered-dark {
     width: 100%;
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 20px;
+    font-size: 1vw;
     color: #394648;
     position: absolute;
     top: 72.5%;
@@ -62,7 +62,7 @@
 .below-dark {
     width: 100%;
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 20px;
+    font-size: 1vw;
     color: #394648;
     position: absolute;
     top: 80%;
