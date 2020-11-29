@@ -40,17 +40,17 @@
     font-family: 'Lexend Deca', sans-serif;
     color: #5C6A6F;
     padding-left: 37%;
-    padding-top: 7vw;
+    padding-top: 9vw;
     /* padding-bottom: 3vw; */
     /* transform: translate(-50%, -50%); */
 }
 
 .staff-description {
-    font-size: 0.75vw;
+    font-size: 1vw;
     font-family: 'Tenor Sans', sans-serif;
     color: #5C6A6F;
-    padding-left: 20vw;
-    padding-right: 20vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
     padding-top: 1.5vw;
     padding-bottom: 3vw;
     text-align: center;
