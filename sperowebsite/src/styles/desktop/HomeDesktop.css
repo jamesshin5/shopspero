@@ -137,7 +137,7 @@ a {
 
   .home-centered {
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 140px;
+    font-size: 9vw;
     color: #5C6A6F;
     position: absolute;
     top: 50%;
@@ -147,7 +147,7 @@ a {
   }
 
   .home-centered:hover {
-    font-size: 145px;
+    font-size: 10vw;
   }
 
   .main-text {
@@ -157,23 +157,23 @@ a {
   .sub-text {
     font-family: 'Tenor Sans', sans-serif;
     color: #5C6A6F;
-    font-size: 22px;
+    font-size: 1.2vw;
     transition: font-size 0.25s;
 
   }
 
   .sub-text:hover {
-    font-size: 25px;
+    font-size: 1.3vw;
   }
 
   .shop-text {
     font-family: 'Tenor Sans', sans-serif;
-    font-size: 12px;
+    font-size: 0.6vw;
     transition: font-size 0.25s;
   }
 
   .shop-text:hover {
-      font-size: 15px;
+    font-size: 0.7vw;
   }
 
   .shop-btn {
