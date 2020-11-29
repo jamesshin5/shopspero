@@ -37,13 +37,24 @@
     transform: translate(-50%, -50%);
 }
 
+.top-dark {
+    width: 87.5%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 14px;
+    color: #394648;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .centered-dark {
     width: 100%;
     font-family: 'Lexend Deca', sans-serif;
     font-size: 20px;
     color: #394648;
     position: absolute;
-    top: 45%;
+    top: 72.5%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -54,7 +65,7 @@
     font-size: 20px;
     color: #394648;
     position: absolute;
-    top: 55%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
