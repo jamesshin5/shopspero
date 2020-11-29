@@ -1,0 +1,105 @@
+.App {
+    text-align: center;
+  }
+  
+  h1 {
+    font-family: 'meno-banner', serif;
+    font-size: 3.5vw;
+    margin: 0px 0px;
+    font-weight: 450;
+  }
+  
+  h2 {
+    font-family: 'meno-banner', serif;
+    font-size: 2.5vw;
+    margin: 0px 0px;
+    font-weight: 200;
+  }
+  
+  h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%;
+  }
+  
+  h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%;
+    margin: 0;
+    letter-spacing: 0.15vw;
+  }
+  
+  h5 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75vw;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+  }
+  
+  h6 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8vw;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0.75vw 0 0.75vw;
+  }
+  
+  a {
+    font-family: 'Inter', sans-serif;
+    color: #1f1f1f;
+  }
+  
+  input {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .fade-enter {
+    opacity: 0.01;
+  }
+  
+  .fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+  }
+  
+  .fade-exit {
+    opacity: 1;
+  }
+  
+  .fade-exit.fade-exit-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }
+  
+  .transition-group {
+    position: relative;
+  }
+  
+  section.route-section {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 32px;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  
+    h3 {
+      font-size: 12px;
+      line-height: 200%;
+    }
+  }
+  

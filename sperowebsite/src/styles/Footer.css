@@ -1,0 +1,70 @@
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .footer-blurb {
+    width: 30vw;
+    padding: 1.5vw 1vw 1.5vw;
+    margin-left: 1.5vw;
+  }
+
+  .spero-berkeley {
+    width: 30vw;
+    padding: 1.5vw 1vw 1.5vw;
+    margin-left: 1.5vw;
+  }
+  
+  .footer-social-container {
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+    padding: 1vw;
+    margin-right: 1.5vw;
+    z-index: 2;
+  }
+  
+  .social-icons-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 2vw;
+    justify-content: space-around;
+    margin-bottom: 0.5vw;
+  }
+  
+  .icon {
+    width: 1.5vw;
+  }
+  
+  a {
+    width: 100%;
+    height: 2.2vw;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  .bottom-border {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 35vw;
+    height: 13.414vw;
+    z-index: 1;
+  }
+  
+  .bottom-border > img {
+    height: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      display: none;
+    }
+  }
+  

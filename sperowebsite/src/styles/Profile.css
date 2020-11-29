@@ -1,0 +1,79 @@
+.profile-container {
+    position: relative;
+    width: 15vw;
+    height: 20vw;
+    background-color: aliceblue;
+    /* border-width: 5px;
+    border-color: grey; */
+    transition: width 2s height 2s;
+    text-align: center;
+    /* outline: 5px solid #EDDCD2;
+    outline-offset: -5px; */
+}
+
+.centered-dark .centered-light .below-dark .below-light {
+    z-index: 0;
+}
+
+.centered-light {
+    width: 100%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    color: #EDDCD2;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.below-light {
+    width: 100%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    color: #EDDCD2;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centered-dark {
+    width: 100%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    color: #394648;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.below-dark {
+    width: 100%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    color: #394648;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.profile-container:hover {
+    background-color: aliceblue;
+}
+
+.profile-img {
+    /* vertical-align: top; */
+    /* float: left; */
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    width:100%;
+    transition: opacity 0.25s ease-in-out;
+    z-index: 100;
+}
+
+
+.profile-img:hover {
+    opacity: 0%;
+}
