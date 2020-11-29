@@ -8,6 +8,7 @@
   }
   
 .staff-card-container {
+    
     /* background-color: red; */
     position: relative;
     width: 100vw;
@@ -35,11 +36,11 @@
 }
 
 .staff-title {
-    font-size: 5vw;
+    font-size: 4vw;
     font-family: 'Lexend Deca', sans-serif;
     color: #5C6A6F;
-    padding-left: 33%;
-    padding-top: 6vw;
+    padding-left: 37%;
+    padding-top: 7vw;
     /* padding-bottom: 3vw; */
     /* transform: translate(-50%, -50%); */
 }
@@ -53,8 +54,4 @@
     padding-top: 1.5vw;
     padding-bottom: 3vw;
     text-align: center;
-}
-
-body {
-    background-color: #fff2e6;
 }
