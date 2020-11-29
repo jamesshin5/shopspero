@@ -1,0 +1,20 @@
+.design-main-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+    background-color: #fff2e6;
+    background-size : cover
+}
+
+.design-card-container {
+    /* background-color: red; */
+    position: relative;
+    width: 100vw;
+    height:60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    background-color: #fff2e6;
+    /* align-items: center; */
+}
