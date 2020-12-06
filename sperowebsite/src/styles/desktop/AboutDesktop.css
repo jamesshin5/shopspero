@@ -1,22 +1,91 @@
-  
 body {
     background-color: #fff2e6;
 }
+.ab-logo {
+    z-index: 1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    padding-top: 3vw;
+    /* position: absolute; */
+}
+.about-caption-1 {
+    width: 50vw;
+    padding-left: 5vw;
+    top: -40vw;
+    position: relative;
+}
+.about-caption-2 {
+    width: 50vw;
+    text-align: right;
+    top: -25vw;
+    padding-left: 45vw;
+    position: relative;
+}
 .ab-caption-title-1 {
-    font-family: 'Tenor Sans', sans-serif;
-    font-size: 32px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 2vw;
+    z-index: 10;
 }
 .ab-caption-title-2 {
-    font-family: 'Tenor Sans', sans-serif;
-    font-size: 32px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 2vw;
+    z-index: 10;
 }
 .ab-caption-content-1 {
-    font-family: 'Lexend Deca', sans-serif;
-    font-size: 22px;
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 1vw;
+    z-index: 10;
 }
 .ab-caption-content-2 {
-    font-family: 'Lexend Deca', sans-serif;
-    font-size: 22px;
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 1vw;
+    z-index: 10;
+}
+.about-bottom-container {
+    position: relative;
+    height: 20vw;
+    top: -30vw;
+}
+.ab-explanation-1 {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 1.5vw;
+    z-index: 10;
+    text-align: right;
+    width: 25vw;
+    padding-left: 10vw;
+    top: 21vw;
+    position: relative;
+}
+.ab-explanation-2 {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 1.5vw;
+    z-index: 10;
+    width: 25vw;
+    padding-left: 65vw;
+    position: relative;
+}
+.ab-colored-bar {
+    background-color: #5C6A6F;
+    width: 80vw;
+    height: 0.5vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 24vw;
+    z-index: 1;
+    position: relative;
+}
+.ab-image {
+    z-index: 2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20vw;
+    top: 10vw;
+    position: relative;
+    box-shadow: .25vw .25vw .25vw #888888;
 }
 @media (max-width: 480px) {
 }
