@@ -2,7 +2,7 @@
     position: relative;
     width: 15vw;
     height: 20vw;
-    background-color: aliceblue;
+    background-color: #F0EADE;
     /* border-width: 5px;
     border-color: grey; */
     transition: width 2s height 2s;
@@ -69,10 +69,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
+/* 
 .profile-container:hover {
-    background-color: aliceblue;
-}
+    background-color: #A5A58D;
+} */
 
 .profile-img {
     /* vertical-align: top; */

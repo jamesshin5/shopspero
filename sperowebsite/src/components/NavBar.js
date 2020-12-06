@@ -23,7 +23,7 @@ const Navbar = props => {
             </Link>
           </li>
           <li>
-            <Link to='/designs'>
+            <Link to='/design/mountainmover'>
               <div className='navlink'>DESIGNS</div>
             </Link>
           </li>
