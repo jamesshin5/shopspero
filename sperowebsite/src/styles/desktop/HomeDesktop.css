@@ -42,6 +42,7 @@ a {
     flex-direction: column;
     position: relative;
     overflow-x: hidden;
+    /* height: 100vw; */
   }
   
   .top-container {
@@ -49,6 +50,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 50vw;
   }
 
   .main-graphic {
@@ -165,6 +167,7 @@ a {
   .sub-text:hover {
     font-size: 1.3vw;
   }
+  
 
   .shop-text {
     font-family: 'Tenor Sans', sans-serif;
@@ -175,6 +178,7 @@ a {
   .shop-text:hover {
     font-size: 0.7vw;
   }
+  
 
   .shop-btn {
     border: solid;

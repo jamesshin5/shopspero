@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { navigate } from "@reach/router"
 import Footer from '../../components/Footer';
 import '../../styles/desktop/HomeDesktop.css';
 import { Link } from 'react-router-dom';
@@ -8,6 +9,7 @@ const image1 = require('../../images/home-image-1.png');
 // 
 
 const HomePageDesktop = props => {
+    const designLinks = ['walkonwater','mountainmover', 'sperobear']
     const [current, setCurrent] = useState(image0);
     const [num, setNum] = useState(0);
     const numImages = 2
@@ -33,18 +35,20 @@ const HomePageDesktop = props => {
 
     return (
         <div className='main-container'>
-        <div className='top-container'>
+            <div className='top-container'>
                 <div className='main-graphic'>
                     <div className='carousel-container'>
                         <button onClick={() => decreaseNum()} className="arrow-buttons">
                             <img src={require("../../images/left-arrow.png")} alt="left-arrow" className="arrow"/>
                         </button>
-                        <div className='graphic-container'>
-                            <img src={current} id='bird-image' /> 
-                            <Link to='/about'>
-                                <div class="home-centered">SPERO</div>
-                            </Link>
-                        </div>
+                        <Link to={'/design/'+designLinks[num]}>
+                            <div className='graphic-container'>
+                                <img src={current} id='bird-image' /> 
+                                <Link to='/about'>
+                                    <div class="home-centered">SPERO</div>
+                                </Link>
+                            </div>
+                        </Link>
                         <button onClick={() => increaseNum()} className="arrow-buttons"> 
                             <img src={require("../../images/right-arrow.png")} alt="right-arrow" className="arrow"/>
                         </button>
