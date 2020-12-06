@@ -18,3 +18,81 @@
     background-color: #fff2e6;
     /* align-items: center; */
 }
+
+.design-nav {
+    /* background-color: red; */
+    position: relative;
+    width: 20vw;
+    /* height:60vw; */
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    /* align-items: center; */
+    text-align: right;
+}
+
+.design-display {
+    /* background-color: red; */
+    position: relative;
+    width: 80vw;
+    /* height:60vw; */
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    /* align-items: center; */
+}
+
+button {
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    outline: none;
+  }
+
+  .nav-font {
+      font-family: 'Tenor Sans';
+      text-align: right;
+      /* font-weight: bold; */
+      color: #5C6A6F;
+      font-size: 1vw;
+      padding-top: 2.5vw;
+      text-align: right;
+      transition: font-size 0.25s;
+  }
+
+  .nav-font:hover {
+      font-size: 1.1vw;
+  }
+
+  .nav-title {
+    font-family: 'Tenor Sans';
+    /* font-weight: bold; */
+    color: #5C6A6F;
+    font-size: 1vw;
+    padding-top: 2.5vw;
+    text-align: right;
+    font-weight: bold;
+    color: black;
+  }
+
+  .fall-stickers-nav {
+      display: flex;
+      flex-direction: column;
+      /* background-color: aliceblue; */
+  }
+
+  .sub-font {
+    font-family: 'Tenor Sans';
+    text-align: right;
+    /* font-weight: bold; */
+    color: #5C6A6F;
+    font-size: 0.7vw;
+    padding-top: 0.2vw;
+    text-align: right;
+    transition: font-size 0.25s;
+  }
+
+  .sub-font:hover {
+      font-size: 0.75vw;
+  }
