@@ -20,7 +20,7 @@ const WalkOnWaterPage = props => {
 
                 <Link to='/design/walkonwater'>
                 <button className="button-style">
-                  <div className="sub-font">WALK ON WATER</div>
+                  <div className="sub-font"><b>WALK ON WATER</b></div>
                 </button>
                 </Link>
 

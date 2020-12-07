@@ -24,13 +24,17 @@ const MountainMoverPage = props => {
                 </button>
                 </Link>
 
+                <Link to='/design/mountainmover'>
                 <button className="button-style">
-                  <div className="sub-font">MOUNTAIN MOVER</div>
+                  <div className="sub-font"><b>MOUNTAIN MOVER</b></div>
                 </button>
+                </Link>
 
+                <Link to='/design/sperobear'>
                 <button className="button-style">
                   <div className="sub-font">SPERO BEAR</div>
                 </button>
+                </Link>
 
               </div>
 

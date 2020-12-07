@@ -31,7 +31,7 @@ const SperoBearPage = props => {
 
         <Link to='/design/sperobear'>
         <button className="button-style">
-        <div className="sub-font">SPERO BEAR</div>
+        <div className="sub-font"><b>SPERO BEAR</b></div>
         </button>
         </Link>
 
