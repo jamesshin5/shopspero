@@ -41,14 +41,14 @@ const HomePageDesktop = props => {
                         <button onClick={() => decreaseNum()} className="arrow-buttons">
                             <img src={require("../../images/left-arrow.png")} alt="left-arrow" className="arrow"/>
                         </button>
-                        <Link to={'/design/'+designLinks[num]}>
                             <div className='graphic-container'>
+                            <Link to={'/design/'+designLinks[num]}>
                                 <img src={current} id='bird-image' /> 
+                            </Link>
                                 <Link to='/about'>
                                     <div class="home-centered">SPERO</div>
                                 </Link>
                             </div>
-                        </Link>
                         <button onClick={() => increaseNum()} className="arrow-buttons"> 
                             <img src={require("../../images/right-arrow.png")} alt="right-arrow" className="arrow"/>
                         </button>
