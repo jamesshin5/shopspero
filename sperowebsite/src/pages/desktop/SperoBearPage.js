@@ -18,51 +18,65 @@ const SperoBearPage = props => {
         <div className="nav-font">FALL 2020 STICKERS</div>
 
         <Link to='/design/walkonwater'>
-        <button className="button-style">
-        <div className="sub-font">WALK ON WATER</div>
-        </button>
-        </Link>
+                <button className="button-style">
+                  <div className="sub-font">WALK ON WATER</div>
+                </button>
+                </Link>
 
-        <Link to='/design/mountainmover'>
-        <button className="button-style">
-        <div className="sub-font">MOUNTAIN MOVER</div>
-        </button>
-        </Link>
+                <Link to='/design/mountainmover'>
+                <button className="button-style">
+                  <div className="sub-font">MOUNTAIN MOVER</div>
+                </button>
+                </Link>
 
-        <Link to='/design/sperobear'>
-        <button className="button-style">
-        <div className="sub-font"><b>SPERO BEAR</b></div>
-        </button>
-        </Link>
+                <Link to='/design/sperobear'>
+                <button className="button-style">
+                  <div className="sub-font"><b>SPERO BEAR</b></div>
+                </button>
+                </Link>
 
-        </div>
-
+              </div>
+              
               <button className="button-style">
+              <Link to="/design/abide">
                 <div className="nav-font">ABIDE HOODIE</div>
+                </Link>
               </button>
 
               <button className="button-style">
-                <div className="nav-font">HOPE LONG SLEEVE</div>
+                <Link to='/design/hopelongsleeve'>
+                  <div className="nav-font">HOPE LONG SLEEVE</div>
+                </Link>
               </button>
 
               <button className="button-style">
-                <div className="nav-font">"I AM THAT GIRL" DAD HAT</div>
+                <Link to="/design/iamthatgirl">
+                  <div className="nav-font">"I AM THAT GIRL" DAD HAT</div>
+                  </Link>
               </button>
 
               <button className="button-style">
-                <div className="nav-font">SPERO MACRON HOODIE</div>
+                <Link to='/design/macronhoodie'>
+                  <div className="nav-font">SPERO MACRON HOODIE</div>
+                </Link>
               </button>
 
               <button className="button-style">
-                <div className="nav-font">"BLESSED TO BLESS"</div>
+                <Link to="/design/blessedtobless">
+                  <div className="nav-font">"BLESSED TO BLESS"</div> 
+                </Link>
               </button>
 
               <button className="button-style">
-                <div className="nav-font">"BAY AREA" LONG SLEEVE</div>
+                <Link to='/design/bayarea'>
+                  <div className="nav-font">"BAY AREA" LONG SLEEVE</div>
+                </Link>
               </button>
 
               <button className="button-style">
-                <div className="nav-font">BERKELEY HOODIE</div>
+                <Link to='/design/berkeleyhoodie'>
+                  <div className="nav-font">BERKELEY HOODIE</div>
+                </Link>
               </button>
             
           </div>

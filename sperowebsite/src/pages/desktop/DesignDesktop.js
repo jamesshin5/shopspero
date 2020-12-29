@@ -37,7 +37,10 @@ const DesignsDesktop = props => {
         return ''
       case 'berkeley': 
         return ''
+      default:
+        return ''
       }
+
     }
   return (
     <div className="design-main-container">

@@ -37,33 +37,47 @@ const MountainMoverPage = props => {
                 </Link>
 
               </div>
-
+              
               <button className="button-style">
+              <Link to="/design/abide">
                 <div className="nav-font">ABIDE HOODIE</div>
+                </Link>
               </button>
 
               <button className="button-style">
-                <div className="nav-font">HOPE LONG SLEEVE</div>
+                <Link to='/design/hopelongsleeve'>
+                  <div className="nav-font">HOPE LONG SLEEVE</div>
+                </Link>
               </button>
 
               <button className="button-style">
-                <div className="nav-font">"I AM THAT GIRL" DAD HAT</div>
+                <Link to="/design/iamthatgirl">
+                  <div className="nav-font">"I AM THAT GIRL" DAD HAT</div>
+                  </Link>
               </button>
 
               <button className="button-style">
-                <div className="nav-font">SPERO MACRON HOODIE</div>
+                <Link to='/design/macronhoodie'>
+                  <div className="nav-font">SPERO MACRON HOODIE</div>
+                </Link>
               </button>
 
               <button className="button-style">
-                <div className="nav-font">"BLESSED TO BLESS"</div>
+                <Link to="/design/blessedtobless">
+                  <div className="nav-font">"BLESSED TO BLESS"</div> 
+                </Link>
               </button>
 
               <button className="button-style">
-                <div className="nav-font">"BAY AREA" LONG SLEEVE</div>
+                <Link to='/design/bayarea'>
+                  <div className="nav-font">"BAY AREA" LONG SLEEVE</div>
+                </Link>
               </button>
 
               <button className="button-style">
-                <div className="nav-font">BERKELEY HOODIE</div>
+                <Link to='/design/berkeleyhoodie'>
+                  <div className="nav-font">BERKELEY HOODIE</div>
+                </Link>
               </button>
             
           </div>

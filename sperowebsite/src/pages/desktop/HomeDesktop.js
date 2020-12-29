@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import { navigate } from "@reach/router"
 import Footer from '../../components/Footer';
 import '../../styles/desktop/HomeDesktop.css';
 import { Link } from 'react-router-dom';
+
+import CrossfadeImage from 'react-crossfade-image'
 
 const image0 = require('../../images/home-image-0.png');
 const image1 = require('../../images/home-image-1.png');
 // 
 
 const HomePageDesktop = props => {
-    const designLinks = ['walkonwater','mountainmover', 'sperobear']
+    const designLinks = ['abide','mountainmover', 'sperobear']
     const [current, setCurrent] = useState(image0);
     const [num, setNum] = useState(0);
     const numImages = 2
@@ -33,6 +35,13 @@ const HomePageDesktop = props => {
         }
     }
 
+    useEffect(() => {
+        const interval = setInterval(() => increaseNum(), 5000)
+        return () => {
+          clearInterval(interval);
+        }
+    })
+
     return (
         <div className='main-container'>
             <div className='top-container'>
@@ -41,14 +50,14 @@ const HomePageDesktop = props => {
                         <button onClick={() => decreaseNum()} className="arrow-buttons">
                             <img src={require("../../images/left-arrow.png")} alt="left-arrow" className="arrow"/>
                         </button>
-                            <div className='graphic-container'>
+                        <div className='graphic-container'>
                             <Link to={'/design/'+designLinks[num]}>
-                                <img src={current} id='bird-image' /> 
+                                <CrossfadeImage src={current} id='bird-image' duration={2000} timingFunction={"ease-out"} /> 
                             </Link>
-                                <Link to='/about'>
-                                    <div class="home-centered">SPERO</div>
-                                </Link>
-                            </div>
+                            <Link to='/about'>
+                                <div className="home-centered">SPERO</div>
+                            </Link>
+                        </div>
                         <button onClick={() => increaseNum()} className="arrow-buttons"> 
                             <img src={require("../../images/right-arrow.png")} alt="right-arrow" className="arrow"/>
                         </button>
