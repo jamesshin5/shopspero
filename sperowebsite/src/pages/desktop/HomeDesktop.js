@@ -11,12 +11,13 @@ const image1 = require('../../images/home-image-1.png');
 // 
 
 const HomePageDesktop = props => {
-    const designLinks = ['abide','mountainmover', 'sperobear']
+    const designLinks = ['abide','mountainmover', 'iamthatgirl', 'macronhoodie']
     const [current, setCurrent] = useState(image0);
     const [num, setNum] = useState(0);
-    const numImages = 2
+    const numImages = designLinks.length
 
     function increaseNum() {
+        console.log(num)
         var image = require('../../images/home-image-'+((num+1)%numImages).toString()+'.png')
         setCurrent(image)
         setNum((num+1)%numImages);
@@ -24,11 +25,13 @@ const HomePageDesktop = props => {
 
     function decreaseNum() {
         if (num === 0) {
+            console.log(num)
             var image = require('../../images/home-image-'+(numImages-1).toString()+'.png')
             setCurrent(image)
             setNum(numImages-1);
         }
         else {
+            console.log(num)
             var image = require('../../images/home-image-'+((num-1)%numImages).toString()+'.png')
             setCurrent(image)
             setNum((num-1)%numImages);
@@ -52,7 +55,7 @@ const HomePageDesktop = props => {
                         </button>
                         <div className='graphic-container'>
                             <Link to={'/design/'+designLinks[num]}>
-                                <CrossfadeImage src={current} duration={2000} timingFunction={"ease-out"} /> 
+                                <CrossfadeImage src={current} duration={1500} timingFunction={"ease-out"} /> 
                             </Link>
                             <Link to='/about'>
                                 <div className="home-centered">SPERO</div>

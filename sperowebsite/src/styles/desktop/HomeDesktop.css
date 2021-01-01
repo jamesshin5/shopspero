@@ -85,7 +85,6 @@ a {
   margin-top: 5vw;
   position: relative;
   text-align: center;
-  color: white;
   padding-left: 30vw;
   padding-right: 30vw;
 }
@@ -145,12 +144,19 @@ a {
 
 #bird-image {
   width: 20vw;
-  transition: width 0.5s;
+  /* transition: width 0.5s; */
 }
 
-#bird-image:hover {
-  width: 22vw;
+#bird-image img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
 }
+
+/* #bird-image:hover {
+  width: 22vw;
+} */
 
 .bottom-container {
   display: flex;
