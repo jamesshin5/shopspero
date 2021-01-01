@@ -23,7 +23,7 @@ const HomePageDesktop = props => {
     }
 
     function decreaseNum() {
-        if (num == 0) {
+        if (num === 0) {
             var image = require('../../images/home-image-'+(numImages-1).toString()+'.png')
             setCurrent(image)
             setNum(numImages-1);
