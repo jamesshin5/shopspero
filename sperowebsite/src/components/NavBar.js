@@ -6,7 +6,7 @@ const Navbar = props => {
   return (
     <div className='navbar-container'>
         <div className='logo'>
-            <Link to='/'>
+            <Link to='shopspero/'>
             <img src={require('../images/speroicon.png')} alt='Logo' id='logo-image' />
             </Link>
         </div>
@@ -18,12 +18,12 @@ const Navbar = props => {
             </Link>
           </li> */}
           <li>
-            <Link to='/team'>
+            <Link to='shopspero/team'>
               <div className='navlink'>OUR TEAM</div>
             </Link>
           </li>
           <li>
-            <Link to='/design/mountainmover'>
+            <Link to='shopspero/design/mountainmover'>
               <div className='navlink'>DESIGNS</div>
             </Link>
           </li>
