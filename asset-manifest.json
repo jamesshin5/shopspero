@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/shopspero/static/css/main.665613f3.chunk.css",
-    "main.js": "/shopspero/static/js/main.f175599b.chunk.js",
-    "main.js.map": "/shopspero/static/js/main.f175599b.chunk.js.map",
+    "main.js": "/shopspero/static/js/main.304c350c.chunk.js",
+    "main.js.map": "/shopspero/static/js/main.304c350c.chunk.js.map",
     "runtime-main.js": "/shopspero/static/js/runtime-main.2e074193.js",
     "runtime-main.js.map": "/shopspero/static/js/runtime-main.2e074193.js.map",
     "static/js/2.3cc08b00.chunk.js": "/shopspero/static/js/2.3cc08b00.chunk.js",
     "static/js/2.3cc08b00.chunk.js.map": "/shopspero/static/js/2.3cc08b00.chunk.js.map",
     "index.html": "/shopspero/index.html",
-    "precache-manifest.be946b4af021622be0fbd94652436cfd.js": "/shopspero/precache-manifest.be946b4af021622be0fbd94652436cfd.js",
+    "precache-manifest.b6bfd86163b5c62f640dcc29a04fad82.js": "/shopspero/precache-manifest.b6bfd86163b5c62f640dcc29a04fad82.js",
     "service-worker.js": "/shopspero/service-worker.js",
     "static/css/main.665613f3.chunk.css.map": "/shopspero/static/css/main.665613f3.chunk.css.map",
     "static/js/2.3cc08b00.chunk.js.LICENSE.txt": "/shopspero/static/js/2.3cc08b00.chunk.js.LICENSE.txt",
@@ -56,6 +56,6 @@
     "static/js/runtime-main.2e074193.js",
     "static/js/2.3cc08b00.chunk.js",
     "static/css/main.665613f3.chunk.css",
-    "static/js/main.f175599b.chunk.js"
+    "static/js/main.304c350c.chunk.js"
   ]
 }
