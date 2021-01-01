@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/shopspero/static/css/main.14dd5e76.chunk.css",
-    "main.js": "/shopspero/static/js/main.4f738295.chunk.js",
-    "main.js.map": "/shopspero/static/js/main.4f738295.chunk.js.map",
+    "main.js": "/shopspero/static/js/main.07ff2352.chunk.js",
+    "main.js.map": "/shopspero/static/js/main.07ff2352.chunk.js.map",
     "runtime-main.js": "/shopspero/static/js/runtime-main.2e074193.js",
     "runtime-main.js.map": "/shopspero/static/js/runtime-main.2e074193.js.map",
-    "static/js/2.51481969.chunk.js": "/shopspero/static/js/2.51481969.chunk.js",
-    "static/js/2.51481969.chunk.js.map": "/shopspero/static/js/2.51481969.chunk.js.map",
+    "static/js/2.de0a8ca2.chunk.js": "/shopspero/static/js/2.de0a8ca2.chunk.js",
+    "static/js/2.de0a8ca2.chunk.js.map": "/shopspero/static/js/2.de0a8ca2.chunk.js.map",
     "index.html": "/shopspero/index.html",
-    "precache-manifest.2de4c598ff5834f5379ea80dee0bb02c.js": "/shopspero/precache-manifest.2de4c598ff5834f5379ea80dee0bb02c.js",
+    "precache-manifest.2aa06a275121cd587285a6e1d813f522.js": "/shopspero/precache-manifest.2aa06a275121cd587285a6e1d813f522.js",
     "service-worker.js": "/shopspero/service-worker.js",
     "static/css/main.14dd5e76.chunk.css.map": "/shopspero/static/css/main.14dd5e76.chunk.css.map",
-    "static/js/2.51481969.chunk.js.LICENSE.txt": "/shopspero/static/js/2.51481969.chunk.js.LICENSE.txt",
+    "static/js/2.de0a8ca2.chunk.js.LICENSE.txt": "/shopspero/static/js/2.de0a8ca2.chunk.js.LICENSE.txt",
     "static/media/abide-main-2.png": "/shopspero/static/media/abide-main-2.789d1d72.png",
     "static/media/abide-overlay.png": "/shopspero/static/media/abide-overlay.f9ef4aa2.png",
     "static/media/abide-window.png": "/shopspero/static/media/abide-window.6b4e9928.png",
@@ -56,8 +56,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2e074193.js",
-    "static/js/2.51481969.chunk.js",
+    "static/js/2.de0a8ca2.chunk.js",
     "static/css/main.14dd5e76.chunk.css",
-    "static/js/main.4f738295.chunk.js"
+    "static/js/main.07ff2352.chunk.js"
   ]
 }
