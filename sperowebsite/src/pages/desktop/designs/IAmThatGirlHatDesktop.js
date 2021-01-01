@@ -10,14 +10,14 @@ const IAmThatGirlHatDesktop = () => {
                 </div> */}
                 <div className="smaller-container">
                     <div className="girl-fill-fifth leftmost">
-                        <img src={require("../../../images/design-photos/girl-hat-top.jpg")} alt="" />
+                        <img src={require("../../../images/design-photos/girl-hat-top.png")} alt="" />
                     </div>
                     <div className='girl-right-container'>
                         <div className="girl-fill-fifth-right">
-                            <img src={require("../../../images/design-photos/girl-hat-back.jpg")} alt="" />
+                            <img src={require("../../../images/design-photos/girl-hat-back.png")} alt="" />
                         </div>
                         <div className="girl-fill-fifth-window ">
-                            <img src={require("../../../images/design-photos/girl-hat-flyer.jpg")} alt="" />
+                            <img src={require("../../../images/design-photos/girl-hat-flyer.png")} alt="" />
                         </div>
                     </div>
                 </div>

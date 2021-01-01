@@ -10,7 +10,7 @@ const SperoBearPage = () => {
                 </div>
                 <div className="smaller-container">
                     <div class="fill-fifth leftmost">
-                        <img src={require("../../../images/design-photos/three-stickers-drawing.jpg")} alt="" />
+                        <img src={require("../../../images/design-photos/three-stickers-drawing.png")} alt="" />
                     </div>
                     <div class="fill-fifth">
                         <img src={require("../../../images/design-photos/bear-right.png")} alt="" />

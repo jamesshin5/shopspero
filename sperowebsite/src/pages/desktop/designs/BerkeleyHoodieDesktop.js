@@ -10,7 +10,7 @@ const BerkeleyHoodieDesktop = () => {
                 </div> */}
                 <div className="smaller-container">
                     <div className="girl-fill-fifth leftmost">
-                        <img src={require("../../../images/design-photos/berkeley-vertical.jpg")} alt="" />
+                        <img src={require("../../../images/design-photos/berkeley-vertical.png")} alt="" />
                     </div>
                     {/* <div className='girl-right-container'>
                         <div className="girl-fill-fifth-right">
@@ -41,7 +41,7 @@ const BerkeleyHoodieDesktop = () => {
                     </div> */}
                 </div>
                 <div className="blessed-horizontal">
-                        <img src={require("../../../images/design-photos/berkeley-horizontal.jpg")} alt="" />
+                        <img src={require("../../../images/design-photos/berkeley-horizontal.png")} alt="" />
                 </div>
             </div>
         </div>

@@ -10,7 +10,7 @@ const BlessedToBlessDesktop = () => {
                 </div> */}
                 <div className="smaller-container">
                     <div className="girl-fill-fifth leftmost">
-                        <img src={require("../../../images/design-photos/blessed-main.jpg")} alt="" />
+                        <img src={require("../../../images/design-photos/blessed-main.png")} alt="" />
                     </div>
                     {/* <div className='girl-right-container'>
                         <div className="girl-fill-fifth-right">

@@ -10,14 +10,14 @@ const AbideHoodieDesktop = () => {
                 </div> */}
                 <div className="smaller-container">
                     <div class="abide-fill-fifth leftmost">
-                        <img src={require("../../../images/design-photos/abide-main-2.jpg")} alt="" />
+                        <img src={require("../../../images/design-photos/abide-main-2.png")} alt="" />
                     </div>
                     <div className='abide-right-container'>
                         <div class="abide-fill-fifth-right">
-                            <img src={require("../../../images/design-photos/abide-overlay.jpg")} alt="" />
+                            <img src={require("../../../images/design-photos/abide-overlay.png")} alt="" />
                         </div>
                         <div class="abide-fill-fifth-window ">
-                            <img src={require("../../../images/design-photos/abide-window.jpg")} alt="" />
+                            <img src={require("../../../images/design-photos/abide-window.png")} alt="" />
                         </div>
                     </div>
                 </div>

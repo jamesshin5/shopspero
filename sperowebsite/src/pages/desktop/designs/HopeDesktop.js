@@ -10,7 +10,7 @@ const HopeDesktop = () => {
                 </div> */}
                 <div className="smaller-container">
                     <div className="girl-fill-fifth leftmost">
-                        <img src={require("../../../images/design-photos/hope-longsleeve.jpg")} alt="" />
+                        <img src={require("../../../images/design-photos/hope-longsleeve.png")} alt="" />
                     </div>
                     {/* <div className='girl-right-container'>
                         <div className="girl-fill-fifth-right">

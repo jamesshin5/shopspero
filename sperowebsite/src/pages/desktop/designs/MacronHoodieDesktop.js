@@ -41,7 +41,7 @@ const MacronHoodieDesktop = () => {
                     </div> */}
                 </div>
                 <div className="macron-fill-fifth">
-                        <img src={require("../../../images/design-photos/macron-hoodie-guy.jpg")} alt="" />
+                        <img src={require("../../../images/design-photos/macron-hoodie-guy.png")} alt="" />
                 </div>
             </div>
         </div>
