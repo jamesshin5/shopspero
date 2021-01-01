@@ -12,11 +12,11 @@ const Navbar = props => {
         </div>
       <div className='navlinks'>
         <ul>
-          <li>
+          {/* <li>
             <Link to='/about'>
               <div className='navlink'>ABOUT</div>
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to='/team'>
               <div className='navlink'>OUR TEAM</div>

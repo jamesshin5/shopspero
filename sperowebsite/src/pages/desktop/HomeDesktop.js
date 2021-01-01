@@ -52,7 +52,7 @@ const HomePageDesktop = props => {
                         </button>
                         <div className='graphic-container'>
                             <Link to={'/design/'+designLinks[num]}>
-                                <CrossfadeImage src={current} id='bird-image' duration={2000} timingFunction={"ease-out"} /> 
+                                <CrossfadeImage src={current} duration={2000} timingFunction={"ease-out"} /> 
                             </Link>
                             <Link to='/about'>
                                 <div className="home-centered">SPERO</div>

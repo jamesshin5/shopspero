@@ -144,7 +144,7 @@ a {
 }
 
 #bird-image {
-  width: 100vw;
+  width: 20vw;
   transition: width 0.5s;
 }
 
