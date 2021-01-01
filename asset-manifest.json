@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/shopspero/static/css/main.665613f3.chunk.css",
-    "main.js": "/shopspero/static/js/main.304c350c.chunk.js",
-    "main.js.map": "/shopspero/static/js/main.304c350c.chunk.js.map",
+    "main.css": "/shopspero/static/css/main.14dd5e76.chunk.css",
+    "main.js": "/shopspero/static/js/main.cfdef0ca.chunk.js",
+    "main.js.map": "/shopspero/static/js/main.cfdef0ca.chunk.js.map",
     "runtime-main.js": "/shopspero/static/js/runtime-main.2e074193.js",
     "runtime-main.js.map": "/shopspero/static/js/runtime-main.2e074193.js.map",
-    "static/js/2.3cc08b00.chunk.js": "/shopspero/static/js/2.3cc08b00.chunk.js",
-    "static/js/2.3cc08b00.chunk.js.map": "/shopspero/static/js/2.3cc08b00.chunk.js.map",
+    "static/js/2.51481969.chunk.js": "/shopspero/static/js/2.51481969.chunk.js",
+    "static/js/2.51481969.chunk.js.map": "/shopspero/static/js/2.51481969.chunk.js.map",
     "index.html": "/shopspero/index.html",
-    "precache-manifest.b6bfd86163b5c62f640dcc29a04fad82.js": "/shopspero/precache-manifest.b6bfd86163b5c62f640dcc29a04fad82.js",
+    "precache-manifest.867f03d5b37ce6cf24a664242a6455f4.js": "/shopspero/precache-manifest.867f03d5b37ce6cf24a664242a6455f4.js",
     "service-worker.js": "/shopspero/service-worker.js",
-    "static/css/main.665613f3.chunk.css.map": "/shopspero/static/css/main.665613f3.chunk.css.map",
-    "static/js/2.3cc08b00.chunk.js.LICENSE.txt": "/shopspero/static/js/2.3cc08b00.chunk.js.LICENSE.txt",
+    "static/css/main.14dd5e76.chunk.css.map": "/shopspero/static/css/main.14dd5e76.chunk.css.map",
+    "static/js/2.51481969.chunk.js.LICENSE.txt": "/shopspero/static/js/2.51481969.chunk.js.LICENSE.txt",
     "static/media/abide-main-2.jpg": "/shopspero/static/media/abide-main-2.9004b15c.jpg",
     "static/media/abide-overlay.jpg": "/shopspero/static/media/abide-overlay.b1f49112.jpg",
     "static/media/abide-window.jpg": "/shopspero/static/media/abide-window.b5b559b5.jpg",
@@ -33,6 +33,8 @@
     "static/media/girl-hat-top.jpg": "/shopspero/static/media/girl-hat-top.e6582ad9.jpg",
     "static/media/home-image-0.png": "/shopspero/static/media/home-image-0.aefbd985.png",
     "static/media/home-image-1.png": "/shopspero/static/media/home-image-1.7b85ba59.png",
+    "static/media/home-image-2.png": "/shopspero/static/media/home-image-2.a2749077.png",
+    "static/media/home-image-3.png": "/shopspero/static/media/home-image-3.d5d8786a.png",
     "static/media/hope-longsleeve.jpg": "/shopspero/static/media/hope-longsleeve.55f607ed.jpg",
     "static/media/instagram_icon.png": "/shopspero/static/media/instagram_icon.6015841c.png",
     "static/media/jamesshin.png": "/shopspero/static/media/jamesshin.1c3165c0.png",
@@ -54,8 +56,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2e074193.js",
-    "static/js/2.3cc08b00.chunk.js",
-    "static/css/main.665613f3.chunk.css",
-    "static/js/main.304c350c.chunk.js"
+    "static/js/2.51481969.chunk.js",
+    "static/css/main.14dd5e76.chunk.css",
+    "static/js/main.cfdef0ca.chunk.js"
   ]
 }
