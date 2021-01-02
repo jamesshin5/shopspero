@@ -3,6 +3,7 @@ import { navigate } from "@reach/router"
 import Footer from '../../components/Footer';
 import '../../styles/desktop/HomeDesktop.css';
 import { Link } from 'react-router-dom';
+import Fade from 'react-reveal/Fade';
 
 import CrossfadeImage from 'react-crossfade-image'
 
@@ -50,21 +51,28 @@ const HomePageDesktop = props => {
             <div className='top-container'>
                 <div className='main-graphic'>
                     <div className='carousel-container'>
+                        <Fade bottom>
                         <button onClick={() => decreaseNum()} className="arrow-buttons">
                             <img src={require("../../images/left-arrow.png")} alt="left-arrow" className="arrow"/>
                         </button>
-                        <div className='graphic-container'>
-                            <Link to={'/design/'+designLinks[num]}>
-                                <CrossfadeImage src={current} duration={1500} timingFunction={"ease-out"} /> 
-                            </Link>
-                            <Link to='/about'>
-                                <div className="home-centered">SPERO</div>
-                            </Link>
-                        </div>
+                        </Fade>
+                        <Fade bottom>
+                            <div className='graphic-container'>
+                                <Link to={'/design/'+designLinks[num]}>
+                                    <CrossfadeImage src={current} duration={1500} timingFunction={"ease-out"} /> 
+                                </Link>
+                                <Link to='/about'>
+                                    <div className="home-centered">SPERO</div>
+                                </Link>
+                            </div>
+                        </Fade>
+                        <Fade bottom>
                         <button onClick={() => increaseNum()} className="arrow-buttons"> 
                             <img src={require("../../images/right-arrow.png")} alt="right-arrow" className="arrow"/>
                         </button>
+                        </Fade>
                     </div>
+                    <Fade bottom>
                     <div>
                         <Link to='/about'>
                             <h3 className='sub-text'>
@@ -72,12 +80,16 @@ const HomePageDesktop = props => {
                             </h3>
                         </Link>
                     </div>
+                    </Fade>
+                    <Fade bottom>
                     <div className='shop-btn'>
                             <a href='http://tinyurl.com/spero-etsy'>
                                 <h4 className='shop-text'>SHOP NOW</h4>
                             </a>
                     </div>
+                    </Fade>
                 </div>
+                
                 </div>
                 <Footer color='#fff1e6'/>
             </div>
