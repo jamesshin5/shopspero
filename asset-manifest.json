@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/shopspero/static/css/main.14dd5e76.chunk.css",
-    "main.js": "/shopspero/static/js/main.e0f180df.chunk.js",
-    "main.js.map": "/shopspero/static/js/main.e0f180df.chunk.js.map",
+    "main.js": "/shopspero/static/js/main.d8c690f3.chunk.js",
+    "main.js.map": "/shopspero/static/js/main.d8c690f3.chunk.js.map",
     "runtime-main.js": "/shopspero/static/js/runtime-main.2e074193.js",
     "runtime-main.js.map": "/shopspero/static/js/runtime-main.2e074193.js.map",
     "static/js/2.7752b238.chunk.js": "/shopspero/static/js/2.7752b238.chunk.js",
     "static/js/2.7752b238.chunk.js.map": "/shopspero/static/js/2.7752b238.chunk.js.map",
     "index.html": "/shopspero/index.html",
-    "precache-manifest.5b108c26cc8fdbcdd4e5e70839173b1f.js": "/shopspero/precache-manifest.5b108c26cc8fdbcdd4e5e70839173b1f.js",
+    "precache-manifest.0688ad647c19fa4815dde4892972e9cd.js": "/shopspero/precache-manifest.0688ad647c19fa4815dde4892972e9cd.js",
     "service-worker.js": "/shopspero/service-worker.js",
     "static/css/main.14dd5e76.chunk.css.map": "/shopspero/static/css/main.14dd5e76.chunk.css.map",
     "static/js/2.7752b238.chunk.js.LICENSE.txt": "/shopspero/static/js/2.7752b238.chunk.js.LICENSE.txt",
     "static/media/abide-main-2.jpg": "/shopspero/static/media/abide-main-2.51994dab.jpg",
-    "static/media/abide-overlay.jpg": "/shopspero/static/media/abide-overlay.c9f1493c.jpg",
+    "static/media/abide-overlay.jpg": "/shopspero/static/media/abide-overlay.384d430b.jpg",
     "static/media/abide-window.jpg": "/shopspero/static/media/abide-window.a2848b7e.jpg",
     "static/media/about-logo.png": "/shopspero/static/media/about-logo.f9a0b5dc.png",
     "static/media/andrewcheng-min.jpg": "/shopspero/static/media/andrewcheng-min.b0fb16e1.jpg",
@@ -21,7 +21,7 @@
     "static/media/bay-area-main.jpg": "/shopspero/static/media/bay-area-main.9bb43571.jpg",
     "static/media/bear-graphic.jpg": "/shopspero/static/media/bear-graphic.9b66d114.jpg",
     "static/media/bear-right.jpg": "/shopspero/static/media/bear-right.1b0a4902.jpg",
-    "static/media/berkeley-horizontal.jpg": "/shopspero/static/media/berkeley-horizontal.9cfb42cf.jpg",
+    "static/media/berkeley-horizontal.jpg": "/shopspero/static/media/berkeley-horizontal.a27eb15a.jpg",
     "static/media/berkeley-vertical.jpg": "/shopspero/static/media/berkeley-vertical.354d70ec.jpg",
     "static/media/blessed-horizontal.jpg": "/shopspero/static/media/blessed-horizontal.71679757.jpg",
     "static/media/blessed-main.jpg": "/shopspero/static/media/blessed-main.6bad99e6.jpg",
@@ -45,18 +45,18 @@
     "static/media/macron-hoodie-guy.jpg": "/shopspero/static/media/macron-hoodie-guy.bc2ba624.jpg",
     "static/media/matthewflores-min.jpg": "/shopspero/static/media/matthewflores-min.a2313237.jpg",
     "static/media/mountain-graphic.jpg": "/shopspero/static/media/mountain-graphic.b33157b7.jpg",
-    "static/media/mountain-mover-right.jpg": "/shopspero/static/media/mountain-mover-right.58b63f3d.jpg",
+    "static/media/mountain-mover-right.jpg": "/shopspero/static/media/mountain-mover-right.940cb184.jpg",
     "static/media/rachelsoo-min.jpg": "/shopspero/static/media/rachelsoo-min.6d4e71af.jpg",
     "static/media/rebeccasoo-min.jpg": "/shopspero/static/media/rebeccasoo-min.375ef8eb.jpg",
     "static/media/speroicon.png": "/shopspero/static/media/speroicon.9b0ad08b.png",
-    "static/media/three-stickers-drawing.jpg": "/shopspero/static/media/three-stickers-drawing.5a1a5729.jpg",
+    "static/media/three-stickers-drawing.jpg": "/shopspero/static/media/three-stickers-drawing.4ff367fa.jpg",
     "static/media/walk-on-water-main.jpg": "/shopspero/static/media/walk-on-water-main.876e16a6.jpg",
-    "static/media/water-left.jpg": "/shopspero/static/media/water-left.4386a66c.jpg"
+    "static/media/water-left.jpg": "/shopspero/static/media/water-left.76e18e60.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.2e074193.js",
     "static/js/2.7752b238.chunk.js",
     "static/css/main.14dd5e76.chunk.css",
-    "static/js/main.e0f180df.chunk.js"
+    "static/js/main.d8c690f3.chunk.js"
   ]
 }

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "19bc2911bfebcddd04d68c9afeb70b48",
+    "revision": "59851fece82e80e5546298805d6b54e6",
     "url": "/shopspero/index.html"
   },
   {
-    "revision": "a92b02f6b6c578d4ffd5",
+    "revision": "123db3af765b7b2309c9",
     "url": "/shopspero/static/css/main.14dd5e76.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopspero/static/js/2.7752b238.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a92b02f6b6c578d4ffd5",
-    "url": "/shopspero/static/js/main.e0f180df.chunk.js"
+    "revision": "123db3af765b7b2309c9",
+    "url": "/shopspero/static/js/main.d8c690f3.chunk.js"
   },
   {
     "revision": "10c8402f2cbf3a30478d",
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopspero/static/media/abide-main-2.51994dab.jpg"
   },
   {
-    "revision": "c9f1493c7410ec8b9f81e3889d1f03c1",
-    "url": "/shopspero/static/media/abide-overlay.c9f1493c.jpg"
+    "revision": "384d430b361d99d2294bab2dc68c30ea",
+    "url": "/shopspero/static/media/abide-overlay.384d430b.jpg"
   },
   {
     "revision": "a2848b7ee97cc622348c48f0db270db1",
@@ -60,8 +60,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopspero/static/media/bear-right.1b0a4902.jpg"
   },
   {
-    "revision": "9cfb42cf45725a30023d661ea08a5174",
-    "url": "/shopspero/static/media/berkeley-horizontal.9cfb42cf.jpg"
+    "revision": "a27eb15a26fa35e67a51e8d86cf9e92d",
+    "url": "/shopspero/static/media/berkeley-horizontal.a27eb15a.jpg"
   },
   {
     "revision": "354d70ec9a7604189bb6d7ed2bfe1e60",
@@ -156,8 +156,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopspero/static/media/mountain-graphic.b33157b7.jpg"
   },
   {
-    "revision": "58b63f3d3a3447933ba0cf4fdea8e741",
-    "url": "/shopspero/static/media/mountain-mover-right.58b63f3d.jpg"
+    "revision": "940cb184f40f4618f2ae1377e44d23da",
+    "url": "/shopspero/static/media/mountain-mover-right.940cb184.jpg"
   },
   {
     "revision": "6d4e71afa9a3981f0ef2f65927eeb201",
@@ -172,15 +172,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopspero/static/media/speroicon.9b0ad08b.png"
   },
   {
-    "revision": "5a1a5729bd379bb4100bc8954ed1a0f0",
-    "url": "/shopspero/static/media/three-stickers-drawing.5a1a5729.jpg"
+    "revision": "4ff367faeda4c49b9a96a68fc7f66eb9",
+    "url": "/shopspero/static/media/three-stickers-drawing.4ff367fa.jpg"
   },
   {
     "revision": "876e16a6f2be882ed331f0fdd6bd3093",
     "url": "/shopspero/static/media/walk-on-water-main.876e16a6.jpg"
   },
   {
-    "revision": "4386a66cba97eadf3f48891d066cc3e5",
-    "url": "/shopspero/static/media/water-left.4386a66c.jpg"
+    "revision": "76e18e608d98ead1ea6bf8628ebdd5ad",
+    "url": "/shopspero/static/media/water-left.76e18e60.jpg"
   }
 ]);
