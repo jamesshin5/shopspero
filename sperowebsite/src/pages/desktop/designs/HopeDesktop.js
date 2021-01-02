@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../../styles/desktop/IAmThatGirlHatDesktop.css';
+import Fade from 'react-reveal/Fade';
 
 const HopeDesktop = () => {
     return (
@@ -8,6 +9,7 @@ const HopeDesktop = () => {
                 {/* <div class="abide-fill">
                     <img src={require("../../../images/design-photos/abide-main-2.jpg")} alt="main-sticker-photo" />
                 </div> */}
+                <Fade bottom>
                 <div className="smaller-container">
                     <div className="girl-fill-fifth leftmost">
                         <img src={require("../../../images/design-photos/hope-longsleeve.png")} alt="" />
@@ -21,9 +23,12 @@ const HopeDesktop = () => {
                         </div>
                     </div> */}
                 </div>
+                </Fade>
+                
             </div>
             <div className="right-display">
                 <div className="text-box">
+                    <Fade bottom>
                     <div className="hope-title"> <b>HOPE</b><br/>LONG SLEEVE</div>
                     <div className="girl-bible">
                     For to this end we toil and strive, because we have our hope set on the living God, who is the Savior of all people, especially of those who believe.
@@ -39,6 +44,8 @@ const HopeDesktop = () => {
                                 </a>
                         </div>
                     </div> */}
+                    </Fade>
+                    
                     
                 </div>
             </div>

@@ -1,10 +1,12 @@
 import React from 'react';
 import '../../../styles/desktop/IAmThatGirlHatDesktop.css';
+import Fade from 'react-reveal/Fade';
 
 const BlessedToBlessDesktop = () => {
     return (
         <div className='sticker-container'>
             <div className="left-display">
+                <Fade bottom>
                 {/* <div class="abide-fill">
                     <img src={require("../../../images/design-photos/abide-main-2.jpg")} alt="main-sticker-photo" />
                 </div> */}
@@ -21,9 +23,11 @@ const BlessedToBlessDesktop = () => {
                         </div>
                     </div> */}
                 </div>
+                </Fade>
             </div>
             <div className="right-display">
                 <div className="macron-text-box">
+                    <Fade bottom>
                     <div className="bless-title"> <b>BERKELEY</b><br/> HOODIE </div>
                     <div className="bless-bible">
                     You are the light of the world. A city set on a hill cannot be hidden.
@@ -39,10 +43,13 @@ const BlessedToBlessDesktop = () => {
                                 </a>
                         </div>
                     </div> */}
+                    </Fade>
                 </div>
+                <Fade bottom>
                 <div className="blessed-horizontal">
                         <img src={require("../../../images/design-photos/blessed-horizontal.png")} alt="" />
                 </div>
+                </Fade>
             </div>
         </div>
     );

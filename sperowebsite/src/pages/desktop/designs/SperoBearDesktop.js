@@ -25,8 +25,7 @@ const SperoBearPage = () => {
                 <div className="text-box">
                     <Fade bottom>
                         <div className="sticker-title">SPERO <br/>BEAR (sticker)</div>
-                    </Fade>
-                    <Fade bottom>
+
                         <div className="sticker-bible">
                         <b>78</b> because of the tender mercy of our God,<br/>by which the rising sun will come to us from heaven<br/><br/>
                         <b>79</b> to shine on those living in darkness
@@ -35,14 +34,12 @@ const SperoBearPage = () => {
 
                         <br/><br/><b>Luke 1:78-79</b>
                         </div>
-                    </Fade>
-                    <Fade bottom>
+
                         <div className="sticker-description">
                         Our Redeemed Bear sticker was inspired by Luke 1:78. We hope that, despite its seemingly simple design, this sticker will bridge connections between both familiar and unfamiliar faces, as well as between you and your faith! 
                         Created with the intention of sharing God’s saving grace, we hope that this sticker will help to guide you into a path of peace. 
                         </div>
-                    </Fade>
-                    <Fade bottom>
+
                         <div className="button-format">
                             <div className='shop-btn-stickerpage'>
                                     <a href='http://tinyurl.com/spero-etsy'>

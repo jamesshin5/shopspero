@@ -1,9 +1,11 @@
 import React from 'react';
 import '../../../styles/desktop/IAmThatGirlHatDesktop.css';
+import Fade from 'react-reveal/Fade';
 
 const IAmThatGirlHatDesktop = () => {
     return (
         <div className='sticker-container'>
+            <Fade bottom>
             <div className="left-display">
                 {/* <div class="abide-fill">
                     <img src={require("../../../images/design-photos/abide-main-2.jpg")} alt="main-sticker-photo" />
@@ -22,8 +24,11 @@ const IAmThatGirlHatDesktop = () => {
                     </div>
                 </div>
             </div>
+            </Fade>
+            
             <div className="right-display">
                 <div className="text-box">
+                    <Fade bottom>
                     <div className="girl-title">I AM THAT <br/><b>GIRL</b></div>
                     {/* <div className="girl-bible">
                     He who dwells in the shelter of the Most High will abide in the shadow of the Almighty. <br></br>
@@ -40,6 +45,8 @@ const IAmThatGirlHatDesktop = () => {
                                 </a>
                         </div>
                     </div> */}
+                    </Fade>
+                    
                     
                 </div>
             </div>

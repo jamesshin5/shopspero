@@ -1,13 +1,16 @@
 import React from 'react';
 import '../../../styles/desktop/AbideHoodieDesktop.css';
+import Fade from 'react-reveal/Fade';
 
 const AbideHoodieDesktop = () => {
     return (
         <div className='sticker-container'>
+            <Fade bottom>
             <div className="left-display">
                 {/* <div class="abide-fill">
                     <img src={require("../../../images/design-photos/abide-main-2.jpg")} alt="main-sticker-photo" />
                 </div> */}
+                <Fade bottom></Fade>
                 <div className="smaller-container">
                     <div class="abide-fill-fifth leftmost">
                         <img src={require("../../../images/design-photos/abide-main-2.png")} alt="" />
@@ -22,9 +25,12 @@ const AbideHoodieDesktop = () => {
                     </div>
                 </div>
             </div>
+            </Fade>
+            
             <div className="right-display">
                 <div className="text-box">
-                    <div className="abide-title">ABIDE <br/>HOODIE</div>
+                <Fade bottom>
+                <div className="abide-title">ABIDE <br/>HOODIE</div>
                     <div className="abide-bible">
                     He who dwells in the shelter of the Most High will abide in the shadow of the Almighty. <br></br>
                     I will say to the Lord, "My refuge and my fortress, my God, in whom I trust.”
@@ -40,6 +46,8 @@ const AbideHoodieDesktop = () => {
                                 </a>
                         </div>
                     </div> */}
+                </Fade>
+                    
                     
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../../styles/desktop/IAmThatGirlHatDesktop.css';
+import Fade from 'react-reveal/Fade';
 
 const BerkeleyHoodieDesktop = () => {
     return (
@@ -8,6 +9,7 @@ const BerkeleyHoodieDesktop = () => {
                 {/* <div class="abide-fill">
                     <img src={require("../../../images/design-photos/abide-main-2.jpg")} alt="main-sticker-photo" />
                 </div> */}
+                <Fade bottom>
                 <div className="smaller-container">
                     <div className="girl-fill-fifth leftmost">
                         <img src={require("../../../images/design-photos/berkeley-vertical.png")} alt="" />
@@ -21,9 +23,12 @@ const BerkeleyHoodieDesktop = () => {
                         </div>
                     </div> */}
                 </div>
+                </Fade>
+
             </div>
             <div className="right-display">
                 <div className="macron-text-box">
+                    <Fade bottom>
                     <div className="bless-title"> <b>BLESSED TO BLESS</b><br/> CREWNECK/TEE </div>
                     <div className="bless-bible">
                     For even the Son of Man came not to be served but to serve, and to give his life as a ransom for many.
@@ -39,10 +44,13 @@ const BerkeleyHoodieDesktop = () => {
                                 </a>
                         </div>
                     </div> */}
+                    </Fade>
                 </div>
+                <Fade bottom>
                 <div className="blessed-horizontal">
                         <img src={require("../../../images/design-photos/berkeley-horizontal.png")} alt="" />
                 </div>
+                </Fade>
             </div>
         </div>
     );

@@ -1,10 +1,12 @@
 import React from 'react';
 import '../../../styles/desktop/IAmThatGirlHatDesktop.css';
+import Fade from 'react-reveal/Fade';
 
 const BayAreaDesktop = () => {
     return (
         <div className='sticker-container'>
             <div className="left-display">
+                <Fade bottom>
                 {/* <div class="abide-fill">
                     <img src={require("../../../images/design-photos/abide-main-2.jpg")} alt="main-sticker-photo" />
                 </div> */}
@@ -21,9 +23,11 @@ const BayAreaDesktop = () => {
                         </div>
                     </div> */}
                 </div>
+                </Fade>
             </div>
             <div className="right-display">
                 <div className="macron-text-box">
+                    <Fade bottom>
                     <div className="bay-area-title"> <b>BAY AREA</b> HOODIE</div>
                     {/* <div className="macron-bible">
                     Are not two sparrows sold for a penny? And not one of them will fall to the ground apart from your Father. But even the hairs of your head are all numbered. Fear not, therefore; you are of more value than many sparrows.
@@ -39,10 +43,13 @@ const BayAreaDesktop = () => {
                                 </a>
                         </div>
                     </div> */}
+                    </Fade>
                 </div>
+                <Fade bottom>
                 <div className="bay-area-fill-fifth">
                         <img src={require("../../../images/design-photos/bay-area-horizontal.png")} alt="" />
                 </div>
+                </Fade>
             </div>
         </div>
     );
