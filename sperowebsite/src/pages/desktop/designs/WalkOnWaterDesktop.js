@@ -8,14 +8,14 @@ const WalkOnWaterPage = () => {
             <Fade bottom>
                 <div className="left-display">
                     <div class="fill">
-                        <img src={require("../../../images/design-photos/bottle-graphic.png")} alt="main-sticker-photo" />
+                        <img src={require("../../../images/design-photos/bottle-graphic.jpg")} alt="main-sticker-photo" />
                     </div>
                     <div className="smaller-container">
                         <div class="fill-fifth leftmost">
-                            <img src={require("../../../images/design-photos/water-left.png")} alt="" />
+                            <img src={require("../../../images/design-photos/water-left.jpg")} alt="" />
                         </div>
                         <div class="fill-fifth">
-                            <img src={require("../../../images/design-photos/walk-on-water-main.png")} alt="" />
+                            <img src={require("../../../images/design-photos/walk-on-water-main.jpg")} alt="" />
                         </div>
                     </div>
                 </div>

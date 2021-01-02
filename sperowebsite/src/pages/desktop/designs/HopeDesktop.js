@@ -12,7 +12,7 @@ const HopeDesktop = () => {
                 <Fade bottom>
                 <div className="smaller-container">
                     <div className="girl-fill-fifth leftmost">
-                        <img src={require("../../../images/design-photos/hope-longsleeve.png")} alt="" />
+                        <img src={require("../../../images/design-photos/hope-longsleeve.jpg")} alt="" />
                     </div>
                     {/* <div className='girl-right-container'>
                         <div className="girl-fill-fifth-right">

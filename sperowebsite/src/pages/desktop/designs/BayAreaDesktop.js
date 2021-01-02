@@ -12,7 +12,7 @@ const BayAreaDesktop = () => {
                 </div> */}
                 <div className="smaller-container">
                     <div className="girl-fill-fifth leftmost">
-                        <img src={require("../../../images/design-photos/bay-area-main.png")} alt="" />
+                        <img src={require("../../../images/design-photos/bay-area-main.jpg")} alt="" />
                     </div>
                     {/* <div className='girl-right-container'>
                         <div className="girl-fill-fifth-right">
@@ -47,7 +47,7 @@ const BayAreaDesktop = () => {
                 </div>
                 <Fade bottom>
                 <div className="bay-area-fill-fifth">
-                        <img src={require("../../../images/design-photos/bay-area-horizontal.png")} alt="" />
+                        <img src={require("../../../images/design-photos/bay-area-horizontal.jpg")} alt="" />
                 </div>
                 </Fade>
             </div>

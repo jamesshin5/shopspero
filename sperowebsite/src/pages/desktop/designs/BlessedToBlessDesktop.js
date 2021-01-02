@@ -12,7 +12,7 @@ const BlessedToBlessDesktop = () => {
                 </div> */}
                 <div className="smaller-container">
                     <div className="girl-fill-fifth leftmost">
-                        <img src={require("../../../images/design-photos/blessed-main.png")} alt="" />
+                        <img src={require("../../../images/design-photos/blessed-main.jpg")} alt="" />
                     </div>
                     {/* <div className='girl-right-container'>
                         <div className="girl-fill-fifth-right">
@@ -47,7 +47,7 @@ const BlessedToBlessDesktop = () => {
                 </div>
                 <Fade bottom>
                 <div className="blessed-horizontal">
-                        <img src={require("../../../images/design-photos/blessed-horizontal.png")} alt="" />
+                        <img src={require("../../../images/design-photos/blessed-horizontal.jpg")} alt="" />
                 </div>
                 </Fade>
             </div>

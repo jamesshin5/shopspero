@@ -8,14 +8,14 @@ const SperoBearPage = () => {
             <Fade bottom>
             <div className="left-display">
                 <div class="fill">
-                    <img src={require("../../../images/design-photos/bear-graphic.png")} alt="main-sticker-photo" />
+                    <img src={require("../../../images/design-photos/bear-graphic.jpg")} alt="main-sticker-photo" />
                 </div>
                 <div className="smaller-container">
                     <div class="fill-fifth leftmost">
-                        <img src={require("../../../images/design-photos/three-stickers-drawing.png")} alt="" />
+                        <img src={require("../../../images/design-photos/three-stickers-drawing.jpg")} alt="" />
                     </div>
                     <div class="fill-fifth">
-                        <img src={require("../../../images/design-photos/bear-right.png")} alt="" />
+                        <img src={require("../../../images/design-photos/bear-right.jpg")} alt="" />
                     </div>
                 </div>
             </div>

@@ -12,7 +12,7 @@ const BerkeleyHoodieDesktop = () => {
                 <Fade bottom>
                 <div className="smaller-container">
                     <div className="girl-fill-fifth leftmost">
-                        <img src={require("../../../images/design-photos/berkeley-vertical.png")} alt="" />
+                        <img src={require("../../../images/design-photos/berkeley-vertical.jpg")} alt="" />
                     </div>
                     {/* <div className='girl-right-container'>
                         <div className="girl-fill-fifth-right">
@@ -48,7 +48,7 @@ const BerkeleyHoodieDesktop = () => {
                 </div>
                 <Fade bottom>
                 <div className="blessed-horizontal">
-                        <img src={require("../../../images/design-photos/berkeley-horizontal.png")} alt="" />
+                        <img src={require("../../../images/design-photos/berkeley-horizontal.jpg")} alt="" />
                 </div>
                 </Fade>
             </div>

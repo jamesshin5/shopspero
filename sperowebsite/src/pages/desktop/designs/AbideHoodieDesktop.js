@@ -13,14 +13,14 @@ const AbideHoodieDesktop = () => {
                 <Fade bottom></Fade>
                 <div className="smaller-container">
                     <div class="abide-fill-fifth leftmost">
-                        <img src={require("../../../images/design-photos/abide-main-2.png")} alt="" />
+                        <img src={require("../../../images/design-photos/abide-main-2.jpg")} alt="" />
                     </div>
                     <div className='abide-right-container'>
                         <div class="abide-fill-fifth-right">
-                            <img src={require("../../../images/design-photos/abide-overlay.png")} alt="" />
+                            <img src={require("../../../images/design-photos/abide-overlay.jpg")} alt="" />
                         </div>
                         <div class="abide-fill-fifth-window ">
-                            <img src={require("../../../images/design-photos/abide-window.png")} alt="" />
+                            <img src={require("../../../images/design-photos/abide-window.jpg")} alt="" />
                         </div>
                     </div>
                 </div>

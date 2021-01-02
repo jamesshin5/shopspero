@@ -12,7 +12,7 @@ const MacronHoodieDesktop = () => {
                     </div> */}
                     <div className="smaller-container">
                         <div className="girl-fill-fifth leftmost">
-                            <img src={require("../../../images/design-photos/macron-hoodie-girl.png")} alt="" />
+                            <img src={require("../../../images/design-photos/macron-hoodie-girl.jpg")} alt="" />
                         </div>
                         {/* <div className='girl-right-container'>
                             <div className="girl-fill-fifth-right">
@@ -48,7 +48,7 @@ const MacronHoodieDesktop = () => {
                 </div>
                 <Fade bottom>
                 <div className="macron-fill-fifth">
-                        <img src={require("../../../images/design-photos/macron-hoodie-guy.png")} alt="" />
+                        <img src={require("../../../images/design-photos/macron-hoodie-guy.jpg")} alt="" />
                 </div>
                 </Fade>
             </div>

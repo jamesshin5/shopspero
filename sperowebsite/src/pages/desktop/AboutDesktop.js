@@ -28,7 +28,7 @@ class About extends Component {
               Our vision is inspired by Matthew 10:29-31, where something as insignificant as a sparrow, will be remembered and cared for.
             </div>
             <div className="ab-colored-bar"></div>
-            <img src={require("../../images/kinfolk-abide.jpg")} alt='' className="ab-image" />
+            <img src={require("../../images/design-photos/abide-overlay.jpg")} alt='' className="ab-image" />
             <div className="ab-explanation-2">
               His eye is on the sparrow and He watches over us. And through this we have identity and know our worth through Him.
             </div>
