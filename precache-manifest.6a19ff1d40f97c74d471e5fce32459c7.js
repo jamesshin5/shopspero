@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b21d795a700ee0d95bcf7a09d19db815",
+    "revision": "0e1101fba9c16f35cf6e2c6cbf3a268a",
     "url": "/shopspero/index.html"
   },
   {
-    "revision": "73ca39590b93fa314cd0",
+    "revision": "c21be1a52311047e1313",
     "url": "/shopspero/static/css/main.14dd5e76.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopspero/static/js/2.f452529c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "73ca39590b93fa314cd0",
-    "url": "/shopspero/static/js/main.c3fb7bd4.chunk.js"
+    "revision": "c21be1a52311047e1313",
+    "url": "/shopspero/static/js/main.36758717.chunk.js"
   },
   {
     "revision": "10c8402f2cbf3a30478d",
