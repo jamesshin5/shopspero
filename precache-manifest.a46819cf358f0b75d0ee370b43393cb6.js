@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0e1101fba9c16f35cf6e2c6cbf3a268a",
+    "revision": "c3c4d0119fb0ab9bfb8403f61e1b703c",
     "url": "/shopspero/index.html"
   },
   {
-    "revision": "c21be1a52311047e1313",
+    "revision": "53627c4c10540b22caf9",
     "url": "/shopspero/static/css/main.14dd5e76.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopspero/static/js/2.f452529c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c21be1a52311047e1313",
-    "url": "/shopspero/static/js/main.36758717.chunk.js"
+    "revision": "53627c4c10540b22caf9",
+    "url": "/shopspero/static/js/main.15844998.chunk.js"
   },
   {
     "revision": "10c8402f2cbf3a30478d",
@@ -40,8 +40,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopspero/static/media/about-logo.f9a0b5dc.png"
   },
   {
-    "revision": "3a7512c07f99f8d5ea2fb019575ae3d8",
-    "url": "/shopspero/static/media/andrewcheng-min.3a7512c0.png"
+    "revision": "b0fb16e159e651967f41e0baf4a28e15",
+    "url": "/shopspero/static/media/andrewcheng-min.b0fb16e1.jpg"
   },
   {
     "revision": "d86a97e61cd6c0de8378aa0e7d70f852",
@@ -80,12 +80,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopspero/static/media/bottle-graphic.06a53484.png"
   },
   {
-    "revision": "4fe3853bc7e1906c9e1755742adc02fe",
-    "url": "/shopspero/static/media/dorcascheung-min.4fe3853b.png"
+    "revision": "53808e7ecd0c334245360e58ae576a9a",
+    "url": "/shopspero/static/media/dorcascheung-min.53808e7e.jpg"
   },
   {
-    "revision": "39afe60a3a6becf281f6cfd6b888e5ae",
-    "url": "/shopspero/static/media/estheryou-min.39afe60a.png"
+    "revision": "22aa78cd22dc192416ac972068cbaacb",
+    "url": "/shopspero/static/media/estheryou-min.22aa78cd.jpg"
   },
   {
     "revision": "7f99a128e3599439176316ac6626a2a6",
@@ -100,8 +100,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopspero/static/media/girl-hat-top.d576a37e.png"
   },
   {
-    "revision": "2994677ba92550e4781fe95b2c3e8114",
-    "url": "/shopspero/static/media/home-image-0.2994677b.png"
+    "revision": "11022387361928ca7d02c464ad4320a5",
+    "url": "/shopspero/static/media/home-image-0.11022387.png"
   },
   {
     "revision": "ac00a532528a7e14bb8fd6ec0898a88c",
@@ -124,20 +124,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopspero/static/media/instagram_icon.6015841c.png"
   },
   {
-    "revision": "96b7984091d5daafcbc73f02a0b46001",
-    "url": "/shopspero/static/media/jamesshin-min.96b79840.png"
+    "revision": "ccdf45c565961dc33dbf0839faf6a203",
+    "url": "/shopspero/static/media/jamesshin-min.ccdf45c5.jpg"
   },
   {
-    "revision": "2cd1d24b60b7ba64d35fd10c2ea6b963",
-    "url": "/shopspero/static/media/jasminechen-min.2cd1d24b.png"
+    "revision": "06e932a95e300d0856619784c6959c1a",
+    "url": "/shopspero/static/media/jasminechen-min.06e932a9.jpg"
   },
   {
-    "revision": "6c6a3257bb37ec1dccafa80b6c6b0975",
-    "url": "/shopspero/static/media/jenny-min.6c6a3257.png"
+    "revision": "f4b379768976d23e08bd7398fde24674",
+    "url": "/shopspero/static/media/jenny-min.f4b37976.jpg"
   },
   {
-    "revision": "9ff3a7dfab5fd468ac85cbc30fb3aa5b",
-    "url": "/shopspero/static/media/justinpark-min.9ff3a7df.png"
+    "revision": "c2ddb698be9aebdef4431bae15a63609",
+    "url": "/shopspero/static/media/justinpark-min.c2ddb698.jpg"
   },
   {
     "revision": "b1f49112547db0e65926357aceadfa4a",
@@ -152,8 +152,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopspero/static/media/macron-hoodie-guy.950e86b3.png"
   },
   {
-    "revision": "68ca45e0383a1148d15c3785dce08acf",
-    "url": "/shopspero/static/media/matthewflores-min.68ca45e0.png"
+    "revision": "a2313237a05b3340bea8389d1cf561b2",
+    "url": "/shopspero/static/media/matthewflores-min.a2313237.jpg"
   },
   {
     "revision": "6f4a638a378cd81000aa1927421f6dfd",
@@ -164,12 +164,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopspero/static/media/mountain-mover-right.70b0807c.png"
   },
   {
-    "revision": "3ee7d79f9cdfc3dba154e1dcf9be5408",
-    "url": "/shopspero/static/media/rachelsoo-min.3ee7d79f.png"
+    "revision": "6d4e71afa9a3981f0ef2f65927eeb201",
+    "url": "/shopspero/static/media/rachelsoo-min.6d4e71af.jpg"
   },
   {
-    "revision": "73fe5c2c66e1ae89465b24f05a19c27b",
-    "url": "/shopspero/static/media/rebeccasoo-min.73fe5c2c.png"
+    "revision": "375ef8eba9016b3b6c5019f591445d3d",
+    "url": "/shopspero/static/media/rebeccasoo-min.375ef8eb.jpg"
   },
   {
     "revision": "9b0ad08b10c8eea8f4437f999c1679b1",
