@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/shopspero/static/css/main.14dd5e76.chunk.css",
-    "main.js": "/shopspero/static/js/main.2f6a37ae.chunk.js",
-    "main.js.map": "/shopspero/static/js/main.2f6a37ae.chunk.js.map",
+    "main.js": "/shopspero/static/js/main.e0f180df.chunk.js",
+    "main.js.map": "/shopspero/static/js/main.e0f180df.chunk.js.map",
     "runtime-main.js": "/shopspero/static/js/runtime-main.2e074193.js",
     "runtime-main.js.map": "/shopspero/static/js/runtime-main.2e074193.js.map",
     "static/js/2.7752b238.chunk.js": "/shopspero/static/js/2.7752b238.chunk.js",
     "static/js/2.7752b238.chunk.js.map": "/shopspero/static/js/2.7752b238.chunk.js.map",
     "index.html": "/shopspero/index.html",
-    "precache-manifest.59278f95a9c86e05b0c53472e6b0d2b8.js": "/shopspero/precache-manifest.59278f95a9c86e05b0c53472e6b0d2b8.js",
+    "precache-manifest.5b108c26cc8fdbcdd4e5e70839173b1f.js": "/shopspero/precache-manifest.5b108c26cc8fdbcdd4e5e70839173b1f.js",
     "service-worker.js": "/shopspero/service-worker.js",
     "static/css/main.14dd5e76.chunk.css.map": "/shopspero/static/css/main.14dd5e76.chunk.css.map",
     "static/js/2.7752b238.chunk.js.LICENSE.txt": "/shopspero/static/js/2.7752b238.chunk.js.LICENSE.txt",
-    "static/media/abide-main-2.jpg": "/shopspero/static/media/abide-main-2.8f94558e.jpg",
+    "static/media/abide-main-2.jpg": "/shopspero/static/media/abide-main-2.51994dab.jpg",
     "static/media/abide-overlay.jpg": "/shopspero/static/media/abide-overlay.c9f1493c.jpg",
-    "static/media/abide-window.jpg": "/shopspero/static/media/abide-window.3bcb5d30.jpg",
+    "static/media/abide-window.jpg": "/shopspero/static/media/abide-window.a2848b7e.jpg",
     "static/media/about-logo.png": "/shopspero/static/media/about-logo.f9a0b5dc.png",
     "static/media/andrewcheng-min.jpg": "/shopspero/static/media/andrewcheng-min.b0fb16e1.jpg",
-    "static/media/bay-area-horizontal.jpg": "/shopspero/static/media/bay-area-horizontal.31aa4dcc.jpg",
+    "static/media/bay-area-horizontal.jpg": "/shopspero/static/media/bay-area-horizontal.59102794.jpg",
     "static/media/bay-area-main.jpg": "/shopspero/static/media/bay-area-main.9bb43571.jpg",
     "static/media/bear-graphic.jpg": "/shopspero/static/media/bear-graphic.9b66d114.jpg",
     "static/media/bear-right.jpg": "/shopspero/static/media/bear-right.1b0a4902.jpg",
@@ -49,7 +49,7 @@
     "static/media/rachelsoo-min.jpg": "/shopspero/static/media/rachelsoo-min.6d4e71af.jpg",
     "static/media/rebeccasoo-min.jpg": "/shopspero/static/media/rebeccasoo-min.375ef8eb.jpg",
     "static/media/speroicon.png": "/shopspero/static/media/speroicon.9b0ad08b.png",
-    "static/media/three-stickers-drawing.jpg": "/shopspero/static/media/three-stickers-drawing.35d0ead9.jpg",
+    "static/media/three-stickers-drawing.jpg": "/shopspero/static/media/three-stickers-drawing.5a1a5729.jpg",
     "static/media/walk-on-water-main.jpg": "/shopspero/static/media/walk-on-water-main.876e16a6.jpg",
     "static/media/water-left.jpg": "/shopspero/static/media/water-left.4386a66c.jpg"
   },
@@ -57,6 +57,6 @@
     "static/js/runtime-main.2e074193.js",
     "static/js/2.7752b238.chunk.js",
     "static/css/main.14dd5e76.chunk.css",
-    "static/js/main.2f6a37ae.chunk.js"
+    "static/js/main.e0f180df.chunk.js"
   ]
 }
