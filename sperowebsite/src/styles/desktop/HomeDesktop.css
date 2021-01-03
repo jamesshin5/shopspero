@@ -26,7 +26,6 @@ a {
   flex-direction: column;
   position: relative;
   overflow-x: hidden;
-  /* height: 100vw; */
 }
 
 .top-container {
@@ -34,7 +33,6 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* height: 50vw; */
 }
 
 .main-graphic {
@@ -139,7 +137,7 @@ a {
   letter-spacing: 0.15vw;
   padding: 0.15vw 1.2vw;
   text-align: center;
-  margin-bottom: 5vw;
+  /* margin-bottom: 5vw; */
 }
 
 #bird-image {

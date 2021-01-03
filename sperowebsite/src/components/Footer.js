@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Footer.css';
+import Fade from 'react-reveal/Fade';
 
 const Footer = (props) => {
   const style = {
@@ -7,7 +8,8 @@ const Footer = (props) => {
   };
 
   return (
-    <div className='footer-container' style={style}>
+    <Fade bottom>
+<div className='footer-container' style={style}>
       {/* <div className='footer-blurb'>
         <h5>
           Every design is prayed upon, biblically inpsired, and personally
@@ -50,6 +52,7 @@ const Footer = (props) => {
         </div>
       </div>
     </div>
+    </Fade>
   );
 };
 

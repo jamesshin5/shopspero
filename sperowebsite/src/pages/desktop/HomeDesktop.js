@@ -89,10 +89,9 @@ const HomePageDesktop = props => {
                     </div>
                     </Fade>
                 </div>
-                
-                </div>
-                <Footer color='#fff1e6'/>
-            </div>
+             </div>
+            <Footer color='#fff1e6'/>
+        </div>
   );
 };
 
