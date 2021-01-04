@@ -3,6 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     position: relative;
+    height: 5%;
   }
   
   .footer-blurb {

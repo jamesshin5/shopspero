@@ -16,6 +16,13 @@ import { useMediaQuery } from 'react-responsive';
 import MountainMoverPage from '../pages/desktop/MountainMoverPage';
 import WalkOnWaterPage from '../pages/desktop/WalkOnWaterPage';
 import SperoBearPage from '../pages/desktop/SperoBearPage';
+import AbideHoodiePage from '../pages/desktop/AbideHoodiePage';
+import IAmThatGirlHatPage from '../pages/desktop/IAmThatGirlHatPage';
+import HopePage from '../pages/desktop/HopePage';
+import MacronHoodiePage from '../pages/desktop/MacronHoodiePage';
+import BlessedToBlessPage from '../pages/desktop/BlessedToBlessPage';
+import BayAreaPage from '../pages/desktop/BayAreaPage';
+import BerkeleyHoodiePage from '../pages/desktop/BerkeleyHoodiePage';
 
 const Main = ({ location }) => {
   const isDesktopOrLaptop = useMediaQuery({
@@ -51,6 +58,13 @@ const Main = ({ location }) => {
               <Route path='/design/mountainmover' component={MountainMoverPage} />
               <Route path='/design/walkonwater' component={WalkOnWaterPage} />
               <Route path='/design/sperobear' component={SperoBearPage} />
+              <Route path='/design/abide' component={AbideHoodiePage} />
+              <Route path='/design/iamthatgirl' component={IAmThatGirlHatPage} />
+              <Route path='/design/hopelongsleeve' component={HopePage} />
+              <Route path='/design/macronhoodie' component={MacronHoodiePage} />
+              <Route path='/design/blessedtobless' component={BlessedToBlessPage} />
+              <Route path='/design/bayarea' component={BayAreaPage} />
+              <Route path='/design/berkeleyhoodie' component={BerkeleyHoodiePage} />
               {/* <Route path='/designs' component={AboutPage} />
               <Route path='/designs' component={TeamPage} />
               <Route path='/designs' component={DesignsPage} />
