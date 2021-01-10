@@ -3,20 +3,22 @@
     flex-direction: column;
     position: relative;
     overflow-x: hidden;
-    background-color: #fff2e6;
-    background-size : cover
-  }
+    background-size : cover;
+    background: url('../../images/home-bgimage-new.png') no-repeat center center fixed;
+    height: 100vh;
+    background-position: right -9vw;
+    background-size: cover;
+}
   
 .staff-card-container {
-    
     /* background-color: red; */
     position: relative;
     width: 100vw;
-    height:60vw;
+    height: 60vw;
     display: flex;
     flex-direction: column;
     justify-content:  center;
-    background-color: #fff2e6;
+    /* background-color: #fff2e6; */
     padding-bottom: 3vw;
     /* align-items: center; */
 }

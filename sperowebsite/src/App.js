@@ -47,6 +47,7 @@ import picture34 from "./images/design-photos/mountain-mover-right.jpg";
 import picture35 from  "./images/design-photos/three-stickers-drawing.jpg";
 import picture36 from  "./images/design-photos/walk-on-water-main.jpg";
 import picture37 from "./images/design-photos/water-left.jpg";
+import picture38 from "./images/home-bgimage-new.png";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -93,6 +94,8 @@ function App() {
       picture35,
       picture36,
       picture37,
+
+      picture38,
   ];
     
   imgs.forEach((image) => {

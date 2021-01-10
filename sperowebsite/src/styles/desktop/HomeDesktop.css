@@ -26,13 +26,17 @@ a {
   flex-direction: column;
   position: relative;
   overflow-x: hidden;
+  background: url('../../images/home-bgimage-new.png') no-repeat center center fixed;
+  height: 100vh;
+  background-position: right -9vw;
+  /* background-size: cover; */
 }
 
 .top-container {
-  background-color: #fff2e6;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-bottom: 1.5vw;
 }
 
 .main-graphic {
@@ -159,7 +163,7 @@ a {
 .bottom-container {
   display: flex;
   flex-direction: column;
-  background-color: #d3cec7;
+  /* background-color: #d3cec7; */
   position: relative;
 }
 

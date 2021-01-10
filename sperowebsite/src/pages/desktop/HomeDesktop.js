@@ -9,7 +9,6 @@ import CrossfadeImage from 'react-crossfade-image'
 
 const image0 = require('../../images/home-image-0.png');
 const image1 = require('../../images/home-image-1.png');
-// 
 
 const HomePageDesktop = props => {
     const designLinks = ['abide','mountainmover', 'iamthatgirl', 'macronhoodie']
@@ -73,24 +72,22 @@ const HomePageDesktop = props => {
                         </Fade>
                     </div>
                     <Fade bottom>
-                    <div>
-                        <Link to='/about'>
-                            <h3 className='sub-text'>
-                                bridging fashion and mission
-                            </h3>
-                        </Link>
-                    </div>
+                            <Link to='/about'>
+                                <h3 className='sub-text'>
+                                    bridging fashion and mission
+                                </h3>
+                            </Link>
                     </Fade>
                     <Fade bottom>
-                    <div className='shop-btn'>
+                        <div className='shop-btn'>
                             <a href='http://tinyurl.com/spero-etsy'>
                                 <h4 className='shop-text'>SHOP NOW</h4>
                             </a>
-                    </div>
+                        </div>
                     </Fade>
                 </div>
-             </div>
-            <Footer color='#fff1e6'/>
+            </div>
+            <Footer/>
         </div>
   );
 };

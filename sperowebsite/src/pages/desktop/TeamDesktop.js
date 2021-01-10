@@ -39,8 +39,8 @@ const TeamPage = props => {
             </div>
               </Fade>
             
-        </div>
-        <Footer color="#fff2e6"/>
+      </div>
+      <Footer color="#fff2e6"/>
     </div>
   );
 };
