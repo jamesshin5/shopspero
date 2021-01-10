@@ -25,18 +25,18 @@ a {
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow-x: hidden;
   background: url('../../images/home-bgimage-new.png') no-repeat center center fixed;
-  height: 100vh;
   background-position: right -9vw;
+  height: "95%";
   /* background-size: cover; */
+  opacity: 0.5,
 }
 
 .top-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 1.5vw;
+  /* padding-bottom: 1.5vw; */
 }
 
 .main-graphic {

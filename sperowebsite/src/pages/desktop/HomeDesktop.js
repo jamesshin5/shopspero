@@ -72,11 +72,13 @@ const HomePageDesktop = props => {
                         </Fade>
                     </div>
                     <Fade bottom>
+                        <div>
                             <Link to='/about'>
                                 <h3 className='sub-text'>
                                     bridging fashion and mission
                                 </h3>
                             </Link>
+                        </div>
                     </Fade>
                     <Fade bottom>
                         <div className='shop-btn'>

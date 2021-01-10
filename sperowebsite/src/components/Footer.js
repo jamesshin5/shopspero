@@ -10,16 +10,6 @@ const Footer = (props) => {
   return (
     <Fade bottom>
       <div className='footer-container'>
-            {/* <div className='footer-blurb'>
-              <h5>
-                Every design is prayed upon, biblically inpsired, and personally
-                experienced.
-                <br />
-                100% of our profits go toward Christian charities and missions.
-                <br />
-                All for His glory.
-              </h5>
-            </div> */}
             <div className='spero-berkeley'>
                 <h5>&copy; SPERO 2020 Berkeley, CA </h5>
               </div>
@@ -42,7 +32,7 @@ const Footer = (props) => {
                   </a>
                 </div>
                 <div className='icon' id='footer-icon'>
-                  <a href='https://medium.com/@yhwhapparel/'>
+                  <a href='https://medium.com/'>
                     <img
                       src={require('../images/medium_icon.png')}
                       alt='medium-icon'

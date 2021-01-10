@@ -3,7 +3,6 @@
     flex-direction: column;
     position: relative;
     overflow-x: hidden;
-    background-size : cover;
     background: url('../../images/home-bgimage-new.png') no-repeat center center fixed;
     height: 100vh;
     background-position: right -9vw;
