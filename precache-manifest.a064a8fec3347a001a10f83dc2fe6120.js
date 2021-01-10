@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "21b3b594dc2b8671377f985e7be8a350",
+    "revision": "655e84af0af816397e99ed202cab0b4b",
     "url": "/shopspero/index.html"
   },
   {
-    "revision": "e2246be4363b177b49cf",
-    "url": "/shopspero/static/css/main.da940a39.chunk.css"
+    "revision": "23984b18b9ea1ffdf8a0",
+    "url": "/shopspero/static/css/main.f910e9f1.chunk.css"
   },
   {
-    "revision": "056eb2c7f1a4f45d5a3e",
-    "url": "/shopspero/static/js/2.421ec361.chunk.js"
+    "revision": "098908e6d4be7a6e20a3",
+    "url": "/shopspero/static/js/2.8a16310e.chunk.js"
   },
   {
     "revision": "4bf00ea42f5dad8ab33d5f32afec9baf",
-    "url": "/shopspero/static/js/2.421ec361.chunk.js.LICENSE.txt"
+    "url": "/shopspero/static/js/2.8a16310e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e2246be4363b177b49cf",
-    "url": "/shopspero/static/js/main.6489509a.chunk.js"
+    "revision": "23984b18b9ea1ffdf8a0",
+    "url": "/shopspero/static/js/main.23e3cbd4.chunk.js"
   },
   {
     "revision": "10c8402f2cbf3a30478d",
@@ -98,6 +98,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "95d7863e333bfb0afa918fcd81d9786b",
     "url": "/shopspero/static/media/girl-hat-top.95d7863e.jpg"
+  },
+  {
+    "revision": "571f338912077c12e6131aa6031ebe8f",
+    "url": "/shopspero/static/media/home-bgimage-new.571f3389.png"
   },
   {
     "revision": "f6dbfb8bdf7a13e42920e74704e277ab",

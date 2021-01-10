@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/shopspero/static/css/main.da940a39.chunk.css",
-    "main.js": "/shopspero/static/js/main.6489509a.chunk.js",
-    "main.js.map": "/shopspero/static/js/main.6489509a.chunk.js.map",
+    "main.css": "/shopspero/static/css/main.f910e9f1.chunk.css",
+    "main.js": "/shopspero/static/js/main.23e3cbd4.chunk.js",
+    "main.js.map": "/shopspero/static/js/main.23e3cbd4.chunk.js.map",
     "runtime-main.js": "/shopspero/static/js/runtime-main.2e074193.js",
     "runtime-main.js.map": "/shopspero/static/js/runtime-main.2e074193.js.map",
-    "static/js/2.421ec361.chunk.js": "/shopspero/static/js/2.421ec361.chunk.js",
-    "static/js/2.421ec361.chunk.js.map": "/shopspero/static/js/2.421ec361.chunk.js.map",
+    "static/js/2.8a16310e.chunk.js": "/shopspero/static/js/2.8a16310e.chunk.js",
+    "static/js/2.8a16310e.chunk.js.map": "/shopspero/static/js/2.8a16310e.chunk.js.map",
     "index.html": "/shopspero/index.html",
-    "precache-manifest.db973b3a448235f5fcb2fd342a0d2714.js": "/shopspero/precache-manifest.db973b3a448235f5fcb2fd342a0d2714.js",
+    "precache-manifest.a064a8fec3347a001a10f83dc2fe6120.js": "/shopspero/precache-manifest.a064a8fec3347a001a10f83dc2fe6120.js",
     "service-worker.js": "/shopspero/service-worker.js",
-    "static/css/main.da940a39.chunk.css.map": "/shopspero/static/css/main.da940a39.chunk.css.map",
-    "static/js/2.421ec361.chunk.js.LICENSE.txt": "/shopspero/static/js/2.421ec361.chunk.js.LICENSE.txt",
+    "static/css/main.f910e9f1.chunk.css.map": "/shopspero/static/css/main.f910e9f1.chunk.css.map",
+    "static/js/2.8a16310e.chunk.js.LICENSE.txt": "/shopspero/static/js/2.8a16310e.chunk.js.LICENSE.txt",
     "static/media/abide-main-2.jpg": "/shopspero/static/media/abide-main-2.51994dab.jpg",
     "static/media/abide-overlay.jpg": "/shopspero/static/media/abide-overlay.384d430b.jpg",
     "static/media/abide-window.jpg": "/shopspero/static/media/abide-window.a2848b7e.jpg",
@@ -31,6 +31,7 @@
     "static/media/girl-hat-back.jpg": "/shopspero/static/media/girl-hat-back.7437b3c8.jpg",
     "static/media/girl-hat-flyer.jpg": "/shopspero/static/media/girl-hat-flyer.b5d2bebb.jpg",
     "static/media/girl-hat-top.jpg": "/shopspero/static/media/girl-hat-top.95d7863e.jpg",
+    "static/media/TeamDesktop.css": "/shopspero/static/media/home-bgimage-new.571f3389.png",
     "static/media/home-image-0.png": "/shopspero/static/media/home-image-0.f6dbfb8b.png",
     "static/media/home-image-1.png": "/shopspero/static/media/home-image-1.7de29113.png",
     "static/media/home-image-2.png": "/shopspero/static/media/home-image-2.f5af8f38.png",
@@ -55,8 +56,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2e074193.js",
-    "static/js/2.421ec361.chunk.js",
-    "static/css/main.da940a39.chunk.css",
-    "static/js/main.6489509a.chunk.js"
+    "static/js/2.8a16310e.chunk.js",
+    "static/css/main.f910e9f1.chunk.css",
+    "static/js/main.23e3cbd4.chunk.js"
   ]
 }
