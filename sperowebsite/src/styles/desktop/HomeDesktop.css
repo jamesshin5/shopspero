@@ -27,9 +27,8 @@ a {
   position: relative;
   background: url('../../images/home-bgimage-update.png') no-repeat center center fixed;
   background-position: right -9vw;
-  height: "95%";
-  /* background-size: cover; */
-  opacity: 0.5,
+  background-size: cover;
+  height: 57vw;
 }
 
 .top-container {
