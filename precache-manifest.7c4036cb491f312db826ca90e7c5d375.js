@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "df74ac64048e35fe351397070662bba4",
+    "revision": "92973dc9bf5ca86b95f116f97e177bfc",
     "url": "/shopspero/index.html"
   },
   {
-    "revision": "0f39edb31ac891936fed",
-    "url": "/shopspero/static/css/main.3f40a6b4.chunk.css"
+    "revision": "a5c457151dbffc30c2e7",
+    "url": "/shopspero/static/css/main.81b7e3b7.chunk.css"
   },
   {
-    "revision": "098908e6d4be7a6e20a3",
-    "url": "/shopspero/static/js/2.8a16310e.chunk.js"
+    "revision": "b12d60d7692896fc06de",
+    "url": "/shopspero/static/js/2.52013040.chunk.js"
   },
   {
     "revision": "4bf00ea42f5dad8ab33d5f32afec9baf",
-    "url": "/shopspero/static/js/2.8a16310e.chunk.js.LICENSE.txt"
+    "url": "/shopspero/static/js/2.52013040.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0f39edb31ac891936fed",
-    "url": "/shopspero/static/js/main.23e3cbd4.chunk.js"
+    "revision": "a5c457151dbffc30c2e7",
+    "url": "/shopspero/static/js/main.455ae692.chunk.js"
   },
   {
     "revision": "10c8402f2cbf3a30478d",
@@ -38,6 +38,22 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f9a0b5dc5ca703127f4cb91e347b84d6",
     "url": "/shopspero/static/media/about-logo.f9a0b5dc.png"
+  },
+  {
+    "revision": "97ecf4c89659dd55b571a1b26d4ad259",
+    "url": "/shopspero/static/media/ambassador-chaerin.97ecf4c8.jpg"
+  },
+  {
+    "revision": "61b05795241913ecbd90e4b0bf665432",
+    "url": "/shopspero/static/media/ambassador-grace.61b05795.jpg"
+  },
+  {
+    "revision": "ec3b5f35523fc092d770228c186de0bb",
+    "url": "/shopspero/static/media/ambassador-joy.ec3b5f35.jpg"
+  },
+  {
+    "revision": "fda2c9d5bf0e67e83bb89fd2c9155c5e",
+    "url": "/shopspero/static/media/ambassador-yasmin.fda2c9d5.jpg"
   },
   {
     "revision": "b0fb16e159e651967f41e0baf4a28e15",
@@ -98,10 +114,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "95d7863e333bfb0afa918fcd81d9786b",
     "url": "/shopspero/static/media/girl-hat-top.95d7863e.jpg"
-  },
-  {
-    "revision": "571f338912077c12e6131aa6031ebe8f",
-    "url": "/shopspero/static/media/home-bgimage-new.571f3389.png"
   },
   {
     "revision": "706fc2ca232ef881032d578950e3992c",
