@@ -10,11 +10,11 @@ const HomePage = props => {
 
   return (
     <div>
-      {isDesktopOrLaptop && (
-        <>
+      {/* {isDesktopOrLaptop && (
+        <> */}
           <HomePageDesktop />
-        </>
-      )}
+        {/* </>
+      )} */}
 
       {/* {isMobile && (
         <>

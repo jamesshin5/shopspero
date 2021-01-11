@@ -5,6 +5,7 @@
     background: url('../../images/home-bgimage-update.png') no-repeat center center fixed;
     background-position: right -9vw;
     background-size: cover;
+    min-height: 100vh;
 }
 
 .design-card-container {

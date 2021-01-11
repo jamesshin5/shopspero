@@ -7,7 +7,7 @@
     background-position: right -9vw;
     background-size: cover;
     flex:1;
-    /* height: 150vw; */
+    min-height: 100vh;
 }
   
 .staff-card-container {

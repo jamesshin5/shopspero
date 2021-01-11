@@ -47,7 +47,12 @@ import picture34 from "./images/design-photos/mountain-mover-right.jpg";
 import picture35 from  "./images/design-photos/three-stickers-drawing.jpg";
 import picture36 from  "./images/design-photos/walk-on-water-main.jpg";
 import picture37 from "./images/design-photos/water-left.jpg";
-import picture38 from "./images/home-bgimage-new.png";
+import picture38 from "./images/home-bgimage-update.png";
+
+import picture39 from "./images/ambassadors/ambassador-chaerin.jpg";
+import picture40 from "./images/ambassadors/ambassador-grace.jpg";
+import picture41 from "./images/ambassadors/ambassador-joy.jpg";
+import picture42 from "./images/ambassadors/ambassador-yasmin.jpg";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -96,28 +101,19 @@ function App() {
       picture37,
 
       picture38,
+
+      picture39,
+      picture40,
+      picture41,
+      picture42,
   ];
-    
+  //caching images
   imgs.forEach((image) => {
     new Image().src = image
   });
   setIsLoading(false)
 
   }, [])
-
-  const cacheImages = async (srcArray) => {
-    const promises = await srcArray.map((src) => {
-      return new Promise(function(resolve, reject) {
-        const img = new Image();
-        img.src = src;
-        img.onload = resolve();
-        img.onerror = reject();
-      });
-    });
-    await Promise.all(promises);
-
-    setIsLoading(false);
-  }
 
   return (
     <div>
