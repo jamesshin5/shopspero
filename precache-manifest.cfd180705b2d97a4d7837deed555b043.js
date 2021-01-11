@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "655e84af0af816397e99ed202cab0b4b",
+    "revision": "df74ac64048e35fe351397070662bba4",
     "url": "/shopspero/index.html"
   },
   {
-    "revision": "23984b18b9ea1ffdf8a0",
-    "url": "/shopspero/static/css/main.f910e9f1.chunk.css"
+    "revision": "0f39edb31ac891936fed",
+    "url": "/shopspero/static/css/main.3f40a6b4.chunk.css"
   },
   {
     "revision": "098908e6d4be7a6e20a3",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopspero/static/js/2.8a16310e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "23984b18b9ea1ffdf8a0",
+    "revision": "0f39edb31ac891936fed",
     "url": "/shopspero/static/js/main.23e3cbd4.chunk.js"
   },
   {
@@ -102,6 +102,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "571f338912077c12e6131aa6031ebe8f",
     "url": "/shopspero/static/media/home-bgimage-new.571f3389.png"
+  },
+  {
+    "revision": "706fc2ca232ef881032d578950e3992c",
+    "url": "/shopspero/static/media/home-bgimage-update.706fc2ca.png"
   },
   {
     "revision": "f6dbfb8bdf7a13e42920e74704e277ab",
