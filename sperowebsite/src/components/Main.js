@@ -23,8 +23,7 @@ import MacronHoodiePage from '../pages/desktop/MacronHoodiePage'
 import BlessedToBlessPage from '../pages/desktop/BlessedToBlessPage'
 import BayAreaPage from '../pages/desktop/BayAreaPage'
 import BerkeleyHoodiePage from '../pages/desktop/BerkeleyHoodiePage'
-import ContactPage from '../pages/Contact'
-
+import ScrollToTop from './ScrollToTop'
 const Main = ({ location }) => {
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-device-width: 480px)',
@@ -51,57 +50,62 @@ const Main = ({ location }) => {
                     classNames={'fade'}
                 >
                     <section className="route-section">
-                        <Switch location={location}>
-                            <Route
-                                exact
-                                path="/"
-                                component={withRouter(HomePage)}
-                            />
-                            <Route path="/about" component={AboutPage} />
-                            <Route path="/team" component={TeamPage} />
-                            <Route path="/designs" component={DesignsPage} />
-                            <Route
-                                path="/design/mountainmover"
-                                component={MountainMoverPage}
-                            />
-                            <Route
-                                path="/design/walkonwater"
-                                component={WalkOnWaterPage}
-                            />
-                            <Route
-                                path="/design/sperobear"
-                                component={SperoBearPage}
-                            />
-                            <Route
-                                path="/design/abide"
-                                component={AbideHoodiePage}
-                            />
-                            <Route
-                                path="/design/iamthatgirl"
-                                component={IAmThatGirlHatPage}
-                            />
-                            <Route
-                                path="/design/hopelongsleeve"
-                                component={HopePage}
-                            />
-                            <Route
-                                path="/design/macronhoodie"
-                                component={MacronHoodiePage}
-                            />
-                            <Route
-                                path="/design/blessedtobless"
-                                component={BlessedToBlessPage}
-                            />
-                            <Route
-                                path="/design/bayarea"
-                                component={BayAreaPage}
-                            />
-                            <Route
-                                path="/design/berkeleyhoodie"
-                                component={BerkeleyHoodiePage}
-                            />
-                            {/* <Route path='/contact' component={ContactPage} /> */}
-                        </Switch>
+                        <ScrollToTop>
+                            <Switch location={location}>
+                                <Route
+                                    exact
+                                    path="/"
+                                    component={withRouter(HomePage)}
+                                />
+                                <Route path="/about" component={AboutPage} />
+                                <Route path="/team" component={TeamPage} />
+                                <Route
+                                    path="/designs"
+                                    component={DesignsPage}
+                                />
+                                <Route
+                                    path="/design/mountainmover"
+                                    component={MountainMoverPage}
+                                />
+                                <Route
+                                    path="/design/walkonwater"
+                                    component={WalkOnWaterPage}
+                                />
+                                <Route
+                                    path="/design/sperobear"
+                                    component={SperoBearPage}
+                                />
+                                <Route
+                                    path="/design/abide"
+                                    component={AbideHoodiePage}
+                                />
+                                <Route
+                                    path="/design/iamthatgirl"
+                                    component={IAmThatGirlHatPage}
+                                />
+                                <Route
+                                    path="/design/hopelongsleeve"
+                                    component={HopePage}
+                                />
+                                <Route
+                                    path="/design/macronhoodie"
+                                    component={MacronHoodiePage}
+                                />
+                                <Route
+                                    path="/design/blessedtobless"
+                                    component={BlessedToBlessPage}
+                                />
+                                <Route
+                                    path="/design/bayarea"
+                                    component={BayAreaPage}
+                                />
+                                <Route
+                                    path="/design/berkeleyhoodie"
+                                    component={BerkeleyHoodiePage}
+                                />
+                                {/* <Route path='/contact' component={ContactPage} /> */}
+                            </Switch>
+                        </ScrollToTop>
                     </section>
                 </CSSTransition>
             </TransitionGroup>
