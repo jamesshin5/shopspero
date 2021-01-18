@@ -117,7 +117,23 @@ const HomePageDesktop = (props) => {
                         </div>
                     </Fade>
                 </div>
+                {/* <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'space-between',
+                        width: '90vw',
+                        paddingTop: '3rem',
+                    }}
+                >
+                    <NewRelease
+                        name={'Fall Sticker Collection'}
+                        route={'/designs/walkonwater'}
+                    />
+                    <NewRelease />
+                </div> */}
             </div>
+
             <Footer />
         </div>
     )
