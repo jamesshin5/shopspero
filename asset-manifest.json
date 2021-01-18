@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/shopspero/static/css/main.81b7e3b7.chunk.css",
-    "main.js": "/shopspero/static/js/main.455ae692.chunk.js",
-    "main.js.map": "/shopspero/static/js/main.455ae692.chunk.js.map",
+    "main.css": "/shopspero/static/css/main.04c25199.chunk.css",
+    "main.js": "/shopspero/static/js/main.c3d49907.chunk.js",
+    "main.js.map": "/shopspero/static/js/main.c3d49907.chunk.js.map",
     "runtime-main.js": "/shopspero/static/js/runtime-main.2e074193.js",
     "runtime-main.js.map": "/shopspero/static/js/runtime-main.2e074193.js.map",
-    "static/js/2.52013040.chunk.js": "/shopspero/static/js/2.52013040.chunk.js",
-    "static/js/2.52013040.chunk.js.map": "/shopspero/static/js/2.52013040.chunk.js.map",
+    "static/js/2.132023f7.chunk.js": "/shopspero/static/js/2.132023f7.chunk.js",
+    "static/js/2.132023f7.chunk.js.map": "/shopspero/static/js/2.132023f7.chunk.js.map",
     "index.html": "/shopspero/index.html",
-    "precache-manifest.7c4036cb491f312db826ca90e7c5d375.js": "/shopspero/precache-manifest.7c4036cb491f312db826ca90e7c5d375.js",
+    "precache-manifest.cc86f7ab8993c70342d55ef24fd0afda.js": "/shopspero/precache-manifest.cc86f7ab8993c70342d55ef24fd0afda.js",
     "service-worker.js": "/shopspero/service-worker.js",
-    "static/css/main.81b7e3b7.chunk.css.map": "/shopspero/static/css/main.81b7e3b7.chunk.css.map",
-    "static/js/2.52013040.chunk.js.LICENSE.txt": "/shopspero/static/js/2.52013040.chunk.js.LICENSE.txt",
+    "static/css/main.04c25199.chunk.css.map": "/shopspero/static/css/main.04c25199.chunk.css.map",
+    "static/js/2.132023f7.chunk.js.LICENSE.txt": "/shopspero/static/js/2.132023f7.chunk.js.LICENSE.txt",
     "static/media/abide-main-2.jpg": "/shopspero/static/media/abide-main-2.51994dab.jpg",
     "static/media/abide-overlay.jpg": "/shopspero/static/media/abide-overlay.384d430b.jpg",
     "static/media/abide-window.jpg": "/shopspero/static/media/abide-window.a2848b7e.jpg",
@@ -54,14 +54,14 @@
     "static/media/rachelsoo-min.jpg": "/shopspero/static/media/rachelsoo-min.6d4e71af.jpg",
     "static/media/rebeccasoo-min.jpg": "/shopspero/static/media/rebeccasoo-min.375ef8eb.jpg",
     "static/media/speroicon.png": "/shopspero/static/media/speroicon.9b0ad08b.png",
-    "static/media/three-stickers-drawing.jpg": "/shopspero/static/media/three-stickers-drawing.4ff367fa.jpg",
+    "static/media/NewRelease.css": "/shopspero/static/media/three-stickers-drawing.4ff367fa.jpg",
     "static/media/walk-on-water-main.jpg": "/shopspero/static/media/walk-on-water-main.876e16a6.jpg",
     "static/media/water-left.jpg": "/shopspero/static/media/water-left.76e18e60.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.2e074193.js",
-    "static/js/2.52013040.chunk.js",
-    "static/css/main.81b7e3b7.chunk.css",
-    "static/js/main.455ae692.chunk.js"
+    "static/js/2.132023f7.chunk.js",
+    "static/css/main.04c25199.chunk.css",
+    "static/js/main.c3d49907.chunk.js"
   ]
 }
