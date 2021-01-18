@@ -7,9 +7,12 @@ import { Link } from 'react-router-dom'
 import BlessedToBlessDesktop from './designs/BlessedToBlessDesktop'
 import BerkeleyHoodieDesktop from './designs/BerkeleyHoodieDesktop'
 
+import Navbar from '../../components/NavBar'
+
 const BerkeleyHoodiePage = (props) => {
     return (
         <div className="design-main-container">
+            <Navbar />
             <div className="design-card-container">
                 <div className="design-nav">
                     <div className="nav-title">ORIGINAL DESIGNS</div>

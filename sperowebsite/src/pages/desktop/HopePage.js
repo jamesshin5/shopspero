@@ -5,9 +5,12 @@ import HopeDesktop from './designs/HopeDesktop.js'
 
 import { Link } from 'react-router-dom'
 
+import Navbar from '../../components/NavBar'
+
 const IAmThatGirlHatPage = (props) => {
     return (
         <div className="design-main-container">
+            <Navbar />
             <div className="design-card-container">
                 <div className="design-nav">
                     <div className="nav-title">ORIGINAL DESIGNS</div>

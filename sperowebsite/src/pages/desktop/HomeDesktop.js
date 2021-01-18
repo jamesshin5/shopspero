@@ -7,6 +7,7 @@ import Fade from 'react-reveal/Fade'
 
 import CrossfadeImage from 'react-crossfade-image'
 import NewRelease from '../../components/NewRelease'
+import Navbar from '../../components/NavBar'
 
 const image0 = require('../../images/home-image-0.png')
 const image1 = require('../../images/home-image-1.png')
@@ -58,6 +59,7 @@ const HomePageDesktop = (props) => {
 
     return (
         <div className="main-container">
+            <Navbar />
             <div className="top-container">
                 <div className="main-graphic">
                     <div className="carousel-container">

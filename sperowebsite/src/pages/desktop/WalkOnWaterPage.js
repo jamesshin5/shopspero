@@ -4,10 +4,12 @@ import '../../styles/desktop/DesignDesktop.css'
 import WalkOnWaterDesktop from './designs/WalkOnWaterDesktop.js'
 
 import { Link } from 'react-router-dom'
+import Navbar from '../../components/NavBar'
 
 const WalkOnWaterPage = (props) => {
     return (
         <div className="design-main-container">
+            <Navbar />
             <div className="design-card-container">
                 <div className="design-nav">
                     <div className="nav-title">ORIGINAL DESIGNS</div>

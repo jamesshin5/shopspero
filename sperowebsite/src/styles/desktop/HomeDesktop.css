@@ -26,10 +26,11 @@ a {
     flex-direction: column;
     position: relative;
     background: url('../../images/home-bgimage-update.png') no-repeat center
-        center fixed;
+        center;
     background-position: right -10vw;
     background-size: cover;
-    height: 100%;
+    height: 100vh;
+    overflow: scroll;
 }
 
 .top-container {

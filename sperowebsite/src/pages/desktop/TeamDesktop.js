@@ -3,10 +3,12 @@ import Footer from '../../components/Footer'
 import Profile from '../../components/Profile'
 import '../../styles/desktop/TeamDesktop.css'
 import Fade from 'react-reveal/Fade'
+import Navbar from '../../components/NavBar'
 
 const TeamPage = (props) => {
     return (
         <div className="staff-main-container">
+            <Navbar />
             <div className="staff-card-container">
                 <Fade bottom>
                     <div className="staff-title">TEAM SPERO</div>

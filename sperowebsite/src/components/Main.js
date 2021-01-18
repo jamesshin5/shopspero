@@ -33,11 +33,11 @@ const Main = ({ location }) => {
 
     return (
         <Fragment>
-            {isDesktopOrLaptop && (
+            {/* {isDesktopOrLaptop && (
                 <>
                     <Navbar />
                 </>
-            )}
+            )} */}
 
             {/* {isMobile && (
         <>

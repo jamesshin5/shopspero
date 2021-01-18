@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import Footer from '../../components/Footer'
 import '../../styles/desktop/DesignDesktop.css'
 import SperoBearDesktop from './designs/SperoBearDesktop.js'
+import Navbar from '../../components/NavBar'
 
 import { Link } from 'react-router-dom'
 
 const SperoBearPage = (props) => {
     return (
         <div className="design-main-container">
+            <Navbar />
             <div className="design-card-container">
                 <div className="design-nav">
                     <div className="nav-title">ORIGINAL DESIGNS</div>
