@@ -7,8 +7,7 @@
         center;
     background-position: right -9vw;
     background-size: cover;
-    height: 100vh;
-    overflow: scroll;
+    height: 100%;
 }
 
 .staff-card-container {

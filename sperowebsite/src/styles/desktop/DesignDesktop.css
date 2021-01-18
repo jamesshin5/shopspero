@@ -6,9 +6,8 @@
         center;
     background-position: right -9vw;
     background-size: cover;
-    height: 100vh;
-    width: 100vw;
-    overflow: scroll;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 .design-card-container {
