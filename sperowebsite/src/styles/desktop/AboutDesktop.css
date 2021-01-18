@@ -67,7 +67,7 @@ body {
     position: relative;
 }
 .ab-colored-bar {
-    background-color: #5C6A6F;
+    background-color: #5c6a6f;
     width: 80vw;
     height: 0.5vw;
     display: block;
@@ -85,7 +85,7 @@ body {
     width: 20vw;
     top: 10vw;
     position: relative;
-    box-shadow: .25vw .25vw .25vw #888888;
+    box-shadow: 0.25vw 0.25vw 0.25vw #888888;
 }
 @media (max-width: 480px) {
 }

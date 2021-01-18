@@ -1,27 +1,29 @@
-import React from 'react';
-import TeamDesktop from './desktop/TeamDesktop';
+import React from 'react'
+import TeamDesktop from './desktop/TeamDesktop'
 // import HomePageMobile from './mobile/HomePageMobile';
-import { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from 'react-responsive'
 
-const TeamPage = props => {
-  const isDesktopOrLaptop = useMediaQuery({ query: '(min-device-width: 480px)' });
-  // const isMobile = useMediaQuery({ query: '(max-width: 480px)' });
+const TeamPage = (props) => {
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-device-width: 480px)',
+    })
+    // const isMobile = useMediaQuery({ query: '(max-width: 480px)' });
 
-  return (
-    <div>
-      {isDesktopOrLaptop && (
-        <>
-          <TeamDesktop />
-        </>
-      )}
+    return (
+        <div>
+            {isDesktopOrLaptop && (
+                <>
+                    <TeamDesktop />
+                </>
+            )}
 
-      {/* {isMobile && (
+            {/* {isMobile && (
         <>
           <HomePageMobile />
         </>
       )} */}
-    </div>
-  );
-};
+        </div>
+    )
+}
 
-export default TeamPage;
+export default TeamPage

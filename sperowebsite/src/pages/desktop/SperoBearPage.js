@@ -1,93 +1,93 @@
-import React, { useState } from 'react';
-import Footer from '../../components/Footer';
-import '../../styles/desktop/DesignDesktop.css';
+import React, { useState } from 'react'
+import Footer from '../../components/Footer'
+import '../../styles/desktop/DesignDesktop.css'
 import SperoBearDesktop from './designs/SperoBearDesktop.js'
 
+import { Link } from 'react-router-dom'
 
-import { Link } from 'react-router-dom';
+const SperoBearPage = (props) => {
+    return (
+        <div className="design-main-container">
+            <div className="design-card-container">
+                <div className="design-nav">
+                    <div className="nav-title">ORIGINAL DESIGNS</div>
+                    <div className="fall-stickers-nav">
+                        <div className="nav-font">FALL 2020 STICKERS</div>
 
-const SperoBearPage = props => {
+                        <Link to="/design/walkonwater">
+                            <button className="button-style">
+                                <div className="sub-font">WALK ON WATER</div>
+                            </button>
+                        </Link>
 
-  return (
-    <div className="design-main-container">
-        <div className="design-card-container">
-          <div className="design-nav">
-          <div className="nav-title">ORIGINAL DESIGNS</div>
-          <div className="fall-stickers-nav">
+                        <Link to="/design/mountainmover">
+                            <button className="button-style">
+                                <div className="sub-font">MOUNTAIN MOVER</div>
+                            </button>
+                        </Link>
 
-        <div className="nav-font">FALL 2020 STICKERS</div>
+                        <Link to="/design/sperobear">
+                            <button className="button-style">
+                                <div className="sub-font">
+                                    <b>SPERO BEAR</b>
+                                </div>
+                            </button>
+                        </Link>
+                    </div>
 
-        <Link to='/design/walkonwater'>
-                <button className="button-style">
-                  <div className="sub-font">WALK ON WATER</div>
-                </button>
-                </Link>
+                    <button className="button-style">
+                        <Link to="/design/abide">
+                            <div className="nav-font">ABIDE HOODIE</div>
+                        </Link>
+                    </button>
 
-                <Link to='/design/mountainmover'>
-                <button className="button-style">
-                  <div className="sub-font">MOUNTAIN MOVER</div>
-                </button>
-                </Link>
+                    <button className="button-style">
+                        <Link to="/design/hopelongsleeve">
+                            <div className="nav-font">HOPE LONG SLEEVE</div>
+                        </Link>
+                    </button>
 
-                <Link to='/design/sperobear'>
-                <button className="button-style">
-                  <div className="sub-font"><b>SPERO BEAR</b></div>
-                </button>
-                </Link>
+                    <button className="button-style">
+                        <Link to="/design/iamthatgirl">
+                            <div className="nav-font">
+                                "I AM THAT GIRL" DAD HAT
+                            </div>
+                        </Link>
+                    </button>
 
-              </div>
-              
-              <button className="button-style">
-              <Link to="/design/abide">
-                <div className="nav-font">ABIDE HOODIE</div>
-                </Link>
-              </button>
+                    <button className="button-style">
+                        <Link to="/design/macronhoodie">
+                            <div className="nav-font">SPERO MACRON HOODIE</div>
+                        </Link>
+                    </button>
 
-              <button className="button-style">
-                <Link to='/design/hopelongsleeve'>
-                  <div className="nav-font">HOPE LONG SLEEVE</div>
-                </Link>
-              </button>
+                    <button className="button-style">
+                        <Link to="/design/blessedtobless">
+                            <div className="nav-font">"BLESSED TO BLESS"</div>
+                        </Link>
+                    </button>
 
-              <button className="button-style">
-                <Link to="/design/iamthatgirl">
-                  <div className="nav-font">"I AM THAT GIRL" DAD HAT</div>
-                  </Link>
-              </button>
+                    <button className="button-style">
+                        <Link to="/design/bayarea">
+                            <div className="nav-font">
+                                "BAY AREA" LONG SLEEVE
+                            </div>
+                        </Link>
+                    </button>
 
-              <button className="button-style">
-                <Link to='/design/macronhoodie'>
-                  <div className="nav-font">SPERO MACRON HOODIE</div>
-                </Link>
-              </button>
-
-              <button className="button-style">
-                <Link to="/design/blessedtobless">
-                  <div className="nav-font">"BLESSED TO BLESS"</div> 
-                </Link>
-              </button>
-
-              <button className="button-style">
-                <Link to='/design/bayarea'>
-                  <div className="nav-font">"BAY AREA" LONG SLEEVE</div>
-                </Link>
-              </button>
-
-              <button className="button-style">
-                <Link to='/design/berkeleyhoodie'>
-                  <div className="nav-font">BERKELEY HOODIE</div>
-                </Link>
-              </button>
-            
-          </div>
-          <div className="design-display">
-            <SperoBearDesktop />
-          </div>
-
+                    <button className="button-style">
+                        <Link to="/design/berkeleyhoodie">
+                            <div className="nav-font">BERKELEY HOODIE</div>
+                        </Link>
+                    </button>
+                </div>
+                <div className="design-display">
+                    <SperoBearDesktop />
+                </div>
+            </div>
+            <Footer />
         </div>
-        <Footer />
-    </div>
-  );
-};
+    )
+}
 
-export default SperoBearPage;
+export default SperoBearPage

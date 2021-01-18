@@ -107,8 +107,6 @@
     height: 16vw;
 }
 
-
-
 .girl-fill-fifth-right {
     display: flex;
     flex-direction: column;
@@ -189,7 +187,6 @@
     object-fit: cover;
 }
 
-
 .smaller-container {
     display: flex;
     flex-direction: row;
@@ -203,7 +200,7 @@
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 500;
     width: 80vw;
-    color: #2D3739;
+    color: #2d3739;
 }
 
 .hope-title {
@@ -212,7 +209,7 @@
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
     width: 80vw;
-    color: #2D3739;
+    color: #2d3739;
 }
 
 .macron-title {
@@ -221,7 +218,7 @@
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
     width: 80vw;
-    color: #2D3739;
+    color: #2d3739;
 }
 
 .bay-area-title {
@@ -230,7 +227,7 @@
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
     width: 80vw;
-    color: #2D3739;
+    color: #2d3739;
 }
 
 .bless-title {
@@ -239,7 +236,7 @@
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
     width: 80vw;
-    color: #2D3739;
+    color: #2d3739;
 }
 
 .girl-bible {
@@ -270,18 +267,18 @@
     font-size: 1vw;
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 500;
-    width:20vw;
+    width: 20vw;
     padding-top: 2vw;
-    color: #5C6A6F;
+    color: #5c6a6f;
 }
 
 .macron-description {
     font-size: 0.85vw;
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 500;
-    width:40vw;
+    width: 40vw;
     padding-top: 1.5vw;
-    color: #5C6A6F;
+    color: #5c6a6f;
 }
 
 .bottom-one {
@@ -289,27 +286,27 @@
 }
 
 .shop-text {
-font-family: 'Tenor Sans', sans-serif;
-font-size: 0.6vw;
-transition: font-size 0.25s;
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 0.6vw;
+    transition: font-size 0.25s;
 }
 
 .shop-text:hover {
-font-size: 0.7vw;
+    font-size: 0.7vw;
 }
 
 .button-format {
-/* padding-left: 7vw; */
-padding-top: 2vw;
+    /* padding-left: 7vw; */
+    padding-top: 2vw;
 }
 
 .shop-btn-stickerpage {
-border: solid;
-border-width: thin;
-width: 12vw;
-letter-spacing: 0.15vw;
-padding: 0.15vw 1.2vw;
-text-align: center;
-/* padding-left: 1.5vw; */
-/* margin-bottom: 5vw; */
+    border: solid;
+    border-width: thin;
+    width: 12vw;
+    letter-spacing: 0.15vw;
+    padding: 0.15vw 1.2vw;
+    text-align: center;
+    /* padding-left: 1.5vw; */
+    /* margin-bottom: 5vw; */
 }

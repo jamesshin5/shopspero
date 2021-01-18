@@ -1,28 +1,30 @@
-import React from 'react';
-import HomePageDesktop from './desktop/HomeDesktop';
+import React from 'react'
+import HomePageDesktop from './desktop/HomeDesktop'
 // import HomePageMobile from './mobile/HomePageMobile';
-import { useMediaQuery } from 'react-responsive';
-import {withRouter} from 'react-router';
+import { useMediaQuery } from 'react-responsive'
+import { withRouter } from 'react-router'
 
-const HomePage = props => {
-  const isDesktopOrLaptop = useMediaQuery({ query: '(min-device-width: 480px)' });
-  // const isMobile = useMediaQuery({ query: '(max-width: 480px)' });
+const HomePage = (props) => {
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-device-width: 480px)',
+    })
+    // const isMobile = useMediaQuery({ query: '(max-width: 480px)' });
 
-  return (
-    <div>
-      {/* {isDesktopOrLaptop && (
+    return (
+        <div>
+            {/* {isDesktopOrLaptop && (
         <> */}
-          <HomePageDesktop />
-        {/* </>
+            <HomePageDesktop />
+            {/* </>
       )} */}
 
-      {/* {isMobile && (
+            {/* {isMobile && (
         <>
           <HomePageMobile />
         </>
       )} */}
-    </div>
-  );
-};
+        </div>
+    )
+}
 
-export default withRouter(HomePage);
+export default withRouter(HomePage)

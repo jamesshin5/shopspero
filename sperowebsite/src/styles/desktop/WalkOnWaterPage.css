@@ -74,7 +74,6 @@
     object-fit: cover;
 }
 
-
 .smaller-container {
     display: flex;
     flex-direction: row;
@@ -88,7 +87,7 @@
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 500;
     width: 80vw;
-    color: #2D3739;
+    color: #2d3739;
 }
 
 .sticker-bible {
@@ -103,9 +102,9 @@
     font-size: 0.9vw;
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 500;
-    width:27vw;
+    width: 27vw;
     padding-top: 2vw;
-    color: #5C6A6F;
+    color: #5c6a6f;
 }
 
 .bottom-one {
@@ -113,27 +112,27 @@
 }
 
 .shop-text {
-font-family: 'Tenor Sans', sans-serif;
-font-size: 0.6vw;
-transition: font-size 0.25s;
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 0.6vw;
+    transition: font-size 0.25s;
 }
 
 .shop-text:hover {
-font-size: 0.7vw;
+    font-size: 0.7vw;
 }
 
 .button-format {
-/* padding-left: 7vw; */
-padding-top: 2vw;
+    /* padding-left: 7vw; */
+    padding-top: 2vw;
 }
 
 .shop-btn-stickerpage {
-border: solid;
-border-width: thin;
-width: 12vw;
-letter-spacing: 0.15vw;
-padding: 0.15vw 1.2vw;
-text-align: center;
-/* padding-left: 1.5vw; */
-/* margin-bottom: 5vw; */
+    border: solid;
+    border-width: thin;
+    width: 12vw;
+    letter-spacing: 0.15vw;
+    padding: 0.15vw 1.2vw;
+    text-align: center;
+    /* padding-left: 1.5vw; */
+    /* margin-bottom: 5vw; */
 }
