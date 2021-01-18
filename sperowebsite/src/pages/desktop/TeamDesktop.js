@@ -112,28 +112,28 @@ const TeamPage = (props) => {
                 <Fade bottom>
                     <div className="ambassador-cards-table">
                         <Profile
-                            name="JUSTIN PARK"
-                            title="AMBASSADOR"
+                            name="CHAERIN SUNG"
+                            title="USC '24"
                             imageURL={require('../../images/ambassadors/ambassador-chaerin.jpg')}
-                            description="Hey!  My name is Justin Park, and I am a third year @ UC Berkeley studying cognitive science and data science.  I love singing, going on adventures, driving, and hanging out for hours at the park!  I joined Spero because it is filled with people passionate about God and love to serve God with all of their lives."
+                            ambassador={true}
                         />
                         <Profile
-                            name="JAMES SHIN"
-                            title="AMBASSADOR"
+                            name="GRACE CHOI"
+                            title="UPENN '23"
                             imageURL={require('../../images/ambassadors/ambassador-grace.jpg')}
-                            description="Hello! I'm James Shin, a junior at UC Berkeley studying computer science and data science. I love playing the guitar, wearing big hoodies, binging TV shows like Suits or Mad Men, playing basketball and Fortnite, and working with all the talented and creative people at Spero!"
+                            ambassador={true}
                         />
                         <Profile
-                            name="JENNY WOO"
-                            title="AMBASSADOR"
+                            name="JOY PARK"
+                            title="UCI '23"
                             imageURL={require('../../images/ambassadors/ambassador-joy.jpg')}
-                            description="Heyhey!! I'm Jenny, a second year at UC Berkeley hoping to major in Public Health! I love photography (like photoshoots with friendzz), coffee, baking, calligraphy, and theology books (heh)! I joined Spero because I wanted to share the gospel through an art form 🙂"
+                            ambassador={true}
                         />
                         <Profile
-                            name="RACHEL SOO"
-                            title="AMBASSADOR"
+                            name="YASMIN SIWY"
+                            title="PURDUE '22"
                             imageURL={require('../../images/ambassadors/ambassador-yasmin.jpg')}
-                            description="Hello y'all! I'm Rachel, a senior at Mission Viejo High School. In my free time, you can find me browsing anything Disney, singing along to my favorite musicals, or drawing funny pictures of my friends! I joined Spero because I want to use my talents to spread the good news and help develop my faith :)"
+                            ambassador={true}
                         />
                     </div>
                 </Fade>

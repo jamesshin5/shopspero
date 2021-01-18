@@ -69,6 +69,28 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.centered-amb {
+    width: 100%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1vw;
+    color: #394648;
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.below-amb {
+    width: 100%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1vw;
+    color: #394648;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 /* 
 .profile-container:hover {
     background-color: #A5A58D;
