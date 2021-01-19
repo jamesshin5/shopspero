@@ -89,7 +89,7 @@ a {
     text-align: center;
     padding-left: 30vw;
     padding-right: 30vw;
-    height: 62vh;
+    min-height: 62vh;
 }
 
 .home-centered {
