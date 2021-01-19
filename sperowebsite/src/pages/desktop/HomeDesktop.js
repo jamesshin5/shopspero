@@ -10,7 +10,6 @@ import NewRelease from '../../components/NewRelease'
 import Navbar from '../../components/NavBar'
 
 const image0 = require('../../images/home-image-0.png')
-const image1 = require('../../images/home-image-1.png')
 
 const HomePageDesktop = (props) => {
     const designLinks = [
@@ -21,7 +20,7 @@ const HomePageDesktop = (props) => {
     ]
     const [current, setCurrent] = useState(image0)
     const [num, setNum] = useState(0)
-    const numImages = designLinks.length
+    const numImages = 3
 
     function increaseNum() {
         console.log(num)
@@ -78,11 +77,13 @@ const HomePageDesktop = (props) => {
                         <Fade bottom>
                             <div className="graphic-container">
                                 <Link to={'/design/' + designLinks[num]}>
-                                    <CrossfadeImage
-                                        src={current}
-                                        duration={1500}
-                                        timingFunction={'ease-out'}
-                                    />
+                                    <div className="main-image-container">
+                                        <CrossfadeImage
+                                            src={current}
+                                            duration={1500}
+                                            timingFunction={'ease-in'}
+                                        />
+                                    </div>
                                 </Link>
                                 <Link to="/about">
                                     <div className="home-centered">SPERO</div>
@@ -103,13 +104,11 @@ const HomePageDesktop = (props) => {
                         </Fade>
                     </div>
                     <Fade bottom>
-                        <div>
-                            <Link to="/about">
-                                <h3 className="sub-text">
-                                    bridging fashion and mission
-                                </h3>
-                            </Link>
-                        </div>
+                        <Link to="/about">
+                            <h3 className="sub-text">
+                                bridging fashion and mission
+                            </h3>
+                        </Link>
                     </Fade>
                     <Fade bottom>
                         <div className="shop-btn">

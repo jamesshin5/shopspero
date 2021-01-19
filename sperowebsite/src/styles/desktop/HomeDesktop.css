@@ -8,10 +8,6 @@ a {
     transition: width 0.25s;
 }
 
-/* .arrow:hover{
-  width:3.2vw;
-} */
-
 .arrow-buttons {
     background: transparent;
     box-shadow: 0px 0px 0px transparent;
@@ -46,8 +42,6 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* flex-direction: column;
-  align-items: center; */
     margin-left: 6vw;
     margin-right: 6vw;
 }
@@ -89,7 +83,6 @@ a {
     text-align: center;
     padding-left: 30vw;
     padding-right: 30vw;
-    min-height: 62vh;
 }
 
 .home-centered {
@@ -101,6 +94,10 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     transition: font-size 0.5s;
+}
+
+.main-image-container {
+    height: 34vw;
 }
 
 .home-centered:hover {
@@ -117,10 +114,6 @@ a {
     font-size: 1.2vw;
     transition: font-size 0.25s;
 }
-
-/* .sub-text:hover {
-  font-size: 1.3vw;
-} */
 
 .shop-text {
     font-family: 'Tenor Sans', sans-serif;
