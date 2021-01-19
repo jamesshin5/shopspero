@@ -8,10 +8,6 @@ a {
     transition: width 0.25s;
 }
 
-/* .arrow:hover{
-  width:3.2vw;
-} */
-
 .arrow-buttons {
     background: transparent;
     box-shadow: 0px 0px 0px transparent;
@@ -46,8 +42,6 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* flex-direction: column;
-  align-items: center; */
     margin-left: 6vw;
     margin-right: 6vw;
 }
@@ -102,6 +96,10 @@ a {
     transition: font-size 0.5s;
 }
 
+.main-image-container {
+    height: 34vw;
+}
+
 .home-centered:hover {
     font-size: 10vw;
 }
@@ -116,10 +114,6 @@ a {
     font-size: 1.2vw;
     transition: font-size 0.25s;
 }
-
-/* .sub-text:hover {
-  font-size: 1.3vw;
-} */
 
 .shop-text {
     font-family: 'Tenor Sans', sans-serif;

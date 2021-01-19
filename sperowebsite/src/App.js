@@ -55,7 +55,7 @@ import picture41 from './images/ambassadors/ambassador-joy.jpg'
 import picture42 from './images/ambassadors/ambassador-yasmin.jpg'
 
 import picture43 from './images/about-image-1.jpg'
-import picture44 from './images/about-image-1.png'
+import picture44 from './images/about-bgimage.png'
 
 
 function App() {

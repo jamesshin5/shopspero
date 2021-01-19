@@ -18,7 +18,7 @@ class About extends Component {
                     <div className="about-caption-1">
                         <Fade bottom>
                             <div className="ab-caption-title-1">
-                                <b>ABOUT US</b>
+                                ABOUT US
                             </div>
                         </Fade>
                         <Fade bottom>
@@ -45,13 +45,13 @@ class About extends Component {
                     <Fade bottom>
                         <div className='about-line-1'></div>
                     </Fade>
-                    <Fade bottom>
+                    {/* <Fade bottom>
                         <div className='about-subline-1'></div>
-                    </Fade>
+                    </Fade> */}
                     <div className="about-caption-2">
                         <Fade bottom>
                             <div className="ab-caption-title-2">
-                                <b>MISSION</b>
+                                MISSION
                             </div>
                         </Fade>
                         <Fade bottom>
@@ -62,7 +62,6 @@ class About extends Component {
                             insignificant as a sparrow will be remembered and
                             cared for.
                             <br />
-                                <br />
                             We want to expose the poverty in these neglected
                             communities through an innovative medium.{' '}
                                 <b>
@@ -74,9 +73,17 @@ class About extends Component {
                     </div>
                 </div>
                 <div className="about-bottom-container">
+                    <div className='ab-image-container-2'>
+                        <Fade bottom>
+                            <img src={require('../../images/design-photos/mountain-mover-right.jpg')} className='about-image-2' />
+                        </Fade>
+                    </div>
+                    <Fade bottom>
+                        <div className='about-line-2'></div>
+                    </Fade>
                     <Fade bottom>
                         <div className="ab-explanation-1">
-                            Matthew 10:29-31
+                            MATTHEW 10:29-31
                         </div>
                     </Fade>
                     <Fade bottom>
@@ -88,9 +95,9 @@ class About extends Component {
                             value than many sparrows."
                         </div>
                     </Fade>
-                    <div className='ab-image-container-2'>
+                    <div className='ab-image-container-3'>
                         <Fade bottom>
-                            <img src={require('../../images/design-photos/abide-overlay.jpg')} className='about-image-2' />
+                            <img src={require('../../images/design-photos/abide-overlay.jpg')} className='about-image-3' />
                         </Fade>
                     </div>
                     <Fade bottom>
