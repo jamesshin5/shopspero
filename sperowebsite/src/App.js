@@ -54,6 +54,10 @@ import picture40 from './images/ambassadors/ambassador-grace.jpg'
 import picture41 from './images/ambassadors/ambassador-joy.jpg'
 import picture42 from './images/ambassadors/ambassador-yasmin.jpg'
 
+import picture43 from './images/about-image-1.jpg'
+import picture44 from './images/about-image-1.png'
+
+
 function App() {
     const [isLoading, setIsLoading] = useState(true)
 
@@ -123,10 +127,10 @@ function App() {
                     </div>
                 </div>
             ) : (
-                <Router basename={process.env.PUBLIC_URL}>
-                    <Main />
-                </Router>
-            )}
+                    <Router basename={process.env.PUBLIC_URL}>
+                        <Main />
+                    </Router>
+                )}
         </div>
     )
 }

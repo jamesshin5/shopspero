@@ -1,91 +1,176 @@
 body {
     background-color: #fff2e6;
 }
-.ab-logo {
-    z-index: 1;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50vw;
-    padding-top: 3vw;
-    /* position: absolute; */
+.about-main-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-size: cover;
+    background: url('../../images/home-bgimage-update.png') no-repeat center
+        center;
+    background-position: right -9vw;
+    background-size: cover;
+    height: 100%;
 }
 .about-caption-1 {
-    width: 50vw;
-    padding-left: 5vw;
-    top: -40vw;
-    position: relative;
+    text-align: center;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    z-index:100;
 }
 .about-caption-2 {
-    width: 50vw;
-    text-align: right;
-    top: -25vw;
-    padding-left: 45vw;
-    position: relative;
+    text-align: center;
+    z-index:100;
+    /* padding-left: 15vw;
+    padding-right: 15vw; */
 }
 .ab-caption-title-1 {
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 2vw;
+    font-size: 4vw;
     z-index: 10;
+    color: #5c6a6f;
+    padding-top: 8vw;
+
 }
 .ab-caption-title-2 {
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 2vw;
+    font-size: 3vw;
     z-index: 10;
+    color: #5c6a6f;
+    padding-top: 4vw;
+    text-align: right;
+    padding-left: 15vw;
+    padding-right: 27vw;
+    /* background-color: #fff2e6; */
 }
 .ab-caption-content-1 {
     font-family: 'Tenor Sans', sans-serif;
     font-size: 1vw;
     z-index: 10;
+    color: #5c6a6f;
+    padding-top: 1.5vw;
 }
 .ab-caption-content-2 {
     font-family: 'Tenor Sans', sans-serif;
     font-size: 1vw;
     z-index: 10;
+    color: #5c6a6f;
+    padding-top: 1.5vw;
+    width: 30vw;
+    text-align: left;
+    padding-left: 50vw;
+    padding-right: 15vw;
+}
+.about-image-0 {
+    width: 40vw;
+    z-index: 3;
+    padding-top: 2vw;
+    padding-bottom: 1.5vw;
+
+}
+.ab-image-container-1 {
+    top: 4vw;
+    position: relative;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    z-index: 3;
+    height: 0;
+}
+.ab-image-container-2 {
+    top: 4vw;
+    position: relative;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    z-index: 3;
+    height: 0;
+
+}
+.about-image-1 {
+    width: 14vw;
+    /* margin-left: 25vw; */
+    z-index: 3;
+    margin-left: 7vw;
+}
+.about-image-2 {
+    width: 14vw;
+    z-index: 3;
+    margin-left: 37vw;
+}
+.about-line-1 {
+    background-color: #5c6a6f;
+    width: 35vw;
+    height: 0.125vw;
+    top: 6vw;
+    position: relative;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    z-index: 1;
+}
+.about-subline-1 {
+    background-color:#5c6a6f;
+    width: 4vw;
+    height: 0.125vw;
+    top: 5.84vw;
+    position: relative;
+    margin-left: 75.1vw;
+    margin-right: 20vw;
+    z-index: 1;
 }
 .about-bottom-container {
-    position: relative;
-    height: 20vw;
-    top: -30vw;
+    /* height: 20vw; */
+    padding-top: 5vw;
 }
 .ab-explanation-1 {
     font-family: 'Tenor Sans', sans-serif;
     font-size: 1.5vw;
     z-index: 10;
-    text-align: right;
-    width: 25vw;
-    padding-left: 10vw;
-    top: 21vw;
+    text-align: center;
+    color: #5c6a6f;
+    padding-left: 15vw;
+    padding-right: 50vw;
+}
+.ab-subex-1 {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 1vw;
+    z-index: 10;
+    color: #5c6a6f;
+    padding-top: 1vw;
+    width: 40vw;
+    text-align: left;
+    padding-left: 26vw;
+    padding-right: 15vw;
+}
+.about-line-2 {
+    background-color: #5c6a6f;
+    height: 0.125vw;
+    /* top: 10vw; */
+    z-index: 1;
     position: relative;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    top: 7vw;
 }
 .ab-explanation-2 {
     font-family: 'Tenor Sans', sans-serif;
-    font-size: 1.5vw;
+    text-align: left;
+    font-size: 1vw;
     z-index: 10;
-    width: 25vw;
-    padding-left: 65vw;
-    position: relative;
+    color: #5c6a6f;
+    padding-left: 20vw;
+    padding-right: 15vw;
+    padding-top: 12vw;
+    width: 28vw;
 }
-.ab-colored-bar {
-    background-color: #5c6a6f;
-    width: 80vw;
-    height: 0.5vw;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    top: 24vw;
-    z-index: 1;
-    position: relative;
-}
-.ab-image {
-    z-index: 2;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20vw;
-    top: 10vw;
-    position: relative;
-    box-shadow: 0.25vw 0.25vw 0.25vw #888888;
+.ab-explanation-3 {
+    font-family: 'Tenor Sans', sans-serif;
+    text-align: left;
+    font-size: 1vw;
+    z-index: 10;
+    color: #5c6a6f;
+    padding-left: 20vw;
+    padding-right: 15vw;
+    width: 28vw;
+    padding-bottom: 5vw;
 }
 @media (max-width: 480px) {
 }
