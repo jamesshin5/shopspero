@@ -17,33 +17,37 @@ class About extends Component {
                     /> */}
                     <div className="about-caption-1">
                         <Fade bottom>
-                            <div className="ab-caption-title-1">
-                                ABOUT US
-                            </div>
+                            <div className="ab-caption-title-1">ABOUT US</div>
                         </Fade>
                         <Fade bottom>
                             <div className="ab-caption-content-1">
-                                We are a team of UC Berkeley students dedicated to
-                            bridging <b>fashion and mission</b>. We source our
-                            clothes through various Bay Area thrift stores.
-                            Spero also has in-house designers that create{' '}
-                                <b>original, mission-driven</b> clothing underlying
-                            our company's purpose. All of our proceeds go
-                            towards various local and global charitable
-                            organizations.
-                        </div>
+                                We are a team of UC Berkeley students dedicated
+                                to bridging <b>fashion and mission</b>. We
+                                source our clothes through various Bay Area
+                                thrift stores. Spero also has in-house designers
+                                that create <b>original, mission-driven</b>{' '}
+                                clothing underlying our company's purpose. All
+                                of our proceeds go towards various local and
+                                global charitable organizations.
+                            </div>
                         </Fade>
                         <Fade bottom>
-                            <img src={require('../../images/about-image-1.jpg')} className='about-image-0' />
+                            <img
+                                src={require('../../images/about-image-1.jpg')}
+                                className="about-image-0"
+                            />
                         </Fade>
                     </div>
-                    <div className='ab-image-container-1'>
+                    <div className="ab-image-container-1">
                         <Fade bottom>
-                            <img src={require('../../images/design-photos/abide-window.jpg')} className='about-image-1' />
+                            <img
+                                src={require('../../images/design-photos/abide-window.jpg')}
+                                className="about-image-1"
+                            />
                         </Fade>
                     </div>
                     <Fade bottom>
-                        <div className='about-line-1'></div>
+                        <div className="about-line-1"></div>
                     </Fade>
                     {/* <Fade bottom>
                         <div className='about-subline-1'></div>
@@ -52,77 +56,85 @@ class About extends Component {
                         <div className="about-caption-2">
                             <Fade bottom>
                                 <div className="ab-caption-title-2">
-                                    MISSION
-                            </div>
+                                    <b>MISSION</b>
+                                </div>
                             </Fade>
                             <Fade bottom>
                                 <div className="ab-caption-content-2">
-                                    In Latin, the word "spero" means "<b>to hope</b>
-                            ". Our vision is also inspired by{' '}
+                                    In Latin, the word "spero" means "
+                                    <b>to hope</b>
+                                    ". Our vision is also inspired by{' '}
                                     <b>Matthew 10:29-31</b>, where something as
-                            insignificant as a sparrow will be remembered and
-                            cared for.
-                            <br />
-                            We want to expose the poverty in these neglected
-                            communities through an innovative medium.{' '}
+                                    insignificant as a sparrow will be
+                                    remembered and cared for.
+                                    <br />
+                                    We want to expose the poverty in these
+                                    neglected communities through an innovative
+                                    medium.{' '}
                                     <b>
-                                        The goal of Spero is to bring hope to the
-                                        hopeless and light into darkness.
-                            </b>
+                                        The goal of Spero is to bring hope to
+                                        the hopeless and light into darkness.
+                                    </b>
                                 </div>
                             </Fade>
                         </div>
                     </Fade>
                 </div>
                 <div className="about-bottom-container">
-                    <div className='ab-image-container-2'>
+                    <div className="ab-image-container-2">
                         <Fade bottom>
-                            <img src={require('../../images/about-sticker.jpg')} className='about-image-2' />
+                            <img
+                                src={require('../../images/about-sticker.jpg')}
+                                className="about-image-2"
+                            />
                         </Fade>
                     </div>
-                    <Fade bottom>
-                        <div className='about-line-2'></div>
-                    </Fade>
-                    <div className='ab-matthew'>
+                    {/* <Fade bottom>
+                        <div className="about-line-2"></div>
+                    </Fade> */}
+                    <div className="ab-matthew">
                         <Fade bottom>
                             <div className="ab-explanation-1">
-                                MATTHEW 10:29-31
-                        </div>
+                                <b>MATTHEW 10:29-31</b>
+                            </div>
                         </Fade>
                         <Fade bottom>
-                            <div className='ab-subex-1'>
+                            <div className="ab-subex-1">
                                 "Are not two sparrows sold for a penny? And not
-                                one of them will fall to the ground apart from your
-                                Father. But even the hairs of your head are all
-                                numbered. Fear not, therefore; you are of more
-                                value than many sparrows."
-                        </div>
+                                one of them will fall to the ground apart from
+                                your Father. But even the hairs of your head are
+                                all numbered. Fear not, therefore; you are of
+                                more value than many sparrows."
+                            </div>
                         </Fade>
                     </div>
-                    <div className='ab-image-container-3'>
+                    <div className="ab-image-container-3">
                         <Fade bottom>
-                            <img src={require('../../images/design-photos/abide-overlay.jpg')} className='about-image-3' />
+                            <img
+                                src={require('../../images/design-photos/abide-overlay.jpg')}
+                                className="about-image-3"
+                            />
                         </Fade>
                     </div>
                     <Fade bottom>
-                        <div className='about-line-2'></div>
+                        <div className="about-line-2"></div>
                     </Fade>
-                    <div className='ab-bottom-caption'>
+                    <div className="ab-bottom-caption">
                         <Fade bottom>
                             <div className="ab-vision">
-                                VISION
-                        </div>
+                                <b>VISION</b>
+                            </div>
                         </Fade>
                         <Fade bottom>
                             <div className="ab-explanation-2">
-                                Our vision is inspired by Matthew 10:29-31, where
-                                something as insignificant as a sparrow, will be
-                                remembered and cared for.
-                            <br />
-                            His eye is on the sparrow and He watches over us. And
-                            through this we have identity and know our worth through
-                            Him.
-                        </div>
+                                Our vision is inspired by Matthew 10:29-31,
+                                where something as insignificant as a sparrow,
+                                will be remembered and cared for.
+                                <br />
+                                His eye is on the sparrow and He watches over
+                                us. And through this we have identity and know
+                                our worth through Him.
+                            </div>
                         </Fade>
                     </div>
                 </div>

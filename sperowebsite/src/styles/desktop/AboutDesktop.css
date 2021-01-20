@@ -1,23 +1,22 @@
 body {
-    background-color: #FFF1E6;
+    background-color: #fff1e6;
 }
 .about-main-container {
     display: flex;
     flex-direction: column;
     position: relative;
     background-size: cover;
-    background: url('../../images/about-bgimage.png') no-repeat center
-        center;
+    background: url('../../images/about-bgimage.png') no-repeat center center;
     background-position: right -9vw;
     background-size: cover;
     height: 100%;
-    background-color: #FFF1E6;
+    background-color: #fff1e6;
 }
 .about-caption-1 {
     text-align: center;
     padding-left: 20vw;
     padding-right: 20vw;
-    z-index:100;
+    z-index: 100;
 }
 
 .ab-caption-title-1 {
@@ -28,19 +27,18 @@ body {
     padding-top: 8vw;
 }
 .ab-caption-content-1 {
-    font-family: 'Tenor Sans', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
     font-size: 1vw;
     z-index: 10;
     color: #5c6a6f;
     padding-top: 1.5vw;
+    line-height: 2em;
 }
 .about-caption-2 {
     text-align: left;
-    z-index:100;
+    z-index: 100;
     padding-left: 50vw;
-    padding-top: 8vw;
-    /* padding-left: 15vw;
-    padding-right: 15vw; */
+    padding-top: 6vw;
 }
 .ab-caption-title-2 {
     font-family: 'Tenor Sans', sans-serif;
@@ -49,19 +47,19 @@ body {
     color: #5c6a6f;
     padding-top: 8vw;
     text-align: left;
-    /* padding-left: 15vw; */
-    /* padding-right: 41.8vw; */
-    /* background-color: #fff2e6; */
+    padding-left: 5vw;
 }
 
 .ab-caption-content-2 {
-    font-family: 'Tenor Sans', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
     font-size: 1vw;
     z-index: 10;
     color: #5c6a6f;
     padding-top: 1vw;
-    width: 25vw;
+    width: 20vw;
     text-align: tent;
+    padding-left: 5vw;
+    line-height: 2em;
     /* padding-left: 50vw; */
     /* padding-right: 15vw; */
     /* padding-bottom: 2vw; */
@@ -71,29 +69,28 @@ body {
     z-index: 3;
     padding-top: 4vw;
     padding-bottom: 1vw;
-
 }
 .ab-image-container-1 {
     top: 4vw;
     position: relative;
-    margin-left: 20vw;
-    margin-right: 20vw;
+    margin-left: 23vw;
+    /* margin-right: 20vw; */
     z-index: 3;
     height: 0;
 }
 .ab-image-container-2 {
-    top: 0vw;
+    top: 4vw;
     position: relative;
-    margin-left: 20vw;
-    margin-right: 20vw;
+    margin-left: 25vw;
+    /* margin-right: 20vw; */
     z-index: 3;
     height: 0;
 }
 .ab-image-container-3 {
     top: 0vw;
     position: relative;
-    margin-left: 20vw;
-    margin-right: 20vw;
+    margin-left: 23vw;
+    /* margin-right: 20vw; */
     z-index: 3;
     height: 0;
 }
@@ -119,7 +116,7 @@ body {
 .about-line-1 {
     background-color: #5c6a6f;
     /* width: 35vw; */
-    height: 0.125vw;
+    height: 0.06vw;
     top: 6vw;
     position: relative;
     margin-left: 20vw;
@@ -142,7 +139,7 @@ body {
     /* background-color: #DDC79F; */
 }
 .ab-matthew {
-    padding-top: 17vw;
+    padding-top: 10vw;
     padding-left: 24.2vw;
     padding-bottom: 5vw;
     text-align: left;
@@ -153,26 +150,27 @@ body {
     z-index: 10;
     /* text-align: center; */
     color: #5c6a6f;
-    padding-left: 6vw;
+    margin-left: 9vw;
     /* padding-left: 15vw;
     padding-right: 45.7vw; */
     /* padding-top: 8vw; */
 }
 .ab-subex-1 {
-    font-family: 'Tenor Sans', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
     font-size: 1vw;
     z-index: 10;
     color: #5c6a6f;
     padding-top: 1vw;
     width: 20vw;
     text-align: right;
-    /* padding-left: 27.2vw;
-    padding-right: 15vw;
-    padding-bottom: 8vw; */
+    margin-left: 3vw;
+    line-height: 2em;
+    /* padding-right: 15vw; */
+    padding-bottom: 8vw;
 }
 .about-line-2 {
     background-color: #5c6a6f;
-    height: 0.125vw;
+    height: 0.06vw;
     /* top: 10vw; */
     z-index: 1;
     position: relative;
@@ -185,25 +183,30 @@ body {
     padding-top: 12vw;
     z-index: 10;
     color: #5c6a6f;
+    /* background-color: aliceblue; */
 }
 .ab-vision {
-    padding-left: 60vw;
-    padding-right: 15vw;
+    padding-left: 55vw;
+    /* padding-right: 15vw; */
+    padding-top: 2vw;
     font-family: 'Tenor Sans', sans-serif;
     font-size: 1.5vw;
     z-index: 10;
     text-align: left;
 }
 .ab-explanation-2 {
-    font-family: 'Tenor Sans', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 100;
     text-align: left;
     font-size: 1vw;
     z-index: 10;
     color: #5c6a6f;
-    padding-left: 60vw;
+    padding-left: 55vw;
     padding-right: 15vw;
     padding-top: 1vw;
-    width: 15vw;
+    width: 18vw;
+    line-height: 2em;
+    /* background-color: aqua; */
 }
 
 @media (max-width: 480px) {
