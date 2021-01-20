@@ -48,53 +48,57 @@ class About extends Component {
                     {/* <Fade bottom>
                         <div className='about-subline-1'></div>
                     </Fade> */}
-                    <div className="about-caption-2">
-                        <Fade bottom>
-                            <div className="ab-caption-title-2">
-                                MISSION
+                    <Fade bottom>
+                        <div className="about-caption-2">
+                            <Fade bottom>
+                                <div className="ab-caption-title-2">
+                                    MISSION
                             </div>
-                        </Fade>
-                        <Fade bottom>
-                            <div className="ab-caption-content-2">
-                                In Latin, the word "spero" means "<b>to hope</b>
+                            </Fade>
+                            <Fade bottom>
+                                <div className="ab-caption-content-2">
+                                    In Latin, the word "spero" means "<b>to hope</b>
                             ". Our vision is also inspired by{' '}
-                                <b>Matthew 10:29-31</b>, where something as
+                                    <b>Matthew 10:29-31</b>, where something as
                             insignificant as a sparrow will be remembered and
                             cared for.
                             <br />
                             We want to expose the poverty in these neglected
                             communities through an innovative medium.{' '}
-                                <b>
-                                    The goal of Spero is to bring hope to the
-                                    hopeless and light into darkness.
+                                    <b>
+                                        The goal of Spero is to bring hope to the
+                                        hopeless and light into darkness.
                             </b>
-                            </div>
-                        </Fade>
-                    </div>
+                                </div>
+                            </Fade>
+                        </div>
+                    </Fade>
                 </div>
                 <div className="about-bottom-container">
                     <div className='ab-image-container-2'>
                         <Fade bottom>
-                            <img src={require('../../images/design-photos/mountain-mover-right.jpg')} className='about-image-2' />
+                            <img src={require('../../images/about-sticker.jpg')} className='about-image-2' />
                         </Fade>
                     </div>
                     <Fade bottom>
                         <div className='about-line-2'></div>
                     </Fade>
-                    <Fade bottom>
-                        <div className="ab-explanation-1">
-                            MATTHEW 10:29-31
+                    <div className='ab-matthew'>
+                        <Fade bottom>
+                            <div className="ab-explanation-1">
+                                MATTHEW 10:29-31
                         </div>
-                    </Fade>
-                    <Fade bottom>
-                        <div className='ab-subex-1'>
-                            "Are not two sparrows sold for a penny? And not
-                            one of them will fall to the ground apart from your
-                            Father. But even the hairs of your head are all
-                            numbered. Fear not, therefore; you are of more
-                            value than many sparrows."
+                        </Fade>
+                        <Fade bottom>
+                            <div className='ab-subex-1'>
+                                "Are not two sparrows sold for a penny? And not
+                                one of them will fall to the ground apart from your
+                                Father. But even the hairs of your head are all
+                                numbered. Fear not, therefore; you are of more
+                                value than many sparrows."
                         </div>
-                    </Fade>
+                        </Fade>
+                    </div>
                     <div className='ab-image-container-3'>
                         <Fade bottom>
                             <img src={require('../../images/design-photos/abide-overlay.jpg')} className='about-image-3' />
@@ -103,20 +107,24 @@ class About extends Component {
                     <Fade bottom>
                         <div className='about-line-2'></div>
                     </Fade>
-                    <Fade bottom>
-                        <div className="ab-explanation-2">
-                            Our vision is inspired by Matthew 10:29-31, where
-                            something as insignificant as a sparrow, will be
-                            remembered and cared for.
+                    <div className='ab-bottom-caption'>
+                        <Fade bottom>
+                            <div className="ab-vision">
+                                VISION
                         </div>
-                    </Fade>
-                    <Fade bottom>
-                        <div className="ab-explanation-3">
+                        </Fade>
+                        <Fade bottom>
+                            <div className="ab-explanation-2">
+                                Our vision is inspired by Matthew 10:29-31, where
+                                something as insignificant as a sparrow, will be
+                                remembered and cared for.
+                            <br />
                             His eye is on the sparrow and He watches over us. And
                             through this we have identity and know our worth through
                             Him.
                         </div>
-                    </Fade>
+                        </Fade>
+                    </div>
                 </div>
                 <Footer color="#fff2e6" />
             </div>
