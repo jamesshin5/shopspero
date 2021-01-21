@@ -45,10 +45,10 @@ const TeamPage = (props) => {
                             description="What is up!! I'm Andrew, a third year at UC Berkeley studying Data Science and music. I love basketball, running, acappella, magic, camping, smash ultimate, and many other small things in life! I'm serving in Spero because I hope to use fashion as a platform to spread the gospel!"
                         />
                         <Profile
-                            name="MATTHEW FLORES"
-                            title="TECHNICAL LEAD"
-                            imageURL={require('../../images/staff/matthewflores-min.jpg')}
-                            description="Hi! I'm Matt, a third year at UC Berkeley studying Cognitive Science, and I'm the head of Web Design and tech! I love to dance, shop, binge new mock-umentaries/comedies, studying in cafes, and trying all different types of boba and latte drinks! I joined Spero because I could combine my passion for design with something so important to me like my faith!"
+                            name="JAMES SHIN"
+                            title="DEVELOPMENT LEAD"
+                            imageURL={require('../../images/staff/jamesshin-min.jpg')}
+                            description="Hello! I'm James Shin, a junior at UC Berkeley studying computer science and data science. I love playing the guitar, wearing big hoodies, binging TV shows like Suits or Mad Men, playing basketball and Fortnite, and working with all the talented and creative people at Spero!"
                         />
                         <Profile
                             name="JASMINE CHEN"
@@ -68,10 +68,10 @@ const TeamPage = (props) => {
                             description="Hey!  My name is Justin Park, and I am a third year @ UC Berkeley studying cognitive science and data science.  I love singing, going on adventures, driving, and hanging out for hours at the park!  I joined Spero because it is filled with people passionate about God and love to serve God with all of their lives."
                         />
                         <Profile
-                            name="JAMES SHIN"
+                            name="MATTHEW FLORES"
                             title="WEB DEVELOPER"
-                            imageURL={require('../../images/staff/jamesshin-min.jpg')}
-                            description="Hello! I'm James Shin, a junior at UC Berkeley studying computer science and data science. I love playing the guitar, wearing big hoodies, binging TV shows like Suits or Mad Men, playing basketball and Fortnite, and working with all the talented and creative people at Spero!"
+                            imageURL={require('../../images/staff/matthewflores-min.jpg')}
+                            description="Hi! I'm Matt, a third year at UC Berkeley studying Cognitive Science, and I'm the head of Web Design and tech! I love to dance, shop, binge new mock-umentaries/comedies, studying in cafes, and trying all different types of boba and latte drinks! I joined Spero because I could combine my passion for design with something so important to me like my faith!"
                         />
                         <Profile
                             name="JENNY WOO"

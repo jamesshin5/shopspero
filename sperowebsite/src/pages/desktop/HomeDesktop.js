@@ -18,7 +18,7 @@ const HomePageDesktop = (props) => {
     ]
     const [current, setCurrent] = useState(image0)
     const [num, setNum] = useState(0)
-    const numImages = 3
+    const numImages = designLinks.length
 
     function increaseNum() {
         console.log(num)
