@@ -3,7 +3,7 @@ import { Route, Switch, withRouter } from 'react-router-dom'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import '../styles/Main.css'
 
-import Navbar from './NavBar'
+// import Navbar from './NavBar'
 // import MobileNav from './MobileNav';
 
 import HomePage from '../pages/HomePage'
@@ -12,7 +12,7 @@ import TeamPage from '../pages/TeamPage'
 import DesignsPage from '../pages/DesignsPage'
 // import ShopPage from '../pages/ShopPage';
 // import PartnershipsPage from '../pages/PartnershipsPage';
-import { useMediaQuery } from 'react-responsive'
+// import { useMediaQuery } from 'react-responsive'
 import MountainMoverPage from '../pages/desktop/MountainMoverPage'
 import WalkOnWaterPage from '../pages/desktop/WalkOnWaterPage'
 import SperoBearPage from '../pages/desktop/SperoBearPage'
@@ -25,10 +25,10 @@ import BayAreaPage from '../pages/desktop/BayAreaPage'
 import BerkeleyHoodiePage from '../pages/desktop/BerkeleyHoodiePage'
 import ScrollToTop from './ScrollToTop'
 const Main = ({ location }) => {
-    const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-device-width: 480px)',
-    })
-    const isMobile = useMediaQuery({ query: '(max-width: 480px)' })
+    // const isDesktopOrLaptop = useMediaQuery({
+    //     query: '(min-device-width: 480px)',
+    // })
+    // const isMobile = useMediaQuery({ query: '(max-width: 480px)' })
 
     return (
         <Fragment>

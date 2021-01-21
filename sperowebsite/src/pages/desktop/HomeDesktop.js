@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { navigate } from '@reach/router'
 import Footer from '../../components/Footer'
 import '../../styles/desktop/HomeDesktop.css'
 import { Link } from 'react-router-dom'
 import Fade from 'react-reveal/Fade'
 
 import CrossfadeImage from 'react-crossfade-image'
-import NewRelease from '../../components/NewRelease'
 import Navbar from '../../components/NavBar'
 
 const image0 = require('../../images/home-image-0.png')
@@ -41,7 +39,7 @@ const HomePageDesktop = (props) => {
             setNum(numImages - 1)
         } else {
             console.log(num)
-            var image = require('../../images/home-image-' +
+            image = require('../../images/home-image-' +
                 ((num - 1) % numImages).toString() +
                 '.png')
             setCurrent(image)

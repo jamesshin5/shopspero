@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Footer from '../../components/Footer'
 import '../../styles/desktop/DesignDesktop.css'
-// import AbideHoodieDesktop from './designs/AbideHoodieDesktop.js'
 
 import { Link } from 'react-router-dom'
-import BlessedToBlessDesktop from './designs/BlessedToBlessDesktop'
 import BerkeleyHoodieDesktop from './designs/BerkeleyHoodieDesktop'
 
 import Navbar from '../../components/NavBar'

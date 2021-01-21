@@ -10,7 +10,7 @@ const MountainMoverDesktop = () => {
                     <div class="fill">
                         <img
                             src={require('../../../images/design-photos/mountain-graphic.jpg')}
-                            alt="main-sticker-photo"
+                            alt="main-sticker"
                         />
                     </div>
                     <div className="smaller-container">

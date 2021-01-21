@@ -3,10 +3,6 @@ import '../styles/Footer.css'
 import Fade from 'react-reveal/Fade'
 
 const Footer = (props) => {
-    const style = {
-        backgroundColor: '' + props.color + '',
-    }
-
     return (
         <Fade bottom>
             <div className="footer-container">

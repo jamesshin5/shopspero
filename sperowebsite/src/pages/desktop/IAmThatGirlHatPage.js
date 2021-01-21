@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Footer from '../../components/Footer'
 import '../../styles/desktop/DesignDesktop.css'
 import IAmThatGirlHatDesktop from './designs/IAmThatGirlHatDesktop.js'

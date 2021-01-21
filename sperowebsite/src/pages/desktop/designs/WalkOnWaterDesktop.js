@@ -10,7 +10,7 @@ const WalkOnWaterPage = () => {
                     <div class="fill">
                         <img
                             src={require('../../../images/design-photos/bottle-graphic.jpg')}
-                            alt="main-sticker-photo"
+                            alt="main-sticker"
                         />
                     </div>
                     <div className="smaller-container">

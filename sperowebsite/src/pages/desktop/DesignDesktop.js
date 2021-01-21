@@ -5,8 +5,6 @@ import WalkOnWaterPage from './designs/WalkOnWaterDesktop.js'
 import MountainMoverPage from './designs/MountainMoverDesktop.js'
 import SperoBearPage from './designs/SperoBearDesktop.js'
 
-import { Link } from 'react-router-dom'
-import { Nav } from 'react-bootstrap'
 import Navbar from '../../components/NavBar'
 
 const DesignsDesktop = (props) => {
