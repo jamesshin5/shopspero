@@ -58,7 +58,6 @@ import picture43 from './images/about-image-1.jpg'
 import picture44 from './images/about-bgimage.png'
 import picture45 from './images/about-sticker.jpg'
 
-
 function App() {
     const [isLoading, setIsLoading] = useState(true)
 
@@ -111,6 +110,9 @@ function App() {
             picture40,
             picture41,
             picture42,
+            picture43,
+            picture44,
+            picture45,
         ]
         //caching images
         imgs.forEach((image) => {
@@ -128,10 +130,10 @@ function App() {
                     </div>
                 </div>
             ) : (
-                    <Router basename={process.env.PUBLIC_URL}>
-                        <Main />
-                    </Router>
-                )}
+                <Router basename={process.env.PUBLIC_URL}>
+                    <Main />
+                </Router>
+            )}
         </div>
     )
 }
