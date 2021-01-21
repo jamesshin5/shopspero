@@ -65,11 +65,12 @@
 
 .staff-description {
     font-size: 1vw;
-    font-family: 'Tenor Sans', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
     color: #5c6a6f;
     padding-left: 15vw;
     padding-right: 15vw;
     padding-top: 1.5vw;
     padding-bottom: 3vw;
     text-align: center;
+    line-height: 2em;
 }
