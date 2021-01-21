@@ -35,6 +35,7 @@ class About extends Component {
                             <img
                                 src={require('../../images/about-image-1.jpg')}
                                 className="about-image-0"
+                                alt="Abide Hoodie"
                             />
                         </Fade>
                     </div>
@@ -43,6 +44,7 @@ class About extends Component {
                             <img
                                 src={require('../../images/design-photos/abide-window.jpg')}
                                 className="about-image-1"
+                                alt="Abide Hoodie"
                             />
                         </Fade>
                     </div>
@@ -86,6 +88,7 @@ class About extends Component {
                             <img
                                 src={require('../../images/about-sticker.jpg')}
                                 className="about-image-2"
+                                alt="Abide Hoodie"
                             />
                         </Fade>
                     </div>
@@ -113,6 +116,7 @@ class About extends Component {
                             <img
                                 src={require('../../images/design-photos/abide-overlay.jpg')}
                                 className="about-image-3"
+                                alt="Abide Hoodie"
                             />
                         </Fade>
                     </div>
