@@ -21,9 +21,8 @@ a {
     display: flex;
     flex-direction: column;
     position: relative;
-    background: url('../../images/home-bgimage-update.png') no-repeat center
-        center;
-    background-position: right -10vw;
+    background: url('../../images/about-bgimage.png') no-repeat center center;
+    background-position: right -9vw;
     background-size: cover;
     height: 100vh;
     overflow: scroll;

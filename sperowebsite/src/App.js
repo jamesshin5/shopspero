@@ -54,6 +54,10 @@ import picture40 from './images/ambassadors/ambassador-grace.jpg'
 import picture41 from './images/ambassadors/ambassador-joy.jpg'
 import picture42 from './images/ambassadors/ambassador-yasmin.jpg'
 
+import picture43 from './images/about-image-1.jpg'
+import picture44 from './images/about-bgimage.png'
+import picture45 from './images/about-sticker.jpg'
+
 function App() {
     const [isLoading, setIsLoading] = useState(true)
 
@@ -106,6 +110,9 @@ function App() {
             picture40,
             picture41,
             picture42,
+            picture43,
+            picture44,
+            picture45,
         ]
         //caching images
         imgs.forEach((image) => {
