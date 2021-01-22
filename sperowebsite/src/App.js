@@ -120,7 +120,9 @@ function App() {
         })
     }, [])
 
-    setIsLoading(false)
+    if (isLoading == true) {
+        setIsLoading(false)
+    }
 
     return (
         <div>
