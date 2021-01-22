@@ -120,7 +120,7 @@ function App() {
         })
     }, [])
 
-    if (isLoading == true) {
+    if (isLoading === true) {
         setIsLoading(false)
     }
 
