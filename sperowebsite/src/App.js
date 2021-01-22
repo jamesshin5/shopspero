@@ -114,12 +114,13 @@ function App() {
             picture44,
             picture45,
         ]
-        //caching images
+        //setting src property forces browser to load images
         imgs.forEach((image) => {
             new Image().src = image
         })
-        setIsLoading(false)
     }, [])
+
+    setIsLoading(false)
 
     return (
         <div>
