@@ -6,9 +6,9 @@ const Footer = (props) => {
     return (
         <Fade bottom>
             <div className="footer-container">
-                <div className="spero-berkeley">
+                {/* <div className="spero-berkeley">
                     <h5>&copy; SPERO 2020 Berkeley, CA </h5>
-                </div>
+                </div> */}
                 <div className="footer-social-container">
                     <div className="social-icons-container">
                         <div className="icon" id="facebook-icon">

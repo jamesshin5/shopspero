@@ -16,11 +16,6 @@ const Navbar = (props) => {
             </div>
             <div className="navlinks">
                 <ul>
-                    {/* <li>
-            <Link to='/about'>
-              <div className='navlink'>ABOUT</div>
-            </Link>
-          </li> */}
                     <li>
                         <Link to="/about">
                             <div className="navlink">ABOUT US</div>

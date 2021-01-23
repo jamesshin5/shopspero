@@ -49,3 +49,12 @@
         transform: rotate(360deg);
     }
 }
+
+html {
+    margin: 0;
+    overscroll-behavior: none;
+}
+
+body {
+    overscroll-behavior: none;
+}

@@ -26,6 +26,7 @@ a {
     background-size: cover;
     height: 100vh;
     overflow: scroll;
+    overscroll-behavior: none;
 }
 
 .top-container {
@@ -234,4 +235,10 @@ a {
 
 body {
     background-color: #dac4af;
+}
+
+.Bouncefix {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }

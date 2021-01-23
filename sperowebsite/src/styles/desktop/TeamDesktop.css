@@ -51,6 +51,7 @@
     justify-content: space-between;
     /* float:top; */
     margin-top: 0.25vw;
+    margin-bottom: 5vw;
 }
 
 .staff-title {

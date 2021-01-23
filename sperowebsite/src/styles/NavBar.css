@@ -10,13 +10,13 @@
 
 .logo,
 .navlinks {
-    padding-top: 2vw;
+    padding-top: 1.75vw;
 }
 
 .logo {
     width: 7vw;
     margin-top: 1vw;
-    margin-left: 7.5vw;
+    margin-left: 3.5vw;
 }
 
 .logo-name {
@@ -29,8 +29,7 @@
 .navlinks {
     position: absolute;
     right: 0;
-    width: 53vw;
-    margin-right: 7.5vw;
+    margin-right: 3.5vw;
 }
 
 ul {
