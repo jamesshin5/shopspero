@@ -42,6 +42,11 @@
 .icon {
     width: 1.5vw;
     padding-right: 1vw;
+    transition: width 0.25s;
+}
+
+.icon:hover {
+    width: 2vw;
 }
 
 a {

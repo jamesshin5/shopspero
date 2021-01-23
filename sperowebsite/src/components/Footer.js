@@ -28,7 +28,7 @@ const Footer = (props) => {
                             </a>
                         </div>
                         <div className="icon" id="footer-icon">
-                            <a href="https://medium.com/">
+                            <a href="https://shopspero.medium.com/">
                                 <img
                                     src={require('../images/medium_icon.png')}
                                     alt="medium-icon"
