@@ -23,7 +23,7 @@ import MacronHoodiePage from '../pages/desktop/MacronHoodiePage'
 import BlessedToBlessPage from '../pages/desktop/BlessedToBlessPage'
 import BayAreaPage from '../pages/desktop/BayAreaPage'
 import BerkeleyHoodiePage from '../pages/desktop/BerkeleyHoodiePage'
-import ScrollToTop from './ScrollToTop'
+// import ScrollToTop from './ScrollToTop'
 const Main = ({ location }) => {
     // const isDesktopOrLaptop = useMediaQuery({
     //     query: '(min-device-width: 480px)',
