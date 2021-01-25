@@ -29,14 +29,19 @@ const DesignsDesktop = (props) => {
         switch (data) {
             case 'abide':
                 setIndex(3)
+                break
             case 'mountainmover':
                 setIndex(1)
+                break
             case 'iamthatgirl':
                 setIndex(5)
+                break
             case 'macronhoodie':
                 setIndex(6)
+                break
             default:
                 setIndex(1)
+                break
         }
     }, [])
 
@@ -101,7 +106,7 @@ const DesignsDesktop = (props) => {
                                 <Text
                                     _hover={{ color: 'black' }}
                                     color={
-                                        designIndex == 1 ? 'black' : '#5c6a6f'
+                                        designIndex === 1 ? 'black' : '#5c6a6f'
                                     }
                                     textAlign="right"
                                 >
@@ -114,7 +119,7 @@ const DesignsDesktop = (props) => {
                                 <Text
                                     _hover={{ color: 'black' }}
                                     color={
-                                        designIndex == 1 ? 'black' : '#5c6a6f'
+                                        designIndex === 1 ? 'black' : '#5c6a6f'
                                     }
                                     textAlign="right"
                                 >
@@ -127,7 +132,7 @@ const DesignsDesktop = (props) => {
                                 <Text
                                     _hover={{ color: 'black' }}
                                     color={
-                                        designIndex == 2 ? 'black' : '#5c6a6f'
+                                        designIndex === 2 ? 'black' : '#5c6a6f'
                                     }
                                     textAlign="right"
                                 >
@@ -141,7 +146,7 @@ const DesignsDesktop = (props) => {
                         <button onClick={() => setIndex(3)}>
                             <Text
                                 _hover={{ color: 'black' }}
-                                color={designIndex == 3 ? 'black' : '#5c6a6f'}
+                                color={designIndex === 3 ? 'black' : '#5c6a6f'}
                                 textAlign="right"
                             >
                                 ABIDE HOODIE
@@ -152,7 +157,7 @@ const DesignsDesktop = (props) => {
                         <button onClick={() => setIndex(4)}>
                             <Text
                                 _hover={{ color: 'black' }}
-                                color={designIndex == 4 ? 'black' : '#5c6a6f'}
+                                color={designIndex === 4 ? 'black' : '#5c6a6f'}
                                 textAlign="right"
                             >
                                 HOPE LONG SLEEVE
@@ -163,7 +168,7 @@ const DesignsDesktop = (props) => {
                         <button onClick={() => setIndex(5)}>
                             <Text
                                 _hover={{ color: 'black' }}
-                                color={designIndex == 5 ? 'black' : '#5c6a6f'}
+                                color={designIndex === 5 ? 'black' : '#5c6a6f'}
                                 textAlign="right"
                             >
                                 I AM THAT GIRL DAD HAT
@@ -174,7 +179,7 @@ const DesignsDesktop = (props) => {
                         <button onClick={() => setIndex(6)}>
                             <Text
                                 _hover={{ color: 'black' }}
-                                color={designIndex == 6 ? 'black' : '#5c6a6f'}
+                                color={designIndex === 6 ? 'black' : '#5c6a6f'}
                                 textAlign="right"
                             >
                                 SPERO MACRON HOODIE
@@ -185,7 +190,7 @@ const DesignsDesktop = (props) => {
                         <button onClick={() => setIndex(7)}>
                             <Text
                                 _hover={{ color: 'black' }}
-                                color={designIndex == 7 ? 'black' : '#5c6a6f'}
+                                color={designIndex === 7 ? 'black' : '#5c6a6f'}
                                 textAlign="right"
                             >
                                 BLESSED TO BLESS
@@ -196,7 +201,7 @@ const DesignsDesktop = (props) => {
                         <button onClick={() => setIndex(8)}>
                             <Text
                                 _hover={{ color: 'black' }}
-                                color={designIndex == 8 ? 'black' : '#5c6a6f'}
+                                color={designIndex === 8 ? 'black' : '#5c6a6f'}
                                 textAlign="right"
                             >
                                 BAY AREA LONG SLEEVE
@@ -207,7 +212,7 @@ const DesignsDesktop = (props) => {
                         <button onClick={() => setIndex(9)}>
                             <Text
                                 _hover={{ color: 'black' }}
-                                color={designIndex == 9 ? 'black' : '#5c6a6f'}
+                                color={designIndex === 9 ? 'black' : '#5c6a6f'}
                                 textAlign="right"
                             >
                                 BERKELEY HOODIE

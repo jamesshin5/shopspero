@@ -75,46 +75,78 @@ const HomePageDesktop = (props) => {
         >
             <Navbar />
             <VStack>
-                <Box w="300px" position="relative" textAlign="center">
+                <HStack
+                    alignItems="center"
+                    justifyContent="space-between"
+                    w="80%"
+                >
                     <Fade bottom>
-                        <Box h="500px">
-                            <Link
-                                to={{
-                                    pathname: '/designs',
-                                    state: designLinks[num],
-                                }}
-                            >
-                                <CrossfadeImage
-                                    src={current}
-                                    duration={1500}
-                                    timingFunction={'ease-in'}
-                                />
-                            </Link>
-                        </Box>
+                        <button
+                            onClick={() => decreaseNum()}
+                            className="arrow-buttons"
+                        >
+                            <Image
+                                src={require('../../images/left-arrow.png')}
+                                alt="left-arrow"
+                                w="50px"
+                                display={{ base: 'none', md: 'block' }}
+                            />
+                        </button>
                     </Fade>
-                    <Box
-                        display="flex"
-                        position="absolute"
-                        transform="translate(-50%, -50%)"
-                        top="50%"
-                        left="50%"
-                    >
+                    <Box w="300px" position="relative" textAlign="center">
                         <Fade bottom>
-                            <Link to="/about">
-                                <Text
-                                    fontFamily="Lexend Deca"
-                                    fontWeight="500"
-                                    fontSize="130px"
-                                    color="#5c6a6f"
-                                    _hover={{ fontSize: '140px' }}
-                                    transition="font-size 0.5s"
+                            <Box h="500px">
+                                <Link
+                                    to={{
+                                        pathname: '/designs',
+                                        state: designLinks[num],
+                                    }}
                                 >
-                                    SPERO
-                                </Text>
-                            </Link>
+                                    <CrossfadeImage
+                                        src={current}
+                                        duration={1500}
+                                        timingFunction={'ease-in'}
+                                    />
+                                </Link>
+                            </Box>
                         </Fade>
+                        <Box
+                            display="flex"
+                            position="absolute"
+                            transform="translate(-50%, -50%)"
+                            top="50%"
+                            left="50%"
+                        >
+                            <Fade bottom>
+                                <Link to="/about">
+                                    <Text
+                                        fontFamily="Lexend Deca"
+                                        fontWeight="500"
+                                        fontSize="130px"
+                                        color="#5c6a6f"
+                                        _hover={{ fontSize: '140px' }}
+                                        transition="font-size 0.5s"
+                                    >
+                                        SPERO
+                                    </Text>
+                                </Link>
+                            </Fade>
+                        </Box>
                     </Box>
-                </Box>
+                    <Fade bottom>
+                        <button
+                            onClick={() => increaseNum()}
+                            className="arrow-buttons"
+                        >
+                            <Image
+                                src={require('../../images/right-arrow.png')}
+                                alt="right-arrow"
+                                w="50px"
+                                display={{ base: 'none', md: 'block' }}
+                            />
+                        </button>
+                    </Fade>
+                </HStack>
                 <Fade bottom>
                     <Text
                         py="15px"

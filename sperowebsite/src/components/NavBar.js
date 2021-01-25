@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../styles/NavBar.css'
+import './NavBar.css'
 import { HStack, Image, Text, Box } from '@chakra-ui/react'
 
 const Navbar = (props) => {
