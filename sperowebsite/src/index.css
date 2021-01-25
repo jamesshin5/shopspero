@@ -1,45 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap'); */
 
-@supports (font-variation-settings: normal) {
-  html {
+/* @supports (font-variation-settings: normal) {
+    html {
+        font-family: 'Lexend Deca', sans-serif;
+    }
+} */
+
+html {
+    font-family: 'Tenor Sans', sans-serif;
+    color: #1f1f1f;
+}
+
+/* html {
     font-family: 'Lexend Deca', sans-serif;
-  }
-}
+    color: #1f1f1f;
+} */
 
 html {
-  font-family: 'Tenor Sans', sans-serif;
-  color: #1f1f1f;
-}
-
-html {
-  font-family: 'Lexend Deca', sans-serif;
-  color: #1f1f1f;
-}
-
-html {
-  font-family: 'Montserrat', sans-serif;
-  color: #1f1f1f;
+    font-family: 'Montserrat', sans-serif;
+    color: #1f1f1f;
 }
 
 body {
-  margin: 0;
-  font-family: 'Tenor Sans', 'Montserrat', 'Lexend Deca', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: 'Tenor Sans', 'Montserrat', -apple-system, BlinkMacSystemFont,
+        'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+        'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
 }
 
-body, html {
-  height: 100%;
-  margin: 0;
+body,
+html {
+    height: 100%;
+    margin: 0;
 }

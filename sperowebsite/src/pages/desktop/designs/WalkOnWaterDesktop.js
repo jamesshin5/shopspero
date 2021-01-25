@@ -7,7 +7,7 @@ const WalkOnWaterPage = () => {
         <div className="sticker-container">
             <Fade bottom>
                 <div className="left-display">
-                    <div class="fill">
+                    <div class="mountain-fill">
                         <img
                             src={require('../../../images/design-photos/bottle-graphic.jpg')}
                             alt="main-sticker"

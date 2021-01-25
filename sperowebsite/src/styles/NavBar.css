@@ -10,7 +10,6 @@
 
 .logo,
 .navlinks {
-    padding-top: 2vw;
 }
 
 .logo {
@@ -44,7 +43,7 @@ ul {
 }
 
 li {
-    font-size: 1vw;
+    font-size: 14px;
     padding-bottom: 0.3vw;
     padding-left: 5vw;
 }
@@ -61,7 +60,7 @@ li > a:after {
     left: 50%;
     position: relative;
     top: 0.5vw;
-    background: #1f1f1f;
+    background: #5c6a6f;
     transition: width 0.3s ease 0s, left 0.3s ease;
     width: 0;
 }
@@ -76,7 +75,7 @@ li > a:hover:after {
 }
 
 .navlink {
-    color: #1f1f1f;
+    color: #5c6a6f;
     letter-spacing: 0.1vw;
     font-family: 'Lexend Deca', sans-serif;
 }

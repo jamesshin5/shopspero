@@ -13,16 +13,16 @@ import DesignsPage from '../pages/DesignsPage'
 // import ShopPage from '../pages/ShopPage';
 // import PartnershipsPage from '../pages/PartnershipsPage';
 // import { useMediaQuery } from 'react-responsive'
-import MountainMoverPage from '../pages/desktop/MountainMoverPage'
-import WalkOnWaterPage from '../pages/desktop/WalkOnWaterPage'
-import SperoBearPage from '../pages/desktop/SperoBearPage'
-import AbideHoodiePage from '../pages/desktop/AbideHoodiePage'
-import IAmThatGirlHatPage from '../pages/desktop/IAmThatGirlHatPage'
-import HopePage from '../pages/desktop/HopePage'
-import MacronHoodiePage from '../pages/desktop/MacronHoodiePage'
-import BlessedToBlessPage from '../pages/desktop/BlessedToBlessPage'
-import BayAreaPage from '../pages/desktop/BayAreaPage'
-import BerkeleyHoodiePage from '../pages/desktop/BerkeleyHoodiePage'
+// import MountainMoverPage from '../pages/desktop/MountainMoverPage'
+// import WalkOnWaterPage from '../pages/desktop/WalkOnWaterPage'
+// import SperoBearPage from '../pages/desktop/SperoBearPage'
+// import AbideHoodiePage from '../pages/desktop/removelater/AbideHoodiePage'
+// import IAmThatGirlHatPage from '../pages/desktop/IAmThatGirlHatPage'
+// import HopePage from '../pages/desktop/HopePage'
+// import MacronHoodiePage from '../pages/desktop/MacronHoodiePage'
+// import BlessedToBlessPage from '../pages/desktop/BlessedToBlessPage'
+// import BayAreaPage from '../pages/desktop/BayAreaPage'
+// import BerkeleyHoodiePage from '../pages/desktop/BerkeleyHoodiePage'
 // import ScrollToTop from './ScrollToTop'
 const Main = ({ location }) => {
     // const isDesktopOrLaptop = useMediaQuery({
@@ -60,7 +60,7 @@ const Main = ({ location }) => {
                             <Route path="/about" component={AboutPage} />
                             <Route path="/team" component={TeamPage} />
                             <Route path="/designs" component={DesignsPage} />
-                            <Route
+                            {/* <Route
                                 path="/design/mountainmover"
                                 component={MountainMoverPage}
                             />
@@ -99,7 +99,7 @@ const Main = ({ location }) => {
                             <Route
                                 path="/design/berkeleyhoodie"
                                 component={BerkeleyHoodiePage}
-                            />
+                            /> */}
                             {/* <Route path='/contact' component={ContactPage} /> */}
                         </Switch>
                         {/* </ScrollToTop> */}

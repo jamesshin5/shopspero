@@ -1,123 +1,308 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from '../../components/Footer'
 import '../../styles/desktop/DesignDesktop.css'
-import WalkOnWaterPage from './designs/WalkOnWaterDesktop.js'
-import MountainMoverPage from './designs/MountainMoverDesktop.js'
-import SperoBearPage from './designs/SperoBearDesktop.js'
+import WalkOnWaterDesktop from './designs/WalkOnWaterDesktop.js'
+import MountainMoverDesktop from './designs/MountainMoverDesktop.js'
+import SperoBearDesktop from './designs/SperoBearDesktop.js'
+
+import AbideHoodieDesktop from './designs/AbideHoodieDesktop.js'
+import HopeDesktop from './designs/HopeDesktop.js'
+import IAmThatGirlHatDesktop from './designs/IAmThatGirlHatDesktop.js'
+
+import MacronHoodieDesktop from './designs/MacronHoodieDesktop.js'
+import BlessedToBlessDesktop from './designs/BlessedToBlessDesktop.js'
+import BayAreaDesktop from './designs/BayAreaDesktop.js'
+
+import BerkeleyHoodieDesktop from './designs/BerkeleyHoodieDesktop.js'
 
 import Navbar from '../../components/NavBar'
 
-const DesignsDesktop = (props) => {
-    const designList = [
-        'walk',
-        'mountain',
-        'bear',
-        'abide',
-        'hope',
-        'girl',
-        'macron',
-        'bless',
-        'bay area',
-        'berkeley',
-    ]
-    const [designIndex, setIndex] = useState(0)
+import { HStack, VStack, Flex, Text, Box } from '@chakra-ui/react'
+import { useLocation } from 'react-router-dom'
 
-    function switchDesign(num) {
-        setIndex(num)
-    }
+const DesignsDesktop = (props) => {
+    let passedProps = useLocation()
+    let data = passedProps.state
+    const [designIndex, setIndex] = useState(1)
+
+    useEffect(() => {
+        switch (data) {
+            case 'abide':
+                setIndex(3)
+            case 'mountainmover':
+                setIndex(1)
+            case 'iamthatgirl':
+                setIndex(5)
+            case 'macronhoodie':
+                setIndex(6)
+            default:
+                setIndex(1)
+        }
+    }, [])
 
     function renderSwitch(param) {
         switch (param) {
-            case 'walk':
-                return <WalkOnWaterPage />
-            case 'mountain':
-                return <MountainMoverPage />
-            case 'bear':
-                return <SperoBearPage />
-            case 'abide':
-                return ''
-            case 'hope':
-                return ''
-            case 'girl':
-                return ''
-            case 'macron':
-                return ''
-            case 'bless':
-                return ''
-            case 'bay area':
-                return ''
-            case 'berkeley':
-                return ''
+            case 0:
+                return <WalkOnWaterDesktop />
+            case 1:
+                return <MountainMoverDesktop />
+            case 2:
+                return <SperoBearDesktop />
+            case 3:
+                return <AbideHoodieDesktop />
+            case 4:
+                return <HopeDesktop />
+            case 5:
+                return <IAmThatGirlHatDesktop />
+            case 6:
+                return <MacronHoodieDesktop />
+            case 7:
+                return <BlessedToBlessDesktop />
+            case 8:
+                return <BayAreaDesktop />
+            case 9:
+                return <BerkeleyHoodieDesktop />
             default:
                 return ''
         }
     }
     return (
-        <div className="design-main-container">
+        <Box
+            w="100%"
+            h="100%"
+            bgColor="#eae7e1"
+            bgImage="url('/images/about-bgimage.png')"
+            bgPosition="center"
+            bgRepeat="no-repeat"
+            overflow="scroll"
+            justifyContent="center"
+        >
             <Navbar />
-            <div className="design-card-container">
-                <div className="design-nav">
-                    <div className="nav-title">ORIGINAL DESIGNS</div>
-
-                    <div className="fall-stickers-nav">
-                        <div className="nav-font">FALL 2020 STICKERS</div>
-                        <button
-                            className="button-style"
-                            onClick={() => switchDesign(0)}
-                        >
-                            <div className="sub-font">WALK ON WATER</div>
-                        </button>
-                        <button
-                            className="button-style"
-                            onClick={() => switchDesign(1)}
-                        >
-                            <div className="sub-font">MOUNTAIN MOVER</div>
-                        </button>
-                        <button
-                            className="button-style"
-                            onClick={() => switchDesign(2)}
-                        >
-                            <div className="sub-font">SPERO BEAR</div>
-                        </button>
-                    </div>
-
-                    <button
-                        className="button-style"
-                        onClick={() => switchDesign(3)}
+            <HStack pb="100px" px={{ base: '10px', md: '60px' }}>
+                <VStack
+                    textAlign="right"
+                    alignItems="right"
+                    fontFamily="Tenor Sans"
+                    fontSize="14px"
+                    spacing="1.5rem"
+                    color="#5c6a6f"
+                >
+                    <Text fontWeight="bold" color="black">
+                        ORIGINAL DESIGNS
+                    </Text>
+                    <VStack
+                        alignItems="right"
+                        spacing="0.25rem"
+                        fontSize="10px"
                     >
-                        <div className="nav-font">ABIDE HOODIE</div>
-                    </button>
+                        <Text fontSize="14px">FALL 2020 STICKERS</Text>
+                        <Box>
+                            <button onClick={() => setIndex(1)}>
+                                <Text
+                                    _hover={{ color: 'black' }}
+                                    color={
+                                        designIndex == 1 ? 'black' : '#5c6a6f'
+                                    }
+                                    textAlign="right"
+                                >
+                                    WALK ON WATER
+                                </Text>
+                            </button>
+                        </Box>
+                        <Box>
+                            <button onClick={() => setIndex(1)}>
+                                <Text
+                                    _hover={{ color: 'black' }}
+                                    color={
+                                        designIndex == 1 ? 'black' : '#5c6a6f'
+                                    }
+                                    textAlign="right"
+                                >
+                                    MOUNTAIN MOVER
+                                </Text>
+                            </button>
+                        </Box>
+                        <Box>
+                            <button onClick={() => setIndex(2)}>
+                                <Text
+                                    _hover={{ color: 'black' }}
+                                    color={
+                                        designIndex == 2 ? 'black' : '#5c6a6f'
+                                    }
+                                    textAlign="right"
+                                >
+                                    SPERO BEAR
+                                </Text>
+                            </button>
+                        </Box>
+                    </VStack>
 
-                    <button className="button-style">
-                        <div className="nav-font">HOPE LONG SLEEVE</div>
-                    </button>
-
-                    <button className="button-style">
-                        <div className="nav-font">"I AM THAT GIRL" DAD HAT</div>
-                    </button>
-
-                    <button className="button-style">
-                        <div className="nav-font">SPERO MACRON HOODIE</div>
-                    </button>
-
-                    <button className="button-style">
-                        <div className="nav-font">"BLESSED TO BLESS"</div>
-                    </button>
-
-                    <button className="button-style">
-                        <div className="nav-font">"BAY AREA" LONG SLEEVE</div>
-                    </button>
-
-                    <button className="button-style">
-                        <div className="nav-font">BERKELEY HOODIE</div>
-                    </button>
-                </div>
-                <div className="design-display">
-                    {renderSwitch(designList[designIndex])}
-                </div>
-            </div>
+                    <Box>
+                        <button onClick={() => setIndex(3)}>
+                            <Text
+                                _hover={{ color: 'black' }}
+                                color={designIndex == 3 ? 'black' : '#5c6a6f'}
+                                textAlign="right"
+                            >
+                                ABIDE HOODIE
+                            </Text>
+                        </button>
+                    </Box>
+                    <Box>
+                        <button onClick={() => setIndex(4)}>
+                            <Text
+                                _hover={{ color: 'black' }}
+                                color={designIndex == 4 ? 'black' : '#5c6a6f'}
+                                textAlign="right"
+                            >
+                                HOPE LONG SLEEVE
+                            </Text>
+                        </button>
+                    </Box>
+                    <Box>
+                        <button onClick={() => setIndex(5)}>
+                            <Text
+                                _hover={{ color: 'black' }}
+                                color={designIndex == 5 ? 'black' : '#5c6a6f'}
+                                textAlign="right"
+                            >
+                                I AM THAT GIRL DAD HAT
+                            </Text>
+                        </button>
+                    </Box>
+                    <Box>
+                        <button onClick={() => setIndex(6)}>
+                            <Text
+                                _hover={{ color: 'black' }}
+                                color={designIndex == 6 ? 'black' : '#5c6a6f'}
+                                textAlign="right"
+                            >
+                                SPERO MACRON HOODIE
+                            </Text>
+                        </button>
+                    </Box>
+                    <Box>
+                        <button onClick={() => setIndex(7)}>
+                            <Text
+                                _hover={{ color: 'black' }}
+                                color={designIndex == 7 ? 'black' : '#5c6a6f'}
+                                textAlign="right"
+                            >
+                                BLESSED TO BLESS
+                            </Text>
+                        </button>
+                    </Box>
+                    <Box>
+                        <button onClick={() => setIndex(8)}>
+                            <Text
+                                _hover={{ color: 'black' }}
+                                color={designIndex == 8 ? 'black' : '#5c6a6f'}
+                                textAlign="right"
+                            >
+                                BAY AREA LONG SLEEVE
+                            </Text>
+                        </button>
+                    </Box>
+                    <Box>
+                        <button onClick={() => setIndex(9)}>
+                            <Text
+                                _hover={{ color: 'black' }}
+                                color={designIndex == 9 ? 'black' : '#5c6a6f'}
+                                textAlign="right"
+                            >
+                                BERKELEY HOODIE
+                            </Text>
+                        </button>
+                    </Box>
+                </VStack>
+                <Flex>{renderSwitch(designIndex)}</Flex>
+            </HStack>
             <Footer />
-        </div>
+        </Box>
+
+        // <div className="design-main-container">
+        //     <Navbar />
+        //     <div className="design-card-container">
+        //         <div className="design-nav">
+        //             <div className="nav-title">ORIGINAL DESIGNS</div>
+
+        //             <div className="fall-stickers-nav">
+        //                 <div className="nav-font">FALL 2020 STICKERS</div>
+        //                 <button
+        //                     className="button-style"
+        //                     onClick={() => setIndex(0)}
+        //                 >
+        //                     <div className="sub-font">WALK ON WATER</div>
+        //                 </button>
+        //                 <button
+        //                     className="button-style"
+        //                     onClick={() => setIndex(1)}
+        //                 >
+        //                     <div className="sub-font">MOUNTAIN MOVER</div>
+        //                 </button>
+        //                 <button
+        //                     className="button-style"
+        //                     onClick={() => setIndex(2)}
+        //                 >
+        //                     <div className="sub-font">SPERO BEAR</div>
+        //                 </button>
+        //             </div>
+
+        //             <button
+        //                 className="button-style"
+        //                 onClick={() => setIndex(3)}
+        //             >
+        //                 <div className="nav-font">ABIDE HOODIE</div>
+        //             </button>
+
+        //             <button
+        //                 className="button-style"
+        //                 onClick={() => setIndex(4)}
+        //             >
+        //                 <div className="nav-font">HOPE LONG SLEEVE</div>
+        //             </button>
+
+        //             <button
+        //                 className="button-style"
+        //                 onClick={() => setIndex(5)}
+        //             >
+        //                 <div className="nav-font">"I AM THAT GIRL" DAD HAT</div>
+        //             </button>
+
+        //             <button
+        //                 className="button-style"
+        //                 onClick={() => setIndex(6)}
+        //             >
+        //                 <div className="nav-font">SPERO MACRON HOODIE</div>
+        //             </button>
+
+        //             <button
+        //                 className="button-style"
+        //                 onClick={() => setIndex(7)}
+        //             >
+        //                 <div className="nav-font">"BLESSED TO BLESS"</div>
+        //             </button>
+
+        //             <button
+        //                 className="button-style"
+        //                 onClick={() => setIndex(8)}
+        //             >
+        //                 <div className="nav-font">"BAY AREA" LONG SLEEVE</div>
+        //             </button>
+
+        //             <button
+        //                 className="button-style"
+        //                 onClick={() => setIndex(9)}
+        //             >
+        //                 <div className="nav-font">BERKELEY HOODIE</div>
+        //             </button>
+        //         </div>
+        //         <div className="design-display">
+        //             {renderSwitch(designIndex)}
+        //         </div>
+        //     </div>
+        //     <Footer />
+        // </div>
     )
 }
 
