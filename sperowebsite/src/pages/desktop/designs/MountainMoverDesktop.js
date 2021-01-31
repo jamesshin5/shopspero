@@ -14,115 +14,140 @@ const MountainMoverDesktop = () => {
             // overflow="scroll"
         >
             <VStack spacing="5px">
-                <Box
-                    display="flex"
-                    justifyContent="center"
-                    align-items="center"
-                    overflow="hidden"
-                    width={{ base: '330px', sm: '480px', lg: '560px' }}
-                    height={{ base: '150px', sm: '270px', lg: '350px' }}
-                >
-                    <Image
-                        src={require('../../../images/design-photos/mountain-graphic.jpg')}
-                        alt="main-sticker"
-                        objectFit="cover"
-                        w="100%"
-                        h="100%"
-                    />
-                </Box>
+                <Fade bottom>
+                    <Box
+                        display="flex"
+                        justifyContent="center"
+                        align-items="center"
+                        overflow="hidden"
+                        width={{ base: '330px', sm: '480px', lg: '560px' }}
+                        height={{ base: '150px', sm: '270px', lg: '350px' }}
+                    >
+                        <Image
+                            src={require('../../../images/design-photos/mountain-graphic.jpg')}
+                            alt="main-sticker"
+                            objectFit="cover"
+                            w="100%"
+                            h="100%"
+                        />
+                    </Box>
+                </Fade>
                 <HStack spacing="5px">
-                    <Box
-                        display="flex"
-                        justifyContent="center"
-                        align-items="center"
-                        overflow="hidden"
-                        width={{ base: '163.5px', sm: '238px', lg: '278px' }}
-                        height={{ base: '100px', sm: '140px', lg: '175px' }}
-                    >
-                        <Image
-                            src={require('../../../images/design-photos/three-stickers-drawing.jpg')}
-                            alt=""
-                            objectFit="cover"
-                            w="100%"
-                            h="100%"
-                        />
-                    </Box>
-                    <Box
-                        display="flex"
-                        justifyContent="center"
-                        align-items="center"
-                        overflow="hidden"
-                        width={{ base: '163.5px', sm: '237px', lg: '277px' }}
-                        height={{ base: '100px', sm: '140px', lg: '175px' }}
-                    >
-                        <Image
-                            src={require('../../../images/design-photos/mountain-mover-right.jpg')}
-                            alt=""
-                            objectFit="cover"
-                            w="100%"
-                            h="100%"
-                        />
-                    </Box>
+                    <Fade bottom>
+                        <Box
+                            display="flex"
+                            justifyContent="center"
+                            align-items="center"
+                            overflow="hidden"
+                            width={{
+                                base: '163.5px',
+                                sm: '238px',
+                                lg: '278px',
+                            }}
+                            height={{ base: '100px', sm: '140px', lg: '175px' }}
+                        >
+                            <Image
+                                src={require('../../../images/design-photos/three-stickers-drawing.jpg')}
+                                alt=""
+                                objectFit="cover"
+                                w="100%"
+                                h="100%"
+                            />
+                        </Box>
+                    </Fade>
+
+                    <Fade bottom>
+                        <Box
+                            display="flex"
+                            justifyContent="center"
+                            align-items="center"
+                            overflow="hidden"
+                            width={{
+                                base: '163.5px',
+                                sm: '237px',
+                                lg: '277px',
+                            }}
+                            height={{ base: '100px', sm: '140px', lg: '175px' }}
+                        >
+                            <Image
+                                src={require('../../../images/design-photos/mountain-mover-right.jpg')}
+                                alt=""
+                                objectFit="cover"
+                                w="100%"
+                                h="100%"
+                            />
+                        </Box>
+                    </Fade>
                 </HStack>
             </VStack>
             <VStack textAlign="left" justifyContent="center" maxW="500px">
                 <VStack alignItems="flex-start">
-                    <Text
-                        fontFamily="Lexend Deca"
-                        fontSize={{ base: '30px', sm: '45px' }}
-                        lineHeight={{ base: '35px', sm: '60px' }}
-                    >
-                        MOUNTAIN <br />
-                        MOVER (sticker)
-                    </Text>
-                    <Text
-                        fontFamily="Tenor Sans"
-                        fontSize={{ base: '10px', sm: '12px' }}
-                        py="10px"
-                    >
-                        He replied,{' '}
-                        <i>
-                            “Because you have so little faith. Truly I tell you,
-                            if you have faith as small as a mustard seed, you
-                            can say to this mountain,
-                            <br />
-                            ‘Move from here to there,’ and it will move. <br />
-                            <br />
-                            Nothing will be impossible for you.”
-                        </i>
-                        <br />
-                        <b>Matthew 17:20-21</b>
-                    </Text>
-                    <Text
-                        fontFamily="Lexend Deca"
-                        fontSize={{ base: '10px', sm: '12px' }}
-                    >
-                        Our Mountain Mover sticker was inspired by Matthew
-                        17:20, with the goal of representing how our faith is
-                        ever-thriving and ever-increasing. Our initial
-                        introduction to the concept of faith is often small,
-                        daunting, and unfamiliar. However, this verse reminds us
-                        of how a faith that starts out as an unfamiliar idea can
-                        transform into something capable of moving mountains.
-                    </Text>
-                    <a href="http://tinyurl.com/spero-etsy">
-                        <Box
-                            borderWidth="1px"
-                            p="5px"
-                            alignItems="center"
-                            w="200px"
-                            mt="10px"
+                    <Fade bottom>
+                        <Text
+                            fontFamily="Lexend Deca"
+                            fontSize={{ base: '30px', sm: '45px' }}
+                            lineHeight={{ base: '35px', sm: '60px' }}
                         >
-                            <Text
-                                fontFamily="Tenor Sans"
-                                fontSize="9px"
-                                textAlign="center"
-                                _hover={{ fontSize: '9.5px' }}
-                                transition="font-size 0.25s"
+                            MOUNTAIN <br />
+                            MOVER (sticker)
+                        </Text>
+                    </Fade>
+                    <Fade bottom>
+                        <Text
+                            fontFamily="Tenor Sans"
+                            fontSize={{ base: '10px', sm: '12px' }}
+                            py="10px"
+                        >
+                            He replied,{' '}
+                            <i>
+                                “Because you have so little faith. Truly I tell
+                                you, if you have faith as small as a mustard
+                                seed, you can say to this mountain,
+                                <br />
+                                ‘Move from here to there,’ and it will move.{' '}
+                                <br />
+                                <br />
+                                Nothing will be impossible for you.”
+                            </i>
+                            <br />
+                            <b>Matthew 17:20-21</b>
+                        </Text>
+                    </Fade>
+                    <Fade bottom>
+                        <Text
+                            fontFamily="Lexend Deca"
+                            fontSize={{ base: '10px', sm: '12px' }}
+                        >
+                            Our Mountain Mover sticker was inspired by Matthew
+                            17:20, with the goal of representing how our faith
+                            is ever-thriving and ever-increasing. Our initial
+                            introduction to the concept of faith is often small,
+                            daunting, and unfamiliar. However, this verse
+                            reminds us of how a faith that starts out as an
+                            unfamiliar idea can transform into something capable
+                            of moving mountains.
+                        </Text>
+                    </Fade>
+                    <a href="http://tinyurl.com/spero-etsy">
+                        <Fade bottom>
+                            <Box
+                                borderWidth="1px"
+                                p="5px"
+                                alignItems="center"
+                                w="200px"
+                                mt="10px"
                             >
-                                SHOP NOW ON ETSY
-                            </Text>
-                        </Box>
+                                <Text
+                                    fontFamily="Tenor Sans"
+                                    fontSize="9px"
+                                    textAlign="center"
+                                    _hover={{ fontSize: '9.5px' }}
+                                    transition="font-size 0.25s"
+                                >
+                                    SHOP NOW ON ETSY
+                                </Text>
+                            </Box>
+                        </Fade>
                     </a>
                 </VStack>
             </VStack>

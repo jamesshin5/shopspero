@@ -183,6 +183,7 @@ const HomePageDesktop = (props) => {
                         my={{ base: '5px', sm: '15px' }}
                         py="5px"
                         px="35px"
+                        mb="50px"
                     >
                         <a href="http://tinyurl.com/spero-etsy">
                             <Text
