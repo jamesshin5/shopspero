@@ -113,7 +113,7 @@ const DesignsDesktop = (props) => {
             <Stack
                 direction={{ base: 'column', sm: 'row' }}
                 pb="100px"
-                px={{ base: '25px', md: '75px' }}
+                px={{ base: '15px', md: '35px', lg: '75px' }}
                 justifyContent="flex-start"
                 alignItems="flex-start"
             >
