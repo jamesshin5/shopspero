@@ -41,11 +41,11 @@ const Navbar = (props) => {
             </HStack>
             <div className="navlinks">
                 <ul>
-                    <li>
+                    {/* <li>
                         <Link to="/about">
                             <div className="navlink">ABOUT OG</div>
                         </Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link to="/about2">
                             <div className="navlink">ABOUT US</div>
