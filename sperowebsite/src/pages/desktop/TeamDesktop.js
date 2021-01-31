@@ -19,16 +19,24 @@ const TeamPage = (props) => {
             overflow="scroll"
         >
             <Navbar />
-            <VStack textAlign="center" px="100px" color="#5c6a6f" pt="25px">
+            <VStack
+                textAlign="center"
+                px={{ base: '30px', lg: '100px' }}
+                color="#5c6a6f"
+                pt="25px"
+            >
                 <Fade bottom>
-                    <Text fontFamily="Lexend Deca" fontSize="6xl">
+                    <Text
+                        fontFamily="Lexend Deca"
+                        fontSize={{ base: '5xl', md: '6xl' }}
+                    >
                         TEAM SPERO
                     </Text>
                 </Fade>
                 <Fade bottom>
                     <Text
                         fontFamily="Lexend Deca"
-                        fontSize="14px"
+                        fontSize={{ base: '10px', md: '14px' }}
                         lineHeight="30px"
                         color="#5c6a6f"
                         pb="20px"
@@ -43,7 +51,15 @@ const TeamPage = (props) => {
                     </Text>
                 </Fade>
                 <VStack spacing="5px">
-                    <Grid templateColumns="repeat(5, 1fr)" gap={1}>
+                    <Grid
+                        templateColumns={{
+                            base: 'repeat(2, 5fr)',
+                            sm: 'repeat(3,4fr)',
+                            md: 'repeat(4, 3fr)',
+                            lg: 'repeat(5,2fr)',
+                        }}
+                        gap={1}
+                    >
                         <Profile
                             name="REBECCA SOO"
                             title="CEO"
@@ -74,8 +90,6 @@ const TeamPage = (props) => {
                             imageURL={require('../../images/staff/jasminechen-min.jpg')}
                             description=" hi friends (о´∀`о) I'm Jasmine, a second year at Cal studying Architecture! In my free time, I like to go thrifting, play with my dogs, watch korean dramas, and make stickers!! I joined Spero because I wanted to design for a higher purpose, and hopefully learn new ways to think about my faith!"
                         />
-                    </Grid>
-                    <Grid templateColumns="repeat(5, 1fr)" gap={1}>
                         <Profile
                             name="JUSTIN PARK"
                             title="OPERATIONS"
@@ -111,14 +125,23 @@ const TeamPage = (props) => {
                 <Fade bottom>
                     <Text
                         fontFamily="Lexend Deca"
-                        fontSize="6xl"
+                        fontSize={{ base: '5xl', md: '6xl' }}
                         pb="20px"
                         pt="50px"
                     >
                         AMBASSADORS
                     </Text>
                 </Fade>
-                <Grid templateColumns="repeat(4, 1fr)" gap={1} pb="100px">
+                <Grid
+                    templateColumns={{
+                        base: 'repeat(2, 2fr)',
+                        sm: 'repeat(3,1fr)',
+                        md: 'repeat(4, 1fr)',
+                        lg: 'repeat(4, 1fr)',
+                    }}
+                    gap={1}
+                    pb="100px"
+                >
                     <Profile
                         name="CHAERIN SUNG"
                         title="USC '24"

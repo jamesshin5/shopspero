@@ -11,11 +11,12 @@ const TeamPage = (props) => {
 
     return (
         <div>
-            {isDesktopOrLaptop && (
+            <TeamDesktop />
+            {/* {isDesktopOrLaptop && (
                 <>
                     <TeamDesktop />
                 </>
-            )}
+            )} */}
 
             {/* {isMobile && (
         <>
