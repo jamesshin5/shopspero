@@ -26,9 +26,9 @@
 }
 
 .navlinks {
-    position: absolute;
+    /* position: absolute; */
     right: 0;
-    margin-right: 5vw;
+    margin-right: '10px';
 }
 
 ul {
@@ -45,7 +45,7 @@ ul {
 li {
     font-size: 14px;
     padding-bottom: 0.3vw;
-    padding-left: 5vw;
+    padding-left: 3.5vw;
 }
 
 a {

@@ -1,7 +1,7 @@
 .profile-container {
     position: relative;
-    width: 15vw;
-    height: 20vw;
+    width: 210px;
+    height: 280px;
     background-color: #f0eade;
     /* border-width: 5px;
     border-color: grey; */
@@ -9,6 +9,11 @@
     text-align: center;
     /* outline: 5px solid #EDDCD2;
     outline-offset: -5px; */
+}
+
+.mobile {
+    width: 150px;
+    height: 200px;
 }
 
 .centered-dark .centered-light .below-dark .below-light {
@@ -38,9 +43,9 @@
 }
 
 .top-dark {
-    width: 85%;
-    font-family: 'Lexend Deca', sans-serif;
-    font-size: 0.7vw;
+    width: 80%;
+    font-family: 'Tenor Sans', serif;
+    font-size: 10px;
     color: #394648;
     position: absolute;
     top: 40%;
@@ -51,7 +56,7 @@
 .centered-dark {
     width: 100%;
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 1vw;
+    font-size: 14px;
     color: #394648;
     position: absolute;
     top: 72.5%;
@@ -62,7 +67,7 @@
 .below-dark {
     width: 100%;
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 1vw;
+    font-size: 14px;
     color: #394648;
     position: absolute;
     top: 80%;
@@ -73,7 +78,7 @@
 .centered-amb {
     width: 100%;
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 1vw;
+    font-size: 14px;
     color: #394648;
     position: absolute;
     top: 46%;
@@ -84,12 +89,20 @@
 .below-amb {
     width: 100%;
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 1vw;
+    font-size: 14px;
     color: #394648;
     position: absolute;
     top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.mobile-fontsize {
+    font-size: 9px;
+}
+
+.mobile-topfont {
+    font-size: 6px;
 }
 /* 
 .profile-container:hover {

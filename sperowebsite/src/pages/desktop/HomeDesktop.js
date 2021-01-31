@@ -79,6 +79,7 @@ const HomePageDesktop = (props) => {
                     alignItems="center"
                     justifyContent="space-between"
                     w="80%"
+                    pb="10px"
                 >
                     <Fade bottom>
                         <button
@@ -90,6 +91,7 @@ const HomePageDesktop = (props) => {
                                 alt="left-arrow"
                                 w="50px"
                                 display={{ base: 'none', md: 'block' }}
+                                mb="80%"
                             />
                         </button>
                     </Fade>
@@ -112,6 +114,7 @@ const HomePageDesktop = (props) => {
                         </Fade>
                         <Box
                             display="flex"
+                            flexDirection="column"
                             position="absolute"
                             transform="translate(-50%, -50%)"
                             top="50%"
@@ -122,12 +125,38 @@ const HomePageDesktop = (props) => {
                                     <Text
                                         fontFamily="Lexend Deca"
                                         fontWeight="500"
-                                        fontSize="130px"
+                                        fontSize={{
+                                            base: '100px',
+                                            sm: '130px',
+                                        }}
                                         color="#5c6a6f"
                                         _hover={{ fontSize: '140px' }}
                                         transition="font-size 0.5s"
                                     >
                                         SPERO
+                                    </Text>
+                                </Link>
+                            </Fade>
+                        </Box>
+                        <Box
+                            display="flex"
+                            flexDirection="column"
+                            position="absolute"
+                            transform="translate(-50%, -50%)"
+                            top="65%"
+                            left="50%"
+                            w="100%"
+                        >
+                            <Fade bottom>
+                                <Link to="/about">
+                                    <Text
+                                        fontFamily="Tenor Sans"
+                                        fontSize="16px"
+                                        color="#5c6a6f"
+                                        _hover={{ fontSize: '18px' }}
+                                        transition="font-size 0.5s"
+                                    >
+                                        bridging fashion and mission
                                     </Text>
                                 </Link>
                             </Fade>
@@ -142,23 +171,20 @@ const HomePageDesktop = (props) => {
                                 src={require('../../images/right-arrow.png')}
                                 alt="right-arrow"
                                 w="50px"
+                                mb="80%"
                                 display={{ base: 'none', md: 'block' }}
                             />
                         </button>
                     </Fade>
                 </HStack>
                 <Fade bottom>
-                    <Text
-                        py="15px"
-                        fontFamily="Tenor Sans"
-                        fontSize="16px"
-                        color="#5c6a6f"
+                    <Box
+                        borderWidth="1px"
+                        my={{ base: '5px', sm: '15px' }}
+                        py="5px"
+                        px="35px"
+                        mb="50px"
                     >
-                        bridging fashion and mission
-                    </Text>
-                </Fade>
-                <Fade bottom>
-                    <Box borderWidth="1px" py="5px" px="35px">
                         <a href="http://tinyurl.com/spero-etsy">
                             <Text
                                 fontFamily="Tenor Sans"

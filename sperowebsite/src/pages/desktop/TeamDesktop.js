@@ -19,20 +19,33 @@ const TeamPage = (props) => {
             overflow="scroll"
         >
             <Navbar />
-            <VStack textAlign="center" px="100px" color="#5c6a6f" pt="25px">
+            <VStack
+                textAlign="center"
+                px={{ base: '30px', lg: '100px' }}
+                color="#5c6a6f"
+                pt="25px"
+                alignItems="start"
+            >
                 <Fade bottom>
-                    <Text fontFamily="Lexend Deca" fontSize="6xl">
+                    <Text
+                        fontFamily="Lexend Deca"
+                        fontSize={{ base: '4xl', sm: '6xl' }}
+                        border="none"
+                        borderBottom="3px solid #5c6a6f"
+                    >
                         TEAM SPERO
                     </Text>
                 </Fade>
                 <Fade bottom>
                     <Text
-                        fontFamily="Lexend Deca"
-                        fontSize="14px"
-                        lineHeight="30px"
+                        fontFamily="Tenor Sans"
+                        fontSize={{ base: '10px', sm: '12px', md: '14px' }}
+                        lineHeight={{ base: '25px', sm: '30px' }}
                         color="#5c6a6f"
-                        pb="20px"
-                        maxW="1000px"
+                        py="20px"
+                        textAlign="left"
+                        maxWidth="1100px"
+                        // pr={{ base: 'none', sm: '40px' }}
                     >
                         Shop Spero is comprised of a diverse group of Christians
                         who all choose to use their talents and skills to
@@ -43,7 +56,15 @@ const TeamPage = (props) => {
                     </Text>
                 </Fade>
                 <VStack spacing="5px">
-                    <Grid templateColumns="repeat(5, 1fr)" gap={1}>
+                    <Grid
+                        templateColumns={{
+                            base: 'repeat(2, 5fr)',
+                            sm: 'repeat(3,4fr)',
+                            md: 'repeat(4, 3fr)',
+                            lg: 'repeat(5,2fr)',
+                        }}
+                        gap={1}
+                    >
                         <Profile
                             name="REBECCA SOO"
                             title="CEO"
@@ -74,8 +95,6 @@ const TeamPage = (props) => {
                             imageURL={require('../../images/staff/jasminechen-min.jpg')}
                             description=" hi friends (о´∀`о) I'm Jasmine, a second year at Cal studying Architecture! In my free time, I like to go thrifting, play with my dogs, watch korean dramas, and make stickers!! I joined Spero because I wanted to design for a higher purpose, and hopefully learn new ways to think about my faith!"
                         />
-                    </Grid>
-                    <Grid templateColumns="repeat(5, 1fr)" gap={1}>
                         <Profile
                             name="JUSTIN PARK"
                             title="OPERATIONS"
@@ -111,14 +130,41 @@ const TeamPage = (props) => {
                 <Fade bottom>
                     <Text
                         fontFamily="Lexend Deca"
-                        fontSize="6xl"
-                        pb="20px"
-                        pt="50px"
+                        fontSize={{ base: '4xl', sm: '6xl' }}
+                        pt="70px"
+                        border="none"
+                        borderBottom="3px solid #5c6a6f"
                     >
                         AMBASSADORS
                     </Text>
                 </Fade>
-                <Grid templateColumns="repeat(4, 1fr)" gap={1} pb="100px">
+                <Fade bottom>
+                    <Text
+                        fontFamily="Tenor Sans"
+                        fontSize={{ base: '10px', sm: '12px', md: '14px' }}
+                        lineHeight={{ base: '25px', sm: '30px' }}
+                        color="#5c6a6f"
+                        py="20px"
+                        maxWidth="1100px"
+                        textAlign="left"
+                    >
+                        Meet our Ambassadors! Spero’s Ambassador Team helps to
+                        amplify the message of Shop Spero at various college
+                        campuses around the nation. Our Ambassadors are a key
+                        part of Spero’s gospel-oriented and community-based
+                        mission. Interested in being a light on your campus?
+                        Email shopspero@gmail.com with your resume!
+                    </Text>
+                </Fade>
+                <Grid
+                    templateColumns={{
+                        base: 'repeat(2, 2fr)',
+                        sm: 'repeat(3,1fr)',
+                        md: 'repeat(4, 1fr)',
+                        lg: 'repeat(4, 1fr)',
+                    }}
+                    gap={1}
+                >
                     <Profile
                         name="CHAERIN SUNG"
                         title="USC '24"
@@ -144,6 +190,37 @@ const TeamPage = (props) => {
                         ambassador={true}
                     />
                 </Grid>
+                <Fade bottom>
+                    <Text
+                        fontFamily="Lexend Deca"
+                        fontSize={{ base: '4xl', sm: '6xl' }}
+                        border="none"
+                        borderBottom="3px solid #5c6a6f"
+                        pt="80px"
+                    >
+                        JOIN OUR TEAM
+                    </Text>
+                </Fade>
+                <Fade bottom>
+                    <Text
+                        fontFamily="Tenor Sans"
+                        fontSize={{ base: '10px', sm: '12px', md: '14px' }}
+                        lineHeight={{ base: '25px', sm: '30px' }}
+                        color="#5c6a6f"
+                        py="20px"
+                        maxWidth="1100px"
+                        textAlign="left"
+                        pb="120px"
+                    >
+                        Interesting in working with an amazingly creative team
+                        who loves God? We have finished actively recruiting, but
+                        if you are excited about using your creative talents to
+                        design apparel and merchandise that glorifies God, email
+                        us your resume at shopspero@gmail.com! We currently have
+                        a design team, marketing team, operations team, and web
+                        development team!
+                    </Text>
+                </Fade>
             </VStack>
             <Footer />
         </Box>

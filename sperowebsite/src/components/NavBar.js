@@ -1,18 +1,37 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './NavBar.css'
-import { HStack, Image, Text, Box } from '@chakra-ui/react'
+import {
+    HStack,
+    Image,
+    Text,
+    Box,
+    Button,
+    Drawer,
+    DrawerBody,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
+    useDisclosure,
+    VStack,
+} from '@chakra-ui/react'
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 
 const Navbar = (props) => {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const btnRef = React.useRef()
     return (
         <HStack
             w="100%"
-            py="50px"
-            px="75px"
+            py={{ base: '30px', md: '50px' }}
+            px={{ base: '30px', sm: '40px', md: '75px' }}
+            pb={{ base: '50px' }}
             justifyContent="space-between"
             alignItems="center"
         >
-            <HStack w="100px">
+            <HStack w="100px" pl={{ base: '10px', md: 'none' }}>
                 <Link to="/">
                     <Image
                         src={require('../images/speroicon.png')}
