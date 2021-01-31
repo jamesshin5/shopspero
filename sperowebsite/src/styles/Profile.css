@@ -11,6 +11,11 @@
     outline-offset: -5px; */
 }
 
+.mobile {
+    width: 150px;
+    height: 200px;
+}
+
 .centered-dark .centered-light .below-dark .below-light {
     z-index: 0;
 }
@@ -38,8 +43,8 @@
 }
 
 .top-dark {
-    width: 85%;
-    font-family: 'Lexend Deca', sans-serif;
+    width: 80%;
+    font-family: 'Tenor Sans', serif;
     font-size: 10px;
     color: #394648;
     position: absolute;
@@ -90,6 +95,14 @@
     top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.mobile-fontsize {
+    font-size: 9px;
+}
+
+.mobile-topfont {
+    font-size: 6px;
 }
 /* 
 .profile-container:hover {

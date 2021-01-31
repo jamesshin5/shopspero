@@ -17,13 +17,41 @@ import BerkeleyHoodieDesktop from './designs/BerkeleyHoodieDesktop.js'
 
 import Navbar from '../../components/NavBar'
 
-import { HStack, VStack, Flex, Text, Box } from '@chakra-ui/react'
+import {
+    HStack,
+    VStack,
+    Flex,
+    Text,
+    Box,
+    Spacer,
+    Stack,
+    Menu,
+    MenuButton,
+    Button,
+    MenuList,
+    MenuItem,
+    background,
+} from '@chakra-ui/react'
+import { ChevronDownIcon } from '@chakra-ui/icons'
 import { useLocation } from 'react-router-dom'
 
 const DesignsDesktop = (props) => {
     let passedProps = useLocation()
     let data = passedProps.state
-    const [designIndex, setIndex] = useState(1)
+    const [designIndex, setIndex] = useState(0)
+
+    const designs = [
+        'WALK ON WATER STICKER',
+        'MOUNTAIN MOVER',
+        'SPERO BEAR',
+        'ABIDE HOODIE',
+        'HOPE LONGSLEEVE',
+        'I AM THAT GIRL',
+        'MACRON HOODIE',
+        'BLESSED TO BLESSED HOODIE',
+        'BAY AREA HOODIE',
+        'BERKELEY HOODIE',
+    ]
 
     useEffect(() => {
         switch (data) {
@@ -74,23 +102,107 @@ const DesignsDesktop = (props) => {
     return (
         <Box
             w="100%"
-            h="100%"
+            h="100vh"
             bgColor="#eae7e1"
             bgImage="url('/images/about-bgimage.png')"
             bgPosition="center"
             bgRepeat="no-repeat"
             overflow="scroll"
-            justifyContent="center"
         >
             <Navbar />
-            <HStack pb="100px" px={{ base: '10px', md: '60px' }}>
+            <Stack
+                direction={{ base: 'column', sm: 'row' }}
+                pb="100px"
+                px={{ base: '25px', md: '75px' }}
+                justifyContent="flex-start"
+                alignItems="flex-start"
+            >
+                <HStack
+                    display={{ base: 'flex', sm: 'none' }}
+                    alignItems="center"
+                >
+                    <Text fontFamily="Lexend Deca" fontSize="12px">
+                        <b>ORIGINAL DESIGNS:</b>
+                    </Text>
+                    <Menu>
+                        <MenuButton>
+                            <Button
+                                rightIcon={<ChevronDownIcon />}
+                                // background="transparent"
+                                _hover={{ bg: '#ebedf0' }}
+                                borderRadius="0"
+                            >
+                                <Text fontFamily="Tenor Sans" fontSize="10px">
+                                    {designs[designIndex]}
+                                </Text>
+                            </Button>
+                        </MenuButton>
+                        <MenuList
+                            fontSize="10px"
+                            borderWidth="0"
+                            borderRadius="0"
+                        >
+                            <MenuItem onClick={() => setIndex(0)}>
+                                <Text fontFamily="Tenor Sans">
+                                    WALK ON WATER STICKER
+                                </Text>
+                            </MenuItem>
+                            <MenuItem onClick={() => setIndex(1)}>
+                                <Text fontFamily="Tenor Sans">
+                                    MOUNTAIN MOVER
+                                </Text>
+                            </MenuItem>
+                            <MenuItem onClick={() => setIndex(2)}>
+                                <Text fontFamily="Tenor Sans">SPERO BEAR</Text>
+                            </MenuItem>
+                            <MenuItem onClick={() => setIndex(3)}>
+                                <Text fontFamily="Tenor Sans">
+                                    ABIDE HOODIE
+                                </Text>
+                            </MenuItem>
+                            <MenuItem onClick={() => setIndex(4)}>
+                                <Text fontFamily="Tenor Sans">
+                                    HOPE LONGSLEEVE
+                                </Text>
+                            </MenuItem>
+                            <MenuItem onClick={() => setIndex(5)}>
+                                <Text fontFamily="Tenor Sans">
+                                    I AM THAT GIRL
+                                </Text>
+                            </MenuItem>
+                            <MenuItem onClick={() => setIndex(6)}>
+                                <Text fontFamily="Tenor Sans">
+                                    MACRON HOODIE
+                                </Text>
+                            </MenuItem>
+                            <MenuItem onClick={() => setIndex(7)}>
+                                <Text fontFamily="Tenor Sans">
+                                    BLESSED TO BLESS HOODIE
+                                </Text>
+                            </MenuItem>
+                            <MenuItem onClick={() => setIndex(8)}>
+                                <Text fontFamily="Tenor Sans">
+                                    BAY AREA HOODIE
+                                </Text>
+                            </MenuItem>
+                            <MenuItem onClick={() => setIndex(9)}>
+                                <Text fontFamily="Tenor Sans">
+                                    BERKELEY HOODIE
+                                </Text>
+                            </MenuItem>
+                        </MenuList>
+                    </Menu>
+                </HStack>
                 <VStack
                     textAlign="right"
                     alignItems="right"
                     fontFamily="Tenor Sans"
-                    fontSize="14px"
-                    spacing="1.5rem"
+                    fontSize={{ base: '8px', sm: '12px', lg: '14px' }}
+                    spacing={{ base: '0.75rem', lg: '1.5rem' }}
                     color="#5c6a6f"
+                    minW={{ base: '175px', lg: '225px' }}
+                    display={{ base: 'none', sm: 'flex' }}
+                    pt="3px"
                 >
                     <Text fontWeight="bold" color="black">
                         ORIGINAL DESIGNS
@@ -98,11 +210,15 @@ const DesignsDesktop = (props) => {
                     <VStack
                         alignItems="right"
                         spacing="0.25rem"
-                        fontSize="10px"
+                        fontSize={{ base: '4px', sm: '8px', lg: '10px' }}
                     >
-                        <Text fontSize="14px">FALL 2020 STICKERS</Text>
+                        <Text
+                            fontSize={{ base: '8px', sm: '12px', lg: '14px' }}
+                        >
+                            FALL 2020 STICKERS
+                        </Text>
                         <Box>
-                            <button onClick={() => setIndex(1)}>
+                            <button onClick={() => setIndex(0)}>
                                 <Text
                                     _hover={{ color: 'black' }}
                                     color={
@@ -221,7 +337,7 @@ const DesignsDesktop = (props) => {
                     </Box>
                 </VStack>
                 <Flex>{renderSwitch(designIndex)}</Flex>
-            </HStack>
+            </Stack>
             <Footer />
         </Box>
 
