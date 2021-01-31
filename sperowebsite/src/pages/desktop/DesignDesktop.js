@@ -202,7 +202,7 @@ const DesignsDesktop = (props) => {
                     color="#5c6a6f"
                     minW={{ base: '175px', lg: '225px' }}
                     display={{ base: 'none', sm: 'flex' }}
-                    pt="3px"
+                    pt="15px"
                 >
                     <Text fontWeight="bold" color="black">
                         ORIGINAL DESIGNS
@@ -222,7 +222,7 @@ const DesignsDesktop = (props) => {
                                 <Text
                                     _hover={{ color: 'black' }}
                                     color={
-                                        designIndex === 1 ? 'black' : '#5c6a6f'
+                                        designIndex === 0 ? 'black' : '#5c6a6f'
                                     }
                                     textAlign="right"
                                 >

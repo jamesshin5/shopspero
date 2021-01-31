@@ -44,7 +44,11 @@ const Navbar = (props) => {
                 w="425px"
                 justifyContent="space-between"
             >
-                <Button background="transparent" _hover={{ bg: '#ebedf0' }}>
+                <Button
+                    background="transparent"
+                    _hover={{ bg: '#ebedf0' }}
+                    borderRadius="0"
+                >
                     <Text
                         fontFamily="Lexend Deca"
                         color="#5c6a6f"
@@ -55,7 +59,11 @@ const Navbar = (props) => {
                         <Link to="/about">ABOUT US</Link>
                     </Text>
                 </Button>
-                <Button background="transparent" _hover={{ bg: '#ebedf0' }}>
+                <Button
+                    background="transparent"
+                    _hover={{ bg: '#ebedf0' }}
+                    borderRadius="0"
+                >
                     <Text
                         fontFamily="Lexend Deca"
                         color="#5c6a6f"
@@ -66,7 +74,11 @@ const Navbar = (props) => {
                         <Link to="/team">OUR TEAM</Link>
                     </Text>
                 </Button>
-                <Button background="transparent" _hover={{ bg: '#ebedf0' }}>
+                <Button
+                    background="transparent"
+                    _hover={{ bg: '#ebedf0' }}
+                    borderRadius="0"
+                >
                     <Text
                         fontFamily="Lexend Deca"
                         color="#5c6a6f"
@@ -77,7 +89,11 @@ const Navbar = (props) => {
                         <Link to="/designs">DESIGNS</Link>
                     </Text>
                 </Button>
-                <Button background="transparent" _hover={{ bg: '#ebedf0' }}>
+                <Button
+                    background="transparent"
+                    _hover={{ bg: '#ebedf0' }}
+                    borderRadius="0"
+                >
                     <Text
                         fontFamily="Lexend Deca"
                         color="#5c6a6f"
@@ -123,6 +139,7 @@ const Navbar = (props) => {
                 _focus={{ boxShadow: 'none' }}
                 size="sm"
                 pb={1}
+                borderRadius="0"
             >
                 <HamburgerIcon w="22px" h="22px" />
                 {/* {isMenuOpen ? (
