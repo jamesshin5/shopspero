@@ -1,5 +1,5 @@
 import React from 'react'
-import AboutDesktop from './desktop/AboutDesktop'
+import AboutPageDesktop from './desktop/AboutDesktop'
 // import HomePageMobile from './mobile/HomePageMobile';
 import { useMediaQuery } from 'react-responsive'
 
@@ -13,7 +13,7 @@ const AboutPage = (props) => {
         <div>
             {isDesktopOrLaptop && (
                 <>
-                    <AboutDesktop />
+                    <AboutPageDesktop />
                 </>
             )}
 

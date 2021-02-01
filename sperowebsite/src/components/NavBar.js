@@ -47,7 +47,7 @@ const Navbar = (props) => {
                         </Link>
                     </li> */}
                     <li>
-                        <Link to="/about2">
+                        <Link to="/about">
                             <div className="navlink">ABOUT US</div>
                         </Link>
                     </li>
