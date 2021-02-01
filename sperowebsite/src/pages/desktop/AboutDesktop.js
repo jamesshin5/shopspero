@@ -118,7 +118,7 @@ const AboutDesktop = (props) => {
                                     }}
                                     lineHeight={{ base: '20px', sm: '30px' }}
                                     color="#5c6a6f"
-                                    pb="20px"
+                                    pb={{ base: "5px", md: "20px" }}
                                     maxW="300px"
                                     textAlign="left"
                                     pr="10px"
@@ -130,7 +130,7 @@ const AboutDesktop = (props) => {
                                 <Text
                                     fontFamily="Lexend Deca"
                                     fontSize={{
-                                        base: '8px',
+                                        base: '6px',
                                         sm: '12px',
                                         md: '14px',
                                     }}
@@ -181,7 +181,7 @@ const AboutDesktop = (props) => {
                                     }}
                                     lineHeight={{ base: '20px', sm: '30px' }}
                                     color="#5c6a6f"
-                                    pb="20px"
+                                    pb={{ base: "5px", sm: "20px" }}
                                     maxW="300px"
                                     textAlign="left"
                                     pl="10px"
@@ -193,7 +193,7 @@ const AboutDesktop = (props) => {
                                 <Text
                                     fontFamily="Lexend Deca"
                                     fontSize={{
-                                        base: '8px',
+                                        base: '6px',
                                         sm: '12px',
                                         md: '14px',
                                     }}
@@ -300,7 +300,7 @@ const AboutDesktop = (props) => {
                                     }}
                                     lineHeight={{ base: '20px', sm: '30px' }}
                                     color="#5c6a6f"
-                                    pb="20px"
+                                    pb={{ base: "5px", sm: "20px" }}
                                     maxW="300px"
                                     textAlign="left"
                                     pr="10px"
@@ -312,7 +312,7 @@ const AboutDesktop = (props) => {
                                 <Text
                                     fontFamily="Lexend Deca"
                                     fontSize={{
-                                        base: '8px',
+                                        base: '6px',
                                         sm: '12px',
                                         md: '14px',
                                     }}
