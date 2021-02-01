@@ -157,7 +157,6 @@ const HomePageDesktop = (props) => {
                                                     sm: '14px',
                                                 }}
                                                 color="white"
-                                                _hover={{ fontSize: '18px' }}
                                                 transition="font-size 0.5s"
                                             >
                                                 bridging fashion and mission
