@@ -2,27 +2,18 @@ import React from 'react'
 import Footer from '../../components/Footer'
 import Navbar from '../../components/NavBar'
 import Fade from 'react-reveal/Fade'
-import { Link } from 'react-router-dom'
-import {
-    HStack,
-    Image,
-    Text,
-    Box,
-    Flex,
-    VStack,
-    SlideFade,
-} from '@chakra-ui/react'
-import Background from '../../images/home-bgimage.png'
+import { HStack, Image, Text, Box, VStack } from '@chakra-ui/react'
 
 const AboutDesktop = (props) => {
     return (
         <div
-            style={{
-                backgroundColor: '#e7e9e0',
-                backgroundImage: `url(${Background})`,
-                backgroundPosition: 'right -9vw',
-                backgroundRepeat: 'no-repeat',
-            }}
+            className="background-main"
+            // style={{
+            //     backgroundColor: '#e7e9e0',
+            //     backgroundImage: `url(${Background})`,
+            //     backgroundPosition: 'right -9vw',
+            //     backgroundRepeat: 'no-repeat',
+            // }}
         >
             <Box w="100%" h="100%" overflow="scroll">
                 <Navbar />

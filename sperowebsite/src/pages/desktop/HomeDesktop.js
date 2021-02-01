@@ -3,19 +3,10 @@ import Footer from '../../components/Footer'
 import '../../styles/desktop/HomeDesktop.css'
 import { Link } from 'react-router-dom'
 import Fade from 'react-reveal/Fade'
-import Background from '../../images/home-bgimage.png'
 
 import CrossfadeImage from 'react-crossfade-image'
 import Navbar from '../../components/NavBar'
-import {
-    HStack,
-    Image,
-    Text,
-    Box,
-    Flex,
-    VStack,
-    SlideFade,
-} from '@chakra-ui/react'
+import { HStack, Image, Text, Box, VStack } from '@chakra-ui/react'
 
 const image0 = require('../../images/home-image-0.png')
 
@@ -66,11 +57,12 @@ const HomePageDesktop = (props) => {
 
     return (
         <div
-            style={{
-                backgroundColor: '#e7e9e0',
-                backgroundImage: `url(${Background})`,
-                backgroundPosition: 'right -9vw',
-            }}
+            className="background-main"
+            // style={{
+            //     backgroundColor: '#e7e9e0',
+            //     backgroundImage: `url(${Background})`,
+            //     backgroundPosition: 'right -9vw',
+            // }}
         >
             <Box w="100%" h="100vh" overflow="scroll">
                 <Navbar />

@@ -1,5 +1,5 @@
 import React from 'react'
-import { HStack, VStack, Stack, Box, Text, Image, Flex } from '@chakra-ui/react'
+import { HStack, VStack, Stack, Box, Text, Image } from '@chakra-ui/react'
 import '../../../styles/desktop/FallStickerPage.css'
 import Fade from 'react-reveal/Fade'
 

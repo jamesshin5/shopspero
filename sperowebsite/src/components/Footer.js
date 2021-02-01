@@ -1,8 +1,7 @@
 import React from 'react'
 import '../styles/Footer.css'
 import Fade from 'react-reveal/Fade'
-import { HStack, Image, Text, Box } from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
+import { HStack, Image, Box } from '@chakra-ui/react'
 
 const Footer = (props) => {
     return (

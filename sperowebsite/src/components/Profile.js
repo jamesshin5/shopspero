@@ -1,13 +1,9 @@
 import React from 'react'
 import '../styles/Profile.css'
-import { Flex, Box, Text, Image, VStack } from '@chakra-ui/react'
 import Fade from 'react-reveal/Fade'
 import { useMediaQuery } from 'react-responsive'
 
 const Profile = (props) => {
-    const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-device-width: 480px)',
-    })
     const isMobile = useMediaQuery({ query: '(max-width: 480px)' })
     if (isMobile) {
         return props.ambassador ? (
