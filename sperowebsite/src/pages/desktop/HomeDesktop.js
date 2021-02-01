@@ -3,7 +3,7 @@ import Footer from '../../components/Footer'
 import '../../styles/desktop/HomeDesktop.css'
 import { Link } from 'react-router-dom'
 import Fade from 'react-reveal/Fade'
-import Background from '../../images/about-bgimage.png'
+import Background from '../../images/home-bgimage.png'
 
 import CrossfadeImage from 'react-crossfade-image'
 import Navbar from '../../components/NavBar'
@@ -72,7 +72,7 @@ const HomePageDesktop = (props) => {
                 backgroundPosition: 'right -9vw',
             }}
         >
-            <Box w="100%" h="100vh">
+            <Box w="100%" h="100vh" overflow="scroll">
                 <Navbar />
                 <VStack>
                     <HStack

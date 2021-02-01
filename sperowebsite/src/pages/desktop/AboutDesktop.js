@@ -12,7 +12,7 @@ import {
     VStack,
     SlideFade,
 } from '@chakra-ui/react'
-import Background from '../../images/about-bgimage.png'
+import Background from '../../images/home-bgimage.png'
 
 const AboutDesktop = (props) => {
     return (
@@ -24,7 +24,7 @@ const AboutDesktop = (props) => {
                 backgroundRepeat: 'no-repeat',
             }}
         >
-            <Box w="100%" h="100%">
+            <Box w="100%" h="100%" overflow="scroll">
                 <Navbar />
                 <VStack
                     textAlign="center"

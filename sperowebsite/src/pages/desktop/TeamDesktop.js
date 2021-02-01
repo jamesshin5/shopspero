@@ -4,7 +4,7 @@ import Profile from '../../components/Profile'
 import '../../styles/desktop/TeamDesktop.css'
 import Fade from 'react-reveal/Fade'
 import Navbar from '../../components/NavBar'
-import Background from '../../images/about-bgimage.png'
+import Background from '../../images/home-bgimage.png'
 
 import { HStack, Image, Text, Box, Flex, VStack, Grid } from '@chakra-ui/react'
 

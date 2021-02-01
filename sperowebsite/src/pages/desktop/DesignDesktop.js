@@ -17,7 +17,7 @@ import BerkeleyHoodieDesktop from './designs/BerkeleyHoodieDesktop.js'
 import RedeemedHoodie from './designs/RedeemedHoodie'
 
 import Navbar from '../../components/NavBar'
-import Background from '../../images/about-bgimage.png'
+import Background from '../../images/home-bgimage.png'
 
 import {
     HStack,
