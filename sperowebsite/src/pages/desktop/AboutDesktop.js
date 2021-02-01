@@ -2,25 +2,18 @@ import React from 'react'
 import Footer from '../../components/Footer'
 import Navbar from '../../components/NavBar'
 import Fade from 'react-reveal/Fade'
-import {
-    HStack,
-    Image,
-    Text,
-    Box,
-    VStack,
-} from '@chakra-ui/react'
-import Background from '../../images/home-bgimage.png'
+import { HStack, Image, Text, Box, VStack } from '@chakra-ui/react'
 
 const AboutDesktop = (props) => {
     return (
         <div
             className="background-main"
-        // style={{
-        //     backgroundColor: '#e7e9e0',
-        //     backgroundImage: `url(${Background})`,
-        //     backgroundPosition: 'right -9vw',
-        //     backgroundRepeat: 'no-repeat',
-        // }}
+            // style={{
+            //     backgroundColor: '#e7e9e0',
+            //     backgroundImage: `url(${Background})`,
+            //     backgroundPosition: 'right -9vw',
+            //     backgroundRepeat: 'no-repeat',
+            // }}
         >
             <Box w="100%" h="100%" overflow="scroll">
                 <Navbar />
@@ -81,10 +74,16 @@ const AboutDesktop = (props) => {
                             top="-100px;"
                         ></Box>
                     </Fade> */}
-                    <HStack textAlign="left"
+                    <HStack
+                        textAlign="left"
                         color="#5c6a6f"
-                        spacing={{ base: '10px', sm: '50px', md: '100px', lg: "150px" }}
-                        pb='75px'
+                        spacing={{
+                            base: '10px',
+                            sm: '50px',
+                            md: '100px',
+                            lg: '150px',
+                        }}
+                        pb="75px"
                     >
                         <Fade bottom>
                             <Box
@@ -97,7 +96,11 @@ const AboutDesktop = (props) => {
                                 //     sm: '238px',
                                 //     lg: '300px',
                                 // }}
-                                width={{ base: '150px', sm: '250px', lg: '350px' }}
+                                width={{
+                                    base: '150px',
+                                    sm: '250px',
+                                    lg: '350px',
+                                }}
                             >
                                 <Image
                                     src={require('../../images/design-photos/abide-window.jpg')}
@@ -118,7 +121,7 @@ const AboutDesktop = (props) => {
                                     }}
                                     lineHeight={{ base: '20px', sm: '30px' }}
                                     color="#5c6a6f"
-                                    pb={{ base: "5px", md: "20px" }}
+                                    pb={{ base: '5px', md: '20px' }}
                                     maxW="300px"
                                     textAlign="left"
                                     pr="10px"
@@ -162,14 +165,19 @@ const AboutDesktop = (props) => {
                         textAlign="left"
                         color="#5c6a6f"
                         pb="75px"
-                        spacing={{ base: '10px', sm: '50px', md: '100px', lg: "150px" }}
+                        spacing={{
+                            base: '10px',
+                            sm: '50px',
+                            md: '100px',
+                            lg: '150px',
+                        }}
                     >
                         <VStack
                             textAlign="left"
                             color="#5c6a6f"
                             align="left"
                             position="relative"
-                        // top="150px"
+                            // top="150px"
                         >
                             <Fade bottom>
                                 <Text
@@ -181,7 +189,7 @@ const AboutDesktop = (props) => {
                                     }}
                                     lineHeight={{ base: '20px', sm: '30px' }}
                                     color="#5c6a6f"
-                                    pb={{ base: "5px", sm: "20px" }}
+                                    pb={{ base: '5px', sm: '20px' }}
                                     maxW="300px"
                                     textAlign="left"
                                     pl="10px"
@@ -223,7 +231,11 @@ const AboutDesktop = (props) => {
                                 //     sm: '238px',
                                 //     lg: '300px',
                                 // }}
-                                width={{ base: '150px', sm: '250px', lg: '350px' }}
+                                width={{
+                                    base: '150px',
+                                    sm: '250px',
+                                    lg: '350px',
+                                }}
                             >
                                 <Image
                                     src={require('../../images/about-sticker.jpg')}
@@ -260,7 +272,12 @@ const AboutDesktop = (props) => {
                         textAlign="left"
                         color="#5c6a6f"
                         pb="150px"
-                        spacing={{ base: '10px', sm: '50px', md: '100px', lg: "150px" }}
+                        spacing={{
+                            base: '10px',
+                            sm: '50px',
+                            md: '100px',
+                            lg: '150px',
+                        }}
                     >
                         <Fade bottom>
                             <Box
@@ -273,7 +290,11 @@ const AboutDesktop = (props) => {
                                 //     sm: '238px',
                                 //     lg: '300px',
                                 // }}
-                                width={{ base: '150px', sm: '250px', lg: '350px' }}
+                                width={{
+                                    base: '150px',
+                                    sm: '250px',
+                                    lg: '350px',
+                                }}
                             >
                                 <Image
                                     src={require('../../images/design-photos/abide-overlay.jpg')}
@@ -287,8 +308,8 @@ const AboutDesktop = (props) => {
                             textAlign="left"
                             color="#5c6a6f"
                             align="left"
-                        // position="relative"
-                        // top="125px"
+                            // position="relative"
+                            // top="125px"
                         >
                             <Fade bottom>
                                 <Text
@@ -300,7 +321,7 @@ const AboutDesktop = (props) => {
                                     }}
                                     lineHeight={{ base: '20px', sm: '30px' }}
                                     color="#5c6a6f"
-                                    pb={{ base: "5px", sm: "20px" }}
+                                    pb={{ base: '5px', sm: '20px' }}
                                     maxW="300px"
                                     textAlign="left"
                                     pr="10px"
