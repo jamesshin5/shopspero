@@ -1,68 +1,135 @@
-import React, { Component } from 'react'
-import '../../styles/desktop/AboutDesktop.css'
+import React from 'react'
 import Footer from '../../components/Footer'
 import Navbar from '../../components/NavBar'
 import Fade from 'react-reveal/Fade'
+import { Link } from 'react-router-dom'
+import {
+    HStack,
+    Image,
+    Text,
+    Box,
+    Flex,
+    VStack,
+    SlideFade,
+} from '@chakra-ui/react'
+import Background from '../../images/home-bgimage.png'
 
-class About extends Component {
-    render() {
-        return (
-            <div className="about-main-container">
+const AboutDesktop = (props) => {
+    return (
+        <div
+            style={{
+                backgroundColor: '#e7e9e0',
+                backgroundImage: `url(${Background})`,
+                backgroundPosition: 'right -9vw',
+                backgroundRepeat: 'no-repeat',
+            }}
+        >
+            <Box w="100%" h="100%" overflow="scroll">
                 <Navbar />
-                <div className="about-top-container">
-                    {/* <img
-                        src={require('../../images/about-logo.png')}
-                        alt="ab logo"
-                        className="ab-logo"
-                    /> */}
-                    <div className="about-caption-1">
-                        <Fade bottom>
-                            <div className="ab-caption-title-1">ABOUT US</div>
-                        </Fade>
-                        <Fade bottom>
-                            <div className="ab-caption-content-1">
-                                We are a team of UC Berkeley students dedicated
-                                to bridging <b>fashion and mission</b>. We
-                                source our clothes through various Bay Area
-                                thrift stores. Spero also has in-house designers
-                                that create <b>original, mission-driven</b>{' '}
-                                clothing underlying our company's purpose. All
-                                of our proceeds go towards various local and
-                                global charitable organizations.
-                            </div>
-                        </Fade>
-                        <Fade bottom>
-                            <img
-                                src={require('../../images/about-image-1.jpg')}
-                                className="about-image-0"
-                                alt="Abide Hoodie"
-                            />
-                        </Fade>
-                    </div>
-                    <div className="ab-image-container-1">
-                        <Fade bottom>
-                            <img
-                                src={require('../../images/design-photos/abide-window.jpg')}
-                                className="about-image-1"
-                                alt="Abide Hoodie"
-                            />
-                        </Fade>
-                    </div>
+                <VStack
+                    textAlign="center"
+                    px={{ base: '30px', lg: '100px' }}
+                    color="#5c6a6f"
+                    pt="25px"
+                >
                     <Fade bottom>
-                        <div className="about-line-1"></div>
+                        <Text
+                            fontFamily="Lexend Deca"
+                            fontSize={{ base: '4xl', sm: '6xl' }}
+                            border="none"
+                            borderBottom="3px solid #5c6a6f"
+                        >
+                            ABOUT US
+                        </Text>
                     </Fade>
-                    {/* <Fade bottom>
-                        <div className='about-subline-1'></div>
-                    </Fade> */}
                     <Fade bottom>
-                        <div className="about-caption-2">
+                        <Text
+                            fontFamily="Lexend Deca"
+                            fontSize={{ base: '10px', sm: '12px', md: '14px' }}
+                            lineHeight={{ base: '25px', sm: '30px' }}
+                            color="#5c6a6f"
+                            pb="20px"
+                            pt="30px"
+                            maxW="1000px"
+                        >
+                            We are a team of UC Berkeley students dedicated to
+                            bridging <b>fashion and mission</b>. We source our
+                            clothes through various Bay Area thrift stores.
+                            Spero also has in-house designers that create{' '}
+                            <b>original, mission-driven</b> clothing underlying
+                            our company's purpose. All of our proceeds go
+                            towards various local and global charitable
+                            organizations.
+                        </Text>
+                    </Fade>
+                    <Fade bottom>
+                        <Image
+                            src={require('../../images/about-image-1.jpg')}
+                            maxW="1000px"
+                            pb={{ base: '150px', md: '200px' }}
+                        />
+                    </Fade>
+                    <Fade bottom>
+                        <Box
+                            w={{
+                                base: '300px',
+                                sm: '500px',
+                                md: '700px',
+                                lg: '1000px',
+                            }}
+                            h="1px"
+                            bgColor="#5c6a6f"
+                            position="relative"
+                            top="-100px;"
+                        ></Box>
+                    </Fade>
+                    <HStack textAlign="left" color="#5c6a6f" spacing="150px">
+                        <Fade bottom>
+                            <Image
+                                src={require('../../images/design-photos/abide-window.jpg')}
+                                width={{ base: '325px' }}
+                                height={{ base: '325px' }}
+                                position="relative"
+                                top={{
+                                    base: '-550px',
+                                    sm: '-175px',
+                                    md: '-150px;',
+                                }}
+                            />
+                        </Fade>
+                        <VStack textAlign="left" color="#5c6a6f" align="left">
                             <Fade bottom>
-                                <div className="ab-caption-title-2">
+                                <Text
+                                    fontFamily="Tenor Sans"
+                                    fontSize={{
+                                        base: '16px',
+                                        sm: '18px',
+                                        md: '20x',
+                                    }}
+                                    lineHeight={{ base: '25px', sm: '30px' }}
+                                    color="#5c6a6f"
+                                    pb="20px"
+                                    maxW="300px"
+                                    textAlign="left"
+                                    pr="10px"
+                                >
                                     <b>MISSION</b>
-                                </div>
+                                </Text>
                             </Fade>
                             <Fade bottom>
-                                <div className="ab-caption-content-2">
+                                <Text
+                                    fontFamily="Lexend Deca"
+                                    fontSize={{
+                                        base: '10px',
+                                        sm: '12px',
+                                        md: '14px',
+                                    }}
+                                    lineHeight={{ base: '25px', sm: '30px' }}
+                                    color="#5c6a6f"
+                                    // pb="20px"
+                                    maxW="300px"
+                                    pr="10px"
+                                >
                                     In Latin, the word "spero" means "
                                     <b>to hope</b>
                                     ". Our vision is also inspired by{' '}
@@ -77,75 +144,156 @@ class About extends Component {
                                         The goal of Spero is to bring hope to
                                         the hopeless and light into darkness.
                                     </b>
-                                </div>
+                                </Text>
                             </Fade>
-                        </div>
-                    </Fade>
-                </div>
-                <div className="about-bottom-container">
-                    <div className="ab-image-container-2">
+                        </VStack>
+                    </HStack>
+                    <HStack
+                        textAlign="left"
+                        color="#5c6a6f"
+                        pb="175px"
+                        spacing="150px"
+                    >
+                        <VStack
+                            textAlign="left"
+                            color="#5c6a6f"
+                            align="left"
+                            position="relative"
+                            top="150px"
+                        >
+                            <Fade bottom>
+                                <Text
+                                    fontFamily="Tenor Sans"
+                                    fontSize={{
+                                        base: '16px',
+                                        sm: '18px',
+                                        md: '20x',
+                                    }}
+                                    lineHeight={{ base: '25px', sm: '30px' }}
+                                    color="#5c6a6f"
+                                    pb="20px"
+                                    maxW="300px"
+                                    textAlign="left"
+                                    pl="10px"
+                                >
+                                    <b>MATTHEW 10:29-31</b>
+                                </Text>
+                            </Fade>
+                            <Fade bottom>
+                                <Text
+                                    fontFamily="Lexend Deca"
+                                    fontSize={{
+                                        base: '10px',
+                                        sm: '12px',
+                                        md: '14px',
+                                    }}
+                                    lineHeight={{ base: '25px', sm: '30px' }}
+                                    color="#5c6a6f"
+                                    pb="20px"
+                                    maxW="225px"
+                                    pl="10px"
+                                >
+                                    "Are not two sparrows sold for a penny? And
+                                    not one of them will fall to the ground
+                                    apart from your Father. But even the hairs
+                                    of your head are all numbered. Fear not,
+                                    therefore; you are of more value than many
+                                    sparrows."
+                                </Text>
+                            </Fade>
+                        </VStack>
                         <Fade bottom>
-                            <img
+                            <Image
                                 src={require('../../images/about-sticker.jpg')}
-                                className="about-image-2"
-                                alt="Abide Hoodie"
+                                maxW="325px"
+                                position="relative"
+                                top="100px"
                             />
                         </Fade>
-                    </div>
-                    {/* <Fade bottom>
-                        <div className="about-line-2"></div>
-                    </Fade> */}
-                    <div className="ab-matthew">
-                        <Fade bottom>
-                            <div className="ab-explanation-1">
-                                <b>MATTHEW 10:29-31</b>
-                            </div>
-                        </Fade>
-                        <Fade bottom>
-                            <div className="ab-subex-1">
-                                "Are not two sparrows sold for a penny? And not
-                                one of them will fall to the ground apart from
-                                your Father. But even the hairs of your head are
-                                all numbered. Fear not, therefore; you are of
-                                more value than many sparrows."
-                            </div>
-                        </Fade>
-                    </div>
-                    <div className="ab-image-container-3">
-                        <Fade bottom>
-                            <img
-                                src={require('../../images/design-photos/abide-overlay.jpg')}
-                                className="about-image-3"
-                                alt="Abide Hoodie"
-                            />
-                        </Fade>
-                    </div>
+                    </HStack>
                     <Fade bottom>
-                        <div className="about-line-2"></div>
+                        <Box
+                            w={{
+                                base: '300px',
+                                sm: '500px',
+                                md: '700px',
+                                lg: '1000px',
+                            }}
+                            h="1px"
+                            bgColor="#5c6a6f"
+                            position="relative"
+                            top="100px"
+                        ></Box>
                     </Fade>
-                    <div className="ab-bottom-caption">
+                    <HStack
+                        textAlign="left"
+                        color="#5c6a6f"
+                        pb="150px"
+                        spacing="150px"
+                    >
                         <Fade bottom>
-                            <div className="ab-vision">
-                                <b>VISION</b>
-                            </div>
+                            <Image
+                                src={require('../../images/design-photos/abide-overlay.jpg')}
+                                maxW="325px"
+                                position="relative"
+                                top="25px"
+                            />
                         </Fade>
-                        <Fade bottom>
-                            <div className="ab-explanation-2">
-                                Our vision is inspired by Matthew 10:29-31,
-                                where something as insignificant as a sparrow,
-                                will be remembered and cared for.
-                                <br />
-                                His eye is on the sparrow and He watches over
-                                us. And through this we have identity and know
-                                our worth through Him.
-                            </div>
-                        </Fade>
-                    </div>
-                </div>
-                <Footer color="#fff2e6" />
-            </div>
-        )
-    }
+                        <VStack
+                            textAlign="left"
+                            color="#5c6a6f"
+                            align="left"
+                            position="relative"
+                            top="125px"
+                        >
+                            <Fade bottom>
+                                <Text
+                                    fontFamily="Tenor Sans"
+                                    fontSize={{
+                                        base: '16px',
+                                        sm: '18px',
+                                        md: '20x',
+                                    }}
+                                    lineHeight={{ base: '25px', sm: '30px' }}
+                                    color="#5c6a6f"
+                                    pb="20px"
+                                    maxW="300px"
+                                    textAlign="left"
+                                    pr="10px"
+                                >
+                                    <b>VISION</b>
+                                </Text>
+                            </Fade>
+                            <Fade bottom>
+                                <Text
+                                    fontFamily="Lexend Deca"
+                                    fontSize={{
+                                        base: '10px',
+                                        sm: '12px',
+                                        md: '14px',
+                                    }}
+                                    lineHeight={{ base: '25px', sm: '30px' }}
+                                    color="#5c6a6f"
+                                    pb="20px"
+                                    maxW="300px"
+                                    pr="10px"
+                                >
+                                    Our vision is inspired by Matthew 10:29-31,
+                                    where something as insignificant as a
+                                    sparrow, will be remembered and cared for.
+                                    <br />
+                                    His eye is on the sparrow and He watches
+                                    over us. And through this we have identity
+                                    and know our worth through Him.
+                                </Text>
+                            </Fade>
+                        </VStack>
+                    </HStack>
+                </VStack>
+                <Footer />
+            </Box>
+        </div>
+    )
 }
 
-export default About
+export default AboutDesktop

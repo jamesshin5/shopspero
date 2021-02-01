@@ -2,8 +2,9 @@ import React from 'react'
 import { HStack, VStack, Stack, Box, Text, Image, Flex } from '@chakra-ui/react'
 import '../../../styles/desktop/FallStickerPage.css'
 import Fade from 'react-reveal/Fade'
+import ReactPlayer from 'react-player'
 
-const MountainMoverDesktop = () => {
+const RedeemedHoodie = () => {
     return (
         <Stack
             direction={{ base: 'column', lg: 'row' }}
@@ -23,13 +24,14 @@ const MountainMoverDesktop = () => {
                         width={{ base: '330px', sm: '480px', lg: '560px' }}
                         height={{ base: '150px', sm: '270px', lg: '350px' }}
                     >
-                        <Image
+                        <ReactPlayer url="https://www.youtube.com/watch?v=t3A_AwNOT_8" />
+                        {/* <Image
                             src={require('../../../images/design-photos/mountain-graphic.jpg')}
                             alt="main-sticker"
                             objectFit="cover"
                             w="100%"
                             h="100%"
-                        />
+                        /> */}
                     </Box>
                 </Fade>
                 <HStack spacing="5px">
@@ -44,10 +46,10 @@ const MountainMoverDesktop = () => {
                                 sm: '238px',
                                 lg: '278px',
                             }}
-                            height={{ base: '100px', sm: '140px', lg: '175px' }}
+                            height={{ base: '140px', sm: '180px', lg: '220px' }}
                         >
                             <Image
-                                src={require('../../../images/design-photos/three-stickers-drawing.jpg')}
+                                src={require('../../../images/design-photos/redeemed-left.jpg')}
                                 alt=""
                                 objectFit="cover"
                                 w="100%"
@@ -67,10 +69,10 @@ const MountainMoverDesktop = () => {
                                 sm: '237px',
                                 lg: '277px',
                             }}
-                            height={{ base: '100px', sm: '140px', lg: '175px' }}
+                            height={{ base: '140px', sm: '180px', lg: '220px' }}
                         >
                             <Image
-                                src={require('../../../images/design-photos/mountain-mover-right.jpg')}
+                                src={require('../../../images/design-photos/redeemed-right.jpg')}
                                 alt=""
                                 objectFit="cover"
                                 w="100%"
@@ -89,8 +91,8 @@ const MountainMoverDesktop = () => {
                                 fontSize={{ base: '30px', sm: '45px' }}
                                 lineHeight={{ base: '35px', sm: '60px' }}
                             >
-                                <b>MOUNTAIN</b> <br />
-                                MOVER
+                                <b>REDEEMED</b> <br />
+                                HOODIE
                             </Text>
                             <Box
                                 bgColor="#5c6a6f"
@@ -102,7 +104,7 @@ const MountainMoverDesktop = () => {
                                     fontSize={{ base: '7px', sm: '10px' }}
                                     color="white"
                                 >
-                                    STICKER COLLECTION
+                                    NEW RELEASE!
                                 </Text>
                             </Box>
                         </HStack>
@@ -113,19 +115,17 @@ const MountainMoverDesktop = () => {
                             fontSize={{ base: '10px', sm: '12px' }}
                             py="10px"
                         >
-                            He replied,{' '}
-                            <i>
-                                “Because you have so little faith. Truly I tell
-                                you, if you have faith as small as a mustard
-                                seed, you can say to this mountain,
-                                <br />
-                                ‘Move from here to there,’ and it will move.{' '}
-                                <br />
-                                <br />
-                                Nothing will be impossible for you.”
-                            </i>
-                            <br />
-                            <b>Matthew 17:20-21</b>
+                            <b>78</b> Because of the tender mercy of our God,
+                            <br></br>by which the rising sun will come to us
+                            from heaven
+                            <br></br>
+                            <br></br>
+                            <b>79</b> to shine on those living in darkness
+                            <br></br>and in the shadow of death,
+                            <br></br>to guide our feet into the path of peace.
+                            <br></br>
+                            <br></br>
+                            <b>Luke 1:78-79</b>
                         </Text>
                     </Fade>
                     <Fade bottom>
@@ -133,14 +133,13 @@ const MountainMoverDesktop = () => {
                             fontFamily="Lexend Deca"
                             fontSize={{ base: '10px', sm: '12px' }}
                         >
-                            Our Mountain Mover sticker was inspired by Matthew
-                            17:20, with the goal of representing how our faith
-                            is ever-thriving and ever-increasing. Our initial
-                            introduction to the concept of faith is often small,
-                            daunting, and unfamiliar. However, this verse
-                            reminds us of how a faith that starts out as an
-                            unfamiliar idea can transform into something capable
-                            of moving mountains.
+                            The Redeemed Hoodie reminds us of God’s mercy and
+                            grace in redeeming us sinners. On the back, the
+                            illustration depicts rays of sunlight shining over a
+                            valley that was once dark. This symbolizes how God
+                            redeemed us when we were walking in darkness; like
+                            the rising sun He comes to us to guide our feet to
+                            the path of peace.
                         </Text>
                     </Fade>
                     <a href="http://tinyurl.com/spero-etsy">
@@ -245,4 +244,4 @@ const MountainMoverDesktop = () => {
     )
 }
 
-export default MountainMoverDesktop
+export default RedeemedHoodie

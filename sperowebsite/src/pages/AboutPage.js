@@ -11,17 +11,9 @@ const AboutPage = (props) => {
 
     return (
         <div>
-            {isDesktopOrLaptop && (
-                <>
-                    <AboutDesktop />
-                </>
-            )}
 
-            {/* {isMobile && (
-        <>
-          <HomePageMobile />
-        </>
-      )} */}
+            <AboutDesktop />
+
         </div>
     )
 }
