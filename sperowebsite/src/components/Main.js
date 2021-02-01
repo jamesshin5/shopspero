@@ -8,7 +8,6 @@ import '../styles/Main.css'
 
 import HomePage from '../pages/HomePage'
 import AboutPage from '../pages/AboutPage'
-import AboutPageOld from '../pages/AboutPageOld'
 import TeamPage from '../pages/TeamPage'
 import DesignsPage from '../pages/DesignsPage'
 // import ShopPage from '../pages/ShopPage';
@@ -59,7 +58,6 @@ const Main = ({ location }) => {
                                 component={withRouter(HomePage)}
                             />
                             <Route path="/about" component={AboutPage} />
-                            <Route path="/about-old" component={AboutPageOld} />
                             <Route path="/team" component={TeamPage} />
                             <Route path="/designs" component={DesignsPage} />
                             {/* <Route
