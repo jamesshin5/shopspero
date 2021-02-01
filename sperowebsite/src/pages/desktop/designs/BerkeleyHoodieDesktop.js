@@ -72,8 +72,8 @@ const BerkeleyHoodieDesktop = () => {
                             fontSize={{ base: '30px', sm: '45px' }}
                             lineHeight={{ base: '35px', sm: '60px' }}
                         >
-                            BERKELEY <br />
-                            <b>HOODIE</b>
+                            <b>BERKELEY</b> <br />
+                            HOODIE
                         </Text>
                     </Fade>
                     <Fade bottom>

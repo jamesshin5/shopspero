@@ -88,7 +88,7 @@ const AbideHoodieDesktop = () => {
                             fontSize={{ base: '30px', sm: '45px' }}
                             lineHeight={{ base: '35px', sm: '60px' }}
                         >
-                            ABIDE <br />
+                            <b>ABIDE</b> <br />
                             HOODIE
                         </Text>
                     </Fade>

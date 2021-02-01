@@ -88,8 +88,26 @@ const HopeDesktop = () => {
                             fontSize={{ base: '30px', sm: '45px' }}
                             lineHeight={{ base: '35px', sm: '60px' }}
                         >
-                            I AM THAT <br />
-                            <b>GIRL</b>
+                            <b>HOPE</b> <br />
+                            LONGSLEEVE
+                        </Text>
+                    </Fade>
+                    <Fade bottom>
+                        <Text
+                            fontFamily="Tenor Sans"
+                            fontSize={{ base: '10px', sm: '12px' }}
+                            py="10px"
+                        >
+                            <b>10</b> For to this end we toil and strive,
+                            <br></br>
+                            because we have our hope set on the living God,
+                            <br></br>
+                            <br></br>
+                            who is the Savior of all people,
+                            <br></br>especially of those who believe.
+                            <br />
+                            <br />
+                            <b>1 Timothy 4:10 </b>
                         </Text>
                     </Fade>
                     <Fade bottom>
@@ -98,10 +116,9 @@ const HopeDesktop = () => {
                             fontSize={{ base: '10px', sm: '12px' }}
                             w={{ base: '300px', sm: '400px' }}
                         >
-                            ShopSpero partnered with I Am That Girl, LMU to
-                            create a limited edition Girl hat. The goal of this
-                            project is to raise fund for sexual assault
-                            survivors and increase sexual harassment awareness.
+                            Once one believes in the gospel, one has eternal
+                            hope. This is the message Spero wants to share, for
+                            this world is temporary and broken.
                         </Text>
                     </Fade>
                 </VStack>

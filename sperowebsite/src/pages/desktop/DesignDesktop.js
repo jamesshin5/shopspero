@@ -14,6 +14,7 @@ import BlessedToBlessDesktop from './designs/BlessedToBlessDesktop.js'
 import BayAreaDesktop from './designs/BayAreaDesktop.js'
 
 import BerkeleyHoodieDesktop from './designs/BerkeleyHoodieDesktop.js'
+import RedeemedHoodie from './designs/RedeemedHoodie'
 
 import Navbar from '../../components/NavBar'
 
@@ -38,62 +39,68 @@ import { useLocation } from 'react-router-dom'
 const DesignsDesktop = (props) => {
     let passedProps = useLocation()
     let data = passedProps.state
-    const [designIndex, setIndex] = useState(0)
+    const [designIndex, setIndex] = useState(10)
 
     const designs = [
-        'WALK ON WATER STICKER',
-        'MOUNTAIN MOVER',
-        'SPERO BEAR',
-        'ABIDE HOODIE',
-        'HOPE LONGSLEEVE',
-        'I AM THAT GIRL',
-        'MACRON HOODIE',
-        'BLESSED TO BLESSED HOODIE',
-        'BAY AREA HOODIE',
         'BERKELEY HOODIE',
+        'BAY AREA HOODIE',
+        'BLESSED TO BLESSED HOODIE',
+        'MACRON HOODIE',
+        'I AM THAT GIRL',
+        'HOPE LONGSLEEVE',
+        'ABIDE HOODIE',
+        'SPERO BEAR',
+        'MOUNTAIN MOVER',
+        'WALK ON WATER STICKER',
+        'REDEEMED HOODIE',
     ]
 
     useEffect(() => {
         switch (data) {
+            case 'redeemed':
+                setIndex(10)
+                break
             case 'abide':
-                setIndex(3)
-                break
-            case 'mountainmover':
-                setIndex(1)
-                break
-            case 'iamthatgirl':
-                setIndex(5)
-                break
-            case 'macronhoodie':
                 setIndex(6)
                 break
+            case 'mountainmover':
+                setIndex(8)
+                break
+            case 'iamthatgirl':
+                setIndex(4)
+                break
+            case 'macronhoodie':
+                setIndex(3)
+                break
             default:
-                setIndex(1)
+                setIndex(6)
                 break
         }
     }, [])
 
     function renderSwitch(param) {
         switch (param) {
-            case 0:
-                return <WalkOnWaterDesktop />
-            case 1:
-                return <MountainMoverDesktop />
-            case 2:
-                return <SperoBearDesktop />
-            case 3:
-                return <AbideHoodieDesktop />
-            case 4:
-                return <HopeDesktop />
-            case 5:
-                return <IAmThatGirlHatDesktop />
-            case 6:
-                return <MacronHoodieDesktop />
-            case 7:
-                return <BlessedToBlessDesktop />
-            case 8:
-                return <BayAreaDesktop />
+            case 10:
+                return <RedeemedHoodie />
             case 9:
+                return <WalkOnWaterDesktop />
+            case 8:
+                return <MountainMoverDesktop />
+            case 7:
+                return <SperoBearDesktop />
+            case 6:
+                return <AbideHoodieDesktop />
+            case 5:
+                return <HopeDesktop />
+            case 4:
+                return <IAmThatGirlHatDesktop />
+            case 3:
+                return <MacronHoodieDesktop />
+            case 2:
+                return <BlessedToBlessDesktop />
+            case 1:
+                return <BayAreaDesktop />
+            case 0:
                 return <BerkeleyHoodieDesktop />
             default:
                 return ''
@@ -142,50 +149,55 @@ const DesignsDesktop = (props) => {
                             borderWidth="0"
                             borderRadius="0"
                         >
-                            <MenuItem onClick={() => setIndex(0)}>
+                            <MenuItem onClick={() => setIndex(10)}>
+                                <Text fontFamily="Tenor Sans">
+                                    REDEEMED HOODIE
+                                </Text>
+                            </MenuItem>
+                            <MenuItem onClick={() => setIndex(9)}>
                                 <Text fontFamily="Tenor Sans">
                                     WALK ON WATER STICKER
                                 </Text>
                             </MenuItem>
-                            <MenuItem onClick={() => setIndex(1)}>
+                            <MenuItem onClick={() => setIndex(8)}>
                                 <Text fontFamily="Tenor Sans">
                                     MOUNTAIN MOVER
                                 </Text>
                             </MenuItem>
-                            <MenuItem onClick={() => setIndex(2)}>
+                            <MenuItem onClick={() => setIndex(7)}>
                                 <Text fontFamily="Tenor Sans">SPERO BEAR</Text>
                             </MenuItem>
-                            <MenuItem onClick={() => setIndex(3)}>
+                            <MenuItem onClick={() => setIndex(6)}>
                                 <Text fontFamily="Tenor Sans">
                                     ABIDE HOODIE
                                 </Text>
                             </MenuItem>
-                            <MenuItem onClick={() => setIndex(4)}>
+                            <MenuItem onClick={() => setIndex(5)}>
                                 <Text fontFamily="Tenor Sans">
                                     HOPE LONGSLEEVE
                                 </Text>
                             </MenuItem>
-                            <MenuItem onClick={() => setIndex(5)}>
+                            <MenuItem onClick={() => setIndex(4)}>
                                 <Text fontFamily="Tenor Sans">
-                                    I AM THAT GIRL
+                                    I AM THAT GIRL HAT
                                 </Text>
                             </MenuItem>
-                            <MenuItem onClick={() => setIndex(6)}>
+                            <MenuItem onClick={() => setIndex(3)}>
                                 <Text fontFamily="Tenor Sans">
                                     MACRON HOODIE
                                 </Text>
                             </MenuItem>
-                            <MenuItem onClick={() => setIndex(7)}>
+                            <MenuItem onClick={() => setIndex(2)}>
                                 <Text fontFamily="Tenor Sans">
                                     BLESSED TO BLESS HOODIE
                                 </Text>
                             </MenuItem>
-                            <MenuItem onClick={() => setIndex(8)}>
+                            <MenuItem onClick={() => setIndex(1)}>
                                 <Text fontFamily="Tenor Sans">
                                     BAY AREA HOODIE
                                 </Text>
                             </MenuItem>
-                            <MenuItem onClick={() => setIndex(9)}>
+                            <MenuItem onClick={() => setIndex(0)}>
                                 <Text fontFamily="Tenor Sans">
                                     BERKELEY HOODIE
                                 </Text>
@@ -207,6 +219,17 @@ const DesignsDesktop = (props) => {
                     <Text fontWeight="bold" color="black">
                         ORIGINAL DESIGNS
                     </Text>
+                    <Box>
+                        <button onClick={() => setIndex(10)}>
+                            <Text
+                                _hover={{ color: 'black' }}
+                                color={designIndex === 10 ? 'black' : '#5c6a6f'}
+                                textAlign="right"
+                            >
+                                REDEEMED HOODIE
+                            </Text>
+                        </button>
+                    </Box>
                     <VStack
                         alignItems="right"
                         spacing="0.25rem"
@@ -218,11 +241,11 @@ const DesignsDesktop = (props) => {
                             FALL 2020 STICKERS
                         </Text>
                         <Box>
-                            <button onClick={() => setIndex(0)}>
+                            <button onClick={() => setIndex(9)}>
                                 <Text
                                     _hover={{ color: 'black' }}
                                     color={
-                                        designIndex === 0 ? 'black' : '#5c6a6f'
+                                        designIndex === 9 ? 'black' : '#5c6a6f'
                                     }
                                     textAlign="right"
                                 >
@@ -231,11 +254,11 @@ const DesignsDesktop = (props) => {
                             </button>
                         </Box>
                         <Box>
-                            <button onClick={() => setIndex(1)}>
+                            <button onClick={() => setIndex(8)}>
                                 <Text
                                     _hover={{ color: 'black' }}
                                     color={
-                                        designIndex === 1 ? 'black' : '#5c6a6f'
+                                        designIndex === 8 ? 'black' : '#5c6a6f'
                                     }
                                     textAlign="right"
                                 >
@@ -244,11 +267,11 @@ const DesignsDesktop = (props) => {
                             </button>
                         </Box>
                         <Box>
-                            <button onClick={() => setIndex(2)}>
+                            <button onClick={() => setIndex(7)}>
                                 <Text
                                     _hover={{ color: 'black' }}
                                     color={
-                                        designIndex === 2 ? 'black' : '#5c6a6f'
+                                        designIndex === 7 ? 'black' : '#5c6a6f'
                                     }
                                     textAlign="right"
                                 >
@@ -259,24 +282,13 @@ const DesignsDesktop = (props) => {
                     </VStack>
 
                     <Box>
-                        <button onClick={() => setIndex(3)}>
+                        <button onClick={() => setIndex(6)}>
                             <Text
                                 _hover={{ color: 'black' }}
-                                color={designIndex === 3 ? 'black' : '#5c6a6f'}
+                                color={designIndex === 6 ? 'black' : '#5c6a6f'}
                                 textAlign="right"
                             >
                                 ABIDE HOODIE
-                            </Text>
-                        </button>
-                    </Box>
-                    <Box>
-                        <button onClick={() => setIndex(4)}>
-                            <Text
-                                _hover={{ color: 'black' }}
-                                color={designIndex === 4 ? 'black' : '#5c6a6f'}
-                                textAlign="right"
-                            >
-                                HOPE LONG SLEEVE
                             </Text>
                         </button>
                     </Box>
@@ -287,15 +299,26 @@ const DesignsDesktop = (props) => {
                                 color={designIndex === 5 ? 'black' : '#5c6a6f'}
                                 textAlign="right"
                             >
-                                I AM THAT GIRL DAD HAT
+                                HOPE LONG SLEEVE
                             </Text>
                         </button>
                     </Box>
                     <Box>
-                        <button onClick={() => setIndex(6)}>
+                        <button onClick={() => setIndex(4)}>
                             <Text
                                 _hover={{ color: 'black' }}
-                                color={designIndex === 6 ? 'black' : '#5c6a6f'}
+                                color={designIndex === 4 ? 'black' : '#5c6a6f'}
+                                textAlign="right"
+                            >
+                                I AM THAT GIRL HAT
+                            </Text>
+                        </button>
+                    </Box>
+                    <Box>
+                        <button onClick={() => setIndex(3)}>
+                            <Text
+                                _hover={{ color: 'black' }}
+                                color={designIndex === 3 ? 'black' : '#5c6a6f'}
                                 textAlign="right"
                             >
                                 SPERO MACRON HOODIE
@@ -303,10 +326,10 @@ const DesignsDesktop = (props) => {
                         </button>
                     </Box>
                     <Box>
-                        <button onClick={() => setIndex(7)}>
+                        <button onClick={() => setIndex(2)}>
                             <Text
                                 _hover={{ color: 'black' }}
-                                color={designIndex === 7 ? 'black' : '#5c6a6f'}
+                                color={designIndex === 2 ? 'black' : '#5c6a6f'}
                                 textAlign="right"
                             >
                                 BLESSED TO BLESS
@@ -314,10 +337,10 @@ const DesignsDesktop = (props) => {
                         </button>
                     </Box>
                     <Box>
-                        <button onClick={() => setIndex(8)}>
+                        <button onClick={() => setIndex(1)}>
                             <Text
                                 _hover={{ color: 'black' }}
-                                color={designIndex === 8 ? 'black' : '#5c6a6f'}
+                                color={designIndex === 1 ? 'black' : '#5c6a6f'}
                                 textAlign="right"
                             >
                                 BAY AREA LONG SLEEVE
@@ -325,10 +348,10 @@ const DesignsDesktop = (props) => {
                         </button>
                     </Box>
                     <Box>
-                        <button onClick={() => setIndex(9)}>
+                        <button onClick={() => setIndex(0)}>
                             <Text
                                 _hover={{ color: 'black' }}
-                                color={designIndex === 9 ? 'black' : '#5c6a6f'}
+                                color={designIndex === 0 ? 'black' : '#5c6a6f'}
                                 textAlign="right"
                             >
                                 BERKELEY HOODIE

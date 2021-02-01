@@ -83,14 +83,29 @@ const IAmThatGirlHatDesktop = () => {
             <VStack textAlign="left" justifyContent="center" maxW="500px">
                 <VStack alignItems="flex-start">
                     <Fade bottom>
-                        <Text
-                            fontFamily="Lexend Deca"
-                            fontSize={{ base: '30px', sm: '45px' }}
-                            lineHeight={{ base: '35px', sm: '60px' }}
-                        >
-                            I AM THAT <br />
-                            <b>GIRL</b>
-                        </Text>
+                        <HStack alignItems="flex-start">
+                            <Text
+                                fontFamily="Lexend Deca"
+                                fontSize={{ base: '30px', sm: '45px' }}
+                                lineHeight={{ base: '35px', sm: '60px' }}
+                            >
+                                I AM THAT <br />
+                                <b>GIRL</b>
+                            </Text>
+                            <Box
+                                bgColor="#5c6a6f"
+                                px={{ base: '4px', sm: '7px' }}
+                                py={{ base: '2px', sm: '5px' }}
+                            >
+                                <Text
+                                    fontFamily="Lexend Deca"
+                                    fontSize={{ base: '7px', sm: '10px' }}
+                                    color="white"
+                                >
+                                    DAD HAT
+                                </Text>
+                            </Box>
+                        </HStack>
                     </Fade>
                     <Fade bottom>
                         <Text
