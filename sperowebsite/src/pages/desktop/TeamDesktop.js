@@ -4,19 +4,18 @@ import Profile from '../../components/Profile'
 import '../../styles/desktop/TeamDesktop.css'
 import Fade from 'react-reveal/Fade'
 import Navbar from '../../components/NavBar'
-import Background from '../../images/home-bgimage.png'
 
-import { HStack, Image, Text, Box, Flex, VStack, Grid } from '@chakra-ui/react'
+import { Text, Box, VStack, Grid } from '@chakra-ui/react'
 
 const TeamPage = (props) => {
     return (
         <div
-            style={{
-                backgroundColor: '#e7e9e0',
-                backgroundImage: `url(${Background})`,
-                backgroundPosition: 'right -9vw',
-                backgroundRepeat: 'no-repeat',
-            }}
+            className="background-main"
+            // style={{
+            //     backgroundColor: '#e7e9e0',
+            //     backgroundImage: `url(${Background})`,
+            //     backgroundPosition: 'right -9vw',
+            // }}
         >
             <Box w="100%" h="100%" overflow="scroll">
                 <Navbar />
@@ -46,7 +45,7 @@ const TeamPage = (props) => {
                             py="20px"
                             textAlign="left"
                             maxWidth="1100px"
-                        // pr={{ base: 'none', sm: '40px' }}
+                            // pr={{ base: 'none', sm: '40px' }}
                         >
                             Shop Spero is comprised of a diverse group of
                             Christians who all choose to use their talents and

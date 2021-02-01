@@ -17,7 +17,6 @@ import BerkeleyHoodieDesktop from './designs/BerkeleyHoodieDesktop.js'
 import RedeemedHoodie from './designs/RedeemedHoodie'
 
 import Navbar from '../../components/NavBar'
-import Background from '../../images/home-bgimage.png'
 
 import {
     HStack,
@@ -25,14 +24,12 @@ import {
     Flex,
     Text,
     Box,
-    Spacer,
     Stack,
     Menu,
     MenuButton,
     Button,
     MenuList,
     MenuItem,
-    background,
 } from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import { useLocation } from 'react-router-dom'
@@ -74,7 +71,7 @@ const DesignsDesktop = (props) => {
                 setIndex(3)
                 break
             default:
-                setIndex(6)
+                setIndex(10)
                 break
         }
     }, [])
@@ -109,12 +106,13 @@ const DesignsDesktop = (props) => {
     }
     return (
         <div
-            style={{
-                backgroundColor: '#e7e9e0',
-                backgroundImage: `url(${Background})`,
-                backgroundPosition: 'right -9vw',
-                backgroundRepeat: 'no-repeat',
-            }}
+            className="background-main"
+            // style={{
+            //     backgroundColor: '#e7e9e0',
+            //     backgroundImage: `url(${Background})`,
+            //     backgroundPosition: 'right -9vw',
+            //     backgroundRepeat: 'no-repeat',
+            // }}
         >
             <Box w="100%" h="100vh" overflow="scroll">
                 <Navbar />

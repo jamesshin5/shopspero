@@ -14,12 +14,13 @@ import Background from '../../images/home-bgimage.png'
 const AboutDesktop = (props) => {
     return (
         <div
-            style={{
-                backgroundColor: '#e7e9e0',
-                backgroundImage: `url(${Background})`,
-                backgroundPosition: 'right -9vw',
-                backgroundRepeat: 'no-repeat',
-            }}
+            className="background-main"
+        // style={{
+        //     backgroundColor: '#e7e9e0',
+        //     backgroundImage: `url(${Background})`,
+        //     backgroundPosition: 'right -9vw',
+        //     backgroundRepeat: 'no-repeat',
+        // }}
         >
             <Box w="100%" h="100%" overflow="scroll">
                 <Navbar />
@@ -111,11 +112,11 @@ const AboutDesktop = (props) => {
                                 <Text
                                     fontFamily="Tenor Sans"
                                     fontSize={{
-                                        base: '16px',
+                                        base: '12px',
                                         sm: '18px',
                                         md: '20x',
                                     }}
-                                    lineHeight={{ base: '25px', sm: '30px' }}
+                                    lineHeight={{ base: '20px', sm: '30px' }}
                                     color="#5c6a6f"
                                     pb="20px"
                                     maxW="300px"
@@ -129,11 +130,11 @@ const AboutDesktop = (props) => {
                                 <Text
                                     fontFamily="Lexend Deca"
                                     fontSize={{
-                                        base: '10px',
+                                        base: '8px',
                                         sm: '12px',
                                         md: '14px',
                                     }}
-                                    lineHeight={{ base: '25px', sm: '30px' }}
+                                    lineHeight={{ base: '20px', sm: '30px' }}
                                     color="#5c6a6f"
                                     // pb="20px"
                                     maxW="300px"
@@ -174,11 +175,11 @@ const AboutDesktop = (props) => {
                                 <Text
                                     fontFamily="Tenor Sans"
                                     fontSize={{
-                                        base: '16px',
+                                        base: '12px',
                                         sm: '18px',
                                         md: '20x',
                                     }}
-                                    lineHeight={{ base: '25px', sm: '30px' }}
+                                    lineHeight={{ base: '20px', sm: '30px' }}
                                     color="#5c6a6f"
                                     pb="20px"
                                     maxW="300px"
@@ -192,11 +193,11 @@ const AboutDesktop = (props) => {
                                 <Text
                                     fontFamily="Lexend Deca"
                                     fontSize={{
-                                        base: '10px',
+                                        base: '8px',
                                         sm: '12px',
                                         md: '14px',
                                     }}
-                                    lineHeight={{ base: '25px', sm: '30px' }}
+                                    lineHeight={{ base: '20px', sm: '30px' }}
                                     color="#5c6a6f"
                                     pb="20px"
                                     maxW="225px"
@@ -293,11 +294,11 @@ const AboutDesktop = (props) => {
                                 <Text
                                     fontFamily="Tenor Sans"
                                     fontSize={{
-                                        base: '16px',
+                                        base: '12px',
                                         sm: '18px',
                                         md: '20x',
                                     }}
-                                    lineHeight={{ base: '25px', sm: '30px' }}
+                                    lineHeight={{ base: '20px', sm: '30px' }}
                                     color="#5c6a6f"
                                     pb="20px"
                                     maxW="300px"
@@ -311,11 +312,11 @@ const AboutDesktop = (props) => {
                                 <Text
                                     fontFamily="Lexend Deca"
                                     fontSize={{
-                                        base: '10px',
+                                        base: '8px',
                                         sm: '12px',
                                         md: '14px',
                                     }}
-                                    lineHeight={{ base: '25px', sm: '30px' }}
+                                    lineHeight={{ base: '20px', sm: '30px' }}
                                     color="#5c6a6f"
                                     pb={{ base: '50px', sm: '20px' }}
                                     maxW="300px"
