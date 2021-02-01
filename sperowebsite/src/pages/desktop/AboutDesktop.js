@@ -64,12 +64,12 @@ const AboutDesktop = (props) => {
                     <Image
                         src={require('../../images/about-image-1.jpg')}
                         maxW="1000px"
-                        pb="200px"
+                        pb={{ base: "150px", md: "200px" }}
                     />
                 </Fade>
                 <Fade bottom>
                     <Box
-                        w="1000px"
+                        w={{ base: '300px', sm: '500px', md: '700px', lg: '1000px' }}
                         h="1px"
                         bgColor="#5c6a6f"
                         position="relative"
@@ -80,21 +80,23 @@ const AboutDesktop = (props) => {
                     <Fade bottom>
                         <Image
                             src={require('../../images/design-photos/abide-window.jpg')}
-                            maxW="325px"
+                            width={{ base: '325px' }}
+                            height={{ base: '325px' }}
                             position="relative"
-                            top="-150px;"
+                            top={{ base: '-550px', sm: '-175px', md: "-150px;" }}
                         />
                     </Fade>
                     <VStack textAlign="left" color="#5c6a6f" align="left">
                         <Fade bottom>
                             <Text
                                 fontFamily="Tenor Sans"
-                                fontSize="20px"
-                                lineHeight="30px"
+                                fontSize={{ base: '16px', sm: '18px', md: '20x' }}
+                                lineHeight={{ base: '25px', sm: '30px' }}
                                 color="#5c6a6f"
                                 pb="20px"
                                 maxW="300px"
                                 textAlign="left"
+                                pr="10px"
                             >
                                 <b>MISSION</b>
                             </Text>
@@ -102,11 +104,12 @@ const AboutDesktop = (props) => {
                         <Fade bottom>
                             <Text
                                 fontFamily="Lexend Deca"
-                                fontSize="14px"
-                                lineHeight="30px"
+                                fontSize={{ base: '10px', sm: '12px', md: '14px' }}
+                                lineHeight={{ base: '25px', sm: '30px' }}
                                 color="#5c6a6f"
                                 // pb="20px"
                                 maxW="300px"
+                                pr="10px"
                             >
                                 In Latin, the word "spero" means "<b>to hope</b>
                                 ". Our vision is also inspired by{' '}
@@ -140,12 +143,13 @@ const AboutDesktop = (props) => {
                         <Fade bottom>
                             <Text
                                 fontFamily="Tenor Sans"
-                                fontSize="20px"
-                                lineHeight="30px"
+                                fontSize={{ base: '16px', sm: '18px', md: '20x' }}
+                                lineHeight={{ base: '25px', sm: '30px' }}
                                 color="#5c6a6f"
                                 pb="20px"
                                 maxW="300px"
                                 textAlign="left"
+                                pl="10px"
                             >
                                 <b>MATTHEW 10:29-31</b>
                             </Text>
@@ -153,11 +157,12 @@ const AboutDesktop = (props) => {
                         <Fade bottom>
                             <Text
                                 fontFamily="Lexend Deca"
-                                fontSize="14px"
-                                lineHeight="30px"
+                                fontSize={{ base: '10px', sm: '12px', md: '14px' }}
+                                lineHeight={{ base: '25px', sm: '30px' }}
                                 color="#5c6a6f"
                                 pb="20px"
                                 maxW="225px"
+                                pl="10px"
                             >
                                 "Are not two sparrows sold for a penny? And not
                                 one of them will fall to the ground apart from
@@ -178,8 +183,8 @@ const AboutDesktop = (props) => {
                 </HStack>
                 <Fade bottom>
                     <Box
-                        w="1000px"
-                        h="2px"
+                        w={{ base: '300px', sm: '500px', md: '700px', lg: '1000px' }}
+                        h="1px"
                         bgColor="#5c6a6f"
                         position="relative"
                         top="100px"
@@ -209,12 +214,13 @@ const AboutDesktop = (props) => {
                         <Fade bottom>
                             <Text
                                 fontFamily="Tenor Sans"
-                                fontSize="20px"
-                                lineHeight="30px"
+                                fontSize={{ base: '16px', sm: '18px', md: '20x' }}
+                                lineHeight={{ base: '25px', sm: '30px' }}
                                 color="#5c6a6f"
                                 pb="20px"
                                 maxW="300px"
                                 textAlign="left"
+                                pr="10px"
                             >
                                 <b>VISION</b>
                             </Text>
@@ -222,11 +228,12 @@ const AboutDesktop = (props) => {
                         <Fade bottom>
                             <Text
                                 fontFamily="Lexend Deca"
-                                fontSize="14px"
-                                lineHeight="30px"
+                                fontSize={{ base: '10px', sm: '12px', md: '14px' }}
+                                lineHeight={{ base: '25px', sm: '30px' }}
                                 color="#5c6a6f"
                                 pb="20px"
                                 maxW="300px"
+                                pr="10px"
                             >
                                 Our vision is inspired by Matthew 10:29-31,
                                 where something as insignificant as a sparrow,
@@ -241,7 +248,7 @@ const AboutDesktop = (props) => {
                 </HStack>
             </VStack>
             <Footer />
-        </Box>
+        </Box >
     )
 }
 
