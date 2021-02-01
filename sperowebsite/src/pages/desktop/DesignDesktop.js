@@ -71,7 +71,7 @@ const DesignsDesktop = (props) => {
                 setIndex(3)
                 break
             default:
-                setIndex(6)
+                setIndex(10)
                 break
         }
     }, [])

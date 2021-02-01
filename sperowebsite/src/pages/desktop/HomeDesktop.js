@@ -12,6 +12,7 @@ const image0 = require('../../images/home-image-0.png')
 
 const HomePageDesktop = (props) => {
     const designLinks = [
+        'redeemed',
         'abide',
         'mountainmover',
         'iamthatgirl',
@@ -109,7 +110,7 @@ const HomePageDesktop = (props) => {
                                 flexDirection="column"
                                 position="absolute"
                                 transform="translate(-50%, -50%)"
-                                top="50%"
+                                top={{ base: '45%', sm: '50%' }}
                                 left="50%"
                             >
                                 <Fade bottom>
@@ -135,21 +136,32 @@ const HomePageDesktop = (props) => {
                                 flexDirection="column"
                                 position="absolute"
                                 transform="translate(-50%, -50%)"
-                                top="65%"
+                                top={{ base: '60%', sm: '67%' }}
                                 left="50%"
                                 w="100%"
+                                alignItems="center"
                             >
                                 <Fade bottom>
                                     <Link to="/about">
-                                        <Text
-                                            fontFamily="Tenor Sans"
-                                            fontSize="16px"
-                                            color="#5c6a6f"
-                                            _hover={{ fontSize: '18px' }}
-                                            transition="font-size 0.5s"
+                                        <Box
+                                            bgColor="#5c6a6f"
+                                            py="2px"
+                                            px="0.5px"
+                                            w={{ base: '180px', sm: '220px' }}
                                         >
-                                            bridging fashion and mission
-                                        </Text>
+                                            <Text
+                                                fontFamily="Tenor Sans"
+                                                fontSize={{
+                                                    base: '10px',
+                                                    sm: '14px',
+                                                }}
+                                                color="white"
+                                                _hover={{ fontSize: '18px' }}
+                                                transition="font-size 0.5s"
+                                            >
+                                                bridging fashion and mission
+                                            </Text>
+                                        </Box>
                                     </Link>
                                 </Fade>
                             </Box>
