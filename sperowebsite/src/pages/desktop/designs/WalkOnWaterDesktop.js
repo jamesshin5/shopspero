@@ -13,73 +13,83 @@ const WalkOnWaterPage = () => {
             // h="72vh"
             // overflow="scroll"
         >
-            <VStack spacing="5px">
-                <Fade bottom>
-                    <Box
-                        display="flex"
-                        justifyContent="center"
-                        align-items="center"
-                        overflow="hidden"
-                        width={{ base: '330px', sm: '480px', lg: '560px' }}
-                        height={{ base: '150px', sm: '270px', lg: '350px' }}
-                    >
-                        <Image
-                            src={require('../../../images/design-photos/bottle-graphic.jpg')}
-                            alt="main-sticker"
-                            objectFit="cover"
-                            w="100%"
-                            h="100%"
-                        />
-                    </Box>
-                </Fade>
-                <HStack spacing="5px">
+            <HStack>
+                <VStack spacing="5px">
                     <Fade bottom>
                         <Box
                             display="flex"
                             justifyContent="center"
                             align-items="center"
                             overflow="hidden"
-                            width={{
-                                base: '163.5px',
-                                sm: '238px',
-                                lg: '278px',
-                            }}
-                            height={{ base: '100px', sm: '140px', lg: '175px' }}
+                            width={{ base: '330px', sm: '480px', lg: '560px' }}
+                            height={{ base: '150px', sm: '270px', lg: '350px' }}
                         >
                             <Image
-                                src={require('../../../images/design-photos/water-left.jpg')}
-                                alt=""
+                                src={require('../../../images/design-photos/bottle-graphic.jpg')}
+                                alt="main-sticker"
                                 objectFit="cover"
                                 w="100%"
                                 h="100%"
                             />
                         </Box>
                     </Fade>
+                    <HStack spacing="5px">
+                        <Fade bottom>
+                            <Box
+                                display="flex"
+                                justifyContent="center"
+                                align-items="center"
+                                overflow="hidden"
+                                width={{
+                                    base: '163.5px',
+                                    sm: '238px',
+                                    lg: '278px',
+                                }}
+                                height={{
+                                    base: '100px',
+                                    sm: '140px',
+                                    lg: '175px',
+                                }}
+                            >
+                                <Image
+                                    src={require('../../../images/design-photos/water-left.jpg')}
+                                    alt=""
+                                    objectFit="cover"
+                                    w="100%"
+                                    h="100%"
+                                />
+                            </Box>
+                        </Fade>
 
-                    <Fade bottom>
-                        <Box
-                            display="flex"
-                            justifyContent="center"
-                            align-items="center"
-                            overflow="hidden"
-                            width={{
-                                base: '163.5px',
-                                sm: '237px',
-                                lg: '277px',
-                            }}
-                            height={{ base: '100px', sm: '140px', lg: '175px' }}
-                        >
-                            <Image
-                                src={require('../../../images/design-photos/walk-on-water-main.jpg')}
-                                alt=""
-                                objectFit="cover"
-                                w="100%"
-                                h="100%"
-                            />
-                        </Box>
-                    </Fade>
-                </HStack>
-            </VStack>
+                        <Fade bottom>
+                            <Box
+                                display="flex"
+                                justifyContent="center"
+                                align-items="center"
+                                overflow="hidden"
+                                width={{
+                                    base: '163.5px',
+                                    sm: '237px',
+                                    lg: '277px',
+                                }}
+                                height={{
+                                    base: '100px',
+                                    sm: '140px',
+                                    lg: '175px',
+                                }}
+                            >
+                                <Image
+                                    src={require('../../../images/design-photos/walk-on-water-main.jpg')}
+                                    alt=""
+                                    objectFit="cover"
+                                    w="100%"
+                                    h="100%"
+                                />
+                            </Box>
+                        </Fade>
+                    </HStack>
+                </VStack>
+            </HStack>
             <VStack textAlign="left" justifyContent="center" maxW="500px">
                 <VStack alignItems="flex-start">
                     <Fade bottom>

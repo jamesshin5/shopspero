@@ -115,11 +115,11 @@ const DesignsDesktop = (props) => {
             //     backgroundRepeat: 'no-repeat',
             // }}
         >
-            <Box w="100%" h="100vh" overflow="scroll">
+            <Box w="100%" h="100%">
                 <Navbar />
                 <Stack
                     direction={{ base: 'column', sm: 'row' }}
-                    pb="100px"
+                    pb={{ base: '100px', sm: 'none' }}
                     px={{ base: '15px', md: '35px', lg: '75px' }}
                     justifyContent="flex-start"
                     alignItems="flex-start"

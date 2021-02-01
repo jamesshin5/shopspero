@@ -13,82 +13,92 @@ const RedeemedHoodie = () => {
             // h="72vh"
             // overflow="scroll"
         >
-            <VStack spacing="5px">
-                <Fade bottom>
-                    <Box
-                        display="flex"
-                        justifyContent="center"
-                        align-items="center"
-                        overflow="hidden"
-                        width={{ base: '330px', sm: '480px', lg: '560px' }}
-                        height={{ base: '150px', sm: '270px', lg: '350px' }}
-                    >
-                        <iframe
-                            title="Manolo"
-                            width="100%"
-                            src="https://www.youtube.com/embed/t3A_AwNOT_8"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                        ></iframe>
+            <HStack>
+                <VStack spacing="5px">
+                    <Fade bottom>
+                        <Box
+                            display="flex"
+                            justifyContent="center"
+                            align-items="center"
+                            overflow="hidden"
+                            width={{ base: '330px', sm: '480px', lg: '560px' }}
+                            height={{ base: '150px', sm: '270px', lg: '350px' }}
+                        >
+                            <iframe
+                                title="Manolo"
+                                width="100%"
+                                src="https://www.youtube.com/embed/t3A_AwNOT_8"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                            ></iframe>
 
-                        {/* <Image
+                            {/* <Image
                             src={require('../../../images/design-photos/mountain-graphic.jpg')}
                             alt="main-sticker"
                             objectFit="cover"
                             w="100%"
                             h="100%"
                         /> */}
-                    </Box>
-                </Fade>
-                <HStack spacing="5px">
-                    <Fade bottom>
-                        <Box
-                            display="flex"
-                            justifyContent="center"
-                            align-items="center"
-                            overflow="hidden"
-                            width={{
-                                base: '163.5px',
-                                sm: '238px',
-                                lg: '278px',
-                            }}
-                            height={{ base: '140px', sm: '180px', lg: '220px' }}
-                        >
-                            <Image
-                                src={require('../../../images/design-photos/redeemed-left.jpg')}
-                                alt=""
-                                objectFit="cover"
-                                w="100%"
-                                h="100%"
-                            />
                         </Box>
                     </Fade>
+                    <HStack spacing="5px">
+                        <Fade bottom>
+                            <Box
+                                display="flex"
+                                justifyContent="center"
+                                align-items="center"
+                                overflow="hidden"
+                                width={{
+                                    base: '163.5px',
+                                    sm: '238px',
+                                    lg: '278px',
+                                }}
+                                height={{
+                                    base: '140px',
+                                    sm: '180px',
+                                    lg: '220px',
+                                }}
+                            >
+                                <Image
+                                    src={require('../../../images/design-photos/redeemed-left.jpg')}
+                                    alt=""
+                                    objectFit="cover"
+                                    w="100%"
+                                    h="100%"
+                                />
+                            </Box>
+                        </Fade>
 
-                    <Fade bottom>
-                        <Box
-                            display="flex"
-                            justifyContent="center"
-                            align-items="center"
-                            overflow="hidden"
-                            width={{
-                                base: '163.5px',
-                                sm: '237px',
-                                lg: '277px',
-                            }}
-                            height={{ base: '140px', sm: '180px', lg: '220px' }}
-                        >
-                            <Image
-                                src={require('../../../images/design-photos/redeemed-right.jpg')}
-                                alt=""
-                                objectFit="cover"
-                                w="100%"
-                                h="100%"
-                            />
-                        </Box>
-                    </Fade>
-                </HStack>
-            </VStack>
+                        <Fade bottom>
+                            <Box
+                                display="flex"
+                                justifyContent="center"
+                                align-items="center"
+                                overflow="hidden"
+                                width={{
+                                    base: '163.5px',
+                                    sm: '237px',
+                                    lg: '277px',
+                                }}
+                                height={{
+                                    base: '140px',
+                                    sm: '180px',
+                                    lg: '220px',
+                                }}
+                            >
+                                <Image
+                                    src={require('../../../images/design-photos/redeemed-right.jpg')}
+                                    alt=""
+                                    objectFit="cover"
+                                    w="100%"
+                                    h="100%"
+                                />
+                            </Box>
+                        </Fade>
+                    </HStack>
+                </VStack>
+            </HStack>
             <VStack textAlign="left" justifyContent="center" maxW="500px">
                 <VStack alignItems="flex-start">
                     <Fade bottom>
