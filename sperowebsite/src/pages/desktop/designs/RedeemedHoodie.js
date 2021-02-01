@@ -142,7 +142,7 @@ const RedeemedHoodie = () => {
                             the path of peace.
                         </Text>
                     </Fade>
-                    <a href="http://tinyurl.com/spero-etsy">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfbYg-tpSn5db7FhVYL4T92BAqZueXFkbsDVFu6Db_CjtE8yA/viewform">
                         <Fade bottom>
                             <Box
                                 borderWidth="1px"
@@ -158,7 +158,7 @@ const RedeemedHoodie = () => {
                                     _hover={{ fontSize: '9.5px' }}
                                     transition="font-size 0.25s"
                                 >
-                                    SHOP NOW ON ETSY
+                                    ORDER NOW
                                 </Text>
                             </Box>
                         </Fade>

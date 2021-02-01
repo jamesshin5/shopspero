@@ -73,6 +73,7 @@ const HomePageDesktop = (props) => {
                         justifyContent="space-between"
                         w="80%"
                         pb="10px"
+                        top={{ base: '50%', sm: '50%' }}
                     >
                         <Fade bottom>
                             <button
