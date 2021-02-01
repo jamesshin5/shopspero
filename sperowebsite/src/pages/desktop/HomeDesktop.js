@@ -70,6 +70,7 @@ const HomePageDesktop = (props) => {
                 backgroundColor: '#e7e9e0',
                 backgroundImage: `url(${Background})`,
                 backgroundPosition: 'right -9vw',
+                backgroundRepeat: 'no-repeat',
             }}
         >
             <Box w="100%" h="100vh" overflow="scroll">

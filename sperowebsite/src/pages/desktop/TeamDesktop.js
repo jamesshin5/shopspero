@@ -15,6 +15,7 @@ const TeamPage = (props) => {
                 backgroundColor: '#e7e9e0',
                 backgroundImage: `url(${Background})`,
                 backgroundPosition: 'right -9vw',
+                backgroundRepeat: 'no-repeat',
             }}
         >
             <Box w="100%" h="100%" overflow="scroll">
@@ -45,7 +46,7 @@ const TeamPage = (props) => {
                             py="20px"
                             textAlign="left"
                             maxWidth="1100px"
-                            // pr={{ base: 'none', sm: '40px' }}
+                        // pr={{ base: 'none', sm: '40px' }}
                         >
                             Shop Spero is comprised of a diverse group of
                             Christians who all choose to use their talents and

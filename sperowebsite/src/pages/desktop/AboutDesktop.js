@@ -66,10 +66,10 @@ const AboutDesktop = (props) => {
                         <Image
                             src={require('../../images/about-image-1.jpg')}
                             maxW="1000px"
-                            pb={{ base: '150px', md: '200px' }}
+                            pb={{ base: '50px', md: '100px' }}
                         />
                     </Fade>
-                    <Fade bottom>
+                    {/* <Fade bottom>
                         <Box
                             w={{
                                 base: '300px',
@@ -82,19 +82,18 @@ const AboutDesktop = (props) => {
                             position="relative"
                             top="-100px;"
                         ></Box>
-                    </Fade>
-                    <HStack textAlign="left" color="#5c6a6f" spacing="150px">
+                    </Fade> */}
+                    <HStack textAlign="left" color="#5c6a6f" spacing="150px" pb='75px'>
                         <Fade bottom>
                             <Image
                                 src={require('../../images/design-photos/abide-window.jpg')}
-                                width={{ base: '325px' }}
-                                height={{ base: '325px' }}
-                                position="relative"
-                                top={{
-                                    base: '-550px',
-                                    sm: '-175px',
-                                    md: '-150px;',
-                                }}
+                                maxW='325px'
+                            // position="relative"
+                            // top={{
+                            //     base: '-550px',
+                            //     sm: '-175px',
+                            //     md: '-150px;',
+                            // }}
                             />
                         </Fade>
                         <VStack textAlign="left" color="#5c6a6f" align="left">
@@ -151,7 +150,7 @@ const AboutDesktop = (props) => {
                     <HStack
                         textAlign="left"
                         color="#5c6a6f"
-                        pb="175px"
+                        pb="75px"
                         spacing="150px"
                     >
                         <VStack
@@ -159,7 +158,7 @@ const AboutDesktop = (props) => {
                             color="#5c6a6f"
                             align="left"
                             position="relative"
-                            top="150px"
+                        // top="150px"
                         >
                             <Fade bottom>
                                 <Text
@@ -206,12 +205,12 @@ const AboutDesktop = (props) => {
                             <Image
                                 src={require('../../images/about-sticker.jpg')}
                                 maxW="325px"
-                                position="relative"
-                                top="100px"
+                            // position="relative"
+                            // top="100px"
                             />
                         </Fade>
                     </HStack>
-                    <Fade bottom>
+                    {/* <Fade bottom>
                         <Box
                             w={{
                                 base: '300px',
@@ -224,7 +223,7 @@ const AboutDesktop = (props) => {
                             position="relative"
                             top="100px"
                         ></Box>
-                    </Fade>
+                    </Fade> */}
                     <HStack
                         textAlign="left"
                         color="#5c6a6f"
@@ -236,15 +235,15 @@ const AboutDesktop = (props) => {
                                 src={require('../../images/design-photos/abide-overlay.jpg')}
                                 maxW="325px"
                                 position="relative"
-                                top="25px"
+                            // top="25px"
                             />
                         </Fade>
                         <VStack
                             textAlign="left"
                             color="#5c6a6f"
                             align="left"
-                            position="relative"
-                            top="125px"
+                        // position="relative"
+                        // top="125px"
                         >
                             <Fade bottom>
                                 <Text
@@ -274,7 +273,7 @@ const AboutDesktop = (props) => {
                                     }}
                                     lineHeight={{ base: '25px', sm: '30px' }}
                                     color="#5c6a6f"
-                                    pb="20px"
+                                    pb={{ base: '50px', sm: '20px' }}
                                     maxW="300px"
                                     pr="10px"
                                 >
