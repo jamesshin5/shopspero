@@ -37,6 +37,7 @@ import { useLocation } from 'react-router-dom'
 const DesignsDesktop = (props) => {
     let passedProps = useLocation()
     let data = passedProps.state
+
     const [designIndex, setIndex] = useState(10)
 
     const designs = [
