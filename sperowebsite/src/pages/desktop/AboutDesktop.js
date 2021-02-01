@@ -2,18 +2,25 @@ import React from 'react'
 import Footer from '../../components/Footer'
 import Navbar from '../../components/NavBar'
 import Fade from 'react-reveal/Fade'
-import { HStack, Image, Text, Box, VStack } from '@chakra-ui/react'
+import {
+    HStack,
+    Image,
+    Text,
+    Box,
+    VStack,
+} from '@chakra-ui/react'
+import Background from '../../images/home-bgimage.png'
 
 const AboutDesktop = (props) => {
     return (
         <div
             className="background-main"
-            // style={{
-            //     backgroundColor: '#e7e9e0',
-            //     backgroundImage: `url(${Background})`,
-            //     backgroundPosition: 'right -9vw',
-            //     backgroundRepeat: 'no-repeat',
-            // }}
+        // style={{
+        //     backgroundColor: '#e7e9e0',
+        //     backgroundImage: `url(${Background})`,
+        //     backgroundPosition: 'right -9vw',
+        //     backgroundRepeat: 'no-repeat',
+        // }}
         >
             <Box w="100%" h="100%" overflow="scroll">
                 <Navbar />
@@ -74,31 +81,44 @@ const AboutDesktop = (props) => {
                             top="-100px;"
                         ></Box>
                     </Fade> */}
-                    <HStack textAlign="left" color="#5c6a6f" spacing="150px" pb='75px'>
+                    <HStack textAlign="left"
+                        color="#5c6a6f"
+                        spacing={{ base: '10px', sm: '50px', md: '100px', lg: "150px" }}
+                        pb='75px'
+                    >
                         <Fade bottom>
-                            <Image
-                                src={require('../../images/design-photos/abide-window.jpg')}
-                                maxW='325px'
-                            // position="relative"
-                            // top={{
-                            //     base: '-550px',
-                            //     sm: '-175px',
-                            //     md: '-150px;',
-                            // }}
-                            />
+                            <Box
+                                display="flex"
+                                justifyContent="center"
+                                align-items="center"
+                                overflow="hidden"
+                                // height={{
+                                //     base: '163.5px',
+                                //     sm: '238px',
+                                //     lg: '300px',
+                                // }}
+                                width={{ base: '150px', sm: '250px', lg: '350px' }}
+                            >
+                                <Image
+                                    src={require('../../images/design-photos/abide-window.jpg')}
+                                    objectFit="cover"
+                                    w="100%"
+                                    h="100%"
+                                />
+                            </Box>
                         </Fade>
                         <VStack textAlign="left" color="#5c6a6f" align="left">
                             <Fade bottom>
                                 <Text
                                     fontFamily="Tenor Sans"
                                     fontSize={{
-                                        base: '16px',
+                                        base: '12px',
                                         sm: '18px',
                                         md: '20x',
                                     }}
-                                    lineHeight={{ base: '25px', sm: '30px' }}
+                                    lineHeight={{ base: '20px', sm: '30px' }}
                                     color="#5c6a6f"
-                                    pb="20px"
+                                    pb={{ base: "5px", md: "20px" }}
                                     maxW="300px"
                                     textAlign="left"
                                     pr="10px"
@@ -110,11 +130,11 @@ const AboutDesktop = (props) => {
                                 <Text
                                     fontFamily="Lexend Deca"
                                     fontSize={{
-                                        base: '10px',
+                                        base: '6px',
                                         sm: '12px',
                                         md: '14px',
                                     }}
-                                    lineHeight={{ base: '25px', sm: '30px' }}
+                                    lineHeight={{ base: '20px', sm: '30px' }}
                                     color="#5c6a6f"
                                     // pb="20px"
                                     maxW="300px"
@@ -142,7 +162,7 @@ const AboutDesktop = (props) => {
                         textAlign="left"
                         color="#5c6a6f"
                         pb="75px"
-                        spacing="150px"
+                        spacing={{ base: '10px', sm: '50px', md: '100px', lg: "150px" }}
                     >
                         <VStack
                             textAlign="left"
@@ -155,13 +175,13 @@ const AboutDesktop = (props) => {
                                 <Text
                                     fontFamily="Tenor Sans"
                                     fontSize={{
-                                        base: '16px',
+                                        base: '12px',
                                         sm: '18px',
                                         md: '20x',
                                     }}
-                                    lineHeight={{ base: '25px', sm: '30px' }}
+                                    lineHeight={{ base: '20px', sm: '30px' }}
                                     color="#5c6a6f"
-                                    pb="20px"
+                                    pb={{ base: "5px", sm: "20px" }}
                                     maxW="300px"
                                     textAlign="left"
                                     pl="10px"
@@ -173,11 +193,11 @@ const AboutDesktop = (props) => {
                                 <Text
                                     fontFamily="Lexend Deca"
                                     fontSize={{
-                                        base: '10px',
+                                        base: '6px',
                                         sm: '12px',
                                         md: '14px',
                                     }}
-                                    lineHeight={{ base: '25px', sm: '30px' }}
+                                    lineHeight={{ base: '20px', sm: '30px' }}
                                     color="#5c6a6f"
                                     pb="20px"
                                     maxW="225px"
@@ -193,13 +213,34 @@ const AboutDesktop = (props) => {
                             </Fade>
                         </VStack>
                         <Fade bottom>
+                            <Box
+                                display="flex"
+                                justifyContent="center"
+                                align-items="center"
+                                overflow="hidden"
+                                // height={{
+                                //     base: '163.5px',
+                                //     sm: '238px',
+                                //     lg: '300px',
+                                // }}
+                                width={{ base: '150px', sm: '250px', lg: '350px' }}
+                            >
+                                <Image
+                                    src={require('../../images/about-sticker.jpg')}
+                                    objectFit="cover"
+                                    w="100%"
+                                    h="100%"
+                                />
+                            </Box>
+                        </Fade>
+                        {/* <Fade bottom>
                             <Image
                                 src={require('../../images/about-sticker.jpg')}
                                 maxW="325px"
                             // position="relative"
                             // top="100px"
                             />
-                        </Fade>
+                        </Fade> */}
                     </HStack>
                     {/* <Fade bottom>
                         <Box
@@ -219,15 +260,28 @@ const AboutDesktop = (props) => {
                         textAlign="left"
                         color="#5c6a6f"
                         pb="150px"
-                        spacing="150px"
+                        spacing={{ base: '10px', sm: '50px', md: '100px', lg: "150px" }}
                     >
                         <Fade bottom>
-                            <Image
-                                src={require('../../images/design-photos/abide-overlay.jpg')}
-                                maxW="325px"
-                                position="relative"
-                            // top="25px"
-                            />
+                            <Box
+                                display="flex"
+                                justifyContent="center"
+                                align-items="center"
+                                overflow="hidden"
+                                // height={{
+                                //     base: '163.5px',
+                                //     sm: '238px',
+                                //     lg: '300px',
+                                // }}
+                                width={{ base: '150px', sm: '250px', lg: '350px' }}
+                            >
+                                <Image
+                                    src={require('../../images/design-photos/abide-overlay.jpg')}
+                                    objectFit="cover"
+                                    w="100%"
+                                    h="100%"
+                                />
+                            </Box>
                         </Fade>
                         <VStack
                             textAlign="left"
@@ -240,13 +294,13 @@ const AboutDesktop = (props) => {
                                 <Text
                                     fontFamily="Tenor Sans"
                                     fontSize={{
-                                        base: '16px',
+                                        base: '12px',
                                         sm: '18px',
                                         md: '20x',
                                     }}
-                                    lineHeight={{ base: '25px', sm: '30px' }}
+                                    lineHeight={{ base: '20px', sm: '30px' }}
                                     color="#5c6a6f"
-                                    pb="20px"
+                                    pb={{ base: "5px", sm: "20px" }}
                                     maxW="300px"
                                     textAlign="left"
                                     pr="10px"
@@ -258,11 +312,11 @@ const AboutDesktop = (props) => {
                                 <Text
                                     fontFamily="Lexend Deca"
                                     fontSize={{
-                                        base: '10px',
+                                        base: '6px',
                                         sm: '12px',
                                         md: '14px',
                                     }}
-                                    lineHeight={{ base: '25px', sm: '30px' }}
+                                    lineHeight={{ base: '20px', sm: '30px' }}
                                     color="#5c6a6f"
                                     pb={{ base: '50px', sm: '20px' }}
                                     maxW="300px"
