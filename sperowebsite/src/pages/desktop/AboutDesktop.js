@@ -2,15 +2,12 @@ import React from 'react'
 import Footer from '../../components/Footer'
 import Navbar from '../../components/NavBar'
 import Fade from 'react-reveal/Fade'
-import { Link } from 'react-router-dom'
 import {
     HStack,
     Image,
     Text,
     Box,
-    Flex,
     VStack,
-    SlideFade,
 } from '@chakra-ui/react'
 import Background from '../../images/home-bgimage.png'
 
@@ -83,18 +80,31 @@ const AboutDesktop = (props) => {
                             top="-100px;"
                         ></Box>
                     </Fade> */}
-                    <HStack textAlign="left" color="#5c6a6f" spacing="150px" pb='75px'>
+                    <HStack textAlign="left"
+                        color="#5c6a6f"
+                        spacing={{ base: '10px', sm: '50px', md: '100px', lg: "150px" }}
+                        pb='75px'
+                    >
                         <Fade bottom>
-                            <Image
-                                src={require('../../images/design-photos/abide-window.jpg')}
-                                maxW='325px'
-                            // position="relative"
-                            // top={{
-                            //     base: '-550px',
-                            //     sm: '-175px',
-                            //     md: '-150px;',
-                            // }}
-                            />
+                            <Box
+                                display="flex"
+                                justifyContent="center"
+                                align-items="center"
+                                overflow="hidden"
+                                // height={{
+                                //     base: '163.5px',
+                                //     sm: '238px',
+                                //     lg: '300px',
+                                // }}
+                                width={{ base: '150px', sm: '250px', lg: '350px' }}
+                            >
+                                <Image
+                                    src={require('../../images/design-photos/abide-window.jpg')}
+                                    objectFit="cover"
+                                    w="100%"
+                                    h="100%"
+                                />
+                            </Box>
                         </Fade>
                         <VStack textAlign="left" color="#5c6a6f" align="left">
                             <Fade bottom>
@@ -151,7 +161,7 @@ const AboutDesktop = (props) => {
                         textAlign="left"
                         color="#5c6a6f"
                         pb="75px"
-                        spacing="150px"
+                        spacing={{ base: '10px', sm: '50px', md: '100px', lg: "150px" }}
                     >
                         <VStack
                             textAlign="left"
@@ -202,13 +212,34 @@ const AboutDesktop = (props) => {
                             </Fade>
                         </VStack>
                         <Fade bottom>
+                            <Box
+                                display="flex"
+                                justifyContent="center"
+                                align-items="center"
+                                overflow="hidden"
+                                // height={{
+                                //     base: '163.5px',
+                                //     sm: '238px',
+                                //     lg: '300px',
+                                // }}
+                                width={{ base: '150px', sm: '250px', lg: '350px' }}
+                            >
+                                <Image
+                                    src={require('../../images/about-sticker.jpg')}
+                                    objectFit="cover"
+                                    w="100%"
+                                    h="100%"
+                                />
+                            </Box>
+                        </Fade>
+                        {/* <Fade bottom>
                             <Image
                                 src={require('../../images/about-sticker.jpg')}
                                 maxW="325px"
                             // position="relative"
                             // top="100px"
                             />
-                        </Fade>
+                        </Fade> */}
                     </HStack>
                     {/* <Fade bottom>
                         <Box
@@ -228,15 +259,28 @@ const AboutDesktop = (props) => {
                         textAlign="left"
                         color="#5c6a6f"
                         pb="150px"
-                        spacing="150px"
+                        spacing={{ base: '10px', sm: '50px', md: '100px', lg: "150px" }}
                     >
                         <Fade bottom>
-                            <Image
-                                src={require('../../images/design-photos/abide-overlay.jpg')}
-                                maxW="325px"
-                                position="relative"
-                            // top="25px"
-                            />
+                            <Box
+                                display="flex"
+                                justifyContent="center"
+                                align-items="center"
+                                overflow="hidden"
+                                // height={{
+                                //     base: '163.5px',
+                                //     sm: '238px',
+                                //     lg: '300px',
+                                // }}
+                                width={{ base: '150px', sm: '250px', lg: '350px' }}
+                            >
+                                <Image
+                                    src={require('../../images/design-photos/abide-overlay.jpg')}
+                                    objectFit="cover"
+                                    w="100%"
+                                    h="100%"
+                                />
+                            </Box>
                         </Fade>
                         <VStack
                             textAlign="left"
