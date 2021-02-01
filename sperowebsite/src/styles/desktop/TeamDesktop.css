@@ -1,3 +1,14 @@
+.background-main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-size: cover;
+    background: url('../../images/home-bgimage.png') no-repeat center center;
+    background-position: right -9vw;
+    background-size: cover;
+    height: 100%;
+}
+
 .staff-main-container {
     display: flex;
     flex-direction: column;
