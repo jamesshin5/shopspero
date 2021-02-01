@@ -7,9 +7,9 @@ import '../styles/Main.css'
 // import MobileNav from './MobileNav';
 
 import HomePage from '../pages/HomePage'
-import AboutPage from '../pages/AboutPage'
-import TeamPage from '../pages/TeamPage'
-import DesignsPage from '../pages/DesignsPage'
+import AboutPage from '../pages/desktop/AboutDesktop'
+import TeamPage from '../pages/desktop/TeamDesktop'
+import DesignsPage from '../pages/desktop/DesignDesktop'
 // import ShopPage from '../pages/ShopPage';
 // import PartnershipsPage from '../pages/PartnershipsPage';
 // import { useMediaQuery } from 'react-responsive'
