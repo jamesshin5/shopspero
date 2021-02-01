@@ -43,14 +43,19 @@ const AboutDesktop = (props) => {
                             pt="30px"
                             maxW="1000px"
                         >
-                            We are a team of UC Berkeley students dedicated to
-                            bridging <b>fashion and mission</b>. We source our
-                            clothes through various Bay Area thrift stores.
-                            Spero also has in-house designers that create{' '}
-                            <b>original, mission-driven</b> clothing underlying
-                            our company's purpose. All of our proceeds go
-                            towards various local and global charitable
-                            organizations.
+                            We are a team of primarily UC Berkeley students
+                            dedicated to bridging <b>fashion and mission</b>. As
+                            a Christian organization, our heart is to advance
+                            the gospel through apparel that is empowered by
+                            Biblical truth and vision. Shop Spero aims to
+                            produce intentional designs that spark hope through
+                            everyday wear and conversation. 30% of all profits
+                            are donated to various social-good organizations
+                            both in and outside of the Bay Area such as{' '}
+                            <b>
+                                Compassion International, Imago Dei Clinic,
+                                Laundry Love, and Hands and Feet!
+                            </b>
                         </Text>
                     </Fade>
                     <Fade bottom>
