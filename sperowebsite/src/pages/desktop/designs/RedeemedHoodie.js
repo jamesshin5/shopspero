@@ -2,7 +2,6 @@ import React from 'react'
 import { HStack, VStack, Stack, Box, Text, Image } from '@chakra-ui/react'
 import '../../../styles/desktop/FallStickerPage.css'
 import Fade from 'react-reveal/Fade'
-import ReactPlayer from 'react-player'
 
 const RedeemedHoodie = () => {
     return (
@@ -30,8 +29,7 @@ const RedeemedHoodie = () => {
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen
                         ></iframe>
-                        <ReactPlayer url="https://www.youtube.com/watch?v=t3A_AwNOT_8" />{' '}
-                        */}
+
                         {/* <Image
                             src={require('../../../images/design-photos/mountain-graphic.jpg')}
                             alt="main-sticker"
