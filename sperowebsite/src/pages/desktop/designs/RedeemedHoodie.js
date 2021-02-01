@@ -24,7 +24,14 @@ const RedeemedHoodie = () => {
                         width={{ base: '330px', sm: '480px', lg: '560px' }}
                         height={{ base: '150px', sm: '270px', lg: '350px' }}
                     >
-                        <ReactPlayer url="https://www.youtube.com/watch?v=t3A_AwNOT_8" />
+                        <iframe
+                            src="https://www.youtube.com/embed/t3A_AwNOT_8"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
+                        <ReactPlayer url="https://www.youtube.com/watch?v=t3A_AwNOT_8" />{' '}
+                        */}
                         {/* <Image
                             src={require('../../../images/design-photos/mountain-graphic.jpg')}
                             alt="main-sticker"
