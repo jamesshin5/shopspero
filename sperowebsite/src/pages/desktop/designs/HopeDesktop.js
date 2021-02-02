@@ -13,7 +13,91 @@ const HopeDesktop = () => {
             // h="72vh"
             // overflow="scroll"
         >
-            <HStack spacing="5px">
+            <VStack spacing="5px">
+                <Fade bottom>
+                    <Box
+                        display="flex"
+                        justifyContent="center"
+                        align-items="center"
+                        overflow="hidden"
+                        width={{ base: '330px', sm: '480px', lg: '560px' }}
+                        height={{ base: '150px', sm: '270px', lg: '350px' }}
+                    >
+                        <iframe
+                            title="Manolo"
+                            width="100%"
+                            src="https://www.youtube.com/embed/Xo0QR06y7yU"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
+
+                        {/* <Image
+                            src={require('../../../images/design-photos/mountain-graphic.jpg')}
+                            alt="main-sticker"
+                            objectFit="cover"
+                            w="100%"
+                            h="100%"
+                        /> */}
+                    </Box>
+                </Fade>
+                <HStack spacing="5px">
+                    <Fade bottom>
+                        <Box
+                            display="flex"
+                            justifyContent="center"
+                            align-items="center"
+                            overflow="hidden"
+                            width={{
+                                base: '163.5px',
+                                sm: '238px',
+                                lg: '278px',
+                            }}
+                            height={{
+                                base: '140px',
+                                sm: '180px',
+                                lg: '280px',
+                            }}
+                        >
+                            <Image
+                                src={require('../../../images/design-photos/hope-iris.jpg')}
+                                alt=""
+                                objectFit="cover"
+                                w="100%"
+                                h="100%"
+                            />
+                        </Box>
+                    </Fade>
+
+                    <Fade bottom>
+                        <Box
+                            display="flex"
+                            justifyContent="center"
+                            align-items="center"
+                            overflow="hidden"
+                            width={{
+                                base: '163.5px',
+                                sm: '237px',
+                                lg: '277px',
+                            }}
+                            height={{
+                                base: '140px',
+                                sm: '180px',
+                                lg: '280px',
+                            }}
+                        >
+                            <Image
+                                src={require('../../../images/design-photos/hope-longsleeve.jpg')}
+                                alt=""
+                                objectFit="cover"
+                                w="100%"
+                                h="100%"
+                            />
+                        </Box>
+                    </Fade>
+                </HStack>
+            </VStack>
+            {/* <HStack spacing="5px">
                 <Fade bottom>
                     <Box
                         display="flex"
@@ -32,97 +116,52 @@ const HopeDesktop = () => {
                         />
                     </Box>
                 </Fade>
-                {/* <VStack spacing="5px">
-                    <Fade bottom>
-                        <Box
-                            display="flex"
-                            justifyContent="center"
-                            align-items="center"
-                            overflow="hidden"
-                            height={{
-                                base: '163.5px',
-                                sm: '238px',
-                                lg: '278px',
-                            }}
-                            width={{ base: '100px', sm: '140px', lg: '175px' }}
-                        >
-                            <Image
-                                src={require('../../../images/design-photos/girl-hat-back.jpg')}
-                                alt=""
-                                objectFit="cover"
-                                w="100%"
-                                h="100%"
-                            />
-                        </Box>
-                    </Fade>
-
-                    <Fade bottom>
-                        <Box
-                            display="flex"
-                            justifyContent="center"
-                            align-items="center"
-                            overflow="hidden"
-                            height={{
-                                base: '163.5px',
-                                sm: '237px',
-                                lg: '277px',
-                            }}
-                            width={{ base: '100px', sm: '140px', lg: '175px' }}
-                        >
-                            <Image
-                                src={require('../../../images/design-photos/girl-hat-flyer.jpg')}
-                                alt=""
-                                objectFit="cover"
-                                w="100%"
-                                h="100%"
-                            />
-                        </Box>
-                    </Fade>
-                </VStack> */}
-            </HStack>
-            <VStack textAlign="left" justifyContent="center" maxW="500px">
-                <VStack alignItems="flex-start">
-                    <Fade bottom>
-                        <Text
-                            fontFamily="Lexend Deca"
-                            fontSize={{ base: '30px', sm: '45px' }}
-                            lineHeight={{ base: '35px', sm: '60px' }}
-                        >
-                            <b>HOPE</b> <br />
-                            LONGSLEEVE
-                        </Text>
-                    </Fade>
-                    <Fade bottom>
-                        <Text
-                            fontFamily="Tenor Sans"
-                            fontSize={{ base: '10px', sm: '12px' }}
-                            py="10px"
-                        >
-                            <b>10</b> For to this end we toil and strive,
-                            <br></br>
-                            because we have our hope set on the living God,
-                            <br></br>
-                            <br></br>
-                            who is the Savior of all people,
-                            <br></br>especially of those who believe.
-                            <br />
-                            <br />
-                            <b>1 Timothy 4:10 </b>
-                        </Text>
-                    </Fade>
-                    <Fade bottom>
-                        <Text
-                            fontFamily="Lexend Deca"
-                            fontSize={{ base: '10px', sm: '12px' }}
-                            w={{ base: '300px', sm: '400px' }}
-                        >
-                            Once one believes in the gospel, one has eternal
-                            hope. This is the message Spero wants to share, for
-                            this world is temporary and broken.
-                        </Text>
-                    </Fade>
+            </HStack> */}
+            <HStack>
+                <VStack textAlign="left" justifyContent="center" maxW="500px">
+                    <VStack alignItems="flex-start">
+                        <Fade bottom>
+                            <Text
+                                fontFamily="Lexend Deca"
+                                fontSize={{ base: '30px', sm: '45px' }}
+                                lineHeight={{ base: '35px', sm: '60px' }}
+                            >
+                                <b>HOPE</b> <br />
+                                LONGSLEEVE
+                            </Text>
+                        </Fade>
+                        <Fade bottom>
+                            <Text
+                                fontFamily="Tenor Sans"
+                                fontSize={{ base: '10px', sm: '12px' }}
+                                py="10px"
+                            >
+                                <b>10</b> For to this end we toil and strive,
+                                <br></br>
+                                because we have our hope set on the living God,
+                                <br></br>
+                                <br></br>
+                                who is the Savior of all people,
+                                <br></br>especially of those who believe.
+                                <br />
+                                <br />
+                                <b>1 Timothy 4:10 </b>
+                            </Text>
+                        </Fade>
+                        <Fade bottom>
+                            <Text
+                                fontFamily="Lexend Deca"
+                                fontSize={{ base: '10px', sm: '12px' }}
+                                w={{ base: '300px', sm: '400px' }}
+                            >
+                                Once one believes in the gospel, one has eternal
+                                hope. This is the message Spero wants to share,
+                                for this world is temporary and broken.
+                            </Text>
+                        </Fade>
+                    </VStack>
                 </VStack>
-            </VStack>
+            </HStack>
         </Stack>
         // <div className='sticker-container'>
         //     <div className="left-display">

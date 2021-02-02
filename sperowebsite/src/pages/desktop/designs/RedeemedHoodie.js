@@ -163,6 +163,7 @@ const RedeemedHoodie = () => {
                         <Fade bottom>
                             <Box
                                 borderWidth="1px"
+                                borderColor="#5c6a6f"
                                 p="5px"
                                 alignItems="center"
                                 w="200px"
@@ -174,8 +175,33 @@ const RedeemedHoodie = () => {
                                     textAlign="center"
                                     _hover={{ fontSize: '9.5px' }}
                                     transition="font-size 0.25s"
+                                    color="#5c6a6f"
                                 >
-                                    ORDER NOW
+                                    <b>LIMITED SUPPLY - ORDER NOW</b>
+                                </Text>
+                            </Box>
+                        </Fade>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCRyOqi7B3VfNJBMAgwufAxg">
+                        <Fade bottom>
+                            <Box
+                                borderWidth="1px"
+                                borderColor="#5c6a6f"
+                                backgroundColor="#5c6a6f"
+                                p="5px"
+                                alignItems="center"
+                                w="200px"
+                                mt="0px"
+                            >
+                                <Text
+                                    fontFamily="Tenor Sans"
+                                    fontSize="9px"
+                                    textAlign="center"
+                                    _hover={{ fontSize: '9.5px' }}
+                                    transition="font-size 0.25s"
+                                    color="white"
+                                >
+                                    ABBA MODERN YOUTUBE
                                 </Text>
                             </Box>
                         </Fade>

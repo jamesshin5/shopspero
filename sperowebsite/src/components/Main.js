@@ -6,7 +6,7 @@ import '../styles/Main.css'
 // import Navbar from './NavBar'
 // import MobileNav from './MobileNav';
 
-import HomePage from '../pages/HomePage'
+import HomePage from '../pages/desktop/HomeDesktop'
 import AboutPage from '../pages/desktop/AboutDesktop'
 import TeamPage from '../pages/desktop/TeamDesktop'
 import DesignsPage from '../pages/desktop/DesignDesktop'

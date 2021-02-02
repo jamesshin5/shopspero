@@ -117,12 +117,27 @@ const HomePageDesktop = (props) => {
                                 <Fade bottom>
                                     <Link to="/about">
                                         <Text
+                                            display={{
+                                                base: 'block',
+                                                sm: 'none',
+                                            }}
                                             fontFamily="Lexend Deca"
                                             fontWeight="500"
-                                            fontSize={{
-                                                base: '100px',
-                                                sm: '130px',
+                                            fontSize="100px"
+                                            color="#5c6a6f"
+                                            _hover={{ fontSize: '110px' }}
+                                            transition="font-size 0.5s"
+                                        >
+                                            SPERO
+                                        </Text>
+                                        <Text
+                                            display={{
+                                                base: 'none',
+                                                sm: 'block',
                                             }}
+                                            fontFamily="Lexend Deca"
+                                            fontWeight="500"
+                                            fontSize="130px"
                                             color="#5c6a6f"
                                             _hover={{ fontSize: '140px' }}
                                             transition="font-size 0.5s"
