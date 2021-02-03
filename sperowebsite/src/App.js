@@ -47,7 +47,7 @@ import picture34 from './images/design-photos/mountain-mover-right.jpg'
 import picture35 from './images/design-photos/three-stickers-drawing.jpg'
 import picture36 from './images/design-photos/walk-on-water-main.jpg'
 import picture37 from './images/design-photos/water-left.jpg'
-import picture38 from './images/home-bgimage-update.png'
+import picture38 from './images/home-bgimage.png'
 
 import picture39 from './images/ambassadors/ambassador-chaerin.jpg'
 import picture40 from './images/ambassadors/ambassador-grace.jpg'
@@ -55,8 +55,10 @@ import picture41 from './images/ambassadors/ambassador-joy.jpg'
 import picture42 from './images/ambassadors/ambassador-yasmin.jpg'
 
 import picture43 from './images/about-image-1.jpg'
-import picture44 from './images/about-bgimage.png'
-import picture45 from './images/about-sticker.jpg'
+import picture44 from './images/design-photos/redeemed-left.jpg'
+import picture45 from './images/design-photos/redeemed-right.jpg'
+import picture46 from './images/about-sticker.jpg'
+import picture47 from './images/design-photos/hope-iris.jpg'
 
 function App() {
     const [isLoading, setIsLoading] = useState(true)
@@ -113,16 +115,17 @@ function App() {
             picture43,
             picture44,
             picture45,
+            picture46,
+            picture47,
         ]
         //setting src property forces browser to load images
         imgs.forEach((image) => {
             new Image().src = image
         })
+        if (isLoading === true) {
+            setIsLoading(false)
+        }
     }, [])
-
-    if (isLoading === true) {
-        setIsLoading(false)
-    }
 
     return (
         <div>
