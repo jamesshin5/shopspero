@@ -14,7 +14,7 @@ const Profile = (props) => {
                         alt="Logo"
                         className="profile-img"
                     />
-                    <div class="centered-amb mobile-fontsize">
+                    <div class="centered-amb mobile-middle">
                         <b>{props.name}</b>
                     </div>
                     <div class="below-amb mobile-fontsize">{props.title}</div>
