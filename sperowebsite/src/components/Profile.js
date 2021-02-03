@@ -31,9 +31,7 @@ const Profile = (props) => {
                     <div class="top-dark mobile-topfont">
                         {props.description}
                     </div>
-                    <div class="centered-dark mobile-fontsize">
-                        {props.name}
-                    </div>
+                    <div class="centered-dark mobile-middle">{props.name}</div>
                     <div class="below-dark mobile-fontsize">{props.title}</div>
                 </div>
             </Fade>

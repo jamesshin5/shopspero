@@ -87,7 +87,7 @@ const TeamPage = (props) => {
                                 name="JAMES SHIN"
                                 title="DEVELOPMENT LEAD"
                                 imageURL={require('../../images/staff/jamesshin-min.jpg')}
-                                description="Hello! I'm James Shin, a junior at UC Berkeley studying computer science and data science. I love playing the guitar, wearing big hoodies, binging TV shows like Suits or Mad Men, playing basketball and Fortnite, and working with all the talented and creative people at Spero!"
+                                description="Hello! I'm James Shin, a junior at UC Berkeley studying Computer Science and Data Science. I love reading, playing the guitar, wearing big hoodies, binging shows (watch The West Wing and Bojack Horseman), and working with all the talented, creative, and God-fearing people at Spero!"
                             />
                             <Profile
                                 name="JASMINE CHEN"
@@ -105,7 +105,7 @@ const TeamPage = (props) => {
                                 name="MATTHEW FLORES"
                                 title="WEB DEVELOPER"
                                 imageURL={require('../../images/staff/matthewflores-min.jpg')}
-                                description="Hi! I'm Matt, a third year at UC Berkeley studying Cognitive Science! I love to dance, shop, binge new mock-umentaries/comedies, studying in cafes, and trying all different types of boba and latte drinks! I joined Spero because I could combine my passion for design with something so important to me like my faith!"
+                                description="Hi! I'm Matt, a third year at UC Berkeley studying Cognitive Science! I love to dance, shop, binge new mockumentaries/ comedies, and try all different types of boba and latte drinks! I joined Spero because I could combine my passion for design with something so important to me like my faith!"
                             />
                             <Profile
                                 name="JENNY WOO"

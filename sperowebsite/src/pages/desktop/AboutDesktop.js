@@ -22,6 +22,7 @@ const AboutDesktop = (props) => {
                     px={{ base: '30px', lg: '100px' }}
                     color="#5c6a6f"
                     pt="25px"
+                    justifyContent="center"
                 >
                     <Fade bottom>
                         <Text
@@ -37,7 +38,7 @@ const AboutDesktop = (props) => {
                         <Text
                             fontFamily="Lexend Deca"
                             fontSize={{ base: '10px', sm: '12px', md: '14px' }}
-                            lineHeight={{ base: '25px', sm: '30px' }}
+                            lineHeight={{ base: '20px', sm: '30px' }}
                             color="#5c6a6f"
                             pb="20px"
                             pt="30px"
@@ -83,12 +84,12 @@ const AboutDesktop = (props) => {
                         textAlign="left"
                         color="#5c6a6f"
                         spacing={{
-                            base: '10px',
+                            base: '25px',
                             sm: '50px',
                             md: '100px',
                             lg: '150px',
                         }}
-                        pb="75px"
+                        pb={{ base: '40px', sm: '75px' }}
                     >
                         <Fade bottom>
                             <Box
@@ -142,7 +143,7 @@ const AboutDesktop = (props) => {
                                         sm: '12px',
                                         md: '14px',
                                     }}
-                                    lineHeight={{ base: '20px', sm: '30px' }}
+                                    lineHeight={{ base: '15px', sm: '30px' }}
                                     color="#5c6a6f"
                                     // pb="20px"
                                     maxW="300px"
@@ -169,13 +170,14 @@ const AboutDesktop = (props) => {
                     <HStack
                         textAlign="left"
                         color="#5c6a6f"
-                        pb="75px"
+                        pb={{ base: '40px', sm: '75px' }}
                         spacing={{
-                            base: '10px',
+                            base: '25px',
                             sm: '50px',
                             md: '100px',
                             lg: '150px',
                         }}
+                        pl={{ lg: '100px' }}
                     >
                         <VStack
                             textAlign="left"
@@ -210,7 +212,7 @@ const AboutDesktop = (props) => {
                                         sm: '12px',
                                         md: '14px',
                                     }}
-                                    lineHeight={{ base: '20px', sm: '30px' }}
+                                    lineHeight={{ base: '15px', sm: '30px' }}
                                     color="#5c6a6f"
                                     pb="20px"
                                     maxW="225px"
@@ -231,11 +233,6 @@ const AboutDesktop = (props) => {
                                 justifyContent="center"
                                 align-items="center"
                                 overflow="hidden"
-                                // height={{
-                                //     base: '163.5px',
-                                //     sm: '238px',
-                                //     lg: '300px',
-                                // }}
                                 width={{
                                     base: '150px',
                                     sm: '250px',
@@ -278,7 +275,7 @@ const AboutDesktop = (props) => {
                         color="#5c6a6f"
                         pb="150px"
                         spacing={{
-                            base: '10px',
+                            base: '25px',
                             sm: '50px',
                             md: '100px',
                             lg: '150px',
@@ -342,7 +339,7 @@ const AboutDesktop = (props) => {
                                         sm: '12px',
                                         md: '14px',
                                     }}
-                                    lineHeight={{ base: '20px', sm: '30px' }}
+                                    lineHeight={{ base: '15px', sm: '30px' }}
                                     color="#5c6a6f"
                                     pb={{ base: '50px', sm: '20px' }}
                                     maxW="300px"
