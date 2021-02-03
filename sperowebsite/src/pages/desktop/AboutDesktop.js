@@ -175,9 +175,9 @@ const AboutDesktop = (props) => {
                             base: '25px',
                             sm: '50px',
                             md: '100px',
-                            lg: '150px',
+                            lg: '200px',
                         }}
-                        pl={{ lg: '100px' }}
+                        pl={{ lg: '65px' }}
                     >
                         <VStack
                             textAlign="left"
