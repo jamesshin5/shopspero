@@ -42,66 +42,78 @@ const Navbar = (props) => {
                 w="425px"
                 justifyContent="space-between"
             >
-                <Button
-                    background="transparent"
-                    _hover={{ bg: '#ebedf0' }}
-                    borderRadius="0"
-                >
-                    <Text
-                        fontFamily="Lexend Deca"
-                        color="#5c6a6f"
-                        letterSpacing="2px"
-                        fontSize="sm"
-                        fontWeight="500"
+                <Link to="/about">
+                    <Button
+                        background="transparent"
+                        _hover={{ bg: '#ebedf0' }}
+                        _focus={{ boxShadow: 'none' }}
+                        borderRadius="0"
                     >
-                        <Link to="/about">ABOUT US</Link>
-                    </Text>
-                </Button>
-                <Button
-                    background="transparent"
-                    _hover={{ bg: '#ebedf0' }}
-                    borderRadius="0"
-                >
-                    <Text
-                        fontFamily="Lexend Deca"
-                        color="#5c6a6f"
-                        letterSpacing="2px"
-                        fontSize="sm"
-                        fontWeight="500"
+                        <Text
+                            fontFamily="Lexend Deca"
+                            color="#5c6a6f"
+                            letterSpacing="2px"
+                            fontSize="sm"
+                            fontWeight="500"
+                        >
+                            ABOUT US
+                        </Text>
+                    </Button>
+                </Link>
+                <Link to="/team">
+                    <Button
+                        background="transparent"
+                        _hover={{ bg: '#ebedf0' }}
+                        _focus={{ boxShadow: 'none' }}
+                        borderRadius="0"
                     >
-                        <Link to="/team">OUR TEAM</Link>
-                    </Text>
-                </Button>
-                <Button
-                    background="transparent"
-                    _hover={{ bg: '#ebedf0' }}
-                    borderRadius="0"
-                >
-                    <Text
-                        fontFamily="Lexend Deca"
-                        color="#5c6a6f"
-                        letterSpacing="2px"
-                        fontSize="sm"
-                        fontWeight="500"
+                        <Text
+                            fontFamily="Lexend Deca"
+                            color="#5c6a6f"
+                            letterSpacing="2px"
+                            fontSize="sm"
+                            fontWeight="500"
+                        >
+                            OUR TEAM
+                        </Text>
+                    </Button>
+                </Link>
+                <Link to="/designs">
+                    <Button
+                        background="transparent"
+                        _hover={{ bg: '#ebedf0' }}
+                        _focus={{ boxShadow: 'none' }}
+                        borderRadius="0"
                     >
-                        <Link to="/designs">DESIGNS</Link>
-                    </Text>
-                </Button>
-                <Button
-                    background="transparent"
-                    _hover={{ bg: '#ebedf0' }}
-                    borderRadius="0"
-                >
-                    <Text
-                        fontFamily="Lexend Deca"
-                        color="#5c6a6f"
-                        letterSpacing="2px"
-                        fontSize="sm"
-                        fontWeight="600"
+                        <Text
+                            fontFamily="Lexend Deca"
+                            color="#5c6a6f"
+                            letterSpacing="2px"
+                            fontSize="sm"
+                            fontWeight="500"
+                        >
+                            DESIGNS
+                        </Text>
+                    </Button>
+                </Link>
+                <a href="http://tinyurl.com/spero-etsy">
+                    <Button
+                        background="transparent"
+                        _hover={{ bg: '#ebedf0' }}
+                        _focus={{ boxShadow: 'none' }}
+                        borderRadius="0"
                     >
-                        <a href="http://tinyurl.com/spero-etsy">SHOP</a>
-                    </Text>
-                </Button>
+                        <Text
+                            fontFamily="Lexend Deca"
+                            color="#5c6a6f"
+                            letterSpacing="2px"
+                            fontSize="sm"
+                            fontWeight="600"
+                        >
+                            SHOP
+                        </Text>
+                    </Button>
+                </a>
                 {/* <div className="navlinks">
                     <ul>
                         <li>
