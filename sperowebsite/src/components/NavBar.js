@@ -129,32 +129,6 @@ const Navbar = (props) => {
                         </Text>
                     </Button>
                 </a>
-                {/* <div className="navlinks">
-                    <ul>
-                        <li>
-                            <Link to="/about">
-                                <Button>
-                                    <Text>ABOUT US</Text>
-                                </Button>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/team">
-                                <div className="navlink">OUR TEAM</div>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/designs">
-                                <div className="navlink">DESIGNS</div>
-                            </Link>
-                        </li>
-                        <li>
-                            <a href="http://tinyurl.com/spero-etsy">
-                                <div className="navlink">SHOP</div>
-                            </a>
-                        </li>
-                    </ul>
-                </div> */}
             </Box>
             <Button
                 ref={btnRef}
@@ -167,11 +141,6 @@ const Navbar = (props) => {
                 borderRadius="0"
             >
                 <HamburgerIcon w="22px" h="22px" />
-                {/* {isMenuOpen ? (
-                    <CloseIcon w="15px" h="15px" />
-                ) : (
-                    <HamburgerIcon w="22px" h="22px" />
-                )} */}
             </Button>
             <Drawer
                 isOpen={isOpen}
@@ -254,42 +223,6 @@ const Navbar = (props) => {
                 </DrawerOverlay>
             </Drawer>
         </HStack>
-        // <div>hi</div>
-        // <div className="navbar-container">
-        //     <div className="logo">
-        //         <Link to="/">
-        //             <img
-        //                 src={require('../images/speroicon.png')}
-        //                 alt="Logo"
-        //                 id="logo-image"
-        //             />
-        //         </Link>
-        //     </div>
-        //     <div className="navlinks">
-        //         <ul>
-        //             <li>
-        //                 <Link to="/about">
-        //                     <div className="navlink">ABOUT US</div>
-        //                 </Link>
-        //             </li>
-        //             <li>
-        //                 <Link to="/team">
-        //                     <div className="navlink">OUR TEAM</div>
-        //                 </Link>
-        //             </li>
-        //             <li>
-        //                 <Link to="/design/mountainmover">
-        //                     <div className="navlink">DESIGNS</div>
-        //                 </Link>
-        //             </li>
-        //             <li>
-        //                 <a href="http://tinyurl.com/spero-etsy">
-        //                     <div className="navlink">SHOP</div>
-        //                 </a>
-        //             </li>
-        //         </ul>
-        //     </div>
-        // </div>
     )
 }
 
