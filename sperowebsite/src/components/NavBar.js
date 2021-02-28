@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import {
     HStack,
     Image,
@@ -30,19 +30,24 @@ const Navbar = (props) => {
             alignItems="center"
         >
             <HStack w="100px" pl={{ base: '10px', md: 'none' }}>
-                <Link to="/">
+                <NavLink to="/">
                     <Image
                         src={require('../images/speroicon.png')}
                         alt="logo"
                     />
-                </Link>
+                </NavLink>
             </HStack>
             <Box
                 display={{ base: 'none', md: 'flex' }}
                 w="425px"
                 justifyContent="space-between"
             >
-                <Link to="/about">
+                <NavLink to="/about" 
+                    activeStyle={{
+                        fontWeight: "bold",
+                        background: '#ebedf0',
+                    }}
+                >
                     <Button
                         background="transparent"
                         _hover={{ bg: '#ebedf0' }}
@@ -59,8 +64,13 @@ const Navbar = (props) => {
                             ABOUT US
                         </Text>
                     </Button>
-                </Link>
-                <Link to="/team">
+                </NavLink>
+                <NavLink to="/team"
+                    activeStyle={{
+                        fontWeight: "bold",
+                        background: '#ebedf0',
+                    }}
+                >
                     <Button
                         background="transparent"
                         _hover={{ bg: '#ebedf0' }}
@@ -77,8 +87,13 @@ const Navbar = (props) => {
                             OUR TEAM
                         </Text>
                     </Button>
-                </Link>
-                <Link to="/designs">
+                </NavLink>
+                <NavLink to="/designs" 
+                    activeStyle={{
+                        fontWeight: "bold",
+                        background: '#ebedf0',
+                    }}
+                >
                     <Button
                         background="transparent"
                         _hover={{ bg: '#ebedf0' }}
@@ -95,7 +110,7 @@ const Navbar = (props) => {
                             DESIGNS
                         </Text>
                     </Button>
-                </Link>
+                </NavLink>
                 <a href="http://tinyurl.com/spero-etsy">
                     <Button
                         background="transparent"
@@ -174,21 +189,21 @@ const Navbar = (props) => {
 
                         <DrawerBody>
                             <VStack spacing="2rem" pt="50px">
-                                <Link to="/about">
+                                <NavLink to="/about">
                                     <Text fontFamily="Lexend Deca">
                                         ABOUT US
                                     </Text>
-                                </Link>
-                                <Link to="/team">
+                                </NavLink>
+                                <NavLink to="/team">
                                     <Text fontFamily="Lexend Deca">
                                         OUR TEAM
                                     </Text>
-                                </Link>
-                                <Link to="/designs">
+                                </NavLink>
+                                <NavLink to="/designs">
                                     <Text fontFamily="Lexend Deca">
                                         DESIGNS
                                     </Text>
-                                </Link>
+                                </NavLink>
                                 <a href="http://tinyurl.com/spero-etsy">
                                     <Text fontFamily="Lexend Deca">SHOP</Text>
                                 </a>
