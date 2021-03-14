@@ -2,16 +2,21 @@
     display: flex;
     flex-direction: row;
     /* justify-content: space-between; */
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     right: 0;
     z-index: 100;
+    margin-top: 10%;
 }
 
 .footer-blurb {
-    width: 30vw;
+    position: relative;
+    left: 0px;
+    padding: 1.5vw 1vw 1.5vw 5vw;
+    /* margin-left: 1.5vw; */
+    /* width: 30vw;
     padding: 1.5vw 1vw 1.5vw;
-    margin-left: 1.5vw;
+    margin-left: 1.5vw; */
 }
 
 .spero-berkeley {
