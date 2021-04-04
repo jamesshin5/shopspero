@@ -31,6 +31,15 @@ const Footer = (props) => {
                         very hairs of your head are all numbered.. So don’t be afraid; 
                         you are worth more than many sparrows.” - Matthew 10:29-31
                         </Text>
+                    {/* <Text
+                        fontFamily="Tenor Sans"
+                        color="white"
+                        letterSpacing="1px"
+                        fontSize="9px"
+                        fontWeight="100"
+                        >
+                        Based in Berkeley
+                        </Text> */}
                 </Box>
             {/* </Fade>         */}
             <HStack
