@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import {
     HStack,
     Image,
@@ -30,19 +30,24 @@ const Navbar = (props) => {
             alignItems="center"
         >
             <HStack w="100px" pl={{ base: '10px', md: 'none' }}>
-                <Link to="/">
+                <NavLink to="/">
                     <Image
                         src={require('../images/speroicon.png')}
                         alt="logo"
                     />
-                </Link>
+                </NavLink>
             </HStack>
             <Box
                 display={{ base: 'none', md: 'flex' }}
                 w="425px"
                 justifyContent="space-between"
             >
-                <Link to="/about">
+                <NavLink to="/about" 
+                    activeStyle={{
+                        fontWeight: "bold",
+                        background: '#ebedf0',
+                    }}
+                >
                     <Button
                         background="transparent"
                         _hover={{ bg: '#ebedf0' }}
@@ -59,8 +64,13 @@ const Navbar = (props) => {
                             ABOUT US
                         </Text>
                     </Button>
-                </Link>
-                <Link to="/team">
+                </NavLink>
+                <NavLink to="/team"
+                    activeStyle={{
+                        fontWeight: "bold",
+                        background: '#ebedf0',
+                    }}
+                >
                     <Button
                         background="transparent"
                         _hover={{ bg: '#ebedf0' }}
@@ -77,8 +87,13 @@ const Navbar = (props) => {
                             OUR TEAM
                         </Text>
                     </Button>
-                </Link>
-                <Link to="/designs">
+                </NavLink>
+                <NavLink to="/designs" 
+                    activeStyle={{
+                        fontWeight: "bold",
+                        background: '#ebedf0',
+                    }}
+                >
                     <Button
                         background="transparent"
                         _hover={{ bg: '#ebedf0' }}
@@ -95,7 +110,7 @@ const Navbar = (props) => {
                             DESIGNS
                         </Text>
                     </Button>
-                </Link>
+                </NavLink>
                 <a href="http://tinyurl.com/spero-etsy">
                     <Button
                         background="transparent"
@@ -114,32 +129,6 @@ const Navbar = (props) => {
                         </Text>
                     </Button>
                 </a>
-                {/* <div className="navlinks">
-                    <ul>
-                        <li>
-                            <Link to="/about">
-                                <Button>
-                                    <Text>ABOUT US</Text>
-                                </Button>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/team">
-                                <div className="navlink">OUR TEAM</div>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/designs">
-                                <div className="navlink">DESIGNS</div>
-                            </Link>
-                        </li>
-                        <li>
-                            <a href="http://tinyurl.com/spero-etsy">
-                                <div className="navlink">SHOP</div>
-                            </a>
-                        </li>
-                    </ul>
-                </div> */}
             </Box>
             <Button
                 ref={btnRef}
@@ -152,11 +141,6 @@ const Navbar = (props) => {
                 borderRadius="0"
             >
                 <HamburgerIcon w="22px" h="22px" />
-                {/* {isMenuOpen ? (
-                    <CloseIcon w="15px" h="15px" />
-                ) : (
-                    <HamburgerIcon w="22px" h="22px" />
-                )} */}
             </Button>
             <Drawer
                 isOpen={isOpen}
@@ -174,21 +158,21 @@ const Navbar = (props) => {
 
                         <DrawerBody>
                             <VStack spacing="2rem" pt="50px">
-                                <Link to="/about">
+                                <NavLink to="/about">
                                     <Text fontFamily="Lexend Deca">
                                         ABOUT US
                                     </Text>
-                                </Link>
-                                <Link to="/team">
+                                </NavLink>
+                                <NavLink to="/team">
                                     <Text fontFamily="Lexend Deca">
                                         OUR TEAM
                                     </Text>
-                                </Link>
-                                <Link to="/designs">
+                                </NavLink>
+                                <NavLink to="/designs">
                                     <Text fontFamily="Lexend Deca">
                                         DESIGNS
                                     </Text>
-                                </Link>
+                                </NavLink>
                                 <a href="http://tinyurl.com/spero-etsy">
                                     <Text fontFamily="Lexend Deca">SHOP</Text>
                                 </a>
@@ -239,42 +223,6 @@ const Navbar = (props) => {
                 </DrawerOverlay>
             </Drawer>
         </HStack>
-        // <div>hi</div>
-        // <div className="navbar-container">
-        //     <div className="logo">
-        //         <Link to="/">
-        //             <img
-        //                 src={require('../images/speroicon.png')}
-        //                 alt="Logo"
-        //                 id="logo-image"
-        //             />
-        //         </Link>
-        //     </div>
-        //     <div className="navlinks">
-        //         <ul>
-        //             <li>
-        //                 <Link to="/about">
-        //                     <div className="navlink">ABOUT US</div>
-        //                 </Link>
-        //             </li>
-        //             <li>
-        //                 <Link to="/team">
-        //                     <div className="navlink">OUR TEAM</div>
-        //                 </Link>
-        //             </li>
-        //             <li>
-        //                 <Link to="/design/mountainmover">
-        //                     <div className="navlink">DESIGNS</div>
-        //                 </Link>
-        //             </li>
-        //             <li>
-        //                 <a href="http://tinyurl.com/spero-etsy">
-        //                     <div className="navlink">SHOP</div>
-        //                 </a>
-        //             </li>
-        //         </ul>
-        //     </div>
-        // </div>
     )
 }
 
