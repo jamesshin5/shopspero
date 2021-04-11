@@ -6,7 +6,6 @@ const Database = (props) => {
 
     var data = null;
     const inventoryurl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSJymJNzhwLJcpoTjHgNto0tZOiWd4tKcL1oQ6UY3-rquMmXL8FdDAYrmhedTKiXCYWKP7JpXpKxg45/pub?output=csv'
-    console.log("got here")
     const init=() => {
         Papa.parse(inventoryurl, {
             download: true,
@@ -28,10 +27,10 @@ const Database = (props) => {
     const printdata=() => {
         console.log("updated data", data)
     }
-    
+
     useEffect(() => {
         window.addEventListener('load', init)
-        window.addEventListener('click', printdata)
+        // window.addEventListener('click', printdata)
     })
     return (
         <div></div>
