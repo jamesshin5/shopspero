@@ -1,0 +1,137 @@
+.product-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background-color: #6e6c67;
+    /* border-width: 5px;
+    border-color: grey; */
+    transition: width 2s height 2s;
+    /* outline: 5px solid #EDDCD2;
+    outline-offset: -5px; */
+}
+
+.mobile {
+    width: 150px;
+    height: 150px;
+}
+
+.centered-dark .centered-light .below-dark .below-light {
+    z-index: 0;
+}
+
+.centered-light {
+    width: 100%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    color: #6e6c67;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.below-light {
+    width: 100%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+    color: #6e6c67;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.top-dark {
+    width: 80%;
+    font-family: 'Tenor Sans', serif;
+    font-size: 19px;
+    font-weight: 900;
+    color: #FFFFFF;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centered-dark {
+    width: 100%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.below-dark {
+    width: 100%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centered-amb {
+    width: 100%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.below-amb {
+    width: 100%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mobile-middle {
+    font-size: 9px;
+    top: 82%;
+}
+
+.mobile-fontsize {
+    font-size: 9px;
+    top: 88%;
+}
+
+.mobile-topfont {
+    font-size: 8px;
+    top: 43%;
+}
+/* 
+.profile-container:hover {
+    background-color: #A5A58D;
+} */
+
+.product-img {
+    /* vertical-align: top; */
+    /* float: left; */
+    position: absolute;
+    object-fit: cover;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* width: 100%; */
+    transition: opacity 0.25s ease-in-out;
+    z-index: 100;
+}
+
+.product-img:hover {
+    opacity: 20%;
+}
