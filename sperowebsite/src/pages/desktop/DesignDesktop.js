@@ -17,6 +17,7 @@ import BerkeleyHoodieDesktop from './designs/BerkeleyHoodieDesktop.js'
 import RedeemedHoodie from './designs/RedeemedHoodie'
 
 import Navbar from '../../components/NavBar'
+import Database from '../../components/Database'
 
 import {
     HStack,
@@ -117,6 +118,7 @@ const DesignsDesktop = (props) => {
         >
             <Box w="100%" h="100%">
                 <Navbar />
+                <Database />
                 <Stack
                     direction={{ base: 'column', sm: 'row' }}
                     pb={{ base: '100px', sm: 'none' }}
