@@ -16,7 +16,7 @@ import BlessedToBlessDesktop from './designs/BlessedToBlessDesktop.js'
 import BayAreaDesktop from './designs/BayAreaDesktop.js'
 
 import BerkeleyHoodieDesktop from './designs/BerkeleyHoodieDesktop.js'
-import RedeemedHoodie from './designs/RedeemedHoodie'
+import RedeemedHoodie from './designs/RedeemedHoodie.js'
 
 import Navbar from '../../components/NavBar'
 import Fade from 'react-reveal/Fade'
@@ -153,72 +153,83 @@ const DesignsDesktop = (props) => {
                                 title="HOODIE"
                                 imageURL={require('../../images/design-photos/redeemed-left.jpg')}
                                 price="$35"
+                                index = "10"
                             />
                             <Product
                                 name="ABIDE"
                                 title="HOODIE"
                                 imageURL={require('../../images/design-photos/abide-window.jpg')}
                                 price="$45"
+                                index = "6"
                             />
                             <Product
                                 name="HOPE"
                                 title="LONG SLEEVE"
                                 imageURL={require('../../images/design-photos/hope-longsleeve.jpg')}
                                 price="$7"
+                                index = "5"
                             />
                             <Product
                                 name="I AM THAT GIRL"
                                 title="HAT"
                                 imageURL={require('../../images/design-photos/girl-hat-top.jpg')}
                                 price="$35"
+                                index = "4"
                             />
                             <Product
                                 name="MACRON"
                                 title="HOODIE"
                                 imageURL={require('../../images/design-photos/macron-hoodie-guy.jpg')}
                                 price="$35"
+                                index = "3"
                             />
                             <Product
                                 name="BLESSED TO BLESS"
                                 title="SHIRT"
                                 imageURL={require('../../images/design-photos/blessed-horizontal.jpg')}
                                 price="$35"
+                                index = "2"
                             />
                             <Product
                                 name="BAY AREA"
                                 title="LONG SLEEVE"
                                 imageURL={require('../../images/design-photos/bay-area-main.jpg')}
                                 price="$35"
+                                index = "1"
                             />
                             <Product
                                 name="BERKELEY"
                                 title="HOODIE"
                                 imageURL={require('../../images/design-photos/berkeley-horizontal.jpg')}
                                 price="$35"
+                                index = "0"
                             />
-                            <Product
+                            {/* <Product
                                 name="STICKER"
                                 title="COLLECTION"
                                 imageURL={require('../../images/design-photos/three-stickers-drawing.jpg')}
                                 price="$35"
-                            />
+                            /> */}
                             <Product
                                 name="WALK ON WATER"
                                 title="STICKER"
                                 imageURL={require('../../images/design-photos/bottle-graphic.jpg')}
                                 price="$35"
+                                index = "9"
                             />
                             <Product
                                 name="SPERO BEAR"
                                 title="STICKER"
                                 imageURL={require('../../images/design-photos/bear-graphic.jpg')}
                                 price="$35"
+                                index = "7"
                             />
                             <Product
                                 name="MOUNTAIN MOVER"
                                 title="STICKER"
                                 imageURL={require('../../images/design-photos/mountain-graphic.jpg')}
                                 price="$35"
+                                index = "8"
                             />
                         </Grid>
                     </VStack>  
