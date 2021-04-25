@@ -159,7 +159,7 @@ const RedeemedHoodie = () => {
                             the path of peace.
                         </Text>
                     </Fade>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfbYg-tpSn5db7FhVYL4T92BAqZueXFkbsDVFu6Db_CjtE8yA/viewform">
+                    {/* <a href="https://docs.google.com/forms/d/e/1FAIpQLSfbYg-tpSn5db7FhVYL4T92BAqZueXFkbsDVFu6Db_CjtE8yA/viewform">
                         <Fade bottom>
                             <Box
                                 borderWidth="1px"
@@ -178,6 +178,27 @@ const RedeemedHoodie = () => {
                                     color="#5c6a6f"
                                 >
                                     <b>LIMITED SUPPLY - ORDER NOW</b>
+                                </Text>
+                            </Box>
+                        </Fade>
+                    </a> */}
+                    <a href="http://tinyurl.com/spero-etsy">
+                        <Fade bottom>
+                            <Box
+                                borderWidth="1px"
+                                p="5px"
+                                alignItems="center"
+                                w="200px"
+                                mt="10px"
+                            >
+                                <Text
+                                    fontFamily="Tenor Sans"
+                                    fontSize="9px"
+                                    textAlign="center"
+                                    _hover={{ fontSize: '9.5px' }}
+                                    transition="font-size 0.25s"
+                                >
+                                    SHOP NOW
                                 </Text>
                             </Box>
                         </Fade>
