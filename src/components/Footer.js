@@ -21,7 +21,7 @@ const Footer = (props) => {
                 <Box w={{base: "75%", sm: "50%", md: "35%", lg: "25%"}} pos="absolute" bottom = "8" left="10" transition="width 0.25s">
                     <Text
                         fontFamily="Tenor Sans"
-                        color="white"
+                        color="#5D6B6F"
                         letterSpacing="1px"
                         fontSize="10px"
                         fontWeight="100"
