@@ -60,6 +60,8 @@ import picture45 from './images/design-photos/redeemed-right.jpg'
 import picture46 from './images/about-sticker.jpg'
 import picture47 from './images/design-photos/hope-iris.jpg'
 
+import picture48 from './images/paintFooter.png'
+
 function App() {
     const [isLoading, setIsLoading] = useState(true)
 
@@ -117,6 +119,8 @@ function App() {
             picture45,
             picture46,
             picture47,
+
+            picture48
         ]
         //setting src property forces browser to load images
         imgs.forEach((image) => {
