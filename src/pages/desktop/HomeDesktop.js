@@ -218,8 +218,9 @@ const HomePageDesktop = (props) => {
                         </Box>
                     </Fade>
                 </VStack>
-                <Footer />
+                
             </Box>
+            <Footer />
         </div>
 
         // <div className="main-container">
