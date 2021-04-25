@@ -21,6 +21,7 @@ import RedeemedHoodie from './designs/RedeemedHoodie.js'
 
 import Navbar from '../../components/NavBar'
 import Fade from 'react-reveal/Fade'
+import Database from '../../components/Database'
 
 import {
     HStack,
@@ -131,6 +132,7 @@ const DesignsDesktop = (props) => {
         >
             <Box w="100%" h="100%">
                 <Navbar />
+                <Database />
                 <div className='design-desktop-popup'>
                     {isOpen && <Popup 
                         content={<>
