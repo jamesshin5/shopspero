@@ -106,6 +106,27 @@ const MacronHoodieDesktop = () => {
                             take care of us, we have nothing to fear.
                         </Text>
                     </Fade>
+                    <a href="http://tinyurl.com/spero-etsy">
+                        <Fade bottom>
+                            <Box
+                                borderWidth="1px"
+                                p="5px"
+                                alignItems="center"
+                                w="200px"
+                                mt="10px"
+                            >
+                                <Text
+                                    fontFamily="Tenor Sans"
+                                    fontSize="9px"
+                                    textAlign="center"
+                                    _hover={{ fontSize: '9.5px' }}
+                                    transition="font-size 0.25s"
+                                >
+                                    SHOP NOW
+                                </Text>
+                            </Box>
+                        </Fade>
+                    </a>
                 </VStack>
                 <Fade bottom>
                     <Box

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Footer from '../../components/Footer'
+import Popup from '../../components/DesignPopup.js';
 import '../../styles/desktop/DesignDesktop.css'
 import Product from '../../components/Product'
 
@@ -34,6 +35,8 @@ import {
     Button,
     MenuList,
     MenuItem,
+    useAriaHidden,
+    processResponsive,
 } from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import { useLocation } from 'react-router-dom'
@@ -43,6 +46,7 @@ const DesignsDesktop = (props) => {
     let data = passedProps.state
 
     const [designIndex, setIndex] = useState(10)
+    const [isOpen, setIsOpen] = useState(false);
 
     const designs = [
         'BERKELEY HOODIE',
@@ -109,6 +113,13 @@ const DesignsDesktop = (props) => {
                 return ''
         }
     }
+
+
+    const togglePopup = (param) => {
+        setIsOpen(!isOpen);
+        window.value = param
+    }
+
     return (
         <div className="background-main"
             // style={{
@@ -120,6 +131,14 @@ const DesignsDesktop = (props) => {
         >
             <Box w="100%" h="100%">
                 <Navbar />
+                <div className='design-desktop-popup'>
+                    {isOpen && <Popup 
+                        content={<>
+                            {renderSwitch(window.value)}
+                        </>}
+                        handleClose={togglePopup}
+                    />}
+                </div>
                 <VStack
                     textAlign="center"
                     px={{ base: '30px', lg: '100px' }}
@@ -148,89 +167,111 @@ const DesignsDesktop = (props) => {
                             }}
                             gap={5}
                         >
-                            <Product
-                                name="REDEEMED"
-                                title="HOODIE"
-                                imageURL={require('../../images/design-photos/redeemed-left.jpg')}
-                                price="$35"
-                                index = "10"
-                            />
-                            <Product
-                                name="ABIDE"
-                                title="HOODIE"
-                                imageURL={require('../../images/design-photos/abide-window.jpg')}
-                                price="$45"
-                                index = "6"
-                            />
-                            <Product
-                                name="HOPE"
-                                title="LONG SLEEVE"
-                                imageURL={require('../../images/design-photos/hope-longsleeve.jpg')}
-                                price="$7"
-                                index = "5"
-                            />
-                            <Product
-                                name="I AM THAT GIRL"
-                                title="HAT"
-                                imageURL={require('../../images/design-photos/girl-hat-top.jpg')}
-                                price="$35"
-                                index = "4"
-                            />
-                            <Product
-                                name="MACRON"
-                                title="HOODIE"
-                                imageURL={require('../../images/design-photos/macron-hoodie-guy.jpg')}
-                                price="$35"
-                                index = "3"
-                            />
-                            <Product
-                                name="BLESSED TO BLESS"
-                                title="SHIRT"
-                                imageURL={require('../../images/design-photos/blessed-horizontal.jpg')}
-                                price="$35"
-                                index = "2"
-                            />
-                            <Product
-                                name="BAY AREA"
-                                title="LONG SLEEVE"
-                                imageURL={require('../../images/design-photos/bay-area-main.jpg')}
-                                price="$35"
-                                index = "1"
-                            />
-                            <Product
-                                name="BERKELEY"
-                                title="HOODIE"
-                                imageURL={require('../../images/design-photos/berkeley-horizontal.jpg')}
-                                price="$35"
-                                index = "0"
-                            />
-                            {/* <Product
-                                name="STICKER"
-                                title="COLLECTION"
-                                imageURL={require('../../images/design-photos/three-stickers-drawing.jpg')}
-                                price="$35"
-                            /> */}
-                            <Product
-                                name="WALK ON WATER"
-                                title="STICKER"
-                                imageURL={require('../../images/design-photos/bottle-graphic.jpg')}
-                                price="$35"
-                                index = "9"
-                            />
-                            <Product
-                                name="SPERO BEAR"
-                                title="STICKER"
-                                imageURL={require('../../images/design-photos/bear-graphic.jpg')}
-                                price="$35"
-                                index = "7"
-                            />
-                            <Product
-                                name="MOUNTAIN MOVER"
-                                title="STICKER"
-                                imageURL={require('../../images/design-photos/mountain-graphic.jpg')}
-                                price="$35"
-                                index = "8"
-                            />
+                            <div className="design-desktop-product" onClick={() =>togglePopup(10)} >
+                                <Product
+                                    name="REDEEMED"
+                                    title="HOODIE"
+                                    imageURL={require('../../images/design-photos/redeemed-left.jpg')}
+                                    price="$35"
+                                    index = "10"
+                                />
+                            </div>
+                            <div className="design-desktop-product" onClick={() =>togglePopup(6)}>
+                                <Product
+                                    name="ABIDE"
+                                    title="HOODIE"
+                                    imageURL={require('../../images/design-photos/abide-window.jpg')}
+                                    price="$45"
+                                    index = "6"
+                                />
+                            </div>
+                            <div className="design-desktop-product" onClick={() =>togglePopup(5)}>
+                                <Product
+                                    name="HOPE"
+                                    title="LONG SLEEVE"
+                                    imageURL={require('../../images/design-photos/hope-longsleeve.jpg')}
+                                    price="$7"
+                                    index = "5"
+                                />
+                            </div>
+                            <div className="design-desktop-product" onClick={() =>togglePopup(4)}>
+                                <Product
+                                    name="I AM THAT GIRL"
+                                    title="HAT"
+                                    imageURL={require('../../images/design-photos/girl-hat-top.jpg')}
+                                    price="$35"
+                                    index = "4"
+                                />
+                            </div>
+                            <div className="design-desktop-product" onClick={() =>togglePopup(3)}>
+                                <Product
+                                    name="MACRON"
+                                    title="HOODIE"
+                                    imageURL={require('../../images/design-photos/macron-hoodie-guy.jpg')}
+                                    price="$35"
+                                    index = "3"
+                                />
+                            </div>
+                            <div className="design-desktop-product" onClick={() =>togglePopup(2)}>
+                                <Product
+                                    name="BLESSED TO BLESS"
+                                    title="SHIRT"
+                                    imageURL={require('../../images/design-photos/blessed-horizontal.jpg')}
+                                    price="$35"
+                                    index = "2"
+                                />
+                            </div>
+                            <div className="design-desktop-product" onClick={() =>togglePopup(1)}>
+                                <Product
+                                    name="BAY AREA"
+                                    title="LONG SLEEVE"
+                                    imageURL={require('../../images/design-photos/bay-area-main.jpg')}
+                                    price="$35"
+                                    index = "1"
+                                />
+                            </div>
+                            <div className="design-desktop-product" onClick={() =>togglePopup(0)}>
+                                <Product
+                                    name="BERKELEY"
+                                    title="HOODIE"
+                                    imageURL={require('../../images/design-photos/berkeley-horizontal.jpg')}
+                                    price="$35"
+                                    index = "0"
+                                />
+                            </div>
+                            <div className="design-desktop-product" onClick={() =>togglePopup(9)}>
+                                {/* <Product
+                                    name="STICKER"
+                                    title="COLLECTION"
+                                    imageURL={require('../../images/design-photos/three-stickers-drawing.jpg')}
+                                    price="$35"
+                                /> */}
+                                <Product
+                                    name="WALK ON WATER"
+                                    title="STICKER"
+                                    imageURL={require('../../images/design-photos/bottle-graphic.jpg')}
+                                    price="$35"
+                                    index = "9"
+                                />
+                            </div>
+                            <div className="design-desktop-product" onClick={() =>togglePopup(7)}>
+                                <Product
+                                    name="SPERO BEAR"
+                                    title="STICKER"
+                                    imageURL={require('../../images/design-photos/bear-graphic.jpg')}
+                                    price="$35"
+                                    index = "7"
+                                />
+                            </div>
+                            <div className="design-desktop-product" onClick={() =>togglePopup(8)}>
+                                <Product
+                                    name="MOUNTAIN MOVER"
+                                    title="STICKER"
+                                    imageURL={require('../../images/design-photos/mountain-graphic.jpg')}
+                                    price="$35"
+                                    index = "8"
+                                />
+                            </div>
                         </Grid>
                     </VStack>  
                 </VStack>

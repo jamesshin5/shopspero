@@ -1,3 +1,17 @@
+.design-desktop-popup {
+    position: relative;
+    z-index: 100;
+}
+
+.design-desktop-product {
+    position: relative;
+    z-index: 0;
+}
+
+.design-desktop-product:hover {
+    cursor: pointer;
+}
+
 .design-main-container {
     display: flex;
     flex-direction: column;

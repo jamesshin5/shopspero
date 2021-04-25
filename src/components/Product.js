@@ -21,59 +21,21 @@ import RedeemedHoodie from '../pages/desktop/designs/RedeemedHoodie.js'
 import { processResponsive } from '@chakra-ui/styled-system';
 
 const Product = (props) => {
-    const [isOpen, setIsOpen] = useState(false);
- 
-    const togglePopup = () => {
-        setIsOpen(!isOpen);
-    }
-
-    function renderSwitch(props) {
-        switch (props.index) {
-            case "10":
-                return <RedeemedHoodie />
-            case "9":
-                return <WalkOnWaterDesktop />
-            case "8":
-                return <MountainMoverDesktop />
-            case "7":
-                return <SperoBearDesktop />
-            case "6":
-                return <AbideHoodieDesktop />
-            case "5":
-                return <HopeDesktop />
-            case "4":
-                return <IAmThatGirlHatDesktop />
-            case "3":
-                return <MacronHoodieDesktop />
-            case "2":
-                return <BlessedToBlessDesktop />
-            case "1":
-                return <BayAreaDesktop />
-            case "0":
-                return <BerkeleyHoodieDesktop />
-            default:
-                return ''
-        }
-    }
-
     return (
         <Fade bottom>
             <div className="product-container">
-                {isOpen && <Popup
-                    content={<>
-                        {renderSwitch(props)}
-                    </>}
-                    handleClose={togglePopup}
-                />}
-                <img
-                    onClick={togglePopup}
-                    src={props.imageURL}
-                    alt="Logo"
-                    className="product-img"
-                />
-                <div class="product-top-dark">{props.name}</div>
-                <div class="product-centered-dark">{props.title}</div>
-                <div class="product-below-dark">{props.price}</div>
+                <div className="product-popup">
+                </div>
+                <div className="product-squares">
+                    <img
+                        src={props.imageURL}
+                        alt="Logo"
+                        className="product-img"
+                    />
+                    <div class="product-top-dark">{props.name}</div>
+                    <div class="product-centered-dark">{props.title}</div>
+                    <div class="product-below-dark">{props.price}</div>
+                </div>
             </div>            
         </Fade>
     )

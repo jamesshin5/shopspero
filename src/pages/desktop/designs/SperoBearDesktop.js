@@ -167,7 +167,7 @@ const SperoBearPage = () => {
                                     _hover={{ fontSize: '9.5px' }}
                                     transition="font-size 0.25s"
                                 >
-                                    SHOP NOW ON ETSY
+                                    SHOP NOW
                                 </Text>
                             </Box>
                         </Fade>
