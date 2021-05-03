@@ -5,7 +5,7 @@ import { useEffect} from "react"
 const Database = (props) => {
 
     var data = null;
-    const inventoryurl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSJymJNzhwLJcpoTjHgNto0tZOiWd4tKcL1oQ6UY3-rquMmXL8FdDAYrmhedTKiXCYWKP7JpXpKxg45/pub?output=csv'
+    const inventoryurl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSJymJNzhwLJcpoTjHgNto0tZOiWd4tKcL1oQ6UY3-rquMmXL8FdDAYrmhedTKiXCYWKP7JpXpKxg45/pub?gid=689684771&single=true&output=csv'
     const init=() => {
         Papa.parse(inventoryurl, {
             download: true,

@@ -18,6 +18,7 @@ import RedeemedHoodie from './designs/RedeemedHoodie'
 
 import Navbar from '../../components/NavBar'
 import Database from '../../components/Database'
+import appendSpreadsheet from '../../components/Sheets'
 
 import {
     HStack,
@@ -119,6 +120,7 @@ const DesignsDesktop = (props) => {
             <Box w="100%" h="100%">
                 <Navbar />
                 <Database />
+                <Button onClick={()=>appendSpreadsheet({ Name: "new name", Value: "new value" })}>BUTTONNN</Button>
                 <Stack
                     direction={{ base: 'column', sm: 'row' }}
                     pb={{ base: '100px', sm: 'none' }}
