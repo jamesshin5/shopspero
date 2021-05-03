@@ -201,7 +201,7 @@ const DesignsDesktop = (props) => {
                                     name="I AM THAT GIRL"
                                     title="HAT"
                                     imageURL={require('../../images/design-photos/girl-hat-top.jpg')}
-                                    price="$35"
+                                    price="$10"
                                     index = "4"
                                 />
                             </div>
@@ -219,7 +219,7 @@ const DesignsDesktop = (props) => {
                                     name="BLESSED TO BLESS"
                                     title="SHIRT"
                                     imageURL={require('../../images/design-photos/blessed-horizontal.jpg')}
-                                    price="$35"
+                                    price="$10"
                                     index = "2"
                                 />
                             </div>
@@ -252,7 +252,7 @@ const DesignsDesktop = (props) => {
                                     name="WALK ON WATER"
                                     title="STICKER"
                                     imageURL={require('../../images/design-photos/bottle-graphic.jpg')}
-                                    price="$35"
+                                    price="$3"
                                     index = "9"
                                 />
                             </div>
@@ -261,7 +261,7 @@ const DesignsDesktop = (props) => {
                                     name="SPERO BEAR"
                                     title="STICKER"
                                     imageURL={require('../../images/design-photos/bear-graphic.jpg')}
-                                    price="$35"
+                                    price="$3"
                                     index = "7"
                                 />
                             </div>
@@ -270,7 +270,7 @@ const DesignsDesktop = (props) => {
                                     name="MOUNTAIN MOVER"
                                     title="STICKER"
                                     imageURL={require('../../images/design-photos/mountain-graphic.jpg')}
-                                    price="$35"
+                                    price="$3"
                                     index = "8"
                                 />
                             </div>
