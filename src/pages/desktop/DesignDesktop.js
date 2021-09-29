@@ -24,22 +24,12 @@ import Fade from 'react-reveal/Fade'
 import Database from '../../components/Database'
 
 import {
-    HStack,
     Grid,
     VStack,
-    Flex,
     Text,
     Box,
-    Stack,
-    Menu,
-    MenuButton,
-    Button,
-    MenuList,
-    MenuItem,
-    useAriaHidden,
-    processResponsive,
 } from '@chakra-ui/react'
-import { ChevronDownIcon } from '@chakra-ui/icons'
+// import { ChevronDownIcon } from '@chakra-ui/icons'
 import { useLocation } from 'react-router-dom'
 
 const DesignsDesktop = (props) => {
@@ -49,19 +39,19 @@ const DesignsDesktop = (props) => {
     const [designIndex, setIndex] = useState(10)
     const [isOpen, setIsOpen] = useState(false);
 
-    const designs = [
-        'BERKELEY HOODIE',
-        'BAY AREA HOODIE',
-        'BLESSED TO BLESSED HOODIE',
-        'MACRON HOODIE',
-        'I AM THAT GIRL',
-        'HOPE LONGSLEEVE',
-        'ABIDE HOODIE',
-        'SPERO BEAR',
-        'MOUNTAIN MOVER',
-        'WALK ON WATER STICKER',
-        'REDEEMED HOODIE',
-    ]
+    // const designs = [
+    //     'BERKELEY HOODIE',
+    //     'BAY AREA HOODIE',
+    //     'BLESSED TO BLESSED HOODIE',
+    //     'MACRON HOODIE',
+    //     'I AM THAT GIRL',
+    //     'HOPE LONGSLEEVE',
+    //     'ABIDE HOODIE',
+    //     'SPERO BEAR',
+    //     'MOUNTAIN MOVER',
+    //     'WALK ON WATER STICKER',
+    //     'REDEEMED HOODIE',
+    // ]
 
     useEffect(() => {
         switch (data) {

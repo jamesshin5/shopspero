@@ -24,9 +24,9 @@ const Database = (props) => {
         // document.getElementById("food").innerHTML = "<strong>Foods:</strong> " + [ data[0].Name, data[1].Name, data[2].Name ].join(", ");
         console.log(data);
     }
-    const printdata=() => {
-        console.log("updated data", data)
-    }
+    // const printdata=() => {
+    //     console.log("updated data", data)
+    // }
 
     useEffect(() => {
         window.addEventListener('load', init)
