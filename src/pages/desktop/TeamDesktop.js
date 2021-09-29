@@ -119,12 +119,12 @@ const TeamPage = (props) => {
                                 imageURL={require('../../images/staff/rachelsoo-min.jpg')}
                                 description="Hello y'all! I'm Rachel, a senior at Mission Viejo High School. In my free time, you can find me browsing anything Disney, singing along to my favorite musicals, or drawing funny pictures of my friends! I joined Spero because I want to use my talents to spread the good news and help develop my faith :)"
                             /> */}
-                            <Profile
+                            {/* <Profile
                                 name="ESTHER YOU"
                                 title="MARKETING"
                                 imageURL={require('../../images/updated-staff/esther-min.jpg')}
                                 description=" Hi! I'm Esther, a second year at UC Berkeley studying Econ and Public Policy. I love exploring the Bay Area, drinking coffee, making TikToks, and taking pics. I joined Spero because I really believe in its mission and love giving back to the community (also love the  aesthetic hehe)."
-                            />
+                            /> */}
                         </Grid>
                     </VStack>
                     <Fade bottom>
