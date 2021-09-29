@@ -43,7 +43,7 @@ const Footer = (props) => {
                 </Box>
             {/* </Fade>         */}
             <HStack
-                display="flex"
+                display={{base: 'none', sm: "flex"}}
                 position="absolute" /*fixed*/
                 bottom="10"
                 right="10"

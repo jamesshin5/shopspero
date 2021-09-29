@@ -84,7 +84,7 @@ const DesignsDesktop = (props) => {
                 setIndex(10)
                 break
         }
-    }, [])
+    }, [data])
 
     function renderSwitch(param) {
         switch (param) {
@@ -159,13 +159,13 @@ const DesignsDesktop = (props) => {
                             DESIGNS
                         </Text>
                     </Fade>
-                    <VStack spacing="5px" width='100%' margin='auto'>
                         <Grid
+                            py={10}
                             templateColumns={{
-                                base: 'repeat(3, 4fr)',
-                                sm: 'repeat(3,4fr)',
+                                base: 'repeat(1, 4fr)',
+                                sm: 'repeat(2,4fr)',
                                 md: 'repeat(3, 4fr)',
-                                lg: 'repeat(3,4fr)',
+                                lg: 'repeat(4,4fr)',
                             }}
                             gap={5}
                         >
@@ -275,7 +275,6 @@ const DesignsDesktop = (props) => {
                                 />
                             </div>
                         </Grid>
-                    </VStack>  
                 </VStack>
                 <Footer />
             </Box>

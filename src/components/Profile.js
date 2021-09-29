@@ -12,7 +12,7 @@ const Profile = (props) => {
                     <img
                         src={props.imageURL}
                         alt="Logo"
-                        className="profile-img"
+                        className="profile-img-mobile"
                     />
                     <div class="centered-amb mobile-middle">
                         <b>{props.name}</b>
@@ -23,11 +23,13 @@ const Profile = (props) => {
         ) : (
             <Fade bottom>
                 <div className="profile-container mobile">
-                    <img
-                        src={props.imageURL}
-                        alt="Logo"
-                        className="profile-img"
-                    />
+                    <div className="image-proportion">
+                        <img
+                            src={props.imageURL}
+                            alt="Logo"
+                            className="profile-img-mobile"
+                        />
+                    </div>
                     <div class="top-dark mobile-topfont">
                         {props.description}
                     </div>
@@ -40,11 +42,13 @@ const Profile = (props) => {
         return props.ambassador ? (
             <Fade bottom>
                 <div className="profile-container">
+                <div className="image-proportion">
                     <img
                         src={props.imageURL}
                         alt="Logo"
                         className="profile-img"
                     />
+                    </div>
                     <div class="centered-amb">
                         <b>{props.name}</b>
                     </div>

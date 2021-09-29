@@ -119,6 +119,8 @@
 .profile-img {
     /* vertical-align: top; */
     /* float: left; */
+    height: 280px;
+
     position: absolute;
     left: 0;
     right: 0;
@@ -126,6 +128,27 @@
     width: 100%;
     transition: opacity 0.25s ease-in-out;
     z-index: 100;
+    object-fit: cover;
+}
+
+.profile-img-mobile {
+    /* vertical-align: top; */
+    /* float: left; */
+    height: 200px;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    transition: opacity 0.25s ease-in-out;
+    z-index: 100;
+    object-fit: cover;
+}
+
+.image-proportion {
+    max-height: 280px;
+    overflow: hidden;
 }
 
 .profile-img:hover {
