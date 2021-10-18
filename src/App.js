@@ -4,6 +4,9 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import Main from './components/Main'
 import './App.css'
 import PuffLoader from 'react-spinners/PuffLoader'
+import { ourFireStore } from './firebaseApp'
+import { collection, getDocs, addDoc } from "firebase/firestore"; 
+
 
 import picture1 from './images/staff/andrewcheng-min.jpg'
 import picture2 from './images/staff/dorcascheung-min.jpg'
@@ -62,10 +65,25 @@ import picture47 from './images/design-photos/hope-iris.jpg'
 
 import picture48 from './images/paintFooter.png'
 
+const fetchUser = async () => {
+    const docRef = await getDocs(collection(ourFireStore, 'User'));
+    const docAddRef = await addDoc(collection(ourFireStore, "User"), {
+        first: "Alan",
+        middle: "Mathison",
+        last: "Turing",
+        born: 1912
+      });
+    docRef.forEach(doc => console.log(doc.data()))
+    return docRef;
+}
+
 function App() {
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
+        //Adding testing here
+        const fetchedDoc = fetchUser();
+        console.log('fetchedDoc', fetchedDoc);
         const imgs = [
             picture1,
             picture2,
