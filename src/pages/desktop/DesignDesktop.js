@@ -65,15 +65,6 @@ const DesignsDesktop = (props) => {
         
     }
 
-    const handlePopupClicks = (event) => {
-        // console.log('event.target', event.target);
-        if (isOpen && popupRef.current.contains(event.target)) {
-            console.log(popupRef.current)
-            alert('Clicked outside of popup to close it')
-        }
-
-    }
-
     useEffect(() => {
         // if (isOpen) {
         //     popupElement = document.getElementsByClassName('popup-box');
