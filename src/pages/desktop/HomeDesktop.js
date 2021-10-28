@@ -65,7 +65,7 @@ const HomePageDesktop = (props) => {
             //     backgroundPosition: 'right -9vw',
             // }}
         >
-            <Box w="100%" h="100vh" overflow="scroll">
+            <Box w="100%" h="100vh">
                 <Navbar />
                 <VStack>
                     <HStack
