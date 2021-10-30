@@ -1,4 +1,4 @@
-import serviceKey from './shop-spero-9120a-firebase-adminsdk-m7c4r-1a1ce66396.json';
+// import serviceKey from './shop-spero-9120a-firebase-adminsdk-m7c4r-1a1ce66396.json';
 const firebaseConfig = {
   apiKey: "AIzaSyAB90RcucEAOihbni8e46B-dce-QDqo2Oo",
   authDomain: "shop-spero-9120a.firebaseapp.com",
