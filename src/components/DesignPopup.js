@@ -4,7 +4,7 @@ import '../styles/DesignPopup.css'
  
 const DesignPopup = props => {
   return (
-    <div className="popup-box">
+    <div className="popup-box" ref={props.reference}>
       <Box className="box" 
         width={{ base: '90%',md: "80%", lg: "70%" }} 
         padding={{base: '1em', sm: '20px'}} 

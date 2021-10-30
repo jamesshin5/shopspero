@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Footer from '../../components/Footer'
 import Popup from '../../components/DesignPopup.js';
 import '../../styles/desktop/DesignDesktop.css'
@@ -40,6 +40,8 @@ const DesignsDesktop = (props) => {
 
     const [designIndex, setIndex] = useState(10)
     const [isOpen, setIsOpen] = useState(false);
+    const popupRef = useRef();
+    let popupElement = useRef();
 
     // const designs = [
     //     'BERKELEY HOODIE',
@@ -54,6 +56,15 @@ const DesignsDesktop = (props) => {
     //     'WALK ON WATER STICKER',
     //     'REDEEMED HOODIE',
     // ]
+
+    const handlePopupClicks = (event) => {
+        // console.log('event.target', event.target);
+        if (isOpen && popupRef.current.contains(event.target)) {
+            console.log(popupRef.current)
+            alert('Clicked outside of popup to close it')
+        }
+
+    }
 
     useEffect(() => {
         switch (data) {
@@ -130,7 +141,12 @@ const DesignsDesktop = (props) => {
     return (
         <div className="background-main"
         >
-            <Box w="100%" h="100%">
+            <Box w="100%" h="100%"
+            onClick={(event)=> {
+                if(isOpen && popupRef.current == event.target) {
+                    togglePopup();
+                }
+            }}>
                 <Navbar />
                 <Database />
                 <div className='design-desktop-popup'>
@@ -139,6 +155,7 @@ const DesignsDesktop = (props) => {
                             {renderSwitch(window.value)}
                         </>}
                         handleClose={togglePopup}
+                        reference = {popupRef}
                     />}
                 </div>
                 <VStack
