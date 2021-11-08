@@ -6,6 +6,7 @@ import './App.css'
 import PuffLoader from 'react-spinners/PuffLoader'
 import { ourFireStore } from './firebaseApp'
 import { collection, getDocs, addDoc } from "firebase/firestore"; 
+//Testing Stripe API here
 
 
 import picture1 from './images/staff/andrewcheng-min.jpg'
@@ -64,6 +65,7 @@ import picture46 from './images/about-sticker.jpg'
 import picture47 from './images/design-photos/hope-iris.jpg'
 
 import picture48 from './images/paintFooter.png'
+const Stripe = require("stripe")
 
 const fetchUser = async () => {
     const docRef = await getDocs(collection(ourFireStore, 'User'));
@@ -73,17 +75,55 @@ const fetchUser = async () => {
         last: "Turing",
         born: 1912
       });
-    docRef.forEach(doc => console.log(doc.data()))
+    // docRef.forEach(doc => console.log(doc.data()))
     return docRef;
 }
 
+const sendStripeRequest = async () => {
+    const stripeAPI = new Stripe('pk_test_51JrGoPAezHVyBWRcDy9BbFoltwhnlsSW5gKsxOuXnNhmyPlKZadfMYcdDmhTvuumGP5sIzeEQujzNVCc2xzF2cZE00SDQqTezw');
+        // console.log("stripeAPI obj", stripeAPI)
+    const response = await stripeAPI.paymentIntents.create({
+        amount: 1000,
+        currency: 'usd',
+        payment_method_types: ['card'],
+        receipt_email: 'jenny.rosen@example.com',
+    });
+    // console.log(response)
+    return response
+            
+        
+}
+
+    
+    
+
+
 function App() {
     const [isLoading, setIsLoading] = useState(true)
-
+    // const [stripeResponse, setStripeResponse] = useState();
     useEffect(() => {
         //Adding testing here
         const fetchedDoc = fetchUser();
-        console.log('fetchedDoc', fetchedDoc);
+        const stripeResponse = sendStripeRequest();
+        console.log("Stripe paymentIntent API response", stripeResponse)
+        // .then(data => console.log("Stripe API response: ", data))
+        // const stripeAPI = new Stripe('pk_test_51JrGoPAezHVyBWRcDy9BbFoltwhnlsSW5gKsxOuXnNhmyPlKZadfMYcdDmhTvuumGP5sIzeEQujzNVCc2xzF2cZE00SDQqTezw');
+        // // console.log("stripeAPI obj", stripeAPI)
+        // try {
+        //     stripeAPI.paymentIntents.create({
+        //         amount: 1000,
+        //         currency: 'usd',
+        //         payment_method_types: ['card'],
+        //         receipt_email: 'jenny.rosen@example.com',
+        //     }).then(res => setStripeResponse(res.json()))
+        //     console.log("Here in try statement")
+        // }
+        // catch(err) {
+        //     // console.log("Goes to error statement")
+        //     console.log({error: err.message})
+        // }
+        
+        // console.log('fetchedDoc', fetchedDoc);
         const imgs = [
             picture1,
             picture2,
@@ -148,7 +188,7 @@ function App() {
             setIsLoading(false)
         }
     }, [])
-
+    // console.log(stripeResponse)
     return (
         <div>
             {isLoading ? (
