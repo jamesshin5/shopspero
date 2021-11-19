@@ -65,10 +65,10 @@ const HomePagePanel = ({ deviceType }) => {
                     _hover={{ opacity: '0' }}
                 >
                     <Text
-                        marginTop="30%"
+                        marginTop="20%"
                         fontFamily="Lexend Deca"
                         fontWeight="500"
-                        fontSize="7xl"
+                        fontSize="6xl"
                         color="#ffffff"
                         transition="font-size 0.5s"
                         align="center"
@@ -95,10 +95,10 @@ const HomePagePanel = ({ deviceType }) => {
                     _hover={{ opacity: '0' }}
                 >
                     <Text
-                        marginTop="30%"
+                        marginTop="20%"
                         fontFamily="Lexend Deca"
                         fontWeight="500"
-                        fontSize="7xl"
+                        fontSize="6xl"
                         color="#ffffff"
                         transition="font-size 0.5s"
                         align="center"
@@ -125,10 +125,10 @@ const HomePagePanel = ({ deviceType }) => {
                     _hover={{ opacity: '0' }}
                 >
                     <Text
-                        marginTop="30%"
+                        marginTop="20%"
                         fontFamily="Lexend Deca"
                         fontWeight="500"
-                        fontSize="7xl"
+                        fontSize="6xl"
                         color="#ffffff"
                         transition="font-size 0.5s"
                         align="center"
@@ -155,10 +155,10 @@ const HomePagePanel = ({ deviceType }) => {
                     _hover={{ opacity: '0' }}
                 >
                     <Text
-                        marginTop="30%"
+                        marginTop="20%"
                         fontFamily="Lexend Deca"
                         fontWeight="500"
-                        fontSize="7xl"
+                        fontSize="6xl"
                         color="#ffffff"
                         transition="font-size 0.5s"
                         align="center"
@@ -185,10 +185,10 @@ const HomePagePanel = ({ deviceType }) => {
                     _hover={{ opacity: '0' }}
                 >
                     <Text
-                        marginTop="30%"
+                        marginTop="20%"
                         fontFamily="Lexend Deca"
                         fontWeight="500"
-                        fontSize="7xl"
+                        fontSize="6xl"
                         color="#ffffff"
                         transition="font-size 0.5s"
                         align="center"
