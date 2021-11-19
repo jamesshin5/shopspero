@@ -163,7 +163,7 @@ const HomePagePanel = ({ deviceType }) => {
                         transition="font-size 0.5s"
                         align="center"
                     >
-                        the team.
+                        meet the team.
                     </Text>
                 </Box>
             </Box>
