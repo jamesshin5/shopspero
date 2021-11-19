@@ -87,8 +87,16 @@ const AbideHoodieDesktop = () => {
                             fontFamily="Lexend Deca"
                             fontSize={{ base: '30px', sm: '45px' }}
                             lineHeight={{ base: '35px', sm: '60px' }}
+                            pb={0}
                         >
                             <b>ABIDE</b> <br />
+                        </Text>
+                        <Text
+                            fontFamily="Lexend Deca"
+                            fontSize={{ base: '20px', sm: '35px' }}
+                            lineHeight={{ base: '25px', sm: '50px' }}
+                            pt={0}
+                        >
                             HOODIE
                         </Text>
                     </Fade>

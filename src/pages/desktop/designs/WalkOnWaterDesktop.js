@@ -8,10 +8,11 @@ const WalkOnWaterPage = () => {
         <Stack
             direction={{ base: 'column', lg: 'row' }}
             spacing="1.5rem"
-            ml={{ base: '0', sm: '1rem' }}
-            mt={{ base: '10px', sm: 'none' }}
+            // ml={{ base: '0', sm: '1rem' }}
+            // mt={{ base: '10px', sm: 'none' }}
             // h="72vh"
             // overflow="scroll"
+            height="100%"
         >
             <HStack>
                 <VStack spacing="5px">
@@ -20,9 +21,9 @@ const WalkOnWaterPage = () => {
                             display="flex"
                             justifyContent="center"
                             align-items="center"
-                            overflow="hidden"
-                            width={{ base: '330px', sm: '480px', lg: '560px' }}
-                            height={{ base: '150px', sm: '270px', lg: '350px' }}
+                            // overflow="hidden"
+                            width={{ base: '80vw', sm: '60vw', lg: '40vw' }}
+                            height={{ base: '20vh', sm: '40vh', lg: '40vh' }}
                         >
                             <Image
                                 src={require('../../../images/design-photos/bottle-graphic.jpg')}
@@ -39,16 +40,16 @@ const WalkOnWaterPage = () => {
                                 display="flex"
                                 justifyContent="center"
                                 align-items="center"
-                                overflow="hidden"
+                                // overflow="hidden"
                                 width={{
-                                    base: '163.5px',
-                                    sm: '238px',
-                                    lg: '278px',
+                                    base: '39vw',
+                                    sm: '29.75vw',
+                                    lg: '19.75vw',
                                 }}
                                 height={{
-                                    base: '100px',
-                                    sm: '140px',
-                                    lg: '175px',
+                                    base: '20vh',
+                                    sm: '20vh',
+                                    lg: '20vh',
                                 }}
                             >
                                 <Image
@@ -66,16 +67,16 @@ const WalkOnWaterPage = () => {
                                 display="flex"
                                 justifyContent="center"
                                 align-items="center"
-                                overflow="hidden"
+                                // overflow="hidden"
                                 width={{
-                                    base: '163.5px',
-                                    sm: '237px',
-                                    lg: '277px',
+                                    base: '39vw',
+                                    sm: '29.75vw',
+                                    lg: '19.75vw',
                                 }}
                                 height={{
-                                    base: '100px',
-                                    sm: '140px',
-                                    lg: '175px',
+                                    base: '20vh',
+                                    sm: '20vh',
+                                    lg: '20vh',
                                 }}
                             >
                                 <Image
@@ -182,6 +183,7 @@ const WalkOnWaterPage = () => {
                             </Box>
                         </Fade>
                     </a>
+                    <Box h={{base: "30px", sm: "0px"}}></Box>
                 </VStack>
             </VStack>
         </Stack>

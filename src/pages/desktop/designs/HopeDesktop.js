@@ -20,8 +20,8 @@ const HopeDesktop = () => {
                         justifyContent="center"
                         align-items="center"
                         overflow="hidden"
-                        width={{ base: '330px', sm: '480px', lg: '560px' }}
-                        height={{ base: '150px', sm: '270px', lg: '350px' }}
+                        width={{ base: '80vw', sm: '60vw', lg: '30vw' }}
+                        height={{ base: '20vh', sm: '40vh', lg: '40vh' }}
                     >
                         <iframe
                             title="Manolo"
@@ -49,14 +49,14 @@ const HopeDesktop = () => {
                             align-items="center"
                             overflow="hidden"
                             width={{
-                                base: '163.5px',
-                                sm: '238px',
-                                lg: '278px',
+                                base: '39vw',
+                                sm: '29.75vw',
+                                lg: '14.75vw',
                             }}
                             height={{
-                                base: '140px',
-                                sm: '180px',
-                                lg: '280px',
+                                base: '20vh',
+                                sm: '20vh',
+                                lg: '25vh',
                             }}
                         >
                             <Image
@@ -76,14 +76,14 @@ const HopeDesktop = () => {
                             align-items="center"
                             overflow="hidden"
                             width={{
-                                base: '163.5px',
-                                sm: '237px',
-                                lg: '277px',
+                                base: '39vw',
+                                sm: '29.75vw',
+                                lg: '14.75vw',
                             }}
                             height={{
-                                base: '140px',
-                                sm: '180px',
-                                lg: '280px',
+                                base: '20vh',
+                                sm: '20vh',
+                                lg: '25vh',
                             }}
                         >
                             <Image

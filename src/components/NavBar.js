@@ -39,7 +39,6 @@ const Navbar = (props) => {
             </HStack>
             <Box
                 display={{ base: 'none', md: 'flex' }}
-                w="425px"
                 justifyContent="space-between"
             >
                 <NavLink to="/about" 
