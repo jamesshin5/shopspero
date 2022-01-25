@@ -18,6 +18,7 @@ import BayAreaDesktop from './designs/BayAreaDesktop.js'
 
 import BerkeleyHoodieDesktop from './designs/BerkeleyHoodieDesktop.js'
 import RedeemedHoodie from './designs/RedeemedHoodie.js'
+import Fall2021CrewneckProduct from './designs/Fall2021CrewneckProductDesktop';
 
 import Navbar from '../../components/NavBar'
 import Fade from 'react-reveal/Fade'
@@ -37,7 +38,6 @@ import { productPreviewData } from './productPreviewData'
 const DesignsDesktop = (props) => {
     let passedProps = useLocation()
     let data = passedProps.state
-
     const [designIndex, setIndex] = useState(10)
     const [isOpen, setIsOpen] = useState(false);
     const popupRef = useRef();
@@ -91,6 +91,8 @@ const DesignsDesktop = (props) => {
 
     function renderSwitch(param) {
         switch (param) {
+            case 11:
+                return <Fall2021CrewneckProduct/>
             case 10:
                 return <RedeemedHoodie />
             case 9:
@@ -175,7 +177,9 @@ const DesignsDesktop = (props) => {
                         >
                             DESIGNS
                         </Text>
+                        
                     </Fade>
+                    <Text>Our new product here!</Text>
                         <Grid
                             py={10}
                             templateColumns={{

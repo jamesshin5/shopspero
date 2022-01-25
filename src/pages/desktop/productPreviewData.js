@@ -76,4 +76,11 @@ export const productPreviewData = [
     price: "$3",
     index: 8,
   },
+  {
+    name: "FALL 2021 PRODUCT",
+    title: "CREWNECK",
+    image: require('../../images/design-photos/abide-window.jpg'),
+    price: "$35",
+    index: 11,
+  }
 ]
