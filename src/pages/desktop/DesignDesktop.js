@@ -56,17 +56,22 @@ const DesignsDesktop = (props) => {
     //     'WALK ON WATER STICKER',
     //     'REDEEMED HOODIE',
     // ]
-
     const handlePopupClicks = (event) => {
         // console.log('event.target', event.target);
         if (isOpen && popupRef.current.contains(event.target)) {
             console.log(popupRef.current)
             alert('Clicked outside of popup to close it')
         }
-
+        
     }
 
     useEffect(() => {
+        // if (isOpen) {
+        //     popupElement = document.getElementsByClassName('popup-box');
+        //     console.log('popupElement', popupElement);
+        //     popupElement.addEventListener('click', handlePopupClicks);
+        // }
+        // popupRef.current.addEventListener('click', handlePopupClicks);
         switch (data) {
             case 'redeemed':
                 setIndex(10)
@@ -86,6 +91,9 @@ const DesignsDesktop = (props) => {
             default:
                 setIndex(10)
                 break
+        }
+        return () => {
+            // popupRef.current.removeEventListener("click", handlePopupClicks);
         }
     }, [data])
 
@@ -164,6 +172,7 @@ const DesignsDesktop = (props) => {
                     color="#5c6a6f"
                     pt="25px"
                     alignItems="start"
+                    
                 >
                     <Fade bottom>
                         <Text
