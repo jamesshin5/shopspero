@@ -1,27 +1,27 @@
 export const SliderData = [
     {
         image: require("../images/sliderimage1.jpg"),
-        description: "new arrivals.",
+        description: "NEW ARRIVALS",
         link: "/designs"
     },
     {
         image: require("../images/sliderimage2.jpg"),
-        description: "our mission.",
+        description: "OUR MISSION",
         link: "/about"
     },
     {
         image: require("../images/sliderimage3.jpg"),
-        description: "shop now.",
+        description: "SHOP NOW",
         link: "/shop"
     },
     {
         image: require("../images/sliderimage4.jpg"),
-        description: "meet the team.",
+        description: "MEET THE TEAM",
         link: "/team"
     },
     {
         image: require("../images/sliderimage5.jpg"),
-        description: "contact us.",
-        link: "/team"
+        description: "CONTACT US",
+        link: "mailto:shopspero@gmail.com"
     },
 ]
