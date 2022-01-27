@@ -17,7 +17,6 @@ import Fade from 'react-reveal/Fade'
 let stripePromise
 
 const getStripe = () => {
-    console.log(process.env.REACT_APP_STRIPE_KEY)
     if (!stripePromise) {
         stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY)
     }
@@ -25,6 +24,7 @@ const getStripe = () => {
 }
 
 const NewProduct = () => {
+    const [stripeError, setStripeError] = useState(null)
     const [shippingChecked, setShippingChecked] = useState(false)
     const [totalCost, setTotalCost] = useState(0)
     const [smallQuantity, setSmallQuantity] = useState(0)
@@ -67,7 +67,13 @@ const NewProduct = () => {
         } else {
             setTotalCost(34 * totalQuantity)
         }
-    }, [shippingChecked, smallQuantity, mediumQuantity, largeQuantity])
+    }, [
+        shippingChecked,
+        smallQuantity,
+        mediumQuantity,
+        largeQuantity,
+        stripeError,
+    ])
 
     const onShippingBoxChange = () => {
         //Need to update total cost
@@ -110,8 +116,30 @@ const NewProduct = () => {
             }
         })
         const stripe = await getStripe()
-        const { error } = await stripe.redirectToCheckout(checkoutOptions)
-        console.log('Stripe checkout error', error)
+        await stripe
+            .redirectToCheckout(checkoutOptions)
+            .then(function (result) {
+                if (result.error) {
+                    // Error scenario 1
+                    // If `redirectToCheckout` fails due to a browser or network
+                    // error, display the localized error message to your customer.
+                    alert(result.error.message)
+                }
+            })
+            .catch(function (error) {
+                if (error) {
+                    // Error scenario 2
+                    // If the promise throws an error
+                    alert(
+                        'We are experiencing issues connecting to our' +
+                            ' payments provider. ' +
+                            error
+                    )
+                }
+            })
+    }
+    if (stripeError) {
+        alert(stripeError)
     }
 
     return (
