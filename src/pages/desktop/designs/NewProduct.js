@@ -133,11 +133,6 @@ const NewProduct = () => {
         var quantity = 0
         if (size === 'sm') {
             setSmallQuantity(newQuantity)
-            // let setSmallQuantResponse = await setSmallQuantity(newQuantity)
-            // setSmallQuantResponse.then(() => {
-            //     quantity += smallQuantity
-            //     console.log(smallQuantity)
-            // })
         }
         if (size === 'md') {
             setMediumQuantity(newQuantity)
@@ -334,150 +329,109 @@ const NewProduct = () => {
                             the path of peace.
                         </Text>
                     </Fade>
-                    <HStack pt="20px">
-                        <Text fontFamily="Lexend Deca" fontSize="sm" pr="16px">
-                            Small
-                        </Text>
-                        <HStack maxW="400px">
-                            {/** Trying NumberInput component + sub-components */}
-                            {/**((valueAsString: string, valueAsNumber: number) => void) */}
-                            <NumberInput
-                                size="md"
-                                // maxW={6}
-                                defaultValue={0}
-                                min={0}
-                                onChange={(valueAsString, valueAsNumber) => {
-                                    //Do the calculateTotalCost() procedure here and pass in valueAsNumber
-
-                                    calculateTotalCost('sm', valueAsNumber)
-                                }}
+                    <Fade bottom>
+                        <HStack pt="20px">
+                            <Text
+                                fontFamily="Lexend Deca"
+                                fontSize="sm"
+                                pr="16px"
                             >
-                                <NumberInputField />
-                                <NumberInputStepper>
-                                    <NumberIncrementStepper />
-                                    <NumberDecrementStepper />
-                                </NumberInputStepper>
-                            </NumberInput>
-                            {/* <Button
-                                onClick={() => {
-                                    console.log(inputSM.value)
-                                    calculateTotalCost()
-                                }}
-                                {...decSM}
-                            >
-                                -
-                            </Button>
-                            <Input {...inputSM} />
-                            <Button
-                                onClick={() => calculateTotalCost()}
-                                {...incSM}
-                            >
-                                +
-                            </Button> */}
+                                Small
+                            </Text>
+                            <HStack maxW="320px">
+                                <Button
+                                    isDisabled={smallQuantity < 1}
+                                    onClick={() => {
+                                        calculateTotalCost(
+                                            'sm',
+                                            smallQuantity - 1
+                                        )
+                                    }}
+                                >
+                                    -
+                                </Button>
+                                <Input value={smallQuantity} w="43px" />
+                                <Button
+                                    isDisabled={smallQuantity > 8}
+                                    onClick={() => {
+                                        calculateTotalCost(
+                                            'sm',
+                                            smallQuantity + 1
+                                        )
+                                    }}
+                                >
+                                    +
+                                </Button>
+                            </HStack>
                         </HStack>
-                    </HStack>
 
-                    <HStack>
-                        <Text fontFamily="Lexend Deca" fontSize="sm">
-                            Medium
-                        </Text>
-                        <HStack maxW="140px">
-                            <NumberInput
-                                size="md"
-                                // maxW={6}
-                                defaultValue={0}
-                                min={0}
-                                onChange={(valueAsString, valueAsNumber) => {
-                                    //Do the calculateTotalCost() procedure here and pass in valueAsNumber
-
-                                    calculateTotalCost('md', valueAsNumber)
-                                }}
-                            >
-                                <NumberInputField />
-                                <NumberInputStepper>
-                                    <NumberIncrementStepper />
-                                    <NumberDecrementStepper />
-                                </NumberInputStepper>
-                            </NumberInput>
-                            {/* <Button
-                                onClick={() => {
-                                    console.log(inputMD.value)
-                                    calculateTotalCost()
-                                }}
-                                {...decMD}
-                            >
-                                -
-                            </Button>
-                            <Input {...inputMD} />
-                            <Button
-                                onClick={() => calculateTotalCost()}
-                                {...incMD}
-                            >
-                                +
-                            </Button> */}
+                        <HStack>
+                            <Text fontFamily="Lexend Deca" fontSize="sm">
+                                Medium
+                            </Text>
+                            <HStack maxW="320px">
+                                <Button
+                                    isDisabled={mediumQuantity < 1}
+                                    onClick={() => {
+                                        calculateTotalCost(
+                                            'md',
+                                            mediumQuantity - 1
+                                        )
+                                    }}
+                                >
+                                    -
+                                </Button>
+                                <Input value={mediumQuantity} w="43px" />
+                                <Button
+                                    isDisabled={mediumQuantity > 8}
+                                    onClick={() => {
+                                        calculateTotalCost(
+                                            'md',
+                                            mediumQuantity + 1
+                                        )
+                                    }}
+                                >
+                                    +
+                                </Button>
+                            </HStack>
                         </HStack>
-                    </HStack>
 
-                    <HStack pb="20px">
-                        <Text fontFamily="Lexend Deca" fontSize="sm" pr="15px">
-                            Large
-                        </Text>
-                        {/* <HStack maxW="140px">
-                            <Button
-                                onClick={() => {
-                                    console.log(inputLG.value)
-                                    calculateTotalCost()
-                                }}
-                                {...decLG}
+                        <HStack pb="20px">
+                            <Text
+                                fontFamily="Lexend Deca"
+                                fontSize="sm"
+                                pr="15px"
                             >
-                                -
-                            </Button>
-                            <Input {...inputLG} />
-                            <Button
-                                onClick={() => calculateTotalCost()}
-                                {...incLG}
-                            >
-                                +
-                            </Button>
-                        </HStack> */}
+                                Large
+                            </Text>
 
-                        <NumberInput
-                            size="md"
-                            // maxW={6}
-                            defaultValue={0}
-                            min={0}
-                            onChange={(valueAsString, valueAsNumber) => {
-                                //Do the calculateTotalCost() procedure here and pass in valueAsNumber
-
-                                calculateTotalCost('lg', valueAsNumber)
-                            }}
-                        >
-                            <NumberInputField />
-                            <NumberInputStepper>
-                                <NumberIncrementStepper />
-                                <NumberDecrementStepper />
-                            </NumberInputStepper>
-                        </NumberInput>
-
-                        <HStack maxW="140px">
-                            <Button
-                                onClick={() => {
-                                    console.log(inputLG.value)
-                                    calculateTotalCost()
-                                }}
-                                {...decLG}
-                            >
-                                -
-                            </Button>
-                            <Input {...inputLG} />
-                            <Button
-                                onClick={() => calculateTotalCost()}
-                                {...incLG}
-                            >
-                                +
-                            </Button>
+                            <HStack maxW="320px">
+                                <Button
+                                    isDisabled={largeQuantity < 1}
+                                    onClick={() => {
+                                        calculateTotalCost(
+                                            'lg',
+                                            largeQuantity - 1
+                                        )
+                                    }}
+                                >
+                                    -
+                                </Button>
+                                <Input value={largeQuantity} w="43px" />
+                                <Button
+                                    isDisabled={largeQuantity > 8}
+                                    onClick={() => {
+                                        calculateTotalCost(
+                                            'lg',
+                                            largeQuantity + 1
+                                        )
+                                    }}
+                                >
+                                    +
+                                </Button>
+                            </HStack>
                         </HStack>
-                    </HStack>
+                    </Fade>
                     <Fade bottom>
                         <Checkbox
                             size="sm"
