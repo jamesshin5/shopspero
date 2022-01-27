@@ -1,5 +1,12 @@
 export const productPreviewData = [
   {
+    name: "PRODUCT",
+    title: "NEW",
+    image: require('../../images/design-photos/redeemed-left.jpg'),
+    price: "$34",
+    index: 11,
+  },
+  {
     name: "REDEEMED",
     title: "HOODIE",
     image: require('../../images/design-photos/redeemed-left.jpg'),

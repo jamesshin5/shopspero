@@ -4,6 +4,7 @@ import Popup from '../../components/DesignPopup.js';
 import '../../styles/desktop/DesignDesktop.css'
 import Product from '../../components/Product'
 
+import NewProduct from './designs/NewProduct';
 import WalkOnWaterDesktop from './designs/WalkOnWaterDesktop.js'
 import MountainMoverDesktop from './designs/MountainMoverDesktop.js'
 import SperoBearDesktop from './designs/SperoBearDesktop.js'
@@ -99,6 +100,8 @@ const DesignsDesktop = (props) => {
 
     function renderSwitch(param) {
         switch (param) {
+            case 11:
+                return <NewProduct />
             case 10:
                 return <RedeemedHoodie />
             case 9:

@@ -1,3 +1,4 @@
+import "@stripe/stripe-js"
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 // import { HashRouter as Router } from 'react-router-dom'
@@ -64,6 +65,7 @@ import picture46 from './images/about-sticker.jpg'
 import picture47 from './images/design-photos/hope-iris.jpg'
 
 import picture48 from './images/paintFooter.png'
+require('dotenv').config()
 
 const fetchUser = async () => {
     const docRef = await getDocs(collection(ourFireStore, 'User'));
@@ -147,7 +149,7 @@ function App() {
         if (isLoading === true) {
             setIsLoading(false)
         }
-    }, [])
+    }, [isLoading])
 
     return (
         <div>
