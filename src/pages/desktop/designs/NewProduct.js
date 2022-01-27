@@ -11,11 +11,6 @@ import {
     Checkbox,
     useNumberInput,
     Input,
-    NumberInput,
-    NumberInputField,
-    NumberInputStepper,
-    NumberIncrementStepper,
-    NumberDecrementStepper,
 } from '@chakra-ui/react'
 import '../../../styles/desktop/FallStickerPage.css'
 import Fade from 'react-reveal/Fade'
@@ -36,54 +31,6 @@ const NewProduct = () => {
     const [smallQuantity, setSmallQuantity] = useState(0)
     const [mediumQuantity, setMediumQuantity] = useState(0)
     const [largeQuantity, setLargeQuantity] = useState(0)
-
-    const inputPropsSM = useNumberInput({
-        step: 1,
-        defaultValue: 0,
-        min: 0,
-        max: 6,
-        precision: 0,
-    })
-
-    var getInputPropsSM = inputPropsSM.getInputProps
-    var getIncrementButtonPropsSM = inputPropsSM.getIncrementButtonProps
-    var getDecrementButtonPropsSM = inputPropsSM.getDecrementButtonProps
-
-    const incSM = getIncrementButtonPropsSM()
-    const decSM = getDecrementButtonPropsSM()
-    const inputSM = getInputPropsSM({ isReadOnly: true })
-
-    const inputPropsMD = useNumberInput({
-        step: 1,
-        defaultValue: 0,
-        min: 0,
-        max: 6,
-        precision: 0,
-    })
-
-    var getInputPropsMD = inputPropsMD.getInputProps
-    var getIncrementButtonPropsMD = inputPropsMD.getIncrementButtonProps
-    var getDecrementButtonPropsMD = inputPropsMD.getDecrementButtonProps
-
-    const incMD = getIncrementButtonPropsMD()
-    const decMD = getDecrementButtonPropsMD()
-    const inputMD = getInputPropsMD({ isReadOnly: true })
-
-    const inputPropsLG = useNumberInput({
-        step: 1,
-        defaultValue: 0,
-        min: 0,
-        max: 6,
-        precision: 0,
-    })
-
-    var getInputPropsLG = inputPropsLG.getInputProps
-    var getIncrementButtonPropsLG = inputPropsLG.getIncrementButtonProps
-    var getDecrementButtonPropsLG = inputPropsLG.getDecrementButtonProps
-
-    const incLG = getIncrementButtonPropsLG()
-    const decLG = getDecrementButtonPropsLG()
-    const inputLG = getInputPropsLG({ isReadOnly: true })
 
     const ProductSM = {
         price: 'price_1KM3s4IcIcxBrzywDvLChE1t',
@@ -141,27 +88,11 @@ const NewProduct = () => {
             setLargeQuantity(newQuantity)
         }
 
-        // quantity += smallQuantity
-        // products.forEach((product) => {
-
-        //     quantity = quantity + product.quantity
-        // })
-
         if (shippingChecked) {
             setTotalCost(quantity * 39)
         } else {
             setTotalCost(quantity * 34)
         }
-
-        // var shipping = false
-        // if (fromCheckbox) {
-        //     shipping = !shippingChecked
-        // }
-        // if (shipping) {
-        //     setTotalCost(quantity * 39)
-        // } else {
-        //     setTotalCost(quantity * 34)
-        // }
     }
 
     const redirectToCheckout = async () => {
