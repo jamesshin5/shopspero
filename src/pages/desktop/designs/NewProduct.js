@@ -9,7 +9,6 @@ import {
     Image,
     Button,
     Checkbox,
-    useNumberInput,
     Input,
 } from '@chakra-ui/react'
 import '../../../styles/desktop/FallStickerPage.css'
