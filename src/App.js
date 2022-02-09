@@ -74,23 +74,26 @@ require('dotenv').config()
 
 const fetchUser = async () => {
     const docRef = await getDocs(collection(ourFireStore, 'User'))
-    const docAddRef = await addDoc(collection(ourFireStore, 'User'), {
-        first: 'Alan',
-        middle: 'Mathison',
-        last: 'Turing',
-        born: 1912,
-    })
+    // const docAddRef = await addDoc(collection(ourFireStore, 'User'), {
+    //     first: 'Alan',
+    //     middle: 'Mathison',
+    //     last: 'Turing',
+    //     born: 1912,
+    // })
     docRef.forEach((doc) => console.log(doc.data()))
     return docRef
 }
 
 function App() {
     const [isLoading, setIsLoading] = useState(true)
+    useEffect(() => {
+        // const fetchedDoc = fetchUser()
+        // console.log('fetchedDoc', fetchedDoc)
+    }, [])
 
     useEffect(() => {
         //Adding testing here
-        // const fetchedDoc = fetchUser();
-        // console.log('fetchedDoc', fetchedDoc);
+
         const imgs = [
             picture1,
             picture2,

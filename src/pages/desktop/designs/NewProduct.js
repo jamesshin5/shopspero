@@ -30,20 +30,64 @@ const NewProduct = () => {
     const [smallQuantity, setSmallQuantity] = useState(0)
     const [mediumQuantity, setMediumQuantity] = useState(0)
     const [largeQuantity, setLargeQuantity] = useState(0)
+    const [extraLargeQuantity, setExtraLargeQuantity] = useState(0)
+    const [productColor, setProductColor] = useState('sand')
+    const [isLoading, setLoading] = useState(false)
 
     const ProductSM = {
-        price: 'price_1KM3s4IcIcxBrzywDvLChE1t',
+        price: {
+            sand: [
+                'price_1KM3s4IcIcxBrzywDvLChE1t',
+                'price_1KMNPCIcIcxBrzywtoTRVMGQ',
+            ],
+            blue: [
+                'price_1KMlSBIcIcxBrzyw0JsMryaV',
+                'price_1KMlSBIcIcxBrzywR9ZtStxm',
+            ],
+        },
         quantity: smallQuantity,
     }
 
     const ProductMD = {
-        price: 'price_1KMNPnIcIcxBrzywd3I6ISCx',
+        price: {
+            sand: [
+                'price_1KMNPnIcIcxBrzywd3I6ISCx',
+                'price_1KMNPnIcIcxBrzywzbh4oTV7',
+            ],
+            blue: [
+                'price_1KMlSdIcIcxBrzywpeZnJo2j',
+                'price_1KMlSdIcIcxBrzywizVxxOXh',
+            ],
+        },
         quantity: mediumQuantity,
     }
 
     const ProductLG = {
-        price: 'price_1KMP5qIcIcxBrzywrNv3jdUb',
+        price: {
+            sand: [
+                'price_1KMP5qIcIcxBrzywrNv3jdUb',
+                'price_1KMP5qIcIcxBrzywV1Q7MRqs',
+            ],
+            blue: [
+                'price_1KMlSwIcIcxBrzywcUpKstSL',
+                'price_1KMlSwIcIcxBrzywmgQNJpqL',
+            ],
+        },
         quantity: largeQuantity,
+    }
+
+    const ProductXL = {
+        price: {
+            sand: [
+                'price_1KMlClIcIcxBrzyw6DlBQxhk',
+                'price_1KMlClIcIcxBrzywSv0x4Kf8',
+            ],
+            blue: [
+                'price_1KMlTHIcIcxBrzywaUD1Qilj',
+                'price_1KMlTHIcIcxBrzywqawKdOFo',
+            ],
+        },
+        quantity: extraLargeQuantity,
     }
 
     const checkoutOptions = {
@@ -53,14 +97,15 @@ const NewProduct = () => {
         cancelUrl: window.location.href,
     }
 
-    const products = [ProductSM, ProductMD, ProductLG]
+    const products = [ProductSM, ProductMD, ProductLG, ProductXL]
 
     //Add additional parameters => int size, int newQuantity
     //Based on size, set the corresponding object's quantity attribute to newQuantity
     //Recalculate stateful value of total cost + check if the box is checked
     // const calculateTotalCost = (size, newQuantity)
     useEffect(() => {
-        let totalQuantity = smallQuantity + mediumQuantity + largeQuantity
+        let totalQuantity =
+            smallQuantity + mediumQuantity + largeQuantity + extraLargeQuantity
         //If box is checked, add extra costs
         if (shippingChecked) {
             setTotalCost(39 * totalQuantity)
@@ -73,6 +118,8 @@ const NewProduct = () => {
         mediumQuantity,
         largeQuantity,
         stripeError,
+        extraLargeQuantity,
+        productColor,
     ])
 
     const onShippingBoxChange = () => {
@@ -83,14 +130,23 @@ const NewProduct = () => {
         // var quantity = 0
         //handle each size update quantity here
         var quantity = 0
-        if (size === 'sm') {
-            setSmallQuantity(newQuantity)
-        }
-        if (size === 'md') {
-            setMediumQuantity(newQuantity)
-        }
-        if (size === 'lg') {
-            setLargeQuantity(newQuantity)
+        switch (size) {
+            case 'sm':
+                setSmallQuantity(newQuantity)
+                break
+            case 'md':
+                setMediumQuantity(newQuantity)
+                break
+            case 'lg':
+                setLargeQuantity(newQuantity)
+                break
+            case 'xl':
+                setExtraLargeQuantity(newQuantity)
+                break
+            default:
+                alert(
+                    'An error has occured in updating your cart, please reload the page.'
+                )
         }
 
         if (shippingChecked) {
@@ -101,13 +157,25 @@ const NewProduct = () => {
     }
 
     const redirectToCheckout = async () => {
+        setLoading(true)
+        ProductSM.price = ProductSM.price[productColor]
+        ProductMD.price = ProductMD.price[productColor]
+        ProductLG.price = ProductLG.price[productColor]
+        ProductXL.price = ProductXL.price[productColor]
+
         if (shippingChecked) {
             checkoutOptions.shippingAddressCollection = {
                 allowedCountries: ['US'],
             }
-            ProductSM.price = 'price_1KMNPCIcIcxBrzywtoTRVMGQ'
-            ProductMD.price = 'price_1KMNPnIcIcxBrzywzbh4oTV7'
-            ProductLG.price = 'price_1KMP5qIcIcxBrzywV1Q7MRqs'
+            ProductSM.price = ProductSM.price[1]
+            ProductMD.price = ProductMD.price[1]
+            ProductLG.price = ProductLG.price[1]
+            ProductXL.price = ProductXL.price[1]
+        } else {
+            ProductSM.price = ProductSM.price[0]
+            ProductMD.price = ProductMD.price[0]
+            ProductLG.price = ProductLG.price[0]
+            ProductXL.price = ProductXL.price[0]
         }
 
         products.forEach((product) => {
@@ -148,85 +216,84 @@ const NewProduct = () => {
             spacing="1.5rem"
             ml={{ base: '0', sm: '1rem' }}
             mt={{ base: '10px', sm: 'none' }}
+            pt={{ base: 'none', lg: '20vh' }}
         >
-            <HStack>
-                <VStack spacing="5px">
+            <VStack spacing="5px">
+                <Fade bottom>
+                    <Box
+                        display="flex"
+                        justifyContent="center"
+                        align-items="center"
+                        overflow="hidden"
+                        width={{ base: '80vw', sm: '60vw', lg: '40vw' }}
+                        height={{ base: '20vh', sm: '40vh', lg: '40vh' }}
+                    >
+                        <iframe
+                            title="Manolo"
+                            width="100%"
+                            src="https://www.youtube.com/embed/t3A_AwNOT_8"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
+                    </Box>
+                </Fade>
+                <HStack spacing="5px">
                     <Fade bottom>
                         <Box
                             display="flex"
                             justifyContent="center"
                             align-items="center"
                             overflow="hidden"
-                            width={{ base: '80vw', sm: '60vw', lg: '40vw' }}
-                            height={{ base: '20vh', sm: '40vh', lg: '40vh' }}
+                            width={{
+                                base: '39vw',
+                                sm: '29.75vw',
+                                lg: '19.75vw',
+                            }}
+                            height={{
+                                base: '20vh',
+                                sm: '20vh',
+                                lg: '20vh',
+                            }}
                         >
-                            <iframe
-                                title="Manolo"
-                                width="100%"
-                                src="https://www.youtube.com/embed/t3A_AwNOT_8"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                            ></iframe>
+                            <Image
+                                src={require('../../../images/design-photos/redeemed-left.jpg')}
+                                alt=""
+                                objectFit="cover"
+                                w="100%"
+                                h="100%"
+                            />
                         </Box>
                     </Fade>
-                    <HStack spacing="5px">
-                        <Fade bottom>
-                            <Box
-                                display="flex"
-                                justifyContent="center"
-                                align-items="center"
-                                overflow="hidden"
-                                width={{
-                                    base: '39vw',
-                                    sm: '29.75vw',
-                                    lg: '19.75vw',
-                                }}
-                                height={{
-                                    base: '20vh',
-                                    sm: '20vh',
-                                    lg: '20vh',
-                                }}
-                            >
-                                <Image
-                                    src={require('../../../images/design-photos/redeemed-left.jpg')}
-                                    alt=""
-                                    objectFit="cover"
-                                    w="100%"
-                                    h="100%"
-                                />
-                            </Box>
-                        </Fade>
 
-                        <Fade bottom>
-                            <Box
-                                display="flex"
-                                justifyContent="center"
-                                align-items="center"
-                                overflow="hidden"
-                                width={{
-                                    base: '39vw',
-                                    sm: '29.75vw',
-                                    lg: '19.75vw',
-                                }}
-                                height={{
-                                    base: '20vh',
-                                    sm: '20vh',
-                                    lg: '20vh',
-                                }}
-                            >
-                                <Image
-                                    src={require('../../../images/design-photos/redeemed-right.jpg')}
-                                    alt=""
-                                    objectFit="cover"
-                                    w="100%"
-                                    h="100%"
-                                />
-                            </Box>
-                        </Fade>
-                    </HStack>
-                </VStack>
-            </HStack>
+                    <Fade bottom>
+                        <Box
+                            display="flex"
+                            justifyContent="center"
+                            align-items="center"
+                            overflow="hidden"
+                            width={{
+                                base: '39vw',
+                                sm: '29.75vw',
+                                lg: '19.75vw',
+                            }}
+                            height={{
+                                base: '20vh',
+                                sm: '20vh',
+                                lg: '20vh',
+                            }}
+                        >
+                            <Image
+                                src={require('../../../images/design-photos/redeemed-right.jpg')}
+                                alt=""
+                                objectFit="cover"
+                                w="100%"
+                                h="100%"
+                            />
+                        </Box>
+                    </Fade>
+                </HStack>
+            </VStack>
             <VStack textAlign="left" justifyContent="center" maxW="500px">
                 <VStack alignItems="flex-start">
                     <Fade bottom>
@@ -354,7 +421,7 @@ const NewProduct = () => {
                             </HStack>
                         </HStack>
 
-                        <HStack pb="20px">
+                        <HStack>
                             <Text
                                 fontFamily="Lexend Deca"
                                 fontSize="sm"
@@ -389,6 +456,101 @@ const NewProduct = () => {
                                 </Button>
                             </HStack>
                         </HStack>
+                        <HStack pb="20px">
+                            <Text
+                                fontFamily="Lexend Deca"
+                                fontSize="sm"
+                                pr="38px"
+                            >
+                                XL
+                            </Text>
+
+                            <HStack maxW="320px">
+                                <Button
+                                    isDisabled={extraLargeQuantity < 1}
+                                    onClick={() => {
+                                        calculateTotalCost(
+                                            'xl',
+                                            extraLargeQuantity - 1
+                                        )
+                                    }}
+                                >
+                                    -
+                                </Button>
+                                <Input value={extraLargeQuantity} w="43px" />
+                                <Button
+                                    isDisabled={extraLargeQuantity > 8}
+                                    onClick={() => {
+                                        calculateTotalCost(
+                                            'xl',
+                                            extraLargeQuantity + 1
+                                        )
+                                    }}
+                                >
+                                    +
+                                </Button>
+                            </HStack>
+                        </HStack>
+                        <HStack pb="20px">
+                            <Button
+                                // disabled={productColor === 'sand'}
+                                isActive={productColor === 'sand'}
+                                _active={{
+                                    bg: '#d8c7af',
+                                    // transform: 'scale(0.98)',
+                                }}
+                                _hover={{
+                                    bg: '#e3e8f1',
+                                }}
+                                _focus={{ boxShadow: 'none' }}
+                                onClick={() => {
+                                    setProductColor('sand')
+                                }}
+                            >
+                                <Text
+                                    fontFamily="Lexend Deca"
+                                    fontSize="sm"
+                                    fontWeight="100"
+                                    px="10px"
+                                    color={
+                                        productColor === 'sand'
+                                            ? 'white'
+                                            : 'black'
+                                    }
+                                >
+                                    Sand
+                                </Text>
+                            </Button>
+                            <Button
+                                // disabled={productColor === 'blue'}
+                                isActive={productColor === 'blue'}
+                                _active={{
+                                    bg: '#9bbdd8',
+                                    // transform: 'scale(0.98)',
+                                }}
+                                _hover={{
+                                    bg: '#e3e8f1',
+                                }}
+                                _focus={{ boxShadow: 'none' }}
+                                onClick={() => {
+                                    setProductColor('blue')
+                                }}
+                            >
+                                <Text
+                                    fontFamily="Lexend Deca"
+                                    fontSize="sm"
+                                    fontWeight="100"
+                                    px="10px"
+                                    color={
+                                        productColor === 'blue'
+                                            ? 'white'
+                                            : 'black'
+                                    }
+                                >
+                                    Blue
+                                </Text>
+                            </Button>
+                        </HStack>
                     </Fade>
                     <Fade bottom>
                         <Checkbox
@@ -411,6 +573,7 @@ const NewProduct = () => {
                             px="35px"
                             alignItems="center"
                             mt="10px"
+                            disabled={isLoading}
                         >
                             <Text
                                 fontFamily="Lexend Deca"

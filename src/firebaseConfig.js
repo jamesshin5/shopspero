@@ -1,11 +1,11 @@
 // import serviceKey from './shop-spero-9120a-firebase-adminsdk-m7c4r-1a1ce66396.json';
 const firebaseConfig = {
-  apiKey: "AIzaSyAB90RcucEAOihbni8e46B-dce-QDqo2Oo",
-  authDomain: "shop-spero-9120a.firebaseapp.com",
-  projectId: "shop-spero-9120a",
-  storageBucket: "shop-spero-9120a.appspot.com",
-  messagingSenderId: "342775293141",
-  appId: "1:342775293141:web:d3d0f9599828e024f36e5c",
-};
+    apiKey: 'AIzaSyCX_yrIblE9eNdQMHaAgVvXddDv9tt0laE',
+    authDomain: 'shopspero-database.firebaseapp.com',
+    projectId: 'shopspero-database',
+    storageBucket: 'shopspero-database.appspot.com',
+    messagingSenderId: '712669251530',
+    appId: '1:712669251530:web:f8643137667315434c3133',
+}
 
 export default firebaseConfig
