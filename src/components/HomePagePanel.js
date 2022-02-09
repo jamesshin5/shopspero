@@ -54,15 +54,16 @@ const HomePagePanel = ({ deviceType }) => {
             <Box marginTop="5%">
                 <Image
                     draggable={false}
-                    style={{ width: "95%", height: "100%" }}
+                    style={{ width: "95%", height: "100%"}}
                     src={slide.image}
                     marginLeft="3%"
                     alt="home-images"
-                    objectFit="cover"
+                    objectFit="contain"
+                    
                 />
-                <NavLink to={slide.link}>
+                <Link href={slide.link}>
                     <Box
-                        style={{ width: "95%", height: "100%" }}
+                        style={{ width: "95%", height: "100%"}}
                         position="absolute"
                         marginLeft="3%"
                         marginTop="5%"
@@ -74,10 +75,10 @@ const HomePagePanel = ({ deviceType }) => {
                     >
                         <Fade bottom>
                             <Text
-                                marginTop="40%"
-                                fontFamily="Josefin Sans"
+                                marginTop="75%"
+                                fontFamily="Lexend Deca"
                                 fontWeight="500"
-                                fontSize="6xl"
+                                fontSize="4xl"
                                 color="#ffffff"
                                 transition="font-size 0.5s"
                                 align="center"
@@ -86,7 +87,7 @@ const HomePagePanel = ({ deviceType }) => {
                             </Text>
                         </Fade>
                     </Box>
-                </NavLink>
+                </Link>
             </Box>
         )
     })

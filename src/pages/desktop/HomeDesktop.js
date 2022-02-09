@@ -47,7 +47,7 @@ const HomePageDesktop = (props) => {
         //     backgroundPosition: 'right -9vw',
         // }}
         >
-            <Box w="100%" h="100vh" >
+            <Box w="100%" h="95vh" >
                 <Navbar />
                 <HomePagePanel />
             </Box>
