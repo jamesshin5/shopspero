@@ -13,6 +13,9 @@ import {
 } from '@chakra-ui/react'
 import '../../../styles/desktop/FallStickerPage.css'
 import Fade from 'react-reveal/Fade'
+import { ourFireStore } from '../../../firebaseApp'
+import { doc, getDoc } from 'firebase/firestore'
+import { MinusIcon } from '@chakra-ui/icons'
 
 let stripePromise
 
@@ -27,12 +30,72 @@ const NewProduct = () => {
     const [stripeError, setStripeError] = useState(null)
     const [shippingChecked, setShippingChecked] = useState(false)
     const [totalCost, setTotalCost] = useState(0)
+
     const [smallQuantity, setSmallQuantity] = useState(0)
     const [mediumQuantity, setMediumQuantity] = useState(0)
     const [largeQuantity, setLargeQuantity] = useState(0)
     const [extraLargeQuantity, setExtraLargeQuantity] = useState(0)
+
     const [productColor, setProductColor] = useState('sand')
     const [isLoading, setLoading] = useState(false)
+
+    const [smallQuantityMax, setSmallQuantityMax] = useState({})
+    const [mediumQuantityMax, setMediumQuantityMax] = useState({})
+    const [largeQuantityMax, setLargeQuantityMax] = useState({})
+    const [xlQuantityMax, setXlQuantityMax] = useState({})
+
+    var retrievedInventory
+
+    useEffect(async () => {
+        // Retrieve the inventory
+        const docSnap = await getDoc(
+            doc(ourFireStore, 'inventory', 'Fullness Hoodie')
+        )
+        if (!docSnap.exists()) {
+            console.log('Error: Document does not exist')
+        }
+        retrievedInventory = docSnap.data()['Count']
+        console.log('inventory', retrievedInventory)
+
+        setSmallQuantityMax({
+            sand: retrievedInventory['Fullness Hoodie (S) (Sand)'],
+            blue: retrievedInventory['Fullness Hoodie (S) (Blue)'],
+        })
+        setMediumQuantityMax({
+            sand: retrievedInventory['Fullness Hoodie (M) (Sand)'],
+            blue: retrievedInventory['Fullness Hoodie (M) (Blue)'],
+        })
+        setLargeQuantityMax({
+            sand: retrievedInventory['Fullness Hoodie (L) (Sand)'],
+            blue: retrievedInventory['Fullness Hoodie (L) (Blue)'],
+        })
+        setXlQuantityMax({
+            sand: retrievedInventory['Fullness Hoodie (XL) (Sand)'],
+            blue: retrievedInventory['Fullness Hoodie (XL) (Blue)'],
+        })
+    }, [])
+
+    const ProductNameMap = {
+        price_1KM3s4IcIcxBrzywDvLChE1t: 'Fullness Hoodie (S) (Sand)',
+        price_1KMNPCIcIcxBrzywtoTRVMGQ: 'Fullness Hoodie (S) (Sand)',
+        price_1KMlSBIcIcxBrzyw0JsMryaV: 'Fullness Hoodie (S) (Blue)',
+        price_1KMlSBIcIcxBrzywR9ZtStxm: 'Fullness Hoodie (S) (Blue)',
+
+        price_1KMNPnIcIcxBrzywd3I6ISCx: 'Fullness Hoodie (M) (Sand)',
+        price_1KMNPnIcIcxBrzywzbh4oTV7: 'Fullness Hoodie (M) (Sand)',
+        price_1KMlSdIcIcxBrzywpeZnJo2j: 'Fullness Hoodie (M) (Blue)',
+        price_1KMlSdIcIcxBrzywizVxxOXh: 'Fullness Hoodie (M) (Blue)',
+
+        price_1KMP5qIcIcxBrzywrNv3jdUb: 'Fullness Hoodie (L) (Sand)',
+        price_1KMP5qIcIcxBrzywV1Q7MRqs: 'Fullness Hoodie (L) (Sand)',
+        price_1KMlSwIcIcxBrzywcUpKstSL: 'Fullness Hoodie (L) (Blue)',
+        price_1KMlSwIcIcxBrzywmgQNJpqL: 'Fullness Hoodie (L) (Blue)',
+
+        price_1KMlClIcIcxBrzyw6DlBQxhk: 'Fullness Hoodie (XL) (Sand)',
+        price_1KMlClIcIcxBrzywSv0x4Kf8: 'Fullness Hoodie (XL) (Sand)',
+        price_1KMlTHIcIcxBrzywaUD1Qilj: 'Fullness Hoodie (XL) (Blue)',
+        price_1KMlTHIcIcxBrzywqawKdOFo: 'Fullness Hoodie (XL) (Blue)',
+    }
 
     const ProductSM = {
         price: {
@@ -94,7 +157,7 @@ const NewProduct = () => {
         lineItems: [],
         mode: 'payment',
         successUrl: window.location.href + '/success',
-        cancelUrl: window.location.href,
+        cancelUrl: window.location.href + '/cancel',
     }
 
     const products = [ProductSM, ProductMD, ProductLG, ProductXL]
@@ -112,6 +175,18 @@ const NewProduct = () => {
         } else {
             setTotalCost(34 * totalQuantity)
         }
+        // if (smallQuantity > smallQuantityMax) {
+        //     setSmallQuantity(smallQuantityMax)
+        // }
+        // if (mediumQuantity > mediumQuantityMax) {
+        //     setMediumQuantity(mediumQuantityMax)
+        // }
+        // if (smallQuantity > largeQuantityMax) {
+        //     setSmallQuantity(largeQuantityMax)
+        // }
+        // if (extraLargeQuantity > xlQuantityMax) {
+        //     setExtraLargeQuantity(xlQuantityMax)
+        // }
     }, [
         shippingChecked,
         smallQuantity,
@@ -183,6 +258,31 @@ const NewProduct = () => {
                 checkoutOptions.lineItems.push(product)
             }
         })
+
+        // checkoutOptions.cancelUrl = `${window.location.href}/cancel?lineitems=${checkoutOptions.lineItems}`
+
+        // Check if order can be fulfilled
+        const docSnap = await getDoc(
+            doc(ourFireStore, 'inventory', 'Fullness Hoodie')
+        )
+        if (!docSnap.exists()) {
+            console.log('Error: Document does not exist')
+        }
+        var retrievedInventory = docSnap.data()
+        retrievedInventory = retrievedInventory['Count']
+
+        console.log(retrievedInventory)
+        for (var order of checkoutOptions.lineItems) {
+            if (
+                order.quantity > retrievedInventory[ProductNameMap[order.price]]
+            ) {
+                alert(
+                    'Order cannot be fulfilled by current inventory. Please reload the page.'
+                )
+                return
+            }
+        }
+
         const stripe = await getStripe()
         await stripe
             .redirectToCheckout(checkoutOptions)
@@ -377,7 +477,13 @@ const NewProduct = () => {
                                 </Button>
                                 <Input value={smallQuantity} w="43px" />
                                 <Button
-                                    isDisabled={smallQuantity > 8}
+                                    isDisabled={
+                                        smallQuantity >=
+                                        Math.min(
+                                            smallQuantityMax[productColor],
+                                            9
+                                        )
+                                    }
                                     onClick={() => {
                                         calculateTotalCost(
                                             'sm',
@@ -408,7 +514,13 @@ const NewProduct = () => {
                                 </Button>
                                 <Input value={mediumQuantity} w="43px" />
                                 <Button
-                                    isDisabled={mediumQuantity > 8}
+                                    isDisabled={
+                                        mediumQuantity >=
+                                        Math.min(
+                                            mediumQuantityMax[productColor],
+                                            9
+                                        )
+                                    }
                                     onClick={() => {
                                         calculateTotalCost(
                                             'md',
@@ -444,7 +556,13 @@ const NewProduct = () => {
                                 </Button>
                                 <Input value={largeQuantity} w="43px" />
                                 <Button
-                                    isDisabled={largeQuantity > 8}
+                                    isDisabled={
+                                        largeQuantity >=
+                                        Math.min(
+                                            largeQuantityMax[productColor],
+                                            9
+                                        )
+                                    }
                                     onClick={() => {
                                         calculateTotalCost(
                                             'lg',
@@ -479,7 +597,10 @@ const NewProduct = () => {
                                 </Button>
                                 <Input value={extraLargeQuantity} w="43px" />
                                 <Button
-                                    isDisabled={extraLargeQuantity > 8}
+                                    isDisabled={
+                                        extraLargeQuantity >=
+                                        Math.min(xlQuantityMax[productColor], 9)
+                                    }
                                     onClick={() => {
                                         calculateTotalCost(
                                             'xl',

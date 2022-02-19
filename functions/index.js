@@ -3,6 +3,7 @@ const stripe = require('stripe')(functions.config().keys.webhooks)
 const endpointSecret = functions.config().keys.signing
 // import { ourFireStore } from '../src/firebaseApp'
 const admin = require('firebase-admin')
+const { map } = require('@firebase/util')
 admin.initializeApp()
 
 // import { ourFireStore } from '../src/firebaseApp'
@@ -17,18 +18,50 @@ exports.events = functions.https.onRequest(async (request, response) => {
             sig,
             endpointSecret
         )
-        const dataObject = event.data.object
-        await admin
-            .firestore()
-            .collection('transactions')
-            .add({
-                checkoutSessionId: dataObject.id,
-                paymentStatus: dataObject.paid,
-                shippingInfo: dataObject.shipping ?? null,
-                amountTotal: dataObject.amount_captured / 100,
-                clientEmail: dataObject.billing_details.email,
-                itemsPurchased: dataObject.description,
-            })
+        if (event.type == 'charge.succeeded') {
+            const dataObject = event.data.object
+            const regexForItemsPurchased =
+                /[0-9]x (\w)+ (\w)+ \([A-Z]+\) \((\w)+\)/gm
+            const itemsPurchased = dataObject.description.match(
+                regexForItemsPurchased
+            )
+            var mapOfItemsPurchased = {}
+            for (var item of itemsPurchased) {
+                item = item.toString().split('x ')
+                mapOfItemsPurchased[item[1]] = parseInt(item[0])
+            }
+
+            await admin
+                .firestore()
+                .collection('inventory')
+                .doc('Fullness Hoodie')
+                .get()
+                .then(async (doc) => {
+                    if (!doc.exists) {
+                        throw 'Document does not exist'
+                    }
+                    var newCountsMap = doc.data().Count
+                    for (var key of Object.keys(mapOfItemsPurchased)) {
+                        newCountsMap[key] =
+                            newCountsMap[key] - mapOfItemsPurchased[key]
+                    }
+                    await doc.ref.update({ Count: newCountsMap })
+                })
+
+            await admin
+                .firestore()
+                .collection('transactions')
+                .add({
+                    checkoutSessionId: dataObject.id,
+                    paymentStatus: dataObject.paid,
+                    shippingInfo: dataObject.shipping ?? null,
+                    amountTotal: dataObject.amount_captured / 100,
+                    clientEmail: dataObject.billing_details.email,
+                    itemsPurchased: mapOfItemsPurchased,
+                    timePurchased: Date.now(),
+                })
+        }
+
         return response.sendStatus(200, event)
     } catch (err) {
         console.error(' Webhook signature verification failed. ', err)
