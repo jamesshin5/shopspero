@@ -14,8 +14,20 @@ import {
 import '../../../styles/desktop/FallStickerPage.css'
 import Fade from 'react-reveal/Fade'
 import { ourFireStore } from '../../../firebaseApp'
-import { doc, getDoc } from 'firebase/firestore'
+import {
+    doc,
+    getDoc,
+    addDoc,
+    setDoc,
+    updateDoc,
+    collection,
+    Timestamp,
+    increment,
+    runTransaction,
+} from 'firebase/firestore'
 import { MinusIcon } from '@chakra-ui/icons'
+import { v4 as uuidv4 } from 'uuid'
+import firebaseConfig from '../../../firebaseConfig'
 
 let stripePromise
 
@@ -36,74 +48,56 @@ const NewProduct = () => {
     const [largeQuantity, setLargeQuantity] = useState(0)
     const [extraLargeQuantity, setExtraLargeQuantity] = useState(0)
 
-    const [productColor, setProductColor] = useState('sand')
+    const [productColor, setProductColor] = useState('Sand')
     const [isLoading, setLoading] = useState(false)
 
     const [smallQuantityMax, setSmallQuantityMax] = useState({})
     const [mediumQuantityMax, setMediumQuantityMax] = useState({})
     const [largeQuantityMax, setLargeQuantityMax] = useState({})
     const [xlQuantityMax, setXlQuantityMax] = useState({})
+    const [cartID, setCartID] = useState(uuidv4())
+    const cartId = uuidv4()
 
     var retrievedInventory
 
-    useEffect(async () => {
-        // Retrieve the inventory
-        const docSnap = await getDoc(
-            doc(ourFireStore, 'inventory', 'Fullness Hoodie')
-        )
-        if (!docSnap.exists()) {
-            console.log('Error: Document does not exist')
-        }
-        retrievedInventory = docSnap.data()['Count']
-        console.log('inventory', retrievedInventory)
+    // cannot use async function in use effect by itself, make it a named function
 
-        setSmallQuantityMax({
-            sand: retrievedInventory['Fullness Hoodie (S) (Sand)'],
-            blue: retrievedInventory['Fullness Hoodie (S) (Blue)'],
-        })
-        setMediumQuantityMax({
-            sand: retrievedInventory['Fullness Hoodie (M) (Sand)'],
-            blue: retrievedInventory['Fullness Hoodie (M) (Blue)'],
-        })
-        setLargeQuantityMax({
-            sand: retrievedInventory['Fullness Hoodie (L) (Sand)'],
-            blue: retrievedInventory['Fullness Hoodie (L) (Blue)'],
-        })
-        setXlQuantityMax({
-            sand: retrievedInventory['Fullness Hoodie (XL) (Sand)'],
-            blue: retrievedInventory['Fullness Hoodie (XL) (Blue)'],
-        })
-    }, [])
+    // useEffect(async () => {
+    //     // Retrieve the inventory
+    //     const docSnap = await getDoc(
+    //         doc(ourFireStore, 'inventory', 'Fullness Hoodie')
+    //     )
+    //     if (!docSnap.exists()) {
+    //         console.log('Error: Document does not exist')
+    //     }
+    //     retrievedInventory = docSnap.data()['Count']
+    //     console.log('inventory', retrievedInventory)
 
-    const ProductNameMap = {
-        price_1KM3s4IcIcxBrzywDvLChE1t: 'Fullness Hoodie (S) (Sand)',
-        price_1KMNPCIcIcxBrzywtoTRVMGQ: 'Fullness Hoodie (S) (Sand)',
-        price_1KMlSBIcIcxBrzyw0JsMryaV: 'Fullness Hoodie (S) (Blue)',
-        price_1KMlSBIcIcxBrzywR9ZtStxm: 'Fullness Hoodie (S) (Blue)',
+    //     setSmallQuantityMax({
+    //         sand: retrievedInventory['Fullness Hoodie (S) (Sand)'],
+    //         blue: retrievedInventory['Fullness Hoodie (S) (Blue)'],
+    //     })
+    //     setMediumQuantityMax({
+    //         sand: retrievedInventory['Fullness Hoodie (M) (Sand)'],
+    //         blue: retrievedInventory['Fullness Hoodie (M) (Blue)'],
+    //     })
+    //     setLargeQuantityMax({
+    //         sand: retrievedInventory['Fullness Hoodie (L) (Sand)'],
+    //         blue: retrievedInventory['Fullness Hoodie (L) (Blue)'],
+    //     })
+    //     setXlQuantityMax({
+    //         sand: retrievedInventory['Fullness Hoodie (XL) (Sand)'],
+    //         blue: retrievedInventory['Fullness Hoodie (XL) (Blue)'],
+    //     })
+    // }, [])
 
-        price_1KMNPnIcIcxBrzywd3I6ISCx: 'Fullness Hoodie (M) (Sand)',
-        price_1KMNPnIcIcxBrzywzbh4oTV7: 'Fullness Hoodie (M) (Sand)',
-        price_1KMlSdIcIcxBrzywpeZnJo2j: 'Fullness Hoodie (M) (Blue)',
-        price_1KMlSdIcIcxBrzywizVxxOXh: 'Fullness Hoodie (M) (Blue)',
-
-        price_1KMP5qIcIcxBrzywrNv3jdUb: 'Fullness Hoodie (L) (Sand)',
-        price_1KMP5qIcIcxBrzywV1Q7MRqs: 'Fullness Hoodie (L) (Sand)',
-        price_1KMlSwIcIcxBrzywcUpKstSL: 'Fullness Hoodie (L) (Blue)',
-        price_1KMlSwIcIcxBrzywmgQNJpqL: 'Fullness Hoodie (L) (Blue)',
-
-        price_1KMlClIcIcxBrzyw6DlBQxhk: 'Fullness Hoodie (XL) (Sand)',
-        price_1KMlClIcIcxBrzywSv0x4Kf8: 'Fullness Hoodie (XL) (Sand)',
-        price_1KMlTHIcIcxBrzywaUD1Qilj: 'Fullness Hoodie (XL) (Blue)',
-        price_1KMlTHIcIcxBrzywqawKdOFo: 'Fullness Hoodie (XL) (Blue)',
-    }
-
-    const ProductSM = {
+    var ProductSM = {
         price: {
-            sand: [
+            Sand: [
                 'price_1KM3s4IcIcxBrzywDvLChE1t',
                 'price_1KMNPCIcIcxBrzywtoTRVMGQ',
             ],
-            blue: [
+            Blue: [
                 'price_1KMlSBIcIcxBrzyw0JsMryaV',
                 'price_1KMlSBIcIcxBrzywR9ZtStxm',
             ],
@@ -111,13 +105,13 @@ const NewProduct = () => {
         quantity: smallQuantity,
     }
 
-    const ProductMD = {
+    var ProductMD = {
         price: {
-            sand: [
+            Sand: [
                 'price_1KMNPnIcIcxBrzywd3I6ISCx',
                 'price_1KMNPnIcIcxBrzywzbh4oTV7',
             ],
-            blue: [
+            Blue: [
                 'price_1KMlSdIcIcxBrzywpeZnJo2j',
                 'price_1KMlSdIcIcxBrzywizVxxOXh',
             ],
@@ -125,13 +119,13 @@ const NewProduct = () => {
         quantity: mediumQuantity,
     }
 
-    const ProductLG = {
+    var ProductLG = {
         price: {
-            sand: [
+            Sand: [
                 'price_1KMP5qIcIcxBrzywrNv3jdUb',
                 'price_1KMP5qIcIcxBrzywV1Q7MRqs',
             ],
-            blue: [
+            Blue: [
                 'price_1KMlSwIcIcxBrzywcUpKstSL',
                 'price_1KMlSwIcIcxBrzywmgQNJpqL',
             ],
@@ -139,13 +133,13 @@ const NewProduct = () => {
         quantity: largeQuantity,
     }
 
-    const ProductXL = {
+    var ProductXL = {
         price: {
-            sand: [
+            Sand: [
                 'price_1KMlClIcIcxBrzyw6DlBQxhk',
                 'price_1KMlClIcIcxBrzywSv0x4Kf8',
             ],
-            blue: [
+            Blue: [
                 'price_1KMlTHIcIcxBrzywaUD1Qilj',
                 'price_1KMlTHIcIcxBrzywqawKdOFo',
             ],
@@ -153,7 +147,7 @@ const NewProduct = () => {
         quantity: extraLargeQuantity,
     }
 
-    const checkoutOptions = {
+    var checkoutOptions = {
         lineItems: [],
         mode: 'payment',
         successUrl: window.location.href + '/success',
@@ -175,18 +169,6 @@ const NewProduct = () => {
         } else {
             setTotalCost(34 * totalQuantity)
         }
-        // if (smallQuantity > smallQuantityMax) {
-        //     setSmallQuantity(smallQuantityMax)
-        // }
-        // if (mediumQuantity > mediumQuantityMax) {
-        //     setMediumQuantity(mediumQuantityMax)
-        // }
-        // if (smallQuantity > largeQuantityMax) {
-        //     setSmallQuantity(largeQuantityMax)
-        // }
-        // if (extraLargeQuantity > xlQuantityMax) {
-        //     setExtraLargeQuantity(xlQuantityMax)
-        // }
     }, [
         shippingChecked,
         smallQuantity,
@@ -201,21 +183,80 @@ const NewProduct = () => {
         //Need to update total cost
         setShippingChecked(!shippingChecked)
     }
-    const calculateTotalCost = async (size, newQuantity) => {
+
+    const updateCart = async (size, newQuantity, operation) => {
         // var quantity = 0
         //handle each size update quantity here
+        const item = `Fullness Hoodie (${size}) (${productColor})`
+
+        //Batching all these reads and writes into a TRANSACTION
+        //So either all goes through or neither does
+        // await runTransaction(db, async (transaction) {
+
+        // }
+        const InventoryDocSnap = await getDoc(
+            doc(ourFireStore, 'inventory', 'Fullness Hoodie')
+        )
+        if (!InventoryDocSnap.exists()) {
+            console.log('error in retrieving Fullness Hoodie inventory doc')
+        }
+        const retrievedFullnessInventory = InventoryDocSnap.data()
+        // Check if there is inventory to take
+        if (operation == 'add') {
+            const tempoCount = retrievedFullnessInventory['Count'][item] - 1
+            if (tempoCount < 0) {
+                //invalid
+                alert(
+                    'The stock you requested for is not available at this time!'
+                )
+                return
+            }
+            retrievedFullnessInventory['Count'][item] -= 1
+            await updateDoc(doc(ourFireStore, 'inventory', 'Fullness Hoodie'), {
+                // "Count"
+                // [item]: increment(-1),
+                ...retrievedFullnessInventory,
+            })
+        } else {
+            retrievedFullnessInventory['Count'][item] += 1
+            await updateDoc(doc(ourFireStore, 'inventory', 'Fullness Hoodie'), {
+                ...retrievedFullnessInventory,
+            })
+        }
+
+        //check if the cart exists in db
+        const docSnap = await getDoc(doc(ourFireStore, 'carts', cartID))
+        if (!docSnap.exists()) {
+            await setDoc(doc(ourFireStore, 'carts', cartID), {
+                lastUpdated: new Date(Date.now()),
+                items: {
+                    [item]: newQuantity,
+                },
+                paid: false,
+            })
+        }
+        //updating cart doc with latest inventory
+        else {
+            const retrievedCart = docSnap.data()
+            retrievedCart.lastUpdated = new Date(Date.now())
+            retrievedCart.items[item] = newQuantity
+            await setDoc(doc(ourFireStore, 'carts', cartID), {
+                ...retrievedCart,
+            })
+        }
+
         var quantity = 0
         switch (size) {
-            case 'sm':
+            case 'S':
                 setSmallQuantity(newQuantity)
                 break
-            case 'md':
+            case 'M':
                 setMediumQuantity(newQuantity)
                 break
-            case 'lg':
+            case 'L':
                 setLargeQuantity(newQuantity)
                 break
-            case 'xl':
+            case 'XL':
                 setExtraLargeQuantity(newQuantity)
                 break
             default:
@@ -229,6 +270,48 @@ const NewProduct = () => {
         } else {
             setTotalCost(quantity * 34)
         }
+    }
+
+    const restoreAndClear = async () => {
+        //First we read the cart and restore inventory
+
+        const cartDocSnap = await getDoc(doc(ourFireStore, 'carts', cartID))
+        if (!cartDocSnap.exists()) {
+            //In this case, the cart does not exist
+
+            return
+        }
+        const InventoryDocSnap = await getDoc(
+            doc(ourFireStore, 'inventory', 'Fullness Hoodie')
+        )
+        if (!InventoryDocSnap.exists()) {
+            console.error('error in retrieving Fullness Hoodie inventory doc')
+        }
+
+        var inventoryData = InventoryDocSnap.data()
+        var cartData = cartDocSnap.data()
+        //Map through the keys in cartData and restore each field in inventoryDocData
+        for (const [item, stock] of Object.entries(cartData.items)) {
+            //restore inventory in inventoryDocData
+            inventoryData['Count'][item] += stock
+            //Zero out cartData
+            cartData.items[item] = 0
+        }
+
+        setSmallQuantity(0)
+        setMediumQuantity(0)
+        setLargeQuantity(0)
+        setExtraLargeQuantity(0)
+
+        // //Write back inventory data
+        await updateDoc(doc(ourFireStore, 'inventory', 'Fullness Hoodie'), {
+            ...inventoryData,
+        })
+
+        //Write back cart data
+        await updateDoc(doc(ourFireStore, 'carts', cartID), {
+            ...cartData,
+        })
     }
 
     const redirectToCheckout = async () => {
@@ -259,29 +342,7 @@ const NewProduct = () => {
             }
         })
 
-        // checkoutOptions.cancelUrl = `${window.location.href}/cancel?lineitems=${checkoutOptions.lineItems}`
-
-        // Check if order can be fulfilled
-        const docSnap = await getDoc(
-            doc(ourFireStore, 'inventory', 'Fullness Hoodie')
-        )
-        if (!docSnap.exists()) {
-            console.log('Error: Document does not exist')
-        }
-        var retrievedInventory = docSnap.data()
-        retrievedInventory = retrievedInventory['Count']
-
-        console.log(retrievedInventory)
-        for (var order of checkoutOptions.lineItems) {
-            if (
-                order.quantity > retrievedInventory[ProductNameMap[order.price]]
-            ) {
-                alert(
-                    'Order cannot be fulfilled by current inventory. Please reload the page.'
-                )
-                return
-            }
-        }
+        checkoutOptions.successUrl = `http://localhost:3000/success?cartid=${cartID}`
 
         const stripe = await getStripe()
         await stripe
@@ -467,9 +528,10 @@ const NewProduct = () => {
                                 <Button
                                     isDisabled={smallQuantity < 1}
                                     onClick={() => {
-                                        calculateTotalCost(
-                                            'sm',
-                                            smallQuantity - 1
+                                        updateCart(
+                                            'S',
+                                            smallQuantity - 1,
+                                            'dec'
                                         )
                                     }}
                                 >
@@ -485,9 +547,10 @@ const NewProduct = () => {
                                         )
                                     }
                                     onClick={() => {
-                                        calculateTotalCost(
-                                            'sm',
-                                            smallQuantity + 1
+                                        updateCart(
+                                            'S',
+                                            smallQuantity + 1,
+                                            'add'
                                         )
                                     }}
                                 >
@@ -504,9 +567,10 @@ const NewProduct = () => {
                                 <Button
                                     isDisabled={mediumQuantity < 1}
                                     onClick={() => {
-                                        calculateTotalCost(
-                                            'md',
-                                            mediumQuantity - 1
+                                        updateCart(
+                                            'M',
+                                            mediumQuantity - 1,
+                                            'dec'
                                         )
                                     }}
                                 >
@@ -522,9 +586,10 @@ const NewProduct = () => {
                                         )
                                     }
                                     onClick={() => {
-                                        calculateTotalCost(
-                                            'md',
-                                            mediumQuantity + 1
+                                        updateCart(
+                                            'M',
+                                            mediumQuantity + 1,
+                                            'add'
                                         )
                                     }}
                                 >
@@ -546,9 +611,10 @@ const NewProduct = () => {
                                 <Button
                                     isDisabled={largeQuantity < 1}
                                     onClick={() => {
-                                        calculateTotalCost(
-                                            'lg',
-                                            largeQuantity - 1
+                                        updateCart(
+                                            'L',
+                                            largeQuantity - 1,
+                                            'dec'
                                         )
                                     }}
                                 >
@@ -564,9 +630,10 @@ const NewProduct = () => {
                                         )
                                     }
                                     onClick={() => {
-                                        calculateTotalCost(
-                                            'lg',
-                                            largeQuantity + 1
+                                        updateCart(
+                                            'L',
+                                            largeQuantity + 1,
+                                            'add'
                                         )
                                     }}
                                 >
@@ -587,9 +654,10 @@ const NewProduct = () => {
                                 <Button
                                     isDisabled={extraLargeQuantity < 1}
                                     onClick={() => {
-                                        calculateTotalCost(
-                                            'xl',
-                                            extraLargeQuantity - 1
+                                        updateCart(
+                                            'XL',
+                                            extraLargeQuantity - 1,
+                                            'dec'
                                         )
                                     }}
                                 >
@@ -602,10 +670,7 @@ const NewProduct = () => {
                                         Math.min(xlQuantityMax[productColor], 9)
                                     }
                                     onClick={() => {
-                                        calculateTotalCost(
-                                            'xl',
-                                            extraLargeQuantity + 1
-                                        )
+                                        updateCart('XL', extraLargeQuantity + 1)
                                     }}
                                 >
                                     +
@@ -615,7 +680,7 @@ const NewProduct = () => {
                         <HStack pb="20px">
                             <Button
                                 // disabled={productColor === 'sand'}
-                                isActive={productColor === 'sand'}
+                                isActive={productColor === 'Sand'}
                                 _active={{
                                     bg: '#d8c7af',
                                     // transform: 'scale(0.98)',
@@ -624,8 +689,10 @@ const NewProduct = () => {
                                     bg: '#e3e8f1',
                                 }}
                                 _focus={{ boxShadow: 'none' }}
-                                onClick={() => {
-                                    setProductColor('sand')
+                                onClick={async () => {
+                                    //Clear our cart + restore inventory
+                                    await restoreAndClear()
+                                    setProductColor('Sand')
                                 }}
                             >
                                 <Text
@@ -634,7 +701,7 @@ const NewProduct = () => {
                                     fontWeight="100"
                                     px="10px"
                                     color={
-                                        productColor === 'sand'
+                                        productColor === 'Sand'
                                             ? 'white'
                                             : 'black'
                                     }
@@ -643,8 +710,7 @@ const NewProduct = () => {
                                 </Text>
                             </Button>
                             <Button
-                                // disabled={productColor === 'blue'}
-                                isActive={productColor === 'blue'}
+                                isActive={productColor === 'Blue'}
                                 _active={{
                                     bg: '#9bbdd8',
                                     // transform: 'scale(0.98)',
@@ -653,8 +719,11 @@ const NewProduct = () => {
                                     bg: '#e3e8f1',
                                 }}
                                 _focus={{ boxShadow: 'none' }}
-                                onClick={() => {
-                                    setProductColor('blue')
+                                onClick={async () => {
+                                    //Clear our cart + restore
+                                    //Edge case where we have not initialized our cart - handle in restoreAndClear
+                                    await restoreAndClear()
+                                    setProductColor('Blue')
                                 }}
                             >
                                 <Text
@@ -663,7 +732,7 @@ const NewProduct = () => {
                                     fontWeight="100"
                                     px="10px"
                                     color={
-                                        productColor === 'blue'
+                                        productColor === 'Blue'
                                             ? 'white'
                                             : 'black'
                                     }
