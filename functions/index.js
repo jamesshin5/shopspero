@@ -99,7 +99,7 @@ exports.scheduledFunction = functions.pubsub
                 //restore inventory in inventoryDocData
                 inventoryData['Count'][item] += stock
             }
-            await doc.delete().then(() => {
+            await doc.ref.delete().then(() => {
                 console.log('Invalid cart successfully deleted')
             })
         })

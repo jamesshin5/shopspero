@@ -191,58 +191,68 @@ const NewProduct = () => {
 
         //Batching all these reads and writes into a TRANSACTION
         //So either all goes through or neither does
-        // await runTransaction(db, async (transaction) {
-
-        // }
-        const InventoryDocSnap = await getDoc(
-            doc(ourFireStore, 'inventory', 'Fullness Hoodie')
-        )
-        if (!InventoryDocSnap.exists()) {
-            console.log('error in retrieving Fullness Hoodie inventory doc')
-        }
-        const retrievedFullnessInventory = InventoryDocSnap.data()
-        // Check if there is inventory to take
-        if (operation == 'add') {
-            const tempoCount = retrievedFullnessInventory['Count'][item] - 1
-            if (tempoCount < 0) {
-                //invalid
-                alert(
-                    'The stock you requested for is not available at this time!'
+        try {
+            await runTransaction(ourFireStore, async (transaction) => {
+                const InventoryDocSnap = await transaction.get(
+                    doc(ourFireStore, 'inventory', 'Fullness Hoodie')
                 )
-                return
-            }
-            retrievedFullnessInventory['Count'][item] -= 1
-            await updateDoc(doc(ourFireStore, 'inventory', 'Fullness Hoodie'), {
-                // "Count"
-                // [item]: increment(-1),
-                ...retrievedFullnessInventory,
-            })
-        } else {
-            retrievedFullnessInventory['Count'][item] += 1
-            await updateDoc(doc(ourFireStore, 'inventory', 'Fullness Hoodie'), {
-                ...retrievedFullnessInventory,
-            })
-        }
 
-        //check if the cart exists in db
-        const docSnap = await getDoc(doc(ourFireStore, 'carts', cartID))
-        if (!docSnap.exists()) {
-            await setDoc(doc(ourFireStore, 'carts', cartID), {
-                lastUpdated: new Date(Date.now()),
-                items: {
-                    [item]: newQuantity,
-                },
-                paid: false,
+                //check if the cart exists in db
+                const docSnap = await transaction.get(
+                    doc(ourFireStore, 'carts', cartID)
+                )
+
+                const retrievedFullnessInventory = InventoryDocSnap.data()
+                // Check if there is inventory to take
+                if (operation == 'add') {
+                    const tempoCount =
+                        retrievedFullnessInventory['Count'][item] - 1
+                    if (tempoCount < 0) {
+                        //invalid
+                        alert(
+                            'The stock you requested for is not available at this time!'
+                        )
+                        return
+                    }
+                    retrievedFullnessInventory['Count'][item] -= 1
+                    transaction.update(
+                        doc(ourFireStore, 'inventory', 'Fullness Hoodie'),
+                        {
+                            ...retrievedFullnessInventory,
+                        }
+                    )
+                } else {
+                    retrievedFullnessInventory['Count'][item] += 1
+                    transaction.update(
+                        doc(ourFireStore, 'inventory', 'Fullness Hoodie'),
+                        {
+                            ...retrievedFullnessInventory,
+                        }
+                    )
+                }
+
+                if (!docSnap.exists()) {
+                    transaction.set(doc(ourFireStore, 'carts', cartID), {
+                        lastUpdated: new Date(Date.now()),
+                        items: {
+                            [item]: newQuantity,
+                        },
+                        paid: false,
+                    })
+                }
+                //updating cart doc with latest inventory
+                else {
+                    const retrievedCart = docSnap.data()
+                    retrievedCart.lastUpdated = new Date(Date.now())
+                    retrievedCart.items[item] = newQuantity
+                    transaction.set(doc(ourFireStore, 'carts', cartID), {
+                        ...retrievedCart,
+                    })
+                }
             })
-        }
-        //updating cart doc with latest inventory
-        else {
-            const retrievedCart = docSnap.data()
-            retrievedCart.lastUpdated = new Date(Date.now())
-            retrievedCart.items[item] = newQuantity
-            await setDoc(doc(ourFireStore, 'carts', cartID), {
-                ...retrievedCart,
-            })
+            console.log('Transaction successfully committed!')
+        } catch (e) {
+            console.log('Transaction failed: ', e)
         }
 
         var quantity = 0
@@ -275,43 +285,90 @@ const NewProduct = () => {
     const restoreAndClear = async () => {
         //First we read the cart and restore inventory
 
-        const cartDocSnap = await getDoc(doc(ourFireStore, 'carts', cartID))
-        if (!cartDocSnap.exists()) {
-            //In this case, the cart does not exist
+        try {
+            await runTransaction(ourFireStore, async (transaction) => {
+                const cartDocSnap = await transaction.get(
+                    doc(ourFireStore, 'carts', cartID)
+                )
+                if (!cartDocSnap.exists()) {
+                    //In this case, the cart does not exist
 
-            return
-        }
-        const InventoryDocSnap = await getDoc(
-            doc(ourFireStore, 'inventory', 'Fullness Hoodie')
-        )
-        if (!InventoryDocSnap.exists()) {
-            console.error('error in retrieving Fullness Hoodie inventory doc')
+                    throw 'Cart doc does not exist'
+                }
+                const InventoryDocSnap = await transaction.get(
+                    doc(ourFireStore, 'inventory', 'Fullness Hoodie')
+                )
+                if (!InventoryDocSnap.exists()) {
+                    console.error(
+                        'error in retrieving Fullness Hoodie inventory doc'
+                    )
+                }
+
+                var inventoryData = InventoryDocSnap.data()
+                var cartData = cartDocSnap.data()
+                //Map through the keys in cartData and restore each field in inventoryDocData
+                for (const [item, stock] of Object.entries(cartData.items)) {
+                    //restore inventory in inventoryDocData
+                    inventoryData['Count'][item] += stock
+                    //Zero out cartData
+                    cartData.items[item] = 0
+                }
+
+                // //Write back inventory data
+                transaction.update(
+                    doc(ourFireStore, 'inventory', 'Fullness Hoodie'),
+                    {
+                        ...inventoryData,
+                    }
+                )
+
+                //Write back cart data
+                transaction.update(doc(ourFireStore, 'carts', cartID), {
+                    ...cartData,
+                })
+            })
+            console.log('Transaction successfully committed!')
+        } catch (e) {
+            console.log('Transaction failed: ', e)
         }
 
-        var inventoryData = InventoryDocSnap.data()
-        var cartData = cartDocSnap.data()
-        //Map through the keys in cartData and restore each field in inventoryDocData
-        for (const [item, stock] of Object.entries(cartData.items)) {
-            //restore inventory in inventoryDocData
-            inventoryData['Count'][item] += stock
-            //Zero out cartData
-            cartData.items[item] = 0
-        }
+        // const cartDocSnap = await getDoc(doc(ourFireStore, 'carts', cartID))
+        // if (!cartDocSnap.exists()) {
+        //     //In this case, the cart does not exist
+
+        //     return
+        // }
+        // const InventoryDocSnap = await getDoc(
+        //     doc(ourFireStore, 'inventory', 'Fullness Hoodie')
+        // )
+        // if (!InventoryDocSnap.exists()) {
+        //     console.error('error in retrieving Fullness Hoodie inventory doc')
+        // }
+
+        // var inventoryData = InventoryDocSnap.data()
+        // var cartData = cartDocSnap.data()
+        // //Map through the keys in cartData and restore each field in inventoryDocData
+        // for (const [item, stock] of Object.entries(cartData.items)) {
+        //     //restore inventory in inventoryDocData
+        //     inventoryData['Count'][item] += stock
+        //     //Zero out cartData
+        //     cartData.items[item] = 0
+        // }
 
         setSmallQuantity(0)
         setMediumQuantity(0)
         setLargeQuantity(0)
         setExtraLargeQuantity(0)
 
-        // //Write back inventory data
-        await updateDoc(doc(ourFireStore, 'inventory', 'Fullness Hoodie'), {
-            ...inventoryData,
-        })
+        // // //Write back inventory data
+        // await updateDoc(doc(ourFireStore, 'inventory', 'Fullness Hoodie'), {
+        //     ...inventoryData,
+        // })
 
-        //Write back cart data
-        await updateDoc(doc(ourFireStore, 'carts', cartID), {
-            ...cartData,
-        })
+        // //Write back cart data
+        // await updateDoc(doc(ourFireStore, 'carts', cartID), {
+        //     ...cartData,
+        // })
     }
 
     const redirectToCheckout = async () => {
