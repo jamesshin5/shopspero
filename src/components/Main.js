@@ -60,7 +60,7 @@ const Main = ({ location }) => {
                             />
                             <Route path="/about" component={AboutPage} />
                             <Route path="/team" component={TeamPage} />
-                            <Route path="/designs" component={DesignsPage} />
+                            <Route path="/shop" component={DesignsPage} />
                             <Route path="/success" component={SuccessPage} />
                             {/* <Route
                                 path="/design/mountainmover"

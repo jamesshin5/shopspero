@@ -90,7 +90,7 @@ const Navbar = (props) => {
                     </Button>
                 </NavLink>
                 <NavLink
-                    to="/designs"
+                    to="/shop"
                     activeStyle={{
                         fontWeight: 'bold',
                         background: '#ebedf0',
@@ -170,7 +170,7 @@ const Navbar = (props) => {
                                         OUR TEAM
                                     </Text>
                                 </NavLink>
-                                <NavLink to="/designs">
+                                <NavLink to="/shop">
                                     <Text fontFamily="Lexend Deca">SHOP</Text>
                                 </NavLink>
                                 {/* <a href="http://tinyurl.com/spero-etsy">

@@ -106,12 +106,12 @@ const FullnessHoodieDesktop = () => {
                 'Your session has expired! Please come back and reselect your items!'
             )
             if (window.location.hostname === 'shopspero.org') {
-                window.location.href = 'https://shopspero.org/designs'
+                window.location.href = 'https://shopspero.org/shop'
             }
 
             //Testing/Local
             else {
-                window.location.href = 'http://localhost:3000/designs'
+                window.location.href = 'http://localhost:3000/shop'
             }
         }
     }, [sessionExpired])
