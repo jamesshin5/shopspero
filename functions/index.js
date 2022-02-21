@@ -41,6 +41,7 @@ exports.events = functions.https.onRequest(async (request, response) => {
                     shippingInfo: dataObject.shipping ?? null,
                     amountTotal: dataObject.amount_captured / 100,
                     clientEmail: dataObject.billing_details.email,
+                    clientName: dataObject.billing_details.name,
                     itemsPurchased: mapOfItemsPurchased,
                     timePurchased: new Date(Date.now()),
                 })
