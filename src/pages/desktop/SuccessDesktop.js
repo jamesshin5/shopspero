@@ -9,13 +9,17 @@ import { ourFireStore } from '../../firebaseApp'
 import { updateDoc, doc } from '@firebase/firestore'
 
 const SuccessDesktop = (props) => {
-    useEffect(async () => {
-        var urlString = window.location.href
-        var url = new URL(urlString)
-        var cartID = url.searchParams.get('cartid')
-        await updateDoc(doc(ourFireStore, 'carts', cartID), {
-            paid: true,
-        })
+    useEffect(() => {
+        ;(async () => {
+            var urlString = window.location.href
+            var url = new URL(urlString)
+            var cartID = url.searchParams.get('cartid')
+            if (cartID) {
+                await updateDoc(doc(ourFireStore, 'carts', cartID), {
+                    paid: true,
+                })
+            }
+        })()
     }, [])
     return (
         <div className="background-main">
@@ -28,18 +32,19 @@ const SuccessDesktop = (props) => {
                         fontSize={{ base: '40px', sm: '50px', md: '60px' }}
                         transition="font-size 0.5s"
                         align="center"
-                        color="#006400"
+                        color="#5c6a6f"
                     >
                         PURCHASE SUCCESSFUL
                     </Text>
                     <Text
                         marginTop="4%"
                         fontFamily="Lexend Deca"
-                        fontSize={{ base: '15px', sm: '20px', md: '30px' }}
+                        fontSize={{ base: '10px', sm: '15px', md: '20px' }}
                         transition="font-size 0.5s"
                         align="center"
                     >
-                        Thank you for shopping at SPERO!
+                        Thank you for shopping at SPERO! Look out for a
+                        confirmation email for your order.
                     </Text>
                 </Fade>
             </Box>

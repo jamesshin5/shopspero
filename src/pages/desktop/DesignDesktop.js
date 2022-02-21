@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Footer from '../../components/Footer'
-import Popup from '../../components/DesignPopup.js';
+import Popup from '../../components/DesignPopup.js'
 import '../../styles/desktop/DesignDesktop.css'
 import Product from '../../components/Product'
 
-import NewProduct from './designs/NewProduct';
+import NewProduct from './designs/NewProduct'
 import WalkOnWaterDesktop from './designs/WalkOnWaterDesktop.js'
 import MountainMoverDesktop from './designs/MountainMoverDesktop.js'
 import SperoBearDesktop from './designs/SperoBearDesktop.js'
@@ -24,25 +24,20 @@ import Navbar from '../../components/NavBar'
 import Fade from 'react-reveal/Fade'
 import Database from '../../components/Database'
 
-import {
-    Grid,
-    VStack,
-    Text,
-    Box,
-} from '@chakra-ui/react'
+import { Grid, VStack, Text, Box } from '@chakra-ui/react'
 // import { ChevronDownIcon } from '@chakra-ui/icons'
 import { useLocation } from 'react-router-dom'
 
-import { productPreviewData } from './productPreviewData'
+import { productPreviewData, newReleaseData } from './productPreviewData'
 
 const DesignsDesktop = (props) => {
     let passedProps = useLocation()
     let data = passedProps.state
 
     const [designIndex, setIndex] = useState(10)
-    const [isOpen, setIsOpen] = useState(false);
-    const popupRef = useRef();
-    let popupElement = useRef();
+    const [isOpen, setIsOpen] = useState(false)
+    const popupRef = useRef()
+    let popupElement = useRef()
 
     // const designs = [
     //     'BERKELEY HOODIE',
@@ -63,7 +58,6 @@ const DesignsDesktop = (props) => {
             console.log(popupRef.current)
             alert('Clicked outside of popup to close it')
         }
-        
     }
 
     useEffect(() => {
@@ -129,45 +123,66 @@ const DesignsDesktop = (props) => {
         }
     }
 
-
     const togglePopup = (param) => {
-        setIsOpen(!isOpen);
+        setIsOpen(!isOpen)
         window.value = param
     }
 
-    const productTiles = productPreviewData.map(product => {
-        return ( 
-            <div className="design-desktop-product" onClick={() =>togglePopup(product.index)} >
+    const productTiles = productPreviewData.map((product) => {
+        return (
+            <div
+                className="design-desktop-product"
+                onClick={() => togglePopup(product.index)}
+            >
                 <Product
                     name={product.name}
                     title={product.title}
                     imageURL={product.image}
                     price={product.price}
-                    index = {product.index}
+                    index={product.index}
+                />
+            </div>
+        )
+    })
+
+    const newReleaseTiles = newReleaseData.map((product) => {
+        return (
+            <div
+                className="design-desktop-product"
+                onClick={() => togglePopup(product.index)}
+            >
+                <Product
+                    name={product.name}
+                    title={product.title}
+                    imageURL={product.image}
+                    price={product.price}
+                    index={product.index}
                 />
             </div>
         )
     })
 
     return (
-        <div className="background-main"
-        >
-            <Box w="100%" h="100%"
-            onClick={(event)=> {
-                if(isOpen && popupRef.current == event.target) {
-                    togglePopup();
-                }
-            }}>
+        <div className="background-main">
+            <Box
+                w="100%"
+                h="100%"
+                onClick={(event) => {
+                    if (isOpen && popupRef.current == event.target) {
+                        togglePopup()
+                    }
+                }}
+            >
                 <Navbar />
                 <Database />
-                <div className='design-desktop-popup'>
-                    {isOpen && <Popup 
-                        content={<>
-                            {renderSwitch(window.value)}
-                        </>}
-                        handleClose={togglePopup}
-                        reference = {popupRef}
-                    />}
+                <div className="design-desktop-popup">
+                    {isOpen && (
+                        <Popup
+                            content={<>{renderSwitch(window.value)}</>}
+                            handleClose={togglePopup}
+                            reference={popupRef}
+                        />
+                    )}
                 </div>
                 <VStack
                     textAlign="center"
@@ -175,8 +190,30 @@ const DesignsDesktop = (props) => {
                     color="#5c6a6f"
                     pt="25px"
                     alignItems="start"
-                    
                 >
+                    <Fade bottom>
+                        <Text
+                            fontFamily="Lexend Deca"
+                            fontSize={{ base: '4xl', sm: '6xl' }}
+                            border="none"
+                            borderBottom="3px solid #5c6a6f"
+                            marginBottom="5%"
+                        >
+                            NEW RELEASES
+                        </Text>
+                    </Fade>
+                    <Grid
+                        py={10}
+                        templateColumns={{
+                            base: 'repeat(1, 4fr)',
+                            sm: 'repeat(2,4fr)',
+                            md: 'repeat(3, 4fr)',
+                            lg: 'repeat(4,4fr)',
+                        }}
+                        gap={1}
+                    >
+                        {newReleaseTiles}
+                    </Grid>
                     <Fade bottom>
                         <Text
                             fontFamily="Lexend Deca"
@@ -188,18 +225,18 @@ const DesignsDesktop = (props) => {
                             DESIGNS
                         </Text>
                     </Fade>
-                        <Grid
-                            py={10}
-                            templateColumns={{
-                                base: 'repeat(1, 4fr)',
-                                sm: 'repeat(2,4fr)',
-                                md: 'repeat(3, 4fr)',
-                                lg: 'repeat(4,4fr)',
-                            }}
-                            gap={1}
-                        >
-                            {productTiles}
-                        </Grid>
+                    <Grid
+                        py={10}
+                        templateColumns={{
+                            base: 'repeat(1, 4fr)',
+                            sm: 'repeat(2,4fr)',
+                            md: 'repeat(3, 4fr)',
+                            lg: 'repeat(4,4fr)',
+                        }}
+                        gap={1}
+                    >
+                        {productTiles}
+                    </Grid>
                 </VStack>
                 <Footer />
             </Box>

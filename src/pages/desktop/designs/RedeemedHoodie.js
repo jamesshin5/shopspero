@@ -111,19 +111,6 @@ const RedeemedHoodie = () => {
                                 <b>REDEEMED</b> <br />
                                 HOODIE
                             </Text>
-                            <Box
-                                bgColor="#5c6a6f"
-                                px={{ base: '4px', sm: '7px' }}
-                                py={{ base: '2px', sm: '5px' }}
-                            >
-                                <Text
-                                    fontFamily="Lexend Deca"
-                                    fontSize={{ base: '7px', sm: '10px' }}
-                                    color="white"
-                                >
-                                    NEW RELEASE!
-                                </Text>
-                            </Box>
                         </HStack>
                     </Fade>
                     <Fade bottom>
@@ -227,7 +214,7 @@ const RedeemedHoodie = () => {
                             </Box>
                         </Fade>
                     </a>
-                    <Box h={{base: "30px", sm: "0px"}}></Box>
+                    <Box h={{ base: '30px', sm: '0px' }}></Box>
                 </VStack>
             </VStack>
         </Stack>
