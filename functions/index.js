@@ -18,35 +18,19 @@ exports.events = functions.https.onRequest(async (request, response) => {
             sig,
             endpointSecret
         )
+
         if (event.type == 'charge.succeeded') {
             const dataObject = event.data.object
-            // const regexForItemsPurchased =
-            //     /[0-9]x (\w)+ (\w)+ \([A-Z]+\) \((\w)+\)/gm
-            // const itemsPurchased = dataObject.description.match(
-            //     regexForItemsPurchased
-            // )
-            // var mapOfItemsPurchased = {}
-            // for (var item of itemsPurchased) {
-            //     item = item.toString().split('x ')
-            //     mapOfItemsPurchased[item[1]] = parseInt(item[0])
-            // }
-
-            // await admin
-            //     .firestore()
-            //     .collection('inventory')
-            //     .doc('Fullness Hoodie')
-            //     .get()
-            //     .then(async (doc) => {
-            //         if (!doc.exists) {
-            //             throw 'Document does not exist'
-            //         }
-            //         var newCountsMap = doc.data().Count
-            //         for (var key of Object.keys(mapOfItemsPurchased)) {
-            //             newCountsMap[key] =
-            //                 newCountsMap[key] - mapOfItemsPurchased[key]
-            //         }
-            //         await doc.ref.update({ Count: newCountsMap })
-            //     })
+            const regexForItemsPurchased =
+                /[0-9]x (\w)+ (\w)+ \([A-Z]+\) \((\w)+\)/gm
+            const itemsPurchased = dataObject.description.match(
+                regexForItemsPurchased
+            )
+            var mapOfItemsPurchased = {}
+            for (var item of itemsPurchased) {
+                item = item.toString().split('x ')
+                mapOfItemsPurchased[item[1]] = parseInt(item[0])
+            }
 
             await admin
                 .firestore()
