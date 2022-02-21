@@ -14,7 +14,7 @@ import {
 import '../../../styles/desktop/FallStickerPage.css'
 import Fade from 'react-reveal/Fade'
 import { ourFireStore } from '../../../firebaseApp'
-import { doc, getDoc, runTransaction } from 'firebase/firestore'
+import { doc, getDoc, runTransaction, query, collection, documentId, where, onSnapshot } from 'firebase/firestore'
 import { v4 as uuidv4 } from 'uuid'
 
 let stripePromise
@@ -44,7 +44,8 @@ const FullnessHoodieDesktop = () => {
     const [largeQuantityMax, setLargeQuantityMax] = useState({})
     const [xlQuantityMax, setXlQuantityMax] = useState({})
     const [cartID, setCartID] = useState(uuidv4())
-
+    const [sessionExpired, setSessionExpired] = useState(false);
+    const [sessionExpiredOnce, setSessionExpiredOnce] = useState(false);
     var retrievedInventory
 
     const ProductNameMap = {
@@ -189,6 +190,43 @@ const FullnessHoodieDesktop = () => {
         extraLargeQuantity,
         productColor,
     ])
+
+    useEffect(()=> {
+        if (sessionExpired) {
+            alert("Your session has expired! Please come back and reselect your items!");
+            window.location.href = "http://localhost:3000/designs";
+        }
+    }, [sessionExpired])
+
+
+
+    const q = query(collection(ourFireStore, "carts"), where(documentId(), "==", cartID));
+    
+    const subToCartExpiry = onSnapshot(q, (snapshot) => {
+        
+        if (snapshot && snapshot.docChanges()) {
+            
+            snapshot.docChanges().forEach((change) => {
+                
+                if (change.type === "removed") {
+                    // console.log("Removed city: ", change.doc.data());
+                    if(sessionExpiredOnce) {
+                        //Don't alert user again
+                        setSessionExpiredOnce(false);
+                    }
+                    else {
+                       setSessionExpired(true);
+                       setSessionExpiredOnce(true); 
+                    }
+                    
+                }
+              });
+        }
+        //Only want to do something when the doc is nonexistent and it has been more than five minutes
+        
+        
+    });
+
 
     const onShippingBoxChange = () => {
         //Need to update total cost
