@@ -41,9 +41,10 @@ const Navbar = (props) => {
                 display={{ base: 'none', md: 'flex' }}
                 justifyContent="space-between"
             >
-                <NavLink to="/about" 
+                <NavLink
+                    to="/about"
                     activeStyle={{
-                        fontWeight: "bold",
+                        fontWeight: 'bold',
                         background: '#ebedf0',
                     }}
                 >
@@ -64,9 +65,10 @@ const Navbar = (props) => {
                         </Text>
                     </Button>
                 </NavLink>
-                <NavLink to="/team"
+                <NavLink
+                    to="/team"
                     activeStyle={{
-                        fontWeight: "bold",
+                        fontWeight: 'bold',
                         background: '#ebedf0',
                     }}
                 >
@@ -87,30 +89,13 @@ const Navbar = (props) => {
                         </Text>
                     </Button>
                 </NavLink>
-                <NavLink to="/designs" 
+                <NavLink
+                    to="/designs"
                     activeStyle={{
-                        fontWeight: "bold",
+                        fontWeight: 'bold',
                         background: '#ebedf0',
                     }}
                 >
-                    <Button
-                        background="transparent"
-                        _hover={{ bg: '#ebedf0' }}
-                        _focus={{ boxShadow: 'none' }}
-                        borderRadius="0"
-                    >
-                        <Text
-                            fontFamily="Lexend Deca"
-                            color="#5c6a6f"
-                            letterSpacing="2px"
-                            fontSize="sm"
-                            fontWeight="500"
-                        >
-                            DESIGNS
-                        </Text>
-                    </Button>
-                </NavLink>
-                <a href="http://tinyurl.com/spero-etsy">
                     <Button
                         background="transparent"
                         _hover={{ bg: '#ebedf0' }}
@@ -127,7 +112,25 @@ const Navbar = (props) => {
                             SHOP
                         </Text>
                     </Button>
-                </a>
+                </NavLink>
+                {/* <a href="http://tinyurl.com/spero-etsy">
+                    <Button
+                        background="transparent"
+                        _hover={{ bg: '#ebedf0' }}
+                        _focus={{ boxShadow: 'none' }}
+                        borderRadius="0"
+                    >
+                        <Text
+                            fontFamily="Lexend Deca"
+                            color="#5c6a6f"
+                            letterSpacing="2px"
+                            fontSize="sm"
+                            fontWeight="600"
+                        >
+                            SHOP
+                        </Text>
+                    </Button>
+                </a> */}
             </Box>
             <Button
                 ref={btnRef}
