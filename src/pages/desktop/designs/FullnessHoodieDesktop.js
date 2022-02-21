@@ -709,7 +709,7 @@ const FullnessHoodieDesktop = () => {
                             px="35px"
                             alignItems="center"
                             mt="10px"
-                            disabled={isLoading}
+                            disabled={totalCost == 0 || isLoading}
                         >
                             <Text
                                 fontFamily="Lexend Deca"
