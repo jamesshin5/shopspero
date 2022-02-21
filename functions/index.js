@@ -16,7 +16,7 @@ exports.events = functions.https.onRequest(async (request, response) => {
         const event = stripe.webhooks.constructEvent(
             request.rawBody,
             sig,
-            'whsec_jMXpBOXYFOdNp47vOoXQHL8El3jhrFrx'
+            endpointSecret
         )
         if (event.type == 'charge.succeeded') {
             const dataObject = event.data.object
