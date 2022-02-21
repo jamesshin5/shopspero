@@ -55,21 +55,21 @@ const FullnessHoodieDesktop = () => {
     const [sessionExpiredOnce, setSessionExpiredOnce] = useState(false)
 
     const ProductNameMap = {
-        'Fullness Hoodie (S) (Sand)': 'price_1KM3s4IcIcxBrzywDvLChE1t',
-        'Fullness Hoodie (S) (Blue)': 'price_1KMlSBIcIcxBrzyw0JsMryaV',
-        'Fullness Hoodie (M) (Sand)': 'price_1KMNPnIcIcxBrzywd3I6ISCx',
-        'Fullness Hoodie (M) (Blue)': 'price_1KMlSdIcIcxBrzywpeZnJo2j',
-        'Fullness Hoodie (L) (Blue)': 'price_1KMlSwIcIcxBrzywcUpKstSL',
-        'Fullness Hoodie (2XL) (Sand)': 'price_1KVU9FIcIcxBrzywXUq6WHxN',
+        'Fullness Hoodie (S) (Sand)': 'price_1KVVNWIcIcxBrzywXJXs6To9',
+        'Fullness Hoodie (S) (Blue)': 'price_1KVVO9IcIcxBrzywl8epK8xJ',
+        'Fullness Hoodie (M) (Sand)': 'price_1KVVJmIcIcxBrzyw9UFCa0Co',
+        'Fullness Hoodie (M) (Blue)': 'price_1KVVOYIcIcxBrzywhWv6SMyG',
+        'Fullness Hoodie (L) (Blue)': 'price_1KVVOrIcIcxBrzywwh1jA8MU',
+        'Fullness Hoodie (2XL) (Sand)': 'price_1KVVJ1IcIcxBrzyw0exurgSB',
     }
 
     const ProductNameMapShipping = {
-        'Fullness Hoodie (S) (Sand)': 'price_1KMNPCIcIcxBrzywtoTRVMGQ',
-        'Fullness Hoodie (S) (Blue)': 'price_1KMlSBIcIcxBrzywR9ZtStxm',
-        'Fullness Hoodie (M) (Sand)': 'price_1KMNPnIcIcxBrzywzbh4oTV7',
-        'Fullness Hoodie (M) (Blue)': 'price_1KMlSdIcIcxBrzywizVxxOXh',
-        'Fullness Hoodie (L) (Blue)': 'price_1KMlSwIcIcxBrzywmgQNJpqL',
-        'Fullness Hoodie (2XL) (Sand)': 'price_1KVU9FIcIcxBrzyweIppypYV',
+        'Fullness Hoodie (S) (Sand)': 'price_1KVVNWIcIcxBrzywOeX5DtQ6',
+        'Fullness Hoodie (S) (Blue)': 'price_1KVVO9IcIcxBrzywH663Jh9W',
+        'Fullness Hoodie (M) (Sand)': 'price_1KVVJmIcIcxBrzywasHTknLd',
+        'Fullness Hoodie (M) (Blue)': 'price_1KVVOYIcIcxBrzywyCsmLOEe',
+        'Fullness Hoodie (L) (Blue)': 'price_1KVVOrIcIcxBrzyw1Zplqnli',
+        'Fullness Hoodie (2XL) (Sand)': 'price_1KVVJ1IcIcxBrzyw0vURXasK',
     }
 
     var checkoutOptions = {
