@@ -2,7 +2,7 @@ export const SliderData = [
     {
         image: require('../images/sliderimage1.jpg'),
         description: 'NEW ARRIVALS',
-        link: '/designs',
+        link: '/shop',
     },
     {
         image: require('../images/sliderimage2.jpg'),
@@ -12,7 +12,7 @@ export const SliderData = [
     {
         image: require('../images/sliderimage3.jpg'),
         description: 'SHOP NOW',
-        link: '/designs',
+        link: '/shop',
     },
     {
         image: require('../images/sliderimage4.jpg'),
