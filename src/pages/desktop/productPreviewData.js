@@ -3,7 +3,7 @@ export const productPreviewData = [
         name: 'REDEEMED',
         title: 'HOODIE',
         image: require('../../images/design-photos/redeemed-left.jpg'),
-        price: '$35',
+        price: '$36',
         index: 10,
     },
     {
