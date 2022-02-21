@@ -10,6 +10,7 @@ import HomePage from '../pages/desktop/HomeDesktop'
 import AboutPage from '../pages/desktop/AboutDesktop'
 import TeamPage from '../pages/desktop/TeamDesktop'
 import DesignsPage from '../pages/desktop/DesignDesktop'
+import SuccessPage from '../pages/desktop/SuccessDesktop'
 // import ShopPage from '../pages/ShopPage';
 // import PartnershipsPage from '../pages/PartnershipsPage';
 // import { useMediaQuery } from 'react-responsive'
@@ -60,6 +61,7 @@ const Main = ({ location }) => {
                             <Route path="/about" component={AboutPage} />
                             <Route path="/team" component={TeamPage} />
                             <Route path="/designs" component={DesignsPage} />
+                            <Route path="/success" component={SuccessPage} />
                             {/* <Route
                                 path="/design/mountainmover"
                                 component={MountainMoverPage}

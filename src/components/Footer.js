@@ -8,30 +8,37 @@ const Footer = (props) => {
         <React.Fragment>
             {/* <div className="footer-container"> */}
             <Image
-                    src={require('../images/paintFooter.png')}
-                    w="100%"
-                    h="200px"
-                    pos="relative"
-                        />
+                src={require('../images/paintFooter.png')}
+                w="100%"
+                h="200px"
+                pos="relative"
+            />
             {/* <Fade bottom="30"> */}
-                {/* <div className="footer-blurb">“Are not two sparrows sold for a penny? Yet not one of them 
+            {/* <div className="footer-blurb">“Are not two sparrows sold for a penny? Yet not one of them 
                     will fall to the ground outside your Father’s care. And even the 
                     very hairs of your head are all numbered.. So don’t be afraid; 
                     you are worth more than many sparrows.” - Matthew 10:29-31</div> */}
-                <Box w={{base: "75%", sm: "50%", md: "35%", lg: "25%"}} pos="absolute" bottom = "8" left="10" transition="width 0.25s">
-                    <Text
-                        fontFamily="Tenor Sans"
-                        color="#5D6B6F"
-                        letterSpacing="1px"
-                        fontSize="10px"
-                        fontWeight="100"
-                        >
-                        “Are not two sparrows sold for a penny? Yet not one of them 
-                        will fall to the ground outside your Father’s care. And even the 
-                        very hairs of your head are all numbered.. So don’t be afraid; 
-                        you are worth more than many sparrows.” - Matthew 10:29-31
-                        </Text>
-                    {/* <Text
+            <Box
+                w={{ base: '75%', sm: '50%', md: '35%', lg: '25%' }}
+                pos="absolute"
+                bottom="8"
+                left="10"
+                transition="width 0.25s"
+            >
+                <Text
+                    fontFamily="Tenor Sans"
+                    color="#5D6B6F"
+                    letterSpacing="1px"
+                    fontSize="10px"
+                    fontWeight="100"
+                >
+                    “Are not two sparrows sold for a penny? Yet not one of them
+                    will fall to the ground outside your Father’s care. And even
+                    the very hairs of your head are all numbered.. So don’t be
+                    afraid; you are worth more than many sparrows.” - Matthew
+                    10:29-31
+                </Text>
+                {/* <Text
                         fontFamily="Tenor Sans"
                         color="white"
                         letterSpacing="1px"
@@ -40,10 +47,10 @@ const Footer = (props) => {
                         >
                         Based in Berkeley
                         </Text> */}
-                </Box>
+            </Box>
             {/* </Fade>         */}
             <HStack
-                display={{base: 'none', sm: "flex"}}
+                display={{ base: 'none', sm: 'flex' }}
                 position="absolute" /*fixed*/
                 bottom="10"
                 right="10"
@@ -52,18 +59,26 @@ const Footer = (props) => {
                 zIndex="1000"
                 // bgColor="gray.500"
             >
-                <Fade bottom> 
-                    <Box w="30px" _hover={{ w: '34px' }} transition="width 0.25s">
+                <Fade bottom>
+                    <Box
+                        w="30px"
+                        _hover={{ w: '34px' }}
+                        transition="width 0.25s"
+                    >
                         <a href="https://www.facebook.com/shopspero/">
                             <Image
                                 src={require('../images/fb_white_icon.png')}
-                                alt="facebook-icon"  //BOX PREVIOUSLY 23px and 27px for hover
+                                alt="facebook-icon" //BOX PREVIOUSLY 23px and 27px for hover
                             />
                         </a>
                     </Box>
                 </Fade>
                 <Fade bottom>
-                    <Box w="30px" _hover={{ w: '34px' }} transition="width 0.25s">
+                    <Box
+                        w="30px"
+                        _hover={{ w: '34px' }}
+                        transition="width 0.25s"
+                    >
                         <a href="https://www.instagram.com/shopspero/">
                             <Image
                                 src={require('../images/instagram_white_icon.png')}
@@ -73,7 +88,11 @@ const Footer = (props) => {
                     </Box>
                 </Fade>
                 <Fade bottom>
-                    <Box w="30px" _hover={{ w: '34px' }} transition="width 0.25s">
+                    <Box
+                        w="30px"
+                        _hover={{ w: '34px' }}
+                        transition="width 0.25s"
+                    >
                         <a href="https://shopspero.medium.com/">
                             <Image
                                 src={require('../images/medium_white_icon.png')}

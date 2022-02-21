@@ -1,3 +1,4 @@
+import '@stripe/stripe-js'
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 // import { HashRouter as Router } from 'react-router-dom'
@@ -5,8 +6,7 @@ import Main from './components/Main'
 import './App.css'
 import PuffLoader from 'react-spinners/PuffLoader'
 import { ourFireStore } from './firebaseApp'
-import { collection, getDocs, addDoc } from "firebase/firestore"; 
-
+import { collection, getDocs, addDoc } from 'firebase/firestore'
 
 import picture1 from './images/staff/andrewcheng-min.jpg'
 import picture2 from './images/staff/dorcascheung-min.jpg'
@@ -65,25 +65,35 @@ import picture47 from './images/design-photos/hope-iris.jpg'
 
 import picture48 from './images/paintFooter.png'
 
+import picture49 from './images/sliderimage1.jpg'
+import picture50 from './images/sliderimage2.jpg'
+import picture51 from './images/sliderimage3.jpg'
+import picture52 from './images/sliderimage4.jpg'
+import picture53 from './images/sliderimage5.jpg'
+require('dotenv').config()
+
 const fetchUser = async () => {
-    const docRef = await getDocs(collection(ourFireStore, 'User'));
-    const docAddRef = await addDoc(collection(ourFireStore, "User"), {
-        first: "Alan",
-        middle: "Mathison",
-        last: "Turing",
-        born: 1912
-      });
-    docRef.forEach(doc => console.log(doc.data()))
-    return docRef;
+    const docRef = await getDocs(collection(ourFireStore, 'User'))
+    // const docAddRef = await addDoc(collection(ourFireStore, 'User'), {
+    //     first: 'Alan',
+    //     middle: 'Mathison',
+    //     last: 'Turing',
+    //     born: 1912,
+    // })
+    docRef.forEach((doc) => console.log(doc.data()))
+    return docRef
 }
 
 function App() {
     const [isLoading, setIsLoading] = useState(true)
+    useEffect(() => {
+        // const fetchedDoc = fetchUser()
+        // console.log('fetchedDoc', fetchedDoc)
+    }, [])
 
     useEffect(() => {
         //Adding testing here
-        const fetchedDoc = fetchUser();
-        console.log('fetchedDoc', fetchedDoc);
+
         const imgs = [
             picture1,
             picture2,
@@ -138,7 +148,12 @@ function App() {
             picture46,
             picture47,
 
-            picture48
+            picture48,
+            picture49,
+            picture50,
+            picture51,
+            picture52,
+            picture53,
         ]
         //setting src property forces browser to load images
         imgs.forEach((image) => {
@@ -147,7 +162,7 @@ function App() {
         if (isLoading === true) {
             setIsLoading(false)
         }
-    }, [])
+    }, [isLoading])
 
     return (
         <div>
