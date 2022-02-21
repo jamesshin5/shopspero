@@ -171,13 +171,11 @@ const Navbar = (props) => {
                                     </Text>
                                 </NavLink>
                                 <NavLink to="/designs">
-                                    <Text fontFamily="Lexend Deca">
-                                        DESIGNS
-                                    </Text>
-                                </NavLink>
-                                <a href="http://tinyurl.com/spero-etsy">
                                     <Text fontFamily="Lexend Deca">SHOP</Text>
-                                </a>
+                                </NavLink>
+                                {/* <a href="http://tinyurl.com/spero-etsy">
+                                    <Text fontFamily="Lexend Deca">SHOP</Text>
+                                </a> */}
                             </VStack>
                         </DrawerBody>
 
