@@ -14,7 +14,16 @@ import {
 import '../../../styles/desktop/FallStickerPage.css'
 import Fade from 'react-reveal/Fade'
 import { ourFireStore } from '../../../firebaseApp'
-import { doc, getDoc, runTransaction, query, collection, documentId, where, onSnapshot } from 'firebase/firestore'
+import {
+    doc,
+    getDoc,
+    runTransaction,
+    query,
+    collection,
+    documentId,
+    where,
+    onSnapshot,
+} from 'firebase/firestore'
 import { v4 as uuidv4 } from 'uuid'
 
 let stripePromise
@@ -34,7 +43,6 @@ const FullnessHoodieDesktop = () => {
     const [smallQuantity, setSmallQuantity] = useState(0)
     const [mediumQuantity, setMediumQuantity] = useState(0)
     const [largeQuantity, setLargeQuantity] = useState(0)
-    const [extraLargeQuantity, setExtraLargeQuantity] = useState(0)
 
     const [productColor, setProductColor] = useState('Sand')
     const [isLoading, setLoading] = useState(false)
@@ -42,22 +50,17 @@ const FullnessHoodieDesktop = () => {
     const [smallQuantityMax, setSmallQuantityMax] = useState({})
     const [mediumQuantityMax, setMediumQuantityMax] = useState({})
     const [largeQuantityMax, setLargeQuantityMax] = useState({})
-    const [xlQuantityMax, setXlQuantityMax] = useState({})
     const [cartID, setCartID] = useState(uuidv4())
-    const [sessionExpired, setSessionExpired] = useState(false);
-    const [sessionExpiredOnce, setSessionExpiredOnce] = useState(false);
-    var retrievedInventory
+    const [sessionExpired, setSessionExpired] = useState(false)
+    const [sessionExpiredOnce, setSessionExpiredOnce] = useState(false)
 
     const ProductNameMap = {
         'Fullness Hoodie (S) (Sand)': 'price_1KM3s4IcIcxBrzywDvLChE1t',
         'Fullness Hoodie (S) (Blue)': 'price_1KMlSBIcIcxBrzyw0JsMryaV',
         'Fullness Hoodie (M) (Sand)': 'price_1KMNPnIcIcxBrzywd3I6ISCx',
         'Fullness Hoodie (M) (Blue)': 'price_1KMlSdIcIcxBrzywpeZnJo2j',
-        // 'Fullness Hoodie (L) (Sand)': 'price_1KMP5qIcIcxBrzywrNv3jdUb',
         'Fullness Hoodie (L) (Blue)': 'price_1KMlSwIcIcxBrzywcUpKstSL',
         'Fullness Hoodie (2XL) (Sand)': 'price_1KVU9FIcIcxBrzywXUq6WHxN',
-        // 'Fullness Hoodie (XL) (Sand)': 'price_1KMlClIcIcxBrzyw6DlBQxhk',
-        // 'Fullness Hoodie (XL) (Blue)': 'price_1KMlTHIcIcxBrzywaUD1Qilj',
     }
 
     const ProductNameMapShipping = {
@@ -65,98 +68,8 @@ const FullnessHoodieDesktop = () => {
         'Fullness Hoodie (S) (Blue)': 'price_1KMlSBIcIcxBrzywR9ZtStxm',
         'Fullness Hoodie (M) (Sand)': 'price_1KMNPnIcIcxBrzywzbh4oTV7',
         'Fullness Hoodie (M) (Blue)': 'price_1KMlSdIcIcxBrzywizVxxOXh',
-        // 'Fullness Hoodie (L) (Sand)': 'price_1KMP5qIcIcxBrzywV1Q7MRqs',
         'Fullness Hoodie (L) (Blue)': 'price_1KMlSwIcIcxBrzywmgQNJpqL',
         'Fullness Hoodie (2XL) (Sand)': 'price_1KVU9FIcIcxBrzyweIppypYV',
-        // 'Fullness Hoodie (XL) (Sand)': 'price_1KMlClIcIcxBrzywSv0x4Kf8',
-        // 'Fullness Hoodie (XL) (Blue)': 'price_1KMlTHIcIcxBrzywqawKdOFo',
-    }
-
-    // cannot use async function in use effect by itself, make it a named function
-
-    // useEffect(async () => {
-    //     // Retrieve the inventory
-    //     const docSnap = await getDoc(
-    //         doc(ourFireStore, 'inventory', 'Fullness Hoodie')
-    //     )
-    //     if (!docSnap.exists()) {
-    //         console.log('Error: Document does not exist')
-    //     }
-    //     retrievedInventory = docSnap.data()['Count']
-    //     console.log('inventory', retrievedInventory)
-
-    //     setSmallQuantityMax({
-    //         sand: retrievedInventory['Fullness Hoodie (S) (Sand)'],
-    //         blue: retrievedInventory['Fullness Hoodie (S) (Blue)'],
-    //     })
-    //     setMediumQuantityMax({
-    //         sand: retrievedInventory['Fullness Hoodie (M) (Sand)'],
-    //         blue: retrievedInventory['Fullness Hoodie (M) (Blue)'],
-    //     })
-    //     setLargeQuantityMax({
-    //         sand: retrievedInventory['Fullness Hoodie (L) (Sand)'],
-    //         blue: retrievedInventory['Fullness Hoodie (L) (Blue)'],
-    //     })
-    //     setXlQuantityMax({
-    //         sand: retrievedInventory['Fullness Hoodie (XL) (Sand)'],
-    //         blue: retrievedInventory['Fullness Hoodie (XL) (Blue)'],
-    //     })
-    // }, [])
-
-    var ProductSM = {
-        price: {
-            Sand: [
-                'price_1KM3s4IcIcxBrzywDvLChE1t',
-                'price_1KMNPCIcIcxBrzywtoTRVMGQ',
-            ],
-            Blue: [
-                'price_1KMlSBIcIcxBrzyw0JsMryaV',
-                'price_1KMlSBIcIcxBrzywR9ZtStxm',
-            ],
-        },
-        quantity: smallQuantity,
-    }
-
-    var ProductMD = {
-        price: {
-            Sand: [
-                'price_1KMNPnIcIcxBrzywd3I6ISCx',
-                'price_1KMNPnIcIcxBrzywzbh4oTV7',
-            ],
-            Blue: [
-                'price_1KMlSdIcIcxBrzywpeZnJo2j',
-                'price_1KMlSdIcIcxBrzywizVxxOXh',
-            ],
-        },
-        quantity: mediumQuantity,
-    }
-
-    var ProductLG = {
-        price: {
-            Sand: [
-                'price_1KMP5qIcIcxBrzywrNv3jdUb',
-                'price_1KMP5qIcIcxBrzywV1Q7MRqs',
-            ],
-            Blue: [
-                'price_1KMlSwIcIcxBrzywcUpKstSL',
-                'price_1KMlSwIcIcxBrzywmgQNJpqL',
-            ],
-        },
-        quantity: largeQuantity,
-    }
-
-    var ProductXL = {
-        price: {
-            Sand: [
-                'price_1KMlClIcIcxBrzyw6DlBQxhk',
-                'price_1KMlClIcIcxBrzywSv0x4Kf8',
-            ],
-            Blue: [
-                'price_1KMlTHIcIcxBrzywaUD1Qilj',
-                'price_1KMlTHIcIcxBrzywqawKdOFo',
-            ],
-        },
-        quantity: extraLargeQuantity,
     }
 
     var checkoutOptions = {
@@ -166,15 +79,12 @@ const FullnessHoodieDesktop = () => {
         cancelUrl: window.location.href + '/cancel',
     }
 
-    const products = [ProductSM, ProductMD, ProductLG, ProductXL]
-
     //Add additional parameters => int size, int newQuantity
     //Based on size, set the corresponding object's quantity attribute to newQuantity
     //Recalculate stateful value of total cost + check if the box is checked
     // const calculateTotalCost = (size, newQuantity)
     useEffect(() => {
-        let totalQuantity =
-            smallQuantity + mediumQuantity + largeQuantity + extraLargeQuantity
+        let totalQuantity = smallQuantity + mediumQuantity + largeQuantity
         //If box is checked, add extra costs
         if (shippingChecked) {
             setTotalCost(39 * totalQuantity)
@@ -187,46 +97,40 @@ const FullnessHoodieDesktop = () => {
         mediumQuantity,
         largeQuantity,
         stripeError,
-        extraLargeQuantity,
         productColor,
     ])
 
-    useEffect(()=> {
+    useEffect(() => {
         if (sessionExpired) {
-            alert("Your session has expired! Please come back and reselect your items!");
-            window.location.href = "http://localhost:3000/designs";
+            alert(
+                'Your session has expired! Please come back and reselect your items!'
+            )
+            window.location.href = 'http://localhost:3000/designs'
         }
     }, [sessionExpired])
 
+    const q = query(
+        collection(ourFireStore, 'carts'),
+        where(documentId(), '==', cartID)
+    )
 
-
-    const q = query(collection(ourFireStore, "carts"), where(documentId(), "==", cartID));
-    
     const subToCartExpiry = onSnapshot(q, (snapshot) => {
-        
         if (snapshot && snapshot.docChanges()) {
-            
             snapshot.docChanges().forEach((change) => {
-                
-                if (change.type === "removed") {
+                if (change.type === 'removed') {
                     // console.log("Removed city: ", change.doc.data());
-                    if(sessionExpiredOnce) {
+                    if (sessionExpiredOnce) {
                         //Don't alert user again
-                        setSessionExpiredOnce(false);
+                        setSessionExpiredOnce(false)
+                    } else {
+                        setSessionExpired(true)
+                        setSessionExpiredOnce(true)
                     }
-                    else {
-                       setSessionExpired(true);
-                       setSessionExpiredOnce(true); 
-                    }
-                    
                 }
-              });
+            })
         }
         //Only want to do something when the doc is nonexistent and it has been more than five minutes
-        
-        
-    });
-
+    })
 
     const onShippingBoxChange = () => {
         //Need to update total cost
@@ -315,9 +219,6 @@ const FullnessHoodieDesktop = () => {
             case 'L':
                 setLargeQuantity(newQuantity)
                 break
-            case 'XL':
-                setExtraLargeQuantity(newQuantity)
-                break
             case '2XL':
                 setLargeQuantity(newQuantity)
                 break
@@ -326,6 +227,7 @@ const FullnessHoodieDesktop = () => {
                     'An error has occured in updating your cart, please reload the page.'
                 )
         }
+        quantity = smallQuantity + mediumQuantity + largeQuantity
 
         if (shippingChecked) {
             setTotalCost(quantity * 39)
@@ -384,43 +286,9 @@ const FullnessHoodieDesktop = () => {
             console.log('Transaction failed: ', e)
         }
 
-        // const cartDocSnap = await getDoc(doc(ourFireStore, 'carts', cartID))
-        // if (!cartDocSnap.exists()) {
-        //     //In this case, the cart does not exist
-
-        //     return
-        // }
-        // const InventoryDocSnap = await getDoc(
-        //     doc(ourFireStore, 'inventory', 'Fullness Hoodie')
-        // )
-        // if (!InventoryDocSnap.exists()) {
-        //     console.error('error in retrieving Fullness Hoodie inventory doc')
-        // }
-
-        // var inventoryData = InventoryDocSnap.data()
-        // var cartData = cartDocSnap.data()
-        // //Map through the keys in cartData and restore each field in inventoryDocData
-        // for (const [item, stock] of Object.entries(cartData.items)) {
-        //     //restore inventory in inventoryDocData
-        //     inventoryData['Count'][item] += stock
-        //     //Zero out cartData
-        //     cartData.items[item] = 0
-        // }
-
         setSmallQuantity(0)
         setMediumQuantity(0)
         setLargeQuantity(0)
-        setExtraLargeQuantity(0)
-
-        // // //Write back inventory data
-        // await updateDoc(doc(ourFireStore, 'inventory', 'Fullness Hoodie'), {
-        //     ...inventoryData,
-        // })
-
-        // //Write back cart data
-        // await updateDoc(doc(ourFireStore, 'carts', cartID), {
-        //     ...cartData,
-        // })
     }
 
     const redirectToCheckout = async () => {
@@ -446,32 +314,6 @@ const FullnessHoodieDesktop = () => {
                 })
             }
         }
-
-        // ProductSM.price = ProductSM.price[productColor]
-        // ProductMD.price = ProductMD.price[productColor]
-        // ProductLG.price = ProductLG.price[productColor]
-        // ProductXL.price = ProductXL.price[productColor]
-
-        // if (shippingChecked) {
-        //     checkoutOptions.shippingAddressCollection = {
-        //         allowedCountries: ['US'],
-        //     }
-        //     ProductSM.price = ProductSM.price[1]
-        //     ProductMD.price = ProductMD.price[1]
-        //     ProductLG.price = ProductLG.price[1]
-        //     ProductXL.price = ProductXL.price[1]
-        // } else {
-        //     ProductSM.price = ProductSM.price[0]
-        //     ProductMD.price = ProductMD.price[0]
-        //     ProductLG.price = ProductLG.price[0]
-        //     ProductXL.price = ProductXL.price[0]
-        // }
-
-        // products.forEach((product) => {
-        //     if (product.quantity > 0) {
-        //         checkoutOptions.lineItems.push(product)
-        //     }
-        // })
 
         checkoutOptions.successUrl = `http://localhost:3000/success?cartid=${cartID}`
 
@@ -769,42 +611,7 @@ const FullnessHoodieDesktop = () => {
                                 </Button>
                             </HStack>
                         </HStack>
-                        {/* <HStack pb="20px">
-                            <Text
-                                fontFamily="Lexend Deca"
-                                fontSize="sm"
-                                pr="38px"
-                            >
-                                XL
-                            </Text>
 
-                            <HStack maxW="320px">
-                                <Button
-                                    isDisabled={extraLargeQuantity < 1}
-                                    onClick={() => {
-                                        updateCart(
-                                            'XL',
-                                            extraLargeQuantity - 1,
-                                            'dec'
-                                        )
-                                    }}
-                                >
-                                    -
-                                </Button>
-                                <Input value={extraLargeQuantity} w="43px" />
-                                <Button
-                                    isDisabled={
-                                        extraLargeQuantity >=
-                                        Math.min(xlQuantityMax[productColor], 9)
-                                    }
-                                    onClick={() => {
-                                        updateCart('XL', extraLargeQuantity + 1)
-                                    }}
-                                >
-                                    +
-                                </Button>
-                            </HStack>
-                        </HStack> */}
                         <HStack pb="20px">
                             <Button
                                 // disabled={productColor === 'sand'}
