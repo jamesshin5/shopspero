@@ -312,10 +312,12 @@ const FullnessHoodieDesktop = () => {
             }
         } else {
             for (var [key, value] of Object.entries(cartItems)) {
-                checkoutOptions.lineItems.push({
-                    price: ProductNameMap[key],
-                    quantity: value,
-                })
+                if (value > 0) {
+                    checkoutOptions.lineItems.push({
+                        price: ProductNameMap[key],
+                        quantity: value,
+                    })
+                }
             }
         }
 
@@ -700,6 +702,13 @@ const FullnessHoodieDesktop = () => {
                         >
                             Shipping costs an additional $5 per item
                         </Checkbox>
+                        <Text
+                            fontFamily="Lexend Deca"
+                            fontSize="12px"
+                            textAlign="center"
+                        >
+                            Or pick up available at Spero on Sproul
+                        </Text>
                     </Fade>
                     <Fade bottom>
                         <Button
