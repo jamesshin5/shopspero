@@ -87,9 +87,9 @@ const FullnessHoodieDesktop = () => {
         let totalQuantity = smallQuantity + mediumQuantity + largeQuantity
         //If box is checked, add extra costs
         if (shippingChecked) {
-            setTotalCost(39 * totalQuantity)
+            setTotalCost(41 * totalQuantity)
         } else {
-            setTotalCost(34 * totalQuantity)
+            setTotalCost(36 * totalQuantity)
         }
     }, [
         shippingChecked,

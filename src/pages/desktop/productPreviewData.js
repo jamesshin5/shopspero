@@ -3,7 +3,7 @@ export const productPreviewData = [
         name: 'REDEEMED',
         title: 'HOODIE',
         image: require('../../images/design-photos/redeemed-left.jpg'),
-        price: '$36',
+        price: '$35',
         index: 10,
     },
     {
@@ -62,7 +62,7 @@ export const newReleaseData = [
         name: 'FULLNESS',
         title: 'HOODIE',
         image: require('../../images/design-photos/fullnesstilephoto.jpg'),
-        price: '$34',
+        price: '$36',
         index: 11,
     },
     {
