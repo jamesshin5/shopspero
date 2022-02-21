@@ -41,13 +41,13 @@ const HomePageDesktop = (props) => {
     return (
         <div
             className="background-main"
-        // style={{
-        //     backgroundColor: '#e7e9e0',
-        //     backgroundImage: `url(${Background})`,
-        //     backgroundPosition: 'right -9vw',
-        // }}
+            // style={{
+            //     backgroundColor: '#e7e9e0',
+            //     backgroundImage: `url(${Background})`,
+            //     backgroundPosition: 'right -9vw',
+            // }}
         >
-            <Box w="100%" h="95vh" >
+            <Box w="100%" h="100vh">
                 <Navbar />
                 <HomePagePanel />
             </Box>
@@ -55,7 +55,6 @@ const HomePageDesktop = (props) => {
         </div>
     )
 }
-
 
 // ReactDOM.render(
 //     <Slider heading="Example Slider" slides={slideData} />,

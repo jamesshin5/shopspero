@@ -26,7 +26,7 @@ const getStripe = () => {
     return stripePromise
 }
 
-const NewProduct = () => {
+const FullnessHoodieDesktop = () => {
     const [stripeError, setStripeError] = useState(null)
     const [shippingChecked, setShippingChecked] = useState(false)
     const [totalCost, setTotalCost] = useState(0)
@@ -44,7 +44,6 @@ const NewProduct = () => {
     const [largeQuantityMax, setLargeQuantityMax] = useState({})
     const [xlQuantityMax, setXlQuantityMax] = useState({})
     const [cartID, setCartID] = useState(uuidv4())
-    const cartId = uuidv4()
 
     var retrievedInventory
 
@@ -53,10 +52,11 @@ const NewProduct = () => {
         'Fullness Hoodie (S) (Blue)': 'price_1KMlSBIcIcxBrzyw0JsMryaV',
         'Fullness Hoodie (M) (Sand)': 'price_1KMNPnIcIcxBrzywd3I6ISCx',
         'Fullness Hoodie (M) (Blue)': 'price_1KMlSdIcIcxBrzywpeZnJo2j',
-        'Fullness Hoodie (L) (Sand)': 'price_1KMP5qIcIcxBrzywrNv3jdUb',
+        // 'Fullness Hoodie (L) (Sand)': 'price_1KMP5qIcIcxBrzywrNv3jdUb',
         'Fullness Hoodie (L) (Blue)': 'price_1KMlSwIcIcxBrzywcUpKstSL',
-        'Fullness Hoodie (XL) (Sand)': 'price_1KMlClIcIcxBrzyw6DlBQxhk',
-        'Fullness Hoodie (XL) (Blue)': 'price_1KMlTHIcIcxBrzywaUD1Qilj',
+        'Fullness Hoodie (2XL) (Sand)': 'price_1KVU9FIcIcxBrzywXUq6WHxN',
+        // 'Fullness Hoodie (XL) (Sand)': 'price_1KMlClIcIcxBrzyw6DlBQxhk',
+        // 'Fullness Hoodie (XL) (Blue)': 'price_1KMlTHIcIcxBrzywaUD1Qilj',
     }
 
     const ProductNameMapShipping = {
@@ -64,10 +64,11 @@ const NewProduct = () => {
         'Fullness Hoodie (S) (Blue)': 'price_1KMlSBIcIcxBrzywR9ZtStxm',
         'Fullness Hoodie (M) (Sand)': 'price_1KMNPnIcIcxBrzywzbh4oTV7',
         'Fullness Hoodie (M) (Blue)': 'price_1KMlSdIcIcxBrzywizVxxOXh',
-        'Fullness Hoodie (L) (Sand)': 'price_1KMP5qIcIcxBrzywV1Q7MRqs',
+        // 'Fullness Hoodie (L) (Sand)': 'price_1KMP5qIcIcxBrzywV1Q7MRqs',
         'Fullness Hoodie (L) (Blue)': 'price_1KMlSwIcIcxBrzywmgQNJpqL',
-        'Fullness Hoodie (XL) (Sand)': 'price_1KMlClIcIcxBrzywSv0x4Kf8',
-        'Fullness Hoodie (XL) (Blue)': 'price_1KMlTHIcIcxBrzywqawKdOFo',
+        'Fullness Hoodie (2XL) (Sand)': 'price_1KVU9FIcIcxBrzyweIppypYV',
+        // 'Fullness Hoodie (XL) (Sand)': 'price_1KMlClIcIcxBrzywSv0x4Kf8',
+        // 'Fullness Hoodie (XL) (Blue)': 'price_1KMlTHIcIcxBrzywqawKdOFo',
     }
 
     // cannot use async function in use effect by itself, make it a named function
@@ -279,6 +280,9 @@ const NewProduct = () => {
             case 'XL':
                 setExtraLargeQuantity(newQuantity)
                 break
+            case '2XL':
+                setLargeQuantity(newQuantity)
+                break
             default:
                 alert(
                     'An error has occured in updating your cart, please reload the page.'
@@ -390,7 +394,7 @@ const NewProduct = () => {
             checkoutOptions.shippingAddressCollection = {
                 allowedCountries: ['US'],
             }
-            for (var [key, value] of cartItems) {
+            for (var [key, value] of Object.entries(cartItems)) {
                 checkoutOptions.lineItems.push({
                     price: ProductNameMapShipping[key],
                     quantity: value,
@@ -527,7 +531,7 @@ const NewProduct = () => {
                                 lg: '19.75vw',
                             }}
                             height={{
-                                base: '15 vh',
+                                base: '15vh',
                                 sm: '25vh',
                                 lg: '25vh',
                             }}
@@ -684,9 +688,9 @@ const NewProduct = () => {
                             <Text
                                 fontFamily="Lexend Deca"
                                 fontSize="sm"
-                                pr="15px"
+                                pr={productColor == 'Blue' ? '15px' : '29px'}
                             >
-                                Large
+                                {productColor == 'Blue' ? 'Large' : '2XL'}
                             </Text>
 
                             <HStack maxW="320px">
@@ -694,7 +698,9 @@ const NewProduct = () => {
                                     isDisabled={largeQuantity < 1}
                                     onClick={() => {
                                         updateCart(
-                                            'L',
+                                            productColor == 'Blue'
+                                                ? 'L'
+                                                : '2XL',
                                             largeQuantity - 1,
                                             'dec'
                                         )
@@ -713,7 +719,9 @@ const NewProduct = () => {
                                     }
                                     onClick={() => {
                                         updateCart(
-                                            'L',
+                                            productColor == 'Blue'
+                                                ? 'L'
+                                                : '2XL',
                                             largeQuantity + 1,
                                             'add'
                                         )
@@ -723,7 +731,7 @@ const NewProduct = () => {
                                 </Button>
                             </HStack>
                         </HStack>
-                        <HStack pb="20px">
+                        {/* <HStack pb="20px">
                             <Text
                                 fontFamily="Lexend Deca"
                                 fontSize="sm"
@@ -758,7 +766,7 @@ const NewProduct = () => {
                                     +
                                 </Button>
                             </HStack>
-                        </HStack>
+                        </HStack> */}
                         <HStack pb="20px">
                             <Button
                                 // disabled={productColor === 'sand'}
@@ -865,4 +873,4 @@ const NewProduct = () => {
     )
 }
 
-export default NewProduct
+export default FullnessHoodieDesktop

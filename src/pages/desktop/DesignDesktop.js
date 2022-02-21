@@ -4,7 +4,7 @@ import Popup from '../../components/DesignPopup.js'
 import '../../styles/desktop/DesignDesktop.css'
 import Product from '../../components/Product'
 
-import NewProduct from './designs/NewProduct'
+import FullnessHoodieDesktop from './designs/FullnessHoodieDesktop'
 import WalkOnWaterDesktop from './designs/WalkOnWaterDesktop.js'
 import MountainMoverDesktop from './designs/MountainMoverDesktop.js'
 import SperoBearDesktop from './designs/SperoBearDesktop.js'
@@ -95,7 +95,7 @@ const DesignsDesktop = (props) => {
     function renderSwitch(param) {
         switch (param) {
             case 11:
-                return <NewProduct />
+                return <FullnessHoodieDesktop />
             case 10:
                 return <RedeemedHoodie />
             case 9:
@@ -194,7 +194,7 @@ const DesignsDesktop = (props) => {
                     <Fade bottom>
                         <Text
                             fontFamily="Lexend Deca"
-                            fontSize={{ base: '4xl', sm: '6xl' }}
+                            fontSize={{ base: '3xl', sm: '5xl' }}
                             border="none"
                             borderBottom="3px solid #5c6a6f"
                             marginBottom="5%"
@@ -217,7 +217,7 @@ const DesignsDesktop = (props) => {
                     <Fade bottom>
                         <Text
                             fontFamily="Lexend Deca"
-                            fontSize={{ base: '4xl', sm: '6xl' }}
+                            fontSize={{ base: '3xl', sm: '5xl' }}
                             border="none"
                             borderBottom="3px solid #5c6a6f"
                             marginBottom="5%"
