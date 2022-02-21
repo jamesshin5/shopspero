@@ -125,7 +125,6 @@ const FullnessHoodieDesktop = () => {
         if (snapshot && snapshot.docChanges()) {
             snapshot.docChanges().forEach((change) => {
                 if (change.type === 'removed') {
-                    // console.log("Removed city: ", change.doc.data());
                     if (sessionExpiredOnce) {
                         //Don't alert user again
                         setSessionExpiredOnce(false)
@@ -210,7 +209,6 @@ const FullnessHoodieDesktop = () => {
                     })
                 }
             })
-            console.log('Transaction successfully committed!')
         } catch (e) {
             console.log('Transaction failed: ', e)
         }
@@ -237,9 +235,9 @@ const FullnessHoodieDesktop = () => {
         quantity = smallQuantity + mediumQuantity + largeQuantity
 
         if (shippingChecked) {
-            setTotalCost(quantity * 39)
+            setTotalCost(quantity * 41)
         } else {
-            setTotalCost(quantity * 34)
+            setTotalCost(quantity * 36)
         }
     }
 
@@ -288,7 +286,6 @@ const FullnessHoodieDesktop = () => {
                     ...cartData,
                 })
             })
-            console.log('Transaction successfully committed!')
         } catch (e) {
             console.log('Transaction failed: ', e)
         }
