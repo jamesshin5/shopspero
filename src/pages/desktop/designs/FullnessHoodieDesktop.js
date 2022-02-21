@@ -105,7 +105,14 @@ const FullnessHoodieDesktop = () => {
             alert(
                 'Your session has expired! Please come back and reselect your items!'
             )
-            window.location.href = 'http://localhost:3000/designs'
+            if (window.location.hostname === 'shopspero.org') {
+                window.location.href = 'https://shopspero.org/designs'
+            }
+
+            //Testing/Local
+            else {
+                window.location.href = 'http://localhost:3000/designs'
+            }
         }
     }, [sessionExpired])
 
@@ -315,7 +322,14 @@ const FullnessHoodieDesktop = () => {
             }
         }
 
-        checkoutOptions.successUrl = `http://localhost:3000/success?cartid=${cartID}`
+        if (window.location.hostname === 'shopspero.org') {
+            checkoutOptions.successUrl = `https://shopspero.org/success?cartid=${cartID}`
+        }
+
+        //Testing/Local
+        else {
+            checkoutOptions.successUrl = `http://localhost:3000/success?cartid=${cartID}`
+        }
 
         const stripe = await getStripe()
         await stripe
