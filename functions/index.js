@@ -44,6 +44,7 @@ exports.events = functions.https.onRequest(async (request, response) => {
                     clientName: dataObject.billing_details.name,
                     itemsPurchased: mapOfItemsPurchased,
                     timePurchased: new Date(Date.now()),
+                    receiptUrl: dataObject.receipt_url,
                 })
         }
 

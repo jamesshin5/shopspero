@@ -10,6 +10,7 @@ import {
     Button,
     Checkbox,
     Input,
+    CloseButton,
 } from '@chakra-ui/react'
 import '../../../styles/desktop/FallStickerPage.css'
 import Fade from 'react-reveal/Fade'
@@ -53,6 +54,10 @@ const FullnessHoodieDesktop = () => {
     const [cartID, setCartID] = useState(uuidv4())
     const [sessionExpired, setSessionExpired] = useState(false)
     const [sessionExpiredOnce, setSessionExpiredOnce] = useState(false)
+
+    const [mainPhotoModal, setMainPhotoModal] = useState('none')
+    const [leftPhotoModal, setLeftPhotoModal] = useState('none')
+    const [rightPhotoModal, setRightPhotoModal] = useState('none')
 
     const ProductNameMap = {
         'Fullness Hoodie (S) (Sand)': 'price_1KVVNWIcIcxBrzywXJXs6To9',
@@ -365,6 +370,114 @@ const FullnessHoodieDesktop = () => {
             mt={{ base: '10px', sm: 'none' }}
             pt={{ base: 'none', lg: '100px' }}
         >
+            <Stack
+                display={mainPhotoModal}
+                position="fixed"
+                zIndex="1"
+                left={0}
+                top={0}
+                width="100%"
+                height="100%"
+                backgroundColor="rgba(0,0,0,0.9)"
+                pt="25px"
+                direction="column"
+                justifyContent="center"
+                alignItems="center"
+            >
+                <CloseButton
+                    _focus={{ boxShadow: 'none' }}
+                    size="lg"
+                    onClick={() => {
+                        setMainPhotoModal('none')
+                    }}
+                    position="absolute"
+                    top="15px"
+                    right="30px"
+                    color="#ffffff"
+                />
+                <Image
+                    src={require('../../../images/design-photos/fullness1.jpg')}
+                    alt=""
+                    w="80%"
+                    h="90%"
+                    display="block"
+                    objectFit="contain"
+                />
+            </Stack>
+            <Stack
+                display={leftPhotoModal}
+                position="fixed"
+                zIndex="1"
+                left={0}
+                top={0}
+                width="100%"
+                height="100%"
+                backgroundColor="rgba(0,0,0,0.9)"
+                direction="column"
+                alignItems="center"
+            >
+                <Box
+                    h="500px"
+                    w="500px"
+                    pt="100px"
+                    pl={{ base: '85px', sm: '0px' }}
+                >
+                    <Image
+                        src={require('../../../images/design-photos/fullness2.jpg')}
+                        alt=""
+                        w="80%"
+                        display="block"
+                        objectFit="contain"
+                    />
+                </Box>
+
+                <CloseButton
+                    _focus={{ boxShadow: 'none' }}
+                    size="lg"
+                    onClick={() => {
+                        setLeftPhotoModal('none')
+                    }}
+                    position="absolute"
+                    top="15px"
+                    right="40px"
+                    color="#ffffff"
+                />
+            </Stack>
+            <Stack
+                display={rightPhotoModal}
+                position="fixed"
+                zIndex="1"
+                left={0}
+                top={0}
+                width="100%"
+                height="100%"
+                backgroundColor="rgba(0,0,0,0.9)"
+                pt="25px"
+                direction="column"
+                justifyContent="center"
+                alignItems="center"
+            >
+                <CloseButton
+                    _focus={{ boxShadow: 'none' }}
+                    size="lg"
+                    onClick={() => {
+                        setRightPhotoModal('none')
+                    }}
+                    position="absolute"
+                    top="15px"
+                    right="40px"
+                    color="#ffffff"
+                />
+                <Image
+                    src={require('../../../images/design-photos/fullness3.jpg')}
+                    alt=""
+                    w="80%"
+                    h="90%"
+                    display="block"
+                    objectFit="contain"
+                />
+            </Stack>
+
             <VStack spacing="5px">
                 <Fade bottom>
                     <Box
@@ -375,13 +488,23 @@ const FullnessHoodieDesktop = () => {
                         width={{ base: '80vw', sm: '60vw', lg: '40vw' }}
                         height={{ base: '20vh', sm: '40vh', lg: '40vh' }}
                     >
-                        <Image
-                            src={require('../../../images/design-photos/fullness1.jpg')}
-                            alt=""
-                            objectFit="cover"
+                        <Button
+                            onClick={() => {
+                                setMainPhotoModal('flex')
+                            }}
                             w="100%"
                             h="100%"
-                        />
+                            border={0}
+                            p={0}
+                        >
+                            <Image
+                                src={require('../../../images/design-photos/fullness1.jpg')}
+                                alt=""
+                                objectFit="cover"
+                                w="100%"
+                                h="100%"
+                            />
+                        </Button>
                     </Box>
                 </Fade>
                 <HStack spacing="5px">
@@ -402,13 +525,23 @@ const FullnessHoodieDesktop = () => {
                                 lg: '25vh',
                             }}
                         >
-                            <Image
-                                src={require('../../../images/design-photos/fullness2.jpg')}
-                                alt=""
-                                objectFit="cover"
+                            <Button
+                                onClick={() => {
+                                    setLeftPhotoModal('flex')
+                                }}
                                 w="100%"
                                 h="100%"
-                            />
+                                border={0}
+                                p={0}
+                            >
+                                <Image
+                                    src={require('../../../images/design-photos/fullness2.jpg')}
+                                    alt=""
+                                    objectFit="cover"
+                                    w="100%"
+                                    h="100%"
+                                />
+                            </Button>
                         </Box>
                     </Fade>
 
@@ -429,13 +562,23 @@ const FullnessHoodieDesktop = () => {
                                 lg: '25vh',
                             }}
                         >
-                            <Image
-                                src={require('../../../images/design-photos/fullness3.jpg')}
-                                alt=""
-                                objectFit="cover"
+                            <Button
+                                onClick={() => {
+                                    setRightPhotoModal('flex')
+                                }}
                                 w="100%"
                                 h="100%"
-                            />
+                                border={0}
+                                p={0}
+                            >
+                                <Image
+                                    src={require('../../../images/design-photos/fullness3.jpg')}
+                                    alt=""
+                                    objectFit="cover"
+                                    w="100%"
+                                    h="100%"
+                                />
+                            </Button>
                         </Box>
                     </Fade>
                 </HStack>
