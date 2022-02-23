@@ -852,7 +852,7 @@ const FullnessHoodieDesktop = () => {
                             fontSize="12px"
                             textAlign="center"
                         >
-                            Or pick up available at Spero on Sproul
+                            Or pick up available at Spero on Sproul at Berkeley
                         </Text>
                     </Fade>
                     <Fade bottom>

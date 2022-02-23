@@ -22,7 +22,7 @@ exports.events = functions.https.onRequest(async (request, response) => {
         if (event.type == 'charge.succeeded') {
             const dataObject = event.data.object
             const regexForItemsPurchased =
-                /[0-9]x (\w)+ (\w)+ \([A-Z]+\) \((\w)+\)/gm
+                /[0-9]x (\w)+ (\w)+ \([a-zA-Z0-9]+\) \((\w)+\)/gm
             const itemsPurchased = dataObject.description.match(
                 regexForItemsPurchased
             )
