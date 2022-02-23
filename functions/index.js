@@ -81,10 +81,13 @@ exports.scheduledFunction = functions.pubsub
             // doc.data() is never undefined for query doc snapshots
 
             // inventoryData['Count'][item] += stock
-            for (const [item, stock] of Object.entries(doc.data().items)) {
-                //restore inventory in inventoryDocData
-                inventoryData['Count'][item] += stock
+            if (doc.data().items != null) {
+                for (const [item, stock] of Object.entries(doc.data().items)) {
+                    //restore inventory in inventoryDocData
+                    inventoryData['Count'][item] += stock
+                }
             }
+
             await doc.ref.delete().then(() => {
                 console.log('Invalid cart successfully deleted')
             })
