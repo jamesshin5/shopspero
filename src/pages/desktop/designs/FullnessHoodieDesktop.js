@@ -45,7 +45,7 @@ const FullnessHoodieDesktop = () => {
     const [mediumQuantity, setMediumQuantity] = useState(0)
     const [largeQuantity, setLargeQuantity] = useState(0)
 
-    const [productColor, setProductColor] = useState('Sand')
+    const [productColor, setProductColor] = useState('Blue')
     const [isLoading, setLoading] = useState(false)
 
     const [smallQuantityMax, setSmallQuantityMax] = useState({})
@@ -720,7 +720,9 @@ const FullnessHoodieDesktop = () => {
                             </HStack>
                         </HStack>
 
-                        <HStack>
+                        <HStack
+                            display={productColor == 'Blue' ? 'flex' : 'none'}
+                        >
                             <Text
                                 fontFamily="Lexend Deca"
                                 fontSize="sm"
@@ -770,37 +772,6 @@ const FullnessHoodieDesktop = () => {
 
                         <HStack pb="20px">
                             <Button
-                                // disabled={productColor === 'sand'}
-                                isActive={productColor === 'Sand'}
-                                _active={{
-                                    bg: '#d8c7af',
-                                    // transform: 'scale(0.98)',
-                                }}
-                                _hover={{
-                                    bg: '#e3e8f1',
-                                }}
-                                _focus={{ boxShadow: 'none' }}
-                                onClick={async () => {
-                                    //Clear our cart + restore inventory
-                                    await restoreAndClear()
-                                    setProductColor('Sand')
-                                }}
-                            >
-                                <Text
-                                    fontFamily="Lexend Deca"
-                                    fontSize="sm"
-                                    fontWeight="100"
-                                    px="10px"
-                                    color={
-                                        productColor === 'Sand'
-                                            ? 'white'
-                                            : 'black'
-                                    }
-                                >
-                                    Sand
-                                </Text>
-                            </Button>
-                            <Button
                                 isActive={productColor === 'Blue'}
                                 _active={{
                                     bg: '#9bbdd8',
@@ -829,6 +800,37 @@ const FullnessHoodieDesktop = () => {
                                     }
                                 >
                                     Blue
+                                </Text>
+                            </Button>
+                            <Button
+                                // disabled={productColor === 'sand'}
+                                isActive={productColor === 'Sand'}
+                                _active={{
+                                    bg: '#d8c7af',
+                                    // transform: 'scale(0.98)',
+                                }}
+                                _hover={{
+                                    bg: '#e3e8f1',
+                                }}
+                                _focus={{ boxShadow: 'none' }}
+                                onClick={async () => {
+                                    //Clear our cart + restore inventory
+                                    await restoreAndClear()
+                                    setProductColor('Sand')
+                                }}
+                            >
+                                <Text
+                                    fontFamily="Lexend Deca"
+                                    fontSize="sm"
+                                    fontWeight="100"
+                                    px="10px"
+                                    color={
+                                        productColor === 'Sand'
+                                            ? 'white'
+                                            : 'black'
+                                    }
+                                >
+                                    Sand
                                 </Text>
                             </Button>
                         </HStack>
