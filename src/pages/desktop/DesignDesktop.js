@@ -5,6 +5,9 @@ import '../../styles/desktop/DesignDesktop.css'
 import Product from '../../components/Product'
 
 import FullnessHoodieDesktop from './designs/FullnessHoodieDesktop'
+import NewProduct from '../../components/templates/NewProduct'
+import {FullnessHoodieNameMap, FullnessHoodieNameMapShipping, fullnessHoodieSizeToColorMap} from '../../utilities/paymentUtilities/FullnessHoodieUtilities';
+
 import WalkOnWaterDesktop from './designs/WalkOnWaterDesktop.js'
 import MountainMoverDesktop from './designs/MountainMoverDesktop.js'
 import SperoBearDesktop from './designs/SperoBearDesktop.js'
@@ -24,7 +27,7 @@ import Navbar from '../../components/NavBar'
 import Fade from 'react-reveal/Fade'
 import Database from '../../components/Database'
 
-import { Grid, VStack, Text, Box } from '@chakra-ui/react'
+import { Grid, VStack, Text, Box, Link } from '@chakra-ui/react'
 // import { ChevronDownIcon } from '@chakra-ui/icons'
 import { useLocation } from 'react-router-dom'
 
@@ -95,7 +98,21 @@ const DesignsDesktop = (props) => {
     function renderSwitch(param) {
         switch (param) {
             case 11:
-                return <FullnessHoodieDesktop />
+                return <NewProduct 
+                            name="Fullness Hoodie"
+                            
+                            photos={['../../images/design-photos/fullness1.jpg', '../../images/design-photos/fullness2.jpg', '../../images/design-photos/fullness3.jpg']}
+                            verse={{
+                                desc: "You make known to me the path of life; in your presence there is fullness of joy; at your right hands are pleasures forevermore.",
+                                origin: "Psalm 16:11"
+                            }}
+                            description={"Spero’s hoodie is designed to be a reminder of the joy that can only be found in God. We define fullness as being complete— lacking in nothing as we seek the Lord. In the many moments of uncertainty that we face our team clings to the hope that God has a good & sovereign plan for us. We hope that you’re encouraged by this too!"}
+                            ProductNameMap={FullnessHoodieNameMap}
+                            ProductNameMapShipping={FullnessHoodieNameMapShipping}
+                            sizes={fullnessHoodieSizeToColorMap}
+                            
+                        />
+                // return <FullnessHoodieDesktop />
             case 10:
                 return <RedeemedHoodie />
             case 9:
@@ -201,6 +218,20 @@ const DesignsDesktop = (props) => {
                         >
                             NEW RELEASES
                         </Text>
+                    </Fade>
+                    <Fade bottom>
+                        <Link href="https://docs.google.com/forms/d/e/1FAIpQLScl1aqZNSQ1q9VnaQajA74m9s10Nm18aO_mikAHG8MwF9OidQ/viewform">
+                        <Text
+                            fontFamily="Lexend Deca"
+                            fontSize={'3xl'}
+                            border="none"
+                            // borderBottom="3px solid #5c6a6f"
+                            marginBottom="5%"
+                        >
+                            Preorder Our New Tote Bag!
+                        </Text>
+                        </Link>
+                        
                     </Fade>
                     <Grid
                         py={10}

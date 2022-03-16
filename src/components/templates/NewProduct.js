@@ -12,9 +12,9 @@ import {
     Input,
     CloseButton,
 } from '@chakra-ui/react'
-import '../../../styles/desktop/FallStickerPage.css'
+import '../../styles/desktop/FallStickerPage.css'
 import Fade from 'react-reveal/Fade'
-import { ourFireStore } from '../../../firebaseApp'
+import { ourFireStore } from '../../firebaseApp'
 import {
     doc,
     getDoc,
@@ -33,8 +33,8 @@ import { v4 as uuidv4 } from 'uuid'
 //Might want to add handlers in as a prop or we could import from somewhere?
 
 /**
- * @property name - an array of words making up the product name
- * @property photos - indexed accordingly (like index 0 is a certain picture frame)
+ * @property name - a string
+ * @property photos - indexed accordingly (like index 0 is the main photo, index 1 is the left photo, and index 2 is the right photo)
  * @property verse - "“You make known to me the path of life; in your presence there is fullness of joy; at your right hands are pleasures forevermore - Psalm 16:11" => verse is a JSON with key desc and origin
  * @property description - "Spero’s hoodie is designed to be a reminder of the joy that can only be found in God. We define fullness as being complete— lacking in nothing as we seek the Lord. In the many moments of uncertainty that we face our team clings to the hope that God has a good & sovereign plan for us. We hope that you’re encouraged by this too!"
  * @property ProductNameMap - const ProductNameMap = {
@@ -57,6 +57,14 @@ import { v4 as uuidv4 } from 'uuid'
  
  */
 
+    let stripePromise
+
+    const getStripe = () => {
+        if (!stripePromise) {
+            stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY)
+        }
+        return stripePromise
+    }
 
 const NewProduct = (
     {
@@ -103,6 +111,290 @@ const NewProduct = (
         cancelUrl: window.location.href + '/cancel',
     }
 
+    useEffect(() => {
+        let totalQuantity = smallQuantity + mediumQuantity + largeQuantity
+        //If box is checked, add extra costs
+        if (shippingChecked) {
+            setTotalCost(41 * totalQuantity)
+        } else {
+            setTotalCost(36 * totalQuantity)
+        }
+    }, [
+        shippingChecked,
+        smallQuantity,
+        mediumQuantity,
+        largeQuantity,
+        stripeError,
+        productColor,
+    ])
+
+    useEffect(() => {
+        if (sessionExpired) {
+            alert(
+                'Your session has expired! Please come back and reselect your items!'
+            )
+            if (window.location.hostname === 'shopspero.org') {
+                window.location.href = 'https://shopspero.org/shop'
+            }
+
+            //Testing/Local
+            else {
+                window.location.href = 'http://localhost:3000/shop'
+            }
+        }
+    }, [sessionExpired])
+
+
+    const q = query(
+        collection(ourFireStore, 'carts'),
+        where(documentId(), '==', cartID)
+    )
+
+    const subToCartExpiry = onSnapshot(q, (snapshot) => {
+        if (snapshot && snapshot.docChanges()) {
+            snapshot.docChanges().forEach((change) => {
+                if (change.type === 'removed') {
+                    if (sessionExpiredOnce) {
+                        //Don't alert user again
+                        setSessionExpiredOnce(false)
+                    } else {
+                        setSessionExpired(true)
+                        setSessionExpiredOnce(true)
+                    }
+                }
+            })
+        }
+        //Only want to do something when the doc is nonexistent and it has been more than five minutes
+    })
+
+    const onShippingBoxChange = () => {
+        //Need to update total cost
+        setShippingChecked(!shippingChecked)
+    }
+
+    const updateCart = async (size, newQuantity, operation) => {
+        // var quantity = 0
+        //handle each size update quantity here
+
+        const item = `${name} (${size}) (${productColor})`
+        // const item = `Fullness Hoodie (${size}) (${productColor})`
+
+        //Batching all these reads and writes into a TRANSACTION
+        //So either all goes through or neither does
+        try {
+            await runTransaction(ourFireStore, async (transaction) => {
+                const InventoryDocSnap = await transaction.get(
+                    doc(ourFireStore, 'inventory', name)
+                    // doc(ourFireStore, 'inventory', 'Fullness Hoodie')
+                )
+
+                //check if the cart exists in db
+                const docSnap = await transaction.get(
+                    doc(ourFireStore, 'carts', cartID)
+                )
+
+                const retrievedFullnessInventory = InventoryDocSnap.data()
+                // Check if there is inventory to take
+                if (operation == 'add') {
+                    const tempoCount =
+                        retrievedFullnessInventory['Count'][item] - 1
+                    if (tempoCount < 0) {
+                        //invalid
+                        alert(
+                            'The stock you requested for is not available at this time!'
+                        )
+                        return
+                    }
+                    retrievedFullnessInventory['Count'][item] -= 1
+                    transaction.update(
+                        // doc(ourFireStore, 'inventory', 'Fullness Hoodie'),
+                        doc(ourFireStore, 'inventory', name),
+                        {
+                            ...retrievedFullnessInventory,
+                        }
+                    )
+                } else {
+                    retrievedFullnessInventory['Count'][item] += 1
+                    transaction.update(
+                        doc(ourFireStore, 'inventory', name),
+                        // doc(ourFireStore, 'inventory', 'Fullness Hoodie'),
+                        {
+                            ...retrievedFullnessInventory,
+                        }
+                    )
+                }
+
+                if (!docSnap.exists()) {
+                    transaction.set(doc(ourFireStore, 'carts', cartID), {
+                        lastUpdated: new Date(Date.now()),
+                        items: {
+                            [item]: newQuantity,
+                        },
+                        paid: false,
+                    })
+                }
+                //updating cart doc with latest inventory
+                else {
+                    const retrievedCart = docSnap.data()
+                    retrievedCart.lastUpdated = new Date(Date.now())
+                    retrievedCart.items[item] = newQuantity
+                    transaction.set(doc(ourFireStore, 'carts', cartID), {
+                        ...retrievedCart,
+                    })
+                }
+            })
+        } catch (e) {
+            console.log('Transaction failed: ', e)
+        }
+
+        var quantity = 0
+        switch (size) {
+            case 'S':
+                setSmallQuantity(newQuantity)
+                break
+            case 'M':
+                setMediumQuantity(newQuantity)
+                break
+            case 'L':
+                setLargeQuantity(newQuantity)
+                break
+            case '2XL':
+                setLargeQuantity(newQuantity)
+                break
+            default:
+                alert(
+                    'An error has occured in updating your cart, please reload the page.'
+                )
+        }
+        quantity = smallQuantity + mediumQuantity + largeQuantity
+
+        if (shippingChecked) {
+            setTotalCost(quantity * 41)
+        } else {
+            setTotalCost(quantity * 36)
+        }
+    }
+
+
+    const restoreAndClear = async () => {
+        //First we read the cart and restore inventory
+
+        try {
+            await runTransaction(ourFireStore, async (transaction) => {
+                const cartDocSnap = await transaction.get(
+                    doc(ourFireStore, 'carts', cartID)
+                )
+                if (!cartDocSnap.exists()) {
+                    //In this case, the cart does not exist
+
+                    throw 'Cart doc does not exist'
+                }
+                const InventoryDocSnap = await transaction.get(
+                    doc(ourFireStore, 'inventory', name)
+                    // doc(ourFireStore, 'inventory', 'Fullness Hoodie')
+                )
+                if (!InventoryDocSnap.exists()) {
+                    console.error(
+                        `error in retrieving ${name} Hoodie inventory doc`
+                        // 'error in retrieving Fullness Hoodie inventory doc'
+                    )
+                }
+
+                var inventoryData = InventoryDocSnap.data()
+                var cartData = cartDocSnap.data()
+                //Map through the keys in cartData and restore each field in inventoryDocData
+                for (const [item, stock] of Object.entries(cartData.items)) {
+                    //restore inventory in inventoryDocData
+                    inventoryData['Count'][item] += stock
+                    //Zero out cartData
+                    cartData.items[item] = 0
+                }
+
+                // //Write back inventory data
+                transaction.update(
+                    doc(ourFireStore, 'inventory', name),
+                    // doc(ourFireStore, 'inventory', 'Fullness Hoodie'),
+                    {
+                        ...inventoryData,
+                    }
+                )
+
+                //Write back cart data
+                transaction.update(doc(ourFireStore, 'carts', cartID), {
+                    ...cartData,
+                })
+            })
+        } catch (e) {
+            console.log('Transaction failed: ', e)
+        }
+
+        setSmallQuantity(0)
+        setMediumQuantity(0)
+        setLargeQuantity(0)
+    }
+
+    const redirectToCheckout = async () => {
+        setLoading(true)
+
+        const cartDetails = await getDoc(doc(ourFireStore, 'carts', cartID))
+        const cartItems = cartDetails.data().items
+        if (shippingChecked) {
+            checkoutOptions.shippingAddressCollection = {
+                allowedCountries: ['US'],
+            }
+            for (var [key, value] of Object.entries(cartItems)) {
+                checkoutOptions.lineItems.push({
+                    price: ProductNameMapShipping[key],
+                    quantity: value,
+                })
+            }
+        } else {
+            for (var [key, value] of Object.entries(cartItems)) {
+                if (value > 0) {
+                    checkoutOptions.lineItems.push({
+                        price: ProductNameMap[key],
+                        quantity: value,
+                    })
+                }
+            }
+        }
+
+        if (window.location.hostname === 'shopspero.org') {
+            checkoutOptions.successUrl = `https://shopspero.org/success?cartid=${cartID}`
+        }
+
+        //Testing/Local
+        else {
+            checkoutOptions.successUrl = `http://localhost:3000/success?cartid=${cartID}`
+        }
+
+        const stripe = await getStripe()
+        await stripe
+            .redirectToCheckout(checkoutOptions)
+            .then(function (result) {
+                if (result.error) {
+                    // Error scenario 1
+                    // If `redirectToCheckout` fails due to a browser or network
+                    // error, display the localized error message to your customer.
+                    alert(result.error.message)
+                }
+            })
+            .catch(function (error) {
+                if (error) {
+                    // Error scenario 2
+                    // If the promise throws an error
+                    alert(
+                        'We are experiencing issues connecting to our' +
+                            ' payments provider. ' +
+                            error
+                    )
+                }
+            })
+    }
+    if (stripeError) {
+        alert(stripeError)
+    }
+
 
 
 
@@ -140,7 +432,9 @@ const NewProduct = (
                     color="#ffffff"
                 />
                 <Image
-                    src={require('../../../images/design-photos/fullness1.jpg')}
+                    src={
+                        require('../../images/design-photos/fullness1.jpg')
+                    }
                     alt=""
                     w="80%"
                     h="90%"
@@ -167,7 +461,9 @@ const NewProduct = (
                     pl={{ base: '85px', sm: '0px' }}
                 >
                     <Image
-                        src={require('../../../images/design-photos/fullness2.jpg')}
+                        src={
+                            require('../../images/design-photos/fullness2.jpg')
+                        }
                         alt=""
                         w="80%"
                         display="block"
@@ -213,7 +509,9 @@ const NewProduct = (
                     color="#ffffff"
                 />
                 <Image
-                    src={require('../../../images/design-photos/fullness3.jpg')}
+                    src={
+                        require('../../images/design-photos/fullness3.jpg')
+                    }
                     alt=""
                     w="80%"
                     h="90%"
@@ -242,7 +540,9 @@ const NewProduct = (
                             p={0}
                         >
                             <Image
-                                src={require('../../../images/design-photos/fullness1.jpg')}
+                                src={
+                                    require('../../images/design-photos/fullness1.jpg')
+                                }
                                 alt=""
                                 objectFit="cover"
                                 w="100%"
@@ -279,7 +579,9 @@ const NewProduct = (
                                 p={0}
                             >
                                 <Image
-                                    src={require('../../../images/design-photos/fullness2.jpg')}
+                                    src={
+                                        require('../../images/design-photos/fullness2.jpg')
+                                    }
                                     alt=""
                                     objectFit="cover"
                                     w="100%"
@@ -316,7 +618,9 @@ const NewProduct = (
                                 p={0}
                             >
                                 <Image
-                                    src={require('../../../images/design-photos/fullness3.jpg')}
+                                    src={
+                                        require('../../images/design-photos/fullness3.jpg')
+                                    }
                                     alt=""
                                     objectFit="cover"
                                     w="100%"
@@ -336,8 +640,8 @@ const NewProduct = (
                                 fontSize={{ base: '30px', sm: '45px' }}
                                 lineHeight={{ base: '35px', sm: '60px' }}
                             >
-                                <b>{name[0]}</b> <br />
-                                {name[1]}
+                                <b>{name}</b> <br />
+                                
                             </Text>
                             <Box
                                 bgColor="#5c6a6f"
@@ -620,3 +924,5 @@ const NewProduct = (
     )
 
 }
+
+export default NewProduct;
