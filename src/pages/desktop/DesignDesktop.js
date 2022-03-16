@@ -24,7 +24,7 @@ import Navbar from '../../components/NavBar'
 import Fade from 'react-reveal/Fade'
 import Database from '../../components/Database'
 
-import { Grid, VStack, Text, Box } from '@chakra-ui/react'
+import { Grid, VStack, Text, Box, Link } from '@chakra-ui/react'
 // import { ChevronDownIcon } from '@chakra-ui/icons'
 import { useLocation } from 'react-router-dom'
 
@@ -202,6 +202,22 @@ const DesignsDesktop = (props) => {
                             NEW RELEASES
                         </Text>
                     </Fade>
+
+                    <Fade bottom>
+                        <Link href="https://docs.google.com/forms/d/e/1FAIpQLScl1aqZNSQ1q9VnaQajA74m9s10Nm18aO_mikAHG8MwF9OidQ/viewform">
+                        <Text
+                            fontFamily="Lexend Deca"
+                            fontSize={'3xl'}
+                            border="none"
+                            // borderBottom="3px solid #5c6a6f"
+                            marginBottom="5%"
+                        >
+                            Preorder Our New Tote Bag!
+                        </Text>
+                        </Link>
+                        
+                    </Fade>
+
                     <Grid
                         py={10}
                         templateColumns={{
