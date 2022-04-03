@@ -101,7 +101,7 @@ const DesignsDesktop = (props) => {
                 return <NewProduct 
                             name="Fullness Hoodie"
                             
-                            photos={['../../images/design-photos/fullness1.jpg', '../../images/design-photos/fullness2.jpg', '../../images/design-photos/fullness3.jpg']}
+                            photos={[require('../../images/design-photos/fullness1.jpg'), require('../../images/design-photos/fullness2.jpg'), require('../../images/design-photos/fullness3.jpg')]}
                             verse={{
                                 desc: "You make known to me the path of life; in your presence there is fullness of joy; at your right hands are pleasures forevermore.",
                                 origin: "Psalm 16:11"

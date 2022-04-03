@@ -433,7 +433,7 @@ const NewProduct = (
                 />
                 <Image
                     src={
-                        require('../../images/design-photos/fullness1.jpg')
+                        photos[0]
                     }
                     alt=""
                     w="80%"
@@ -462,7 +462,7 @@ const NewProduct = (
                 >
                     <Image
                         src={
-                            require('../../images/design-photos/fullness2.jpg')
+                            photos[1]
                         }
                         alt=""
                         w="80%"
@@ -510,7 +510,7 @@ const NewProduct = (
                 />
                 <Image
                     src={
-                        require('../../images/design-photos/fullness3.jpg')
+                        photos[2]
                     }
                     alt=""
                     w="80%"
@@ -541,7 +541,7 @@ const NewProduct = (
                         >
                             <Image
                                 src={
-                                    require('../../images/design-photos/fullness1.jpg')
+                                    photos[0]
                                 }
                                 alt=""
                                 objectFit="cover"
@@ -580,7 +580,7 @@ const NewProduct = (
                             >
                                 <Image
                                     src={
-                                        require('../../images/design-photos/fullness2.jpg')
+                                        photos[1]
                                     }
                                     alt=""
                                     objectFit="cover"
